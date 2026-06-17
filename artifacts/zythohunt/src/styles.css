@@ -1,0 +1,765 @@
+/* ═══════════════════════════════════════════════════════
+   ZythoHunt Reveal Lab — Styles
+   Dark brewery aesthetic · amber light · patinated copper
+   ═══════════════════════════════════════════════════════ */
+
+/* ─── Custom properties ─────────────────────────────── */
+:root {
+  --bg:             #0e0a06;
+  --bg-mid:         #14100a;
+  --surface:        #1c1509;
+  --surface-raised: #231b0d;
+  --amber:          #c87c28;
+  --amber-light:    #e8a040;
+  --amber-dim:      #7a4a14;
+  --copper:         #b0622a;
+  --copper-light:   #d4864a;
+  --gold:           #d4a84b;
+  --text:           #f0e8d8;
+  --text-dim:       #9e8a6a;
+  --text-muted:     #5a4a35;
+  --border:         rgba(180,120,40,0.18);
+  --border-bright:  rgba(200,150,60,0.4);
+  --glow-color:     rgba(200,124,40,0.35);
+  --glow-color-dim: rgba(200,124,40,0.12);
+
+  --nav-h:   64px;
+  --head-h:  58px;
+  --card-r:  10px;
+  --font-serif: "Cinzel", Georgia, serif;
+  --font-body:  "Crimson Text", Georgia, serif;
+}
+
+/* ─── Reset & base ───────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  width: 100%; height: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  touch-action: manipulation;
+}
+
+/* ─── Grain overlay ──────────────────────────────────── */
+.grain {
+  position: fixed; inset: 0; z-index: 900;
+  pointer-events: none;
+  opacity: 0.028;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  mix-blend-mode: overlay;
+}
+
+/* ─── Scene ambient glow ─────────────────────────────── */
+.scene-glow {
+  position: fixed;
+  top: 30%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70vw; height: 50vw;
+  max-width: 500px; max-height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center,
+    rgba(180,100,20,0.18) 0%,
+    rgba(140,70,10,0.07) 50%,
+    transparent 75%
+  );
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.45;
+}
+
+/* ─── Scene overlay (darkening during reveal) ────────── */
+#scene-overlay {
+  position: fixed; inset: 0;
+  background: rgba(5,3,2,0.72);
+  z-index: 50;
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* ─── Loading screen ─────────────────────────────────── */
+#loading-screen {
+  position: fixed; inset: 0; z-index: 9999;
+  background: var(--bg);
+  display: flex; align-items: center; justify-content: center;
+}
+
+.loading-inner {
+  text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: 20px;
+}
+
+.loading-logo {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 5vw, 2.2rem);
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: var(--amber-light);
+  text-shadow: 0 0 30px rgba(200,150,40,0.5);
+}
+
+.loading-bar-track {
+  width: 180px; height: 2px;
+  background: rgba(180,100,20,0.2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.loading-bar-fill {
+  height: 100%; width: 0%;
+  background: linear-gradient(90deg, var(--amber), var(--amber-light));
+  border-radius: 2px;
+  transition: width 0.2s ease;
+}
+
+.loading-label {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* ─── App layout ─────────────────────────────────────── */
+#app {
+  position: fixed; inset: 0;
+  display: flex; flex-direction: column;
+  overflow: hidden;
+  opacity: 0;
+}
+
+/* ─── Header ─────────────────────────────────────────── */
+#app-header {
+  flex: 0 0 var(--head-h);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 16px;
+  background: linear-gradient(180deg, rgba(14,10,6,0.95) 0%, rgba(14,10,6,0.6) 100%);
+  border-bottom: 1px solid var(--border);
+  position: relative; z-index: 10;
+}
+
+.header-brand {
+  display: flex; flex-direction: column; gap: 1px;
+}
+
+.header-title {
+  font-family: var(--font-serif);
+  font-size: clamp(0.8rem, 3.5vw, 1rem);
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: var(--amber-light);
+  text-shadow: 0 0 20px rgba(200,140,40,0.4);
+}
+
+.header-subtitle {
+  font-size: clamp(0.62rem, 2.5vw, 0.72rem);
+  color: var(--text-dim);
+  letter-spacing: 0.08em;
+  font-style: italic;
+}
+
+.header-actions {
+  display: flex; align-items: center; gap: 12px;
+}
+
+.header-progress {
+  font-family: var(--font-serif);
+  font-size: clamp(0.65rem, 2.5vw, 0.78rem);
+  color: var(--amber-dim);
+  letter-spacing: 0.06em;
+}
+
+.settings-btn {
+  background: none; border: none; cursor: pointer;
+  color: var(--text-dim);
+  padding: 6px;
+  border-radius: 6px;
+  transition: color 0.2s, background 0.2s;
+  display: flex; align-items: center; justify-content: center;
+}
+.settings-btn:hover { color: var(--amber-light); background: rgba(180,100,20,0.1); }
+.settings-btn:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+
+/* ─── Grid container ─────────────────────────────────── */
+#grid-container {
+  flex: 1;
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+  padding: 8px 10px;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.grid-glow {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%; height: 70%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse,
+    rgba(140,80,15,0.12) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ─── Card grid (3×3) ────────────────────────────────── */
+#card-grid {
+  position: relative; z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(6px, 2vw, 12px);
+  width: 100%;
+  max-width: min(380px, calc((100vh - var(--head-h) - var(--nav-h) - 20px) * 63 / 88 * 3 / 3 + 24px));
+  list-style: none;
+}
+
+.card-slot {
+  position: relative;
+  aspect-ratio: 63 / 88;
+}
+
+/* ─── Beer card base ─────────────────────────────────── */
+.beer-card {
+  position: relative;
+  width: 100%; height: 100%;
+  border-radius: var(--card-r);
+  transform-style: preserve-3d;
+  perspective: 1400px;
+  cursor: default;
+  transition: transform 0.15s ease;
+}
+
+.beer-card--revealable {
+  cursor: pointer;
+}
+
+.beer-card--revealable:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 3px;
+  border-radius: var(--card-r);
+}
+
+/* Very subtle pulse on revealable cards to hint they're interactive */
+@keyframes hintPulse {
+  0%, 100% { box-shadow: 0 2px 12px rgba(0,0,0,0.5); }
+  50%       { box-shadow: 0 2px 20px rgba(180,100,20,0.22), 0 2px 12px rgba(0,0,0,0.5); }
+}
+.beer-card--revealable {
+  animation: hintPulse 5s ease-in-out infinite;
+}
+.beer-card--locked {
+  cursor: default;
+  opacity: 0.88;
+}
+
+/* ─── Card faces ─────────────────────────────────────── */
+.card-face {
+  position: absolute; inset: 0;
+  border-radius: var(--card-r);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.card-back {
+  z-index: 2;
+}
+
+.card-back img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  border-radius: var(--card-r);
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+
+.card-front {
+  transform: rotateY(180deg);
+  z-index: 1;
+  background: #0a0704;
+  border-radius: var(--card-r);
+}
+
+/* ─── Card front layers ───────────────────────────────── */
+.illustration-window {
+  position: absolute;
+  left: 16.2%; top: 12.1%;
+  width: 67.6%; height: 54%;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.card-illustration {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.04);
+  transform-origin: center center;
+  pointer-events: none;
+  user-select: none;
+}
+
+.card-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: fill;
+  pointer-events: none;
+  user-select: none;
+  z-index: 3;
+}
+
+.card-copy {
+  position: absolute;
+  left: 16%; top: 74.5%;
+  width: 68%; height: 23%;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1px;
+  overflow: hidden;
+}
+
+.card-type {
+  font-family: var(--font-serif);
+  font-size: clamp(0.38rem, 1.4vw, 0.5rem);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--amber-dim);
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-name {
+  font-family: var(--font-serif);
+  font-size: clamp(0.58rem, 2.2vw, 0.82rem);
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-path {
+  font-size: clamp(0.34rem, 1.2vw, 0.44rem);
+  color: var(--text-dim);
+  font-style: italic;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: 0.02em;
+}
+
+.card-tagline {
+  font-size: clamp(0.34rem, 1.2vw, 0.44rem);
+  color: var(--text-dim);
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ─── Specular (copper sheen on back) ────────────────── */
+.card-specular {
+  position: absolute; inset: 0;
+  z-index: 5;
+  border-radius: var(--card-r);
+  pointer-events: none;
+  background: linear-gradient(
+    135deg,
+    rgba(200,160,60,0) 20%,
+    rgba(200,160,60,0.55) 50%,
+    rgba(200,100,30,0.3) 55%,
+    rgba(200,160,60,0) 70%
+  );
+  opacity: 0;
+}
+
+/* ─── Card glow behind (during reveal) ───────────────── */
+.card-glow-behind {
+  position: absolute; inset: -12px;
+  z-index: -1;
+  border-radius: calc(var(--card-r) + 12px);
+  background: radial-gradient(ellipse at 50% 60%,
+    rgba(180,100,20,0.5) 0%,
+    rgba(140,60,10,0.2) 50%,
+    transparent 75%
+  );
+  pointer-events: none;
+  opacity: 0;
+  filter: blur(8px);
+}
+
+/* ─── Revealed card in grid (shows front) ────────────── */
+.beer-card--revealed {
+  animation: none;
+  cursor: pointer;
+}
+
+/* ─── Clone card (during reveal animation) ───────────── */
+.beer-card--clone {
+  border-radius: var(--card-r);
+  transform-style: preserve-3d;
+  will-change: transform;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+/* ─── Reveal overlay ─────────────────────────────────── */
+#reveal-overlay {
+  position: fixed; inset: 0;
+  z-index: 200;
+  pointer-events: auto;
+}
+#reveal-overlay[hidden] {
+  display: none;
+}
+
+#reveal-stage {
+  position: absolute; inset: 0;
+  pointer-events: none;
+}
+
+/* ─── Reveal actions (below card) ────────────────────── */
+#reveal-actions {
+  position: absolute;
+  bottom: calc(var(--nav-h) + 24px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  width: min(320px, 88vw);
+  pointer-events: auto;
+}
+#reveal-actions[hidden] { display: none; }
+
+.reveal-message {
+  text-align: center;
+}
+
+.reveal-headline {
+  font-family: var(--font-serif);
+  font-size: clamp(0.78rem, 3vw, 0.95rem);
+  color: var(--amber-light);
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  text-shadow: 0 0 20px rgba(200,150,40,0.5);
+}
+
+.reveal-sub {
+  font-size: clamp(0.68rem, 2.5vw, 0.78rem);
+  color: var(--text-dim);
+  font-style: italic;
+  margin-top: 3px;
+}
+
+.reveal-btns {
+  display: flex; gap: 10px; width: 100%;
+}
+
+.reveal-btn {
+  flex: 1;
+  padding: 11px 8px;
+  border-radius: 8px;
+  border: none; cursor: pointer;
+  font-family: var(--font-serif);
+  font-size: clamp(0.7rem, 2.8vw, 0.82rem);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  transition: opacity 0.15s, transform 0.12s;
+}
+.reveal-btn:active { transform: scale(0.97); }
+.reveal-btn:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }
+
+.reveal-btn-primary {
+  background: linear-gradient(135deg, var(--amber) 0%, var(--copper) 100%);
+  color: #0e0a06;
+  box-shadow: 0 4px 20px rgba(180,100,20,0.4);
+}
+.reveal-btn-primary:hover { opacity: 0.9; }
+
+.reveal-btn-secondary {
+  background: rgba(180,100,20,0.12);
+  border: 1px solid var(--border-bright);
+  color: var(--amber-light);
+}
+.reveal-btn-secondary:hover { background: rgba(180,100,20,0.2); }
+
+/* ─── Data panel ─────────────────────────────────────── */
+#data-panel {
+  position: fixed;
+  bottom: calc(var(--nav-h) + 12px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(340px, 90vw);
+  z-index: 600;
+  background: var(--surface-raised);
+  border: 1px solid var(--border-bright);
+  border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.7), 0 0 30px rgba(180,100,20,0.15);
+}
+#data-panel[hidden] { display: none; }
+
+.data-panel-inner {
+  padding: 20px;
+  display: flex; flex-direction: column; gap: 14px;
+}
+
+.data-panel-title {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--amber-light);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+.data-panel-fields {
+  display: flex; flex-direction: column; gap: 8px;
+}
+
+.dpf-row {
+  display: flex; gap: 10px; align-items: baseline;
+}
+
+.dpf-row dt {
+  font-family: var(--font-serif);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--amber-dim);
+  flex: 0 0 60px;
+}
+
+.dpf-row dd {
+  font-size: 0.85rem;
+  color: var(--text);
+  font-style: italic;
+  flex: 1;
+}
+
+.data-panel-close {
+  align-self: center;
+  padding: 8px 24px;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-dim);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  font-family: var(--font-serif);
+  transition: border-color 0.15s, color 0.15s;
+}
+.data-panel-close:hover { border-color: var(--amber-dim); color: var(--amber-light); }
+.data-panel-close:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }
+
+/* ─── Debug / Lab panel ──────────────────────────────── */
+#debug-panel {
+  position: fixed;
+  top: calc(var(--head-h) + 8px);
+  right: 10px;
+  width: min(300px, 92vw);
+  z-index: 700;
+  background: rgba(20,14,8,0.97);
+  border: 1px solid var(--border-bright);
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+  max-height: calc(100vh - var(--head-h) - var(--nav-h) - 20px);
+  overflow-y: auto;
+}
+#debug-panel[hidden] { display: none; }
+
+.debug-panel-inner { padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+
+.debug-panel-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.debug-panel-title {
+  font-family: var(--font-serif);
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  color: var(--amber-dim);
+  text-transform: uppercase;
+}
+
+.debug-close {
+  background: none; border: none; cursor: pointer;
+  color: var(--text-dim); font-size: 0.9rem; padding: 2px 6px;
+  border-radius: 4px; transition: color 0.15s;
+}
+.debug-close:hover { color: var(--amber-light); }
+
+.debug-panel-body { display: flex; flex-direction: column; gap: 10px; }
+
+.debug-row { display: flex; flex-direction: column; gap: 4px; }
+
+.debug-label {
+  font-size: 0.66rem;
+  color: var(--text-dim);
+  letter-spacing: 0.05em;
+}
+
+.debug-input-row {
+  display: flex; align-items: center; gap: 8px;
+}
+
+.debug-range {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 3px;
+  background: rgba(180,100,20,0.25);
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+}
+.debug-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px; height: 14px;
+  background: var(--amber);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 6px rgba(200,140,40,0.5);
+}
+.debug-range::-moz-range-thumb {
+  width: 14px; height: 14px;
+  background: var(--amber);
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+.debug-value {
+  font-size: 0.65rem;
+  color: var(--amber-dim);
+  min-width: 36px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.debug-panel-footer {
+  display: flex; flex-direction: column; gap: 6px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.debug-action-btn {
+  padding: 8px 10px;
+  background: rgba(180,100,20,0.1);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-dim);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  font-family: var(--font-serif);
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  text-align: left;
+}
+.debug-action-btn:hover {
+  background: rgba(180,100,20,0.22);
+  color: var(--amber-light);
+  border-color: var(--amber-dim);
+}
+
+/* ─── Bottom nav ─────────────────────────────────────── */
+#app-nav {
+  flex: 0 0 var(--nav-h);
+  display: flex; align-items: center; justify-content: space-around;
+  background: linear-gradient(0deg, rgba(10,7,4,0.98) 0%, rgba(14,10,6,0.85) 100%);
+  border-top: 1px solid var(--border);
+  padding: 0 4px;
+  position: relative; z-index: 10;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.nav-btn {
+  flex: 1;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 3px;
+  background: none; border: none; cursor: pointer;
+  color: var(--text-muted);
+  padding: 6px 4px;
+  border-radius: 8px;
+  transition: color 0.15s;
+  min-width: 0;
+}
+.nav-btn:hover { color: var(--text-dim); }
+.nav-btn:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }
+
+.nav-btn span {
+  font-family: var(--font-serif);
+  font-size: clamp(0.52rem, 2vw, 0.62rem);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.nav-btn svg { flex-shrink: 0; }
+
+.nav-btn-active {
+  color: var(--amber) !important;
+}
+.nav-btn-active span { color: var(--amber); }
+
+/* ─── Accessibility: focus & reduced motion ─────────── */
+@media (prefers-reduced-motion: reduce) {
+  .beer-card--revealable {
+    animation: none;
+  }
+  .beer-card {
+    transition: none;
+  }
+}
+
+/* ─── Large screens (desktop/tablet) ─────────────────── */
+@media (min-width: 600px) {
+  #card-grid {
+    max-width: 440px;
+    gap: 16px;
+  }
+  .card-type   { font-size: 0.5rem; }
+  .card-name   { font-size: 0.82rem; }
+  .card-path   { font-size: 0.44rem; }
+  .card-tagline{ font-size: 0.44rem; }
+}
+
+@media (min-width: 1024px) {
+  #card-grid { max-width: 500px; gap: 18px; }
+  :root {
+    --head-h: 64px;
+    --nav-h:  72px;
+  }
+}
+
+/* ─── Landscape / very short viewports ───────────────── */
+@media (max-height: 600px) {
+  :root {
+    --head-h: 48px;
+    --nav-h:  54px;
+  }
+  #card-grid { max-width: 300px; gap: 6px; }
+}

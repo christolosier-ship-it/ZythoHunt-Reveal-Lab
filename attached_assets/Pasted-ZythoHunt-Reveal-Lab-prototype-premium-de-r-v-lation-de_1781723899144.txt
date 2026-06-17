@@ -1,0 +1,705 @@
+ZythoHunt Reveal Lab, prototype premium de révélation de cartes
+
+Crée un prototype web autonome nommé ZythoHunt Reveal Lab.
+
+L’objectif n’est pas de développer l’application complète. Il faut construire un laboratoire visuel mobile-first permettant de tester une animation premium de révélation de cartes à jouer représentant des styles de bière.
+
+1. Stack technique imposée
+
+Utiliser exclusivement :
+
+* Vite
+* HTML5
+* CSS3
+* JavaScript vanilla
+* GSAP installé avec npm
+
+Ne pas utiliser :
+
+* React
+* Vue
+* Svelte
+* TypeScript
+* Tailwind
+* backend
+* base de données
+* authentification
+* canvas ou WebGL
+* bibliothèque UI complète
+* animations Lottie ou Rive
+
+Le prototype doit rester simple à récupérer puis à intégrer dans une PWA HTML/CSS/JavaScript existante.
+
+Installer GSAP comme dépendance npm.
+
+Créer tout le code nécessaire, lancer le projet et corriger les éventuelles erreurs. Ne pas fournir uniquement du pseudo-code.
+
+⸻
+
+2. Assets fournis
+
+Les cinq fichiers suivants seront téléversés dans le projet.
+
+Les déplacer ou les renommer pour obtenir exactement cette arborescence :
+
+public/
+└── assets/
+    └── collections/
+        └── porters-stouts/
+            ├── card-back.webp
+            ├── card-front-frame.svg
+            └── cards/
+                ├── stout.webp
+                ├── imperial-stout.webp
+                └── baltic-porter.webp
+
+Le fichier téléversé nommé :
+
+converted-card-back.webp
+
+doit être renommé :
+
+card-back.webp
+
+Ne jamais modifier, redessiner ou remplacer les illustrations fournies.
+
+Ne pas générer de nouvelles images.
+
+⸻
+
+3. Données des trois cartes
+
+Créer un fichier de données JavaScript contenant exactement les trois cartes suivantes :
+
+export const cards = [
+  {
+    id: "stout",
+    name: "Stout",
+    type: "Famille stylistique",
+    path: "Stout",
+    tagline: "Sombre, torréfiée et veloutée.",
+    image: "/assets/collections/porters-stouts/cards/stout.webp"
+  },
+  {
+    id: "imperial-stout",
+    name: "Imperial Stout",
+    type: "Style brassicole",
+    path: "Stout › Imperial Stout",
+    tagline: "Monumentale, dense et intensément torréfiée.",
+    image: "/assets/collections/porters-stouts/cards/imperial-stout.webp"
+  },
+  {
+    id: "baltic-porter",
+    name: "Baltic Porter",
+    type: "Style brassicole",
+    path: "Porter › Baltic Porter",
+    tagline: "Profonde, froide et maltée, née des ports du Nord.",
+    image: "/assets/collections/porters-stouts/cards/baltic-porter.webp"
+  }
+];
+
+⸻
+
+4. Objectif visuel général
+
+Créer une interface premium, vivante, tactile et cinématographique.
+
+Le prototype doit évoquer :
+
+* une collection de cartes précieuses ;
+* une brasserie sombre et élégante ;
+* le cuivre patiné ;
+* le malt torréfié ;
+* le bois sombre ;
+* une lumière ambrée ;
+* une profondeur physique crédible.
+
+L’interface ne doit pas ressembler à :
+
+* un jeu mobile gratuit ;
+* une machine à sous ;
+* une interface fantasy surchargée ;
+* une modale standard avec un simple rotateY(180deg) ;
+* un écran rempli de particules ou de confettis.
+
+La sensation premium doit venir de :
+
+* la composition ;
+* la lumière ;
+* l’inertie ;
+* la profondeur ;
+* la réaction des cartes voisines ;
+* la précision des timings ;
+* la cohérence entre tous les mouvements.
+
+⸻
+
+5. Écran principal
+
+Construire un écran mobile en orientation portrait.
+
+En-tête
+
+Afficher :
+
+ZYTHOHUNT
+Collection Porters & Stouts
+
+Ajouter un indicateur de progression :
+
+0 / 3 révélées
+
+L’en-tête doit rester sobre et compact.
+
+Grille de cartes
+
+Afficher une grille de neuf cartes retournées.
+
+Disposition mobile recommandée :
+
+3 colonnes × 3 lignes
+
+Les neuf cartes utilisent toutes :
+
+/assets/collections/porters-stouts/card-back.webp
+
+Trois positions de la grille correspondent aux vraies cartes :
+
+* position 1 : Stout
+* position 5 : Imperial Stout
+* position 9 : Baltic Porter
+
+Les six autres positions sont des cartes décoratives verrouillées et non révélables.
+
+Ne pas afficher le nom des trois cartes avant leur révélation.
+
+Les cartes révélables doivent être détectables uniquement par une très légère réaction tactile au toucher, sans indication textuelle.
+
+Les cartes verrouillées peuvent avoir une réaction plus faible.
+
+Navigation inférieure
+
+Conserver exactement quatre boutons fixes en bas :
+
+* Révéler
+* Collections
+* Brassopédie
+* Profil
+
+Ces boutons sont uniquement décoratifs dans ce laboratoire.
+
+Le bouton Collections peut être visuellement actif.
+
+Ne créer aucune navigation ou page supplémentaire.
+
+⸻
+
+6. Construction modulaire du recto
+
+Le recto ne doit jamais être une image unique.
+
+Chaque carte révélée doit être assemblée dynamiquement avec trois couches indépendantes :
+
+1. l’illustration WebP ;
+2. le cadre card-front-frame.svg ;
+3. les textes HTML.
+
+Structure recommandée :
+
+<div class="beer-card">
+  <div class="card-face card-back">
+    <img src="card-back.webp">
+  </div>
+  <div class="card-face card-front">
+    <div class="illustration-window">
+      <img class="card-illustration">
+    </div>
+    <img class="card-frame" src="card-front-frame.svg">
+    <div class="card-copy">
+      <p class="card-type"></p>
+      <h2 class="card-name"></h2>
+      <p class="card-path"></p>
+      <p class="card-tagline"></p>
+    </div>
+    <div class="card-specular"></div>
+  </div>
+</div>
+
+Positionnement de l’illustration
+
+Le fichier SVG possède une fenêtre centrale transparente.
+
+Utiliser les proportions suivantes comme point de départ :
+
+left: 16.2%;
+top: 12.1%;
+width: 67.6%;
+height: 54%;
+
+L’image doit utiliser :
+
+object-fit: cover;
+
+Ajouter un léger zoom interne, compris entre 1.02 et 1.06, pour éviter tout bord vide.
+
+Le cadre SVG doit recouvrir l’ensemble de la carte.
+
+Zone textuelle
+
+Placer les textes dans la plaque inférieure du cadre.
+
+Valeurs de départ :
+
+left: 16%;
+top: 74.5%;
+width: 68%;
+height: 14%;
+
+Hiérarchie :
+
+* type en petit et en capitales ;
+* nom de la carte très lisible ;
+* chemin taxonomique discret ;
+* tagline courte, sur une ou deux lignes maximum.
+
+Les textes ne doivent jamais dépasser du cadre.
+
+Prévoir des tailles responsives avec clamp().
+
+⸻
+
+7. Scène vivante au repos
+
+Même avant toute interaction, l’interface doit sembler vivante.
+
+Ajouter des mouvements ambiants très subtils :
+
+* déplacement vertical des cartes de 1 à 2 px ;
+* rotation rotateZ inférieure à 0,3 degré ;
+* cycles lents de 6 à 10 secondes ;
+* décalage différent pour chaque carte ;
+* léger déplacement du fond selon le pointeur ou le toucher ;
+* variations lentes de lumière ambrée ;
+* grain visuel très discret créé en CSS ;
+* légère lueur diffuse derrière le centre de la grille.
+
+Les cartes ne doivent jamais trembler ou flotter de manière caricaturale.
+
+Sur mobile, utiliser le mouvement du doigt uniquement pendant un glissement ou un toucher. Ne pas dépendre du survol.
+
+⸻
+
+8. Sélection d’une carte
+
+Lorsqu’une carte révélable est touchée :
+
+1. verrouiller temporairement les autres interactions ;
+2. mémoriser précisément sa position et sa taille avec getBoundingClientRect() ;
+3. conserver un emplacement fantôme dans la grille ;
+4. créer une copie animée en position: fixed exactement au-dessus de la carte d’origine ;
+5. commencer la séquence GSAP.
+
+L’animation doit réellement partir de la position de la carte choisie.
+
+Ne pas faire apparaître directement une carte au centre.
+
+⸻
+
+9. Timeline premium de révélation
+
+Créer une seule timeline GSAP centrale.
+
+Nom suggéré :
+
+createRevealTimeline(cardElement, cardData)
+
+Durée globale cible :
+
+2,4 à 2,9 secondes
+
+Phase 1, isolement de la scène
+
+Durée indicative :
+
+0 à 250 ms
+
+Actions :
+
+* assombrir légèrement l’interface ;
+* appliquer un flou léger au fond ;
+* réduire visuellement l’importance de la navigation ;
+* augmenter la profondeur perçue ;
+* conserver la carte choisie parfaitement nette.
+
+Le flou ne doit pas dépasser une valeur raisonnable sur mobile.
+
+Phase 2, réaction des cartes voisines
+
+Durée indicative :
+
+100 à 450 ms
+
+Les cartes voisines doivent s’écarter subtilement selon leur position relative à la carte sélectionnée.
+
+Amplitude :
+
+8 à 22 px maximum
+
+Ajouter une très légère rotation opposée.
+
+Les mouvements doivent rester cohérents et donner l’impression que la carte sélectionnée se libère physiquement de la grille.
+
+Phase 3, extraction
+
+Durée indicative :
+
+200 à 750 ms
+
+La carte choisie :
+
+* se soulève ;
+* avance vers le spectateur ;
+* gagne une ombre plus profonde ;
+* quitte sa position d’origine ;
+* suit une trajectoire légèrement incurvée ;
+* arrive près du centre de l’écran ;
+* atteint une taille finale adaptée à l’écran.
+
+La carte ne doit pas remplir complètement l’écran.
+
+Valeur cible mobile :
+
+environ 72 à 82 % de la hauteur disponible
+
+Ajouter une très légère rotation X et Z pendant le déplacement.
+
+Éviter tout rebond.
+
+Phase 4, mise sous tension du verso
+
+Durée indicative :
+
+650 à 950 ms
+
+Avant le retournement :
+
+* un reflet cuivre parcourt le verso ;
+* le motif central semble capter la lumière ;
+* une faible lueur ambrée apparaît derrière la carte ;
+* l’ombre s’intensifie légèrement.
+
+Créer cet effet en CSS avec des pseudo-éléments ou des calques HTML.
+
+Ne pas modifier l’image d’origine.
+
+Phase 5, retournement 3D
+
+Durée indicative :
+
+850 à 1 650 ms
+
+Créer un véritable objet 3D :
+
+perspective
+transform-style: preserve-3d
+backface-visibility: hidden
+
+Le retournement doit combiner :
+
+* rotation principale rotateY(180deg) ;
+* légère inclinaison rotateX ;
+* légère rotation Z ;
+* variation subtile de l’échelle ;
+* déplacement de l’ombre ;
+* bande de lumière suivant l’angle.
+
+Le mouvement doit :
+
+* commencer doucement ;
+* accélérer avant le passage sur la tranche ;
+* ralentir à l’arrivée ;
+* terminer sans rebond élastique.
+
+Au passage autour de 90 degrés :
+
+* la tranche doit sembler étroite mais visible ;
+* aucune face ne doit clignoter ;
+* aucune image ne doit apparaître à l’envers ;
+* Safari iOS ne doit pas produire de flash blanc.
+
+Phase 6, construction du recto
+
+Durée indicative :
+
+1 400 à 2 150 ms
+
+Lorsque le recto devient visible :
+
+1. l’illustration apparaît avec un léger fondu et un petit zoom inverse ;
+2. le cadre gagne en contraste ;
+3. le type apparaît ;
+4. le nom apparaît ;
+5. le chemin taxonomique apparaît ;
+6. la tagline apparaît.
+
+Les éléments textuels doivent apparaître en cascade, mais sans animation lettre par lettre.
+
+Le titre peut monter de 8 px et passer de 0 à 1 en opacité.
+
+Phase 7, signature Porters & Stouts
+
+Durée indicative :
+
+1 800 à 2 400 ms
+
+Créer une signature visuelle discrète propre à la collection :
+
+* lueur de braise très faible ;
+* reflet cuivre sur les bords ;
+* légère brume sombre derrière la carte ;
+* quelques micro-points lumineux très rares ;
+* variation chaude dans l’arrière-plan.
+
+Aucune explosion.
+
+Aucun confetti.
+
+Aucune pluie massive de particules.
+
+Phase 8, stabilisation
+
+À la fin :
+
+* la carte reste centrée ;
+* l’ombre retombe légèrement ;
+* un mouvement de respiration presque imperceptible peut continuer ;
+* les actions deviennent accessibles.
+
+Afficher sous la carte :
+
+Nouvelle carte révélée
+Entrée ajoutée à la Brassopédie
+
+Ajouter deux boutons :
+
+* Voir la fiche
+* Continuer
+
+Dans ce laboratoire :
+
+* Voir la fiche affiche simplement un petit panneau contenant les données de la carte ;
+* Continuer referme la scène.
+
+⸻
+
+10. Retour vers la grille
+
+Lorsque l’utilisateur touche Continuer :
+
+1. masquer les textes d’action ;
+2. diminuer la profondeur ;
+3. retourner si nécessaire la carte vers une position neutre ;
+4. ramener la carte dans son emplacement d’origine ;
+5. remettre les cartes voisines en place ;
+6. restaurer l’interface ;
+7. remplacer définitivement le verso de la carte d’origine par son recto miniature.
+
+La carte doit donc rester révélée dans la grille.
+
+Mettre à jour le compteur :
+
+1 / 3 révélées
+2 / 3 révélées
+3 / 3 révélées
+
+⸻
+
+11. Carte déjà révélée
+
+Lorsqu’une carte déjà révélée est touchée :
+
+* ne pas rejouer toute la révélation ;
+* l’extraire rapidement ;
+* l’afficher directement recto ;
+* faire passer un reflet discret ;
+* afficher :
+
+Carte déjà découverte
+
+Durée cible :
+
+600 à 900 ms
+
+⸻
+
+12. Panneau de réglage du laboratoire
+
+Ajouter un bouton discret représentant des réglages.
+
+Il ouvre un panneau réservé au prototype.
+
+Permettre de modifier en temps réel :
+
+* durée d’extraction ;
+* durée du retournement ;
+* perspective ;
+* inclinaison X ;
+* inclinaison Z ;
+* échelle finale ;
+* déplacement maximal des cartes voisines ;
+* intensité de l’ombre ;
+* intensité du flou ;
+* intensité du reflet ;
+* intensité de la lueur ambiante.
+
+Ajouter les boutons :
+
+* Rejouer
+* Réinitialiser la collection
+* Réinitialiser les réglages
+* Fermer le panneau
+
+Stocker les réglages du laboratoire dans localStorage.
+
+Le panneau ne doit pas dégrader l’apparence normale lorsqu’il est fermé.
+
+⸻
+
+13. Performance et compatibilité
+
+Le prototype doit être optimisé pour :
+
+* Safari iPhone ;
+* PWA en plein écran ;
+* Chrome Android ;
+* iPad ;
+* navigateur desktop.
+
+Résolutions prioritaires :
+
+390 × 844
+430 × 932
+768 × 1024
+1440 × 900
+
+Exigences :
+
+* précharger les cinq assets avant d’autoriser la révélation ;
+* afficher un écran de chargement discret ;
+* ne pas lancer l’animation tant que les images ne sont pas prêtes ;
+* privilégier transform et opacity ;
+* éviter les recalculs de layout pendant la timeline ;
+* utiliser will-change uniquement pendant l’animation ;
+* retirer will-change après stabilisation ;
+* éviter les grands filtres coûteux ;
+* viser 60 images par seconde ;
+* empêcher les doubles clics et doubles touchers ;
+* ne jamais produire de déplacement brutal de mise en page.
+
+⸻
+
+14. Accessibilité
+
+Respecter :
+
+@media (prefers-reduced-motion: reduce)
+
+Dans ce mode :
+
+* pas de grande extraction 3D ;
+* pas de réaction importante du décor ;
+* fondu rapide ;
+* retournement simplifié ou apparition directe ;
+* durée totale inférieure à 500 ms.
+
+Ajouter :
+
+* boutons avec libellés accessibles ;
+* focus clavier visible ;
+* prise en charge de la touche Échap pour fermer la scène ;
+* activation au clavier avec Entrée et Espace ;
+* attributs ARIA pertinents ;
+* contraste suffisant.
+
+⸻
+
+15. Organisation du code
+
+Créer une structure claire :
+
+src/
+├── main.js
+├── styles.css
+├── data/
+│   └── cards.js
+├── components/
+│   ├── create-card.js
+│   ├── create-grid.js
+│   └── create-debug-panel.js
+├── animation/
+│   ├── reveal-controller.js
+│   ├── reveal-timeline.js
+│   └── motion-tokens.js
+└── utils/
+    ├── preload-assets.js
+    └── geometry.js
+
+Le code doit être commenté uniquement lorsque la logique n’est pas évidente.
+
+Éviter les fichiers géants.
+
+Séparer clairement :
+
+* données ;
+* rendu ;
+* logique d’interaction ;
+* animation ;
+* paramètres.
+
+⸻
+
+16. Tokens d’animation
+
+Créer un objet central modifiable :
+
+export const motionTokens = {
+  extractionDuration: 0.55,
+  flipDuration: 0.78,
+  settleDuration: 0.35,
+  perspective: 1400,
+  finalScale: 1,
+  maxNeighborShift: 18,
+  backgroundBlur: 8,
+  tiltX: -4,
+  tiltZ: 1.2,
+  glowIntensity: 0.6,
+  specularIntensity: 0.7
+};
+
+Toutes les animations doivent lire ces valeurs.
+
+Ne pas disperser les timings dans plusieurs fichiers.
+
+⸻
+
+17. Critères de validation
+
+Le prototype est considéré comme réussi uniquement si :
+
+1. les cinq assets fournis sont réellement utilisés ;
+2. les cartes partent de leur position exacte dans la grille ;
+3. les cartes voisines réagissent ;
+4. le recto est assemblé dynamiquement avec illustration, cadre SVG et textes HTML ;
+5. le retournement possède une vraie profondeur 3D ;
+6. la lumière et l’ombre évoluent pendant la rotation ;
+7. la révélation semble intégrée à toute la scène ;
+8. aucune modale générique n’est utilisée ;
+9. les trois cartes peuvent être révélées séparément ;
+10. les cartes révélées restent visibles dans la grille ;
+11. le prototype est fluide sur mobile ;
+12. le panneau de réglage permet d’ajuster les paramètres principaux ;
+13. le mode animations réduites fonctionne ;
+14. le résultat reste sobre, élégant et premium ;
+15. aucun asset supplémentaire n’est inventé ou téléchargé.
+
+Commence par réaliser la version fonctionnelle complète, puis exécute le projet, vérifie les erreurs de console et corrige-les avant de considérer le travail terminé.
