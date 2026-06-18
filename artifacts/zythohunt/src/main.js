@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { preloadAssets } from "./utils/preload-assets.js";
 import { createGrid, resetRevealedState } from "./components/create-grid.js";
 import { createDebugPanel, resetDebugPanel } from "./components/create-debug-panel.js";
-import { createRevealController } from "./animation/reveal-controller.js";
+import { createRevealLabController } from "./lab/reveal-lab-controller.js";
 
 // ─── DOM refs ────────────────────────────────────────────────────────────────
 const loadingScreen   = document.getElementById("loading-screen");
@@ -129,7 +129,7 @@ async function boot() {
   createDebugPanel(debugPanelBody, () => {});
 
   // Wire reveal controller
-  const controller = createRevealController({
+  const controller = createRevealLabController({
     cardEls, getCardData, isRevealable, revealed,
     stageEl, overlayEl, gridEl: gridContainer, navEl, headerEl,
     revealOverlay, revealActions, revealHeadline,

@@ -1,9 +1,11 @@
 import gsap from "gsap";
-import { motionTokens } from "./motion-tokens.js";
-import { captureRect, offsetToCenter, computeNeighborShifts } from "../utils/geometry.js";
+import { motionTokens as defaultMotionTokens } from "./motion-tokens.js";
+import { captureRect } from "../utils/geometry.js";
 import { cloneCardForReveal } from "../components/create-card.js";
 
-const REDUCED_MOTION = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+function prefersReducedMotion() {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
 
 /**
  * Main reveal timeline. Returns a promise that resolves when the flip completes
@@ -23,15 +25,12 @@ const REDUCED_MOTION = window.matchMedia("(prefers-reduced-motion: reduce)").mat
 export function createRevealTimeline({
   cardEl,
   cardData,
-  allCardEls,
-  cardIndex,
   stageEl,
   overlayEl,
-  gridEl,
-  navEl,
-  headerEl
+  sceneContext,
+  motionTokens = defaultMotionTokens
 }) {
-  if (REDUCED_MOTION) {
+  if (prefersReducedMotion()) {
     return createReducedReveal({ cardEl, cardData, stageEl, overlayEl });
   }
 
@@ -64,7 +63,7 @@ export function createRevealTimeline({
   gsap.set(cloneSpecular, { opacity: 0 });
   gsap.set(cloneGlow, { opacity: 0 });
 
-  const neighbors = computeNeighborShifts(allCardEls, cardIndex, motionTokens.maxNeighborShift);
+  const neighborMotions = sceneContext?.neighborMotions || [];
 
   // Target size: ~77% of viewport height, centered
   const vh = window.innerHeight;
@@ -80,18 +79,22 @@ export function createRevealTimeline({
   const tl = gsap.timeline({ paused: true });
 
   // ─── Phase 1 (0–250ms): Scene isolation ────────────────────────────────
-  tl.to(overlayEl, { opacity: 0.55, duration: 0.25, ease: "power2.out" }, 0)
-    .to(gridEl, {
+  tl.to(overlayEl, { opacity: 0.55, duration: 0.25, ease: "power2.out" }, 0);
+  if (sceneContext?.contentEl) {
+    tl.to(sceneContext.contentEl, {
       filter: `blur(${Math.min(motionTokens.backgroundBlur, 12)}px) brightness(0.6)`,
       duration: 0.25,
       ease: "power2.out"
-    }, 0)
-    .to([navEl, headerEl], { opacity: 0.4, duration: 0.2, ease: "power2.out" }, 0);
+    }, 0);
+  }
+  if (sceneContext?.chromeEls?.length) {
+    tl.to(sceneContext.chromeEls, { opacity: 0.4, duration: 0.2, ease: "power2.out" }, 0);
+  }
 
   // ─── Phase 2 (100–450ms): Neighbor cards shift ─────────────────────────
-  neighbors.forEach(({ el, dx, dy, rot }) => {
+  neighborMotions.forEach(({ el, x, y, rotation }) => {
     tl.to(el, {
-      x: dx, y: dy, rotation: rot,
+      x, y, rotation,
       duration: 0.35, ease: "power2.out"
     }, 0.1);
   });
