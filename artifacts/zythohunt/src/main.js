@@ -4,10 +4,17 @@ import { preloadAssets } from "./utils/preload-assets.js";
 import { createGrid, resetRevealedState } from "./components/create-grid.js";
 import { createDebugPanel, resetDebugPanel } from "./components/create-debug-panel.js";
 import { createRevealLabController } from "./lab/reveal-lab-controller.js";
+import { createCarouselView } from "./carousel/create-carousel-view.js";
 
-// ─── DOM refs ────────────────────────────────────────────────────────────────
+// ─── DOM refs — shared ──────────────────────────────────────────────────────
 const loadingScreen   = document.getElementById("loading-screen");
 const loadingBar      = document.getElementById("loading-bar");
+const headerEl        = document.getElementById("app-header");
+const navEl           = document.getElementById("app-nav");
+const navRevealBtn    = document.getElementById("nav-reveal");
+const navCollBtn      = document.getElementById("nav-collections");
+
+// ─── DOM refs — Reveal Lab ──────────────────────────────────────────────────
 const gridEl          = document.getElementById("card-grid");
 const gridContainer   = document.getElementById("grid-container");
 const revealOverlay   = document.getElementById("reveal-overlay");
@@ -29,8 +36,60 @@ const debugPanelBody  = document.getElementById("debug-panel-body");
 const debugReplay     = document.getElementById("debug-replay");
 const debugResetCol   = document.getElementById("debug-reset-col");
 const debugResetSets  = document.getElementById("debug-reset-settings");
-const headerEl        = document.getElementById("app-header");
-const navEl           = document.getElementById("app-nav");
+
+// ─── DOM refs — Carousel Lab ────────────────────────────────────────────────
+const collectionsView      = document.getElementById("collections-view");
+const carouselContainer    = document.getElementById("carousel-container");
+const carouselSettingsBtn  = document.getElementById("carousel-settings-btn");
+const carouselDebugPanel   = document.getElementById("carousel-debug-panel");
+const carouselDebugClose   = document.getElementById("carousel-debug-close");
+const carouselDebugBody    = document.getElementById("carousel-debug-body");
+const carouselDebugReset   = document.getElementById("carousel-debug-reset");
+
+// ─── View state ─────────────────────────────────────────────────────────────
+let currentView = "reveal"; // "reveal" | "collections"
+let carouselView = null;
+
+function switchToRevealLab() {
+  if (currentView === "reveal") return;
+  currentView = "reveal";
+
+  collectionsView.hidden = true;
+  gridContainer.hidden = false;
+  carouselDebugPanel.hidden = true;
+  carouselSettingsBtn.setAttribute("aria-expanded", "false");
+
+  navCollBtn.classList.remove("nav-btn-active");
+  navCollBtn.removeAttribute("aria-current");
+  navRevealBtn.classList.add("nav-btn-active");
+  navRevealBtn.setAttribute("aria-current", "page");
+
+  settingsBtn.hidden = false;
+}
+
+function switchToCollections() {
+  if (currentView === "collections") return;
+  currentView = "collections";
+
+  gridContainer.hidden = true;
+  collectionsView.hidden = false;
+  debugPanel.hidden = true;
+  settingsBtn.hidden = true;
+
+  navRevealBtn.classList.remove("nav-btn-active");
+  navRevealBtn.removeAttribute("aria-current");
+  navCollBtn.classList.add("nav-btn-active");
+  navCollBtn.setAttribute("aria-current", "page");
+
+  if (!carouselView) {
+    carouselView = createCarouselView({
+      carouselContainerEl: carouselContainer,
+      debugBodyEl: carouselDebugBody,
+      onTokenChange: () => {}
+    });
+    carouselView.mount();
+  }
+}
 
 // ─── Ambient animations ────────────────────────────────────────────────────
 let ambientTimelines = [];
@@ -64,7 +123,6 @@ function startAmbientAnimations(cardEls) {
     ambientTimelines.push(tl);
   });
 
-  // Scene glow pulse
   const glowEl = document.querySelector(".scene-glow");
   if (glowEl) {
     const glowTl = gsap.timeline({ repeat: -1, yoyo: true });
@@ -84,31 +142,19 @@ function setupParallax() {
   function applyParallax() {
     const nx = (mx / window.innerWidth - 0.5) * 2;
     const ny = (my / window.innerHeight - 0.5) * 2;
-    gsap.to(".scene-glow", {
-      x: nx * 18,
-      y: ny * 12,
-      duration: 1.2,
-      ease: "power1.out"
-    });
-    gsap.to("#grid-container", {
-      x: nx * 4,
-      y: ny * 3,
-      duration: 1.2,
-      ease: "power1.out"
-    });
+    gsap.to(".scene-glow", { x: nx * 18, y: ny * 12, duration: 1.2, ease: "power1.out" });
+    gsap.to("#grid-container", { x: nx * 4, y: ny * 3, duration: 1.2, ease: "power1.out" });
     rafId = null;
   }
 
   document.addEventListener("mousemove", (e) => {
-    mx = e.clientX;
-    my = e.clientY;
+    mx = e.clientX; my = e.clientY;
     if (!rafId) rafId = requestAnimationFrame(applyParallax);
   });
 
   document.addEventListener("touchmove", (e) => {
     if (e.touches[0]) {
-      mx = e.touches[0].clientX;
-      my = e.touches[0].clientY;
+      mx = e.touches[0].clientX; my = e.touches[0].clientY;
       if (!rafId) rafId = requestAnimationFrame(applyParallax);
     }
   }, { passive: true });
@@ -122,13 +168,10 @@ async function boot() {
     gsap.to(loadingBar, { width: `${progress * 100}%`, duration: 0.3, ease: "power2.out" });
   });
 
-  // Build the grid
   const { cardEls, revealed, getCardData, isRevealable } = createGrid(gridEl);
 
-  // Set up debug panel
   createDebugPanel(debugPanelBody, () => {});
 
-  // Wire reveal controller
   const controller = createRevealLabController({
     cardEls, getCardData, isRevealable, revealed,
     stageEl, overlayEl, gridEl: gridContainer, navEl, headerEl,
@@ -139,39 +182,48 @@ async function boot() {
     onRevealComplete: () => {}
   });
 
-  // Debug panel controls
+  // ── Reveal Lab debug panel ────────────────────────────────────────────────
   settingsBtn.addEventListener("click", () => {
+    if (currentView !== "reveal") return;
     debugPanel.hidden = !debugPanel.hidden;
   });
-  debugClose.addEventListener("click", () => {
-    debugPanel.hidden = true;
-  });
-
-  debugResetSets.addEventListener("click", () => {
-    resetDebugPanel(debugPanelBody, () => {});
-  });
-
+  debugClose.addEventListener("click", () => { debugPanel.hidden = true; });
+  debugResetSets.addEventListener("click", () => { resetDebugPanel(debugPanelBody, () => {}); });
   debugResetCol.addEventListener("click", () => {
     resetRevealedState();
-    // Reload page to reset grid state cleanly
     window.location.reload();
   });
-
   debugReplay.addEventListener("click", () => {
-    // Replay the last revealed index if any, or reset all
     controller.resetAll();
     debugPanel.hidden = true;
   });
 
-  // Start ambient life
+  // ── Carousel Lab debug panel ──────────────────────────────────────────────
+  carouselSettingsBtn.addEventListener("click", () => {
+    const isHidden = carouselDebugPanel.hidden;
+    carouselDebugPanel.hidden = !isHidden;
+    carouselSettingsBtn.setAttribute("aria-expanded", String(isHidden));
+  });
+  carouselDebugClose.addEventListener("click", () => {
+    carouselDebugPanel.hidden = true;
+    carouselSettingsBtn.setAttribute("aria-expanded", "false");
+  });
+  carouselDebugReset.addEventListener("click", () => {
+    carouselView && carouselView.resetPanel();
+  });
+
+  // ── Navigation ────────────────────────────────────────────────────────────
+  navRevealBtn.addEventListener("click", switchToRevealLab);
+  navCollBtn.addEventListener("click", switchToCollections);
+
+  // ── Ambient & parallax (Reveal Lab only) ──────────────────────────────────
   startAmbientAnimations(cardEls);
   setupParallax();
 
-  // Hide loading screen
+  // ── Fade in ───────────────────────────────────────────────────────────────
   await gsap.to(loadingScreen, { opacity: 0, duration: 0.5, ease: "power2.out" }).then();
   loadingScreen.style.display = "none";
 
-  // Fade in app
   gsap.fromTo("#app", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.out" });
 }
 

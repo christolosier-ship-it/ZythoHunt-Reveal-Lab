@@ -29,7 +29,7 @@
     <header id="app-header">
       <div class="header-brand">
         <span class="header-title">ZYTHOHUNT</span>
-        <span class="header-subtitle">Collection Porters &amp; Stouts</span>
+        <span class="header-subtitle" id="header-subtitle">Collection Porters &amp; Stouts</span>
       </div>
       <div class="header-actions">
         <div class="header-progress" id="progress-display" aria-live="polite" aria-label="Cartes révélées">0 / 3 révélées</div>
@@ -42,11 +42,40 @@
       </div>
     </header>
 
+    <!-- ── Vue Révéler (Reveal Lab, grille 3×3) ─────────────────── -->
     <div id="grid-container">
       <div id="card-grid" role="list" aria-label="Grille de cartes à révéler"></div>
       <div class="grid-glow" aria-hidden="true"></div>
     </div>
 
+    <!-- ── Vue Collections (Carousel Lab) ──────────────────────── -->
+    <div id="collections-view" hidden>
+      <div id="carousel-container" role="region" aria-label="Carrousel de la collection Porters &amp; Stouts"></div>
+
+      <!-- Bouton réglages carrousel -->
+      <button class="carousel-settings-btn" id="carousel-settings-btn" aria-label="Réglages du carrousel" aria-expanded="false">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+        </svg>
+      </button>
+
+      <!-- Panneau de réglage du carrousel -->
+      <div id="carousel-debug-panel" hidden role="dialog" aria-label="Réglages du carrousel" aria-modal="true">
+        <div class="debug-panel-inner">
+          <div class="debug-panel-header">
+            <span class="debug-panel-title">CARROUSEL</span>
+            <button class="debug-close" id="carousel-debug-close" aria-label="Fermer les réglages">✕</button>
+          </div>
+          <div class="debug-panel-body" id="carousel-debug-body"></div>
+          <div class="debug-panel-footer">
+            <button class="debug-action-btn" id="carousel-debug-reset">Réinitialiser les réglages</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Overlays reveal (inchangés) ─────────────────────────── -->
     <div id="reveal-overlay" aria-modal="true" role="dialog" aria-label="Révélation de carte" hidden>
       <div id="reveal-stage"></div>
       <div id="reveal-actions" hidden>
@@ -85,11 +114,11 @@
     </div>
 
     <nav id="app-nav" aria-label="Navigation principale">
-      <button class="nav-btn" aria-label="Révéler">
+      <button class="nav-btn nav-btn-active" id="nav-reveal" aria-label="Révéler" aria-current="page">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
         <span>Révéler</span>
       </button>
-      <button class="nav-btn nav-btn-active" aria-label="Collections" aria-current="page">
+      <button class="nav-btn" id="nav-collections" aria-label="Collections">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="3" width="7" height="7"/><rect x="15" y="3" width="7" height="7"/><rect x="2" y="14" width="7" height="7"/><rect x="15" y="14" width="7" height="7"/></svg>
         <span>Collections</span>
       </button>

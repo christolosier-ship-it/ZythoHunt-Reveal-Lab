@@ -770,3 +770,226 @@ html, body {
   }
   #card-grid { max-width: 300px; gap: 6px; }
 }
+
+/* ═══════════════════════════════════════════════════════
+   CAROUSEL LAB — Collections view
+   ═══════════════════════════════════════════════════════ */
+
+:root {
+  --csl-card-w:   clamp(108px, 29vw, 154px);
+  --csl-card-h:   calc(var(--csl-card-w) * 88 / 63);
+  --csl-radius:   10px;
+  --csl-persp:    1100px;
+}
+
+/* ─── Collections view wrapper ───────────────────────── */
+#collections-view {
+  position: absolute;
+  inset: var(--head-h) 0 var(--nav-h) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 10;
+}
+
+/* ─── Carousel container ─────────────────────────────── */
+#carousel-container {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ─── Stage: perspective root ────────────────────────── */
+.carousel-stage {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  perspective: var(--csl-persp);
+  overflow: hidden;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: grab;
+}
+.carousel-stage:active { cursor: grabbing; }
+
+/* ─── Anchor: centering root for 3D cards ────────────── */
+.carousel-anchor {
+  position: relative;
+  width: var(--csl-card-w);
+  height: var(--csl-card-h);
+  transform-style: preserve-3d;
+}
+
+/* ─── Individual carousel card ───────────────────────── */
+.csl-card {
+  position: absolute;
+  top: 0; left: 0;
+  width: var(--csl-card-w);
+  height: var(--csl-card-h);
+  border-radius: var(--csl-radius);
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ─── Inner flip container ───────────────────────────── */
+.csl-card-inner {
+  width: 100%; height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  border-radius: var(--csl-radius);
+}
+
+/* ─── Faces (back & front) ───────────────────────────── */
+.csl-card-face {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--csl-radius);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.csl-card-back img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  border-radius: var(--csl-radius);
+  display: block;
+  pointer-events: none;
+}
+
+.csl-card-front {
+  transform: rotateY(180deg);
+  background: var(--surface);
+}
+
+/* ─── Front face illustration ────────────────────────── */
+.csl-ill-window {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: var(--csl-radius);
+}
+.csl-ill-img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  display: block;
+}
+.csl-frame-img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+.csl-card-copy {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 8px 8px 10px;
+  background: linear-gradient(to top, rgba(10,6,2,0.82) 0%, transparent 100%);
+  border-radius: 0 0 var(--csl-radius) var(--csl-radius);
+}
+.csl-card-name {
+  font-family: var(--font-serif);
+  font-size: clamp(0.6rem, 3vw, 0.78rem);
+  font-weight: 600;
+  color: var(--amber-light);
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* ─── Carousel settings button ───────────────────────── */
+.carousel-settings-btn {
+  position: absolute;
+  bottom: 14px; right: 14px;
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(20, 14, 6, 0.72);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--text-dim);
+  backdrop-filter: blur(8px);
+  z-index: 20;
+  transition: color 0.15s, border-color 0.15s;
+}
+.carousel-settings-btn:hover { color: var(--amber); border-color: var(--border-bright); }
+.carousel-settings-btn:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }
+
+/* ─── Carousel debug panel (reuses .debug-panel-* vars) ─ */
+#carousel-debug-panel {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  z-index: 200;
+  background: rgba(10, 7, 3, 0.96);
+  border-top: 1px solid var(--border-bright);
+  backdrop-filter: blur(12px);
+  max-height: 60vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ─── Keyboard hint ──────────────────────────────────── */
+.carousel-hint {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  text-align: center;
+  padding-bottom: 10px;
+  opacity: 0.7;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ─── Reduced motion: flat layout ────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .csl-card {
+    transition: none;
+  }
+  .csl-card-inner {
+    transform: none !important;
+  }
+  .csl-card-face {
+    backface-visibility: visible;
+    -webkit-backface-visibility: visible;
+  }
+  .csl-card-front {
+    transform: none;
+    position: static;
+    display: none;
+  }
+  [data-discovered="true"] .csl-card-front {
+    display: block;
+  }
+  [data-discovered="true"] .csl-card-back {
+    display: none;
+  }
+}
+
+/* ─── Carousel: desktop / tablet ─────────────────────── */
+@media (min-width: 600px) {
+  :root {
+    --csl-card-w: clamp(120px, 18vw, 170px);
+  }
+}
+@media (min-width: 1024px) {
+  :root {
+    --csl-card-w: 160px;
+    --csl-persp:  1400px;
+  }
+  .carousel-hint { display: block; }
+}

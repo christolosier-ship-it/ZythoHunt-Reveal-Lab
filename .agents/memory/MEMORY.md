@@ -1,0 +1,2 @@
+- [ZythoHunt carousel stack](zythohunt-carousel.md) — GSAP Draggable proxy+trigger pattern; tokens in localStorage; carousel isolated from reveal engine.
+- [Replit git write ops](replit-git-ops.md) — git add/commit blocked in main agent; use system auto-commit + project_tasks for explicit branch pushes.
