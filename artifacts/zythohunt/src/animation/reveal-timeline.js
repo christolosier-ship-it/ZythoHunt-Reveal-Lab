@@ -45,11 +45,7 @@ export function createRevealTimeline({
   const cloneFront = clone.querySelector(".card-front");
   const cloneIll = clone.querySelector(".card-illustration");
   const cloneFrame = clone.querySelector(".card-frame");
-  const cloneCopy = clone.querySelector(".card-copy");
-  const cloneType = clone.querySelector(".card-type");
   const cloneName = clone.querySelector(".card-name");
-  const clonePath = clone.querySelector(".card-path");
-  const cloneTag = clone.querySelector(".card-tagline");
   const cloneSpecular = clone.querySelector(".card-specular");
   const cloneGlow = clone.querySelector(".card-glow-behind");
 
@@ -59,7 +55,7 @@ export function createRevealTimeline({
   gsap.set(cloneFront, { backfaceVisibility: "hidden", rotateY: 180 });
 
   // Hide front face elements initially
-  gsap.set([cloneIll, cloneFrame, cloneType, cloneName, clonePath, cloneTag], { opacity: 0 });
+  gsap.set([cloneIll, cloneFrame, cloneName], { opacity: 0 });
   gsap.set(cloneSpecular, { opacity: 0 });
   gsap.set(cloneGlow, { opacity: 0 });
 
@@ -160,10 +156,7 @@ export function createRevealTimeline({
   }, frontStart)
     .fromTo(cloneIll, { scale: 1.06 }, { scale: 1.03, duration: 0.35, ease: "power2.out" }, frontStart)
     .to(cloneFrame, { opacity: 1, duration: 0.25, ease: "power1.out" }, frontStart + 0.1)
-    .to(cloneType, { opacity: 1, duration: 0.2, ease: "power2.out" }, frontStart + 0.2)
-    .fromTo(cloneName, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, frontStart + 0.3)
-    .to(clonePath, { opacity: 1, duration: 0.2, ease: "power2.out" }, frontStart + 0.5)
-    .to(cloneTag, { opacity: 1, duration: 0.25, ease: "power2.out" }, frontStart + 0.62);
+    .fromTo(cloneName, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, frontStart + 0.3);
 
   // ─── Phase 7 (signature): Warm glow / embers ───────────────────────────
   const sigStart = frontStart + 0.4;

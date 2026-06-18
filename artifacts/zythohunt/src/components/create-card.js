@@ -10,21 +10,20 @@ import { assetUrl } from "../utils/asset-url.js";
  * @param {boolean} options.revealable – whether this card can be revealed
  * @returns {HTMLElement}
  */
-export function createCard({ index, cardData, revealable }) {
-  const wrapper = document.createElement("li");
-  wrapper.className = "card-slot";
+export function createCard({ index = 0, cardData, revealable, discovered = false, as = "slot", collection = null }) {
+  const wrapper = document.createElement(as === "carousel" ? "div" : "li");
+  wrapper.className = as === "carousel" ? "csl-card card-slot" : "card-slot";
   wrapper.setAttribute("role", "listitem");
   wrapper.dataset.index = index;
 
   const card = document.createElement("div");
-  card.className = "beer-card";
+  card.className = "beer-card csl-card-inner";
   if (revealable) card.classList.add("beer-card--revealable");
   else card.classList.add("beer-card--locked");
-  card.setAttribute("tabindex", revealable ? "0" : "-1");
-  card.setAttribute("aria-label", revealable ? "Carte à révéler" : "Carte verrouillée");
-  if (revealable) {
-    card.setAttribute("role", "button");
-  }
+  card.dataset.cardId = cardData?.id || `placeholder-${String(index + 1).padStart(2, "0")}`;
+  card.setAttribute("tabindex", "0");
+  card.setAttribute("aria-label", discovered && cardData?.name ? `${cardData.name}, carte découverte, position ${index + 1} sur 9` : `Carte non découverte, position ${index + 1} sur 9`);
+  card.setAttribute("role", "button");
 
   // Back face
   const backFace = document.createElement("div");
@@ -40,7 +39,7 @@ export function createCard({ index, cardData, revealable }) {
   frontFace.className = "card-face card-front";
   frontFace.setAttribute("aria-hidden", "true");
 
-  if (cardData) {
+  if (cardData?.revealable || cardData?.image) {
     const illWindow = document.createElement("div");
     illWindow.className = "illustration-window";
     const illImg = document.createElement("img");
@@ -52,33 +51,18 @@ export function createCard({ index, cardData, revealable }) {
 
     const frameImg = document.createElement("img");
     frameImg.className = "card-frame";
-    frameImg.src = CARD_FRAME_URL;
+    frameImg.src = collection?.cardFrame ? assetUrl(collection.cardFrame) : CARD_FRAME_URL;
     frameImg.alt = "";
     frameImg.draggable = false;
 
     const copy = document.createElement("div");
     copy.className = "card-copy";
 
-    const typeEl = document.createElement("p");
-    typeEl.className = "card-type";
-    typeEl.textContent = cardData.type;
-
     const nameEl = document.createElement("h2");
     nameEl.className = "card-name";
     nameEl.textContent = cardData.name;
 
-    const pathEl = document.createElement("p");
-    pathEl.className = "card-path";
-    pathEl.textContent = cardData.path;
-
-    const tagEl = document.createElement("p");
-    tagEl.className = "card-tagline";
-    tagEl.textContent = cardData.tagline;
-
-    copy.appendChild(typeEl);
     copy.appendChild(nameEl);
-    copy.appendChild(pathEl);
-    copy.appendChild(tagEl);
 
     const specular = document.createElement("div");
     specular.className = "card-specular";
@@ -95,6 +79,11 @@ export function createCard({ index, cardData, revealable }) {
 
   card.appendChild(backFace);
   card.appendChild(frontFace);
+  if (discovered) {
+    card.classList.add("beer-card--discovered");
+    frontFace.setAttribute("aria-hidden", "false");
+    card.style.transform = "rotateY(180deg)";
+  }
   wrapper.appendChild(card);
   return wrapper;
 }
@@ -147,26 +136,11 @@ export function cloneCardForReveal(cardEl, rect, cardData) {
   const copy = document.createElement("div");
   copy.className = "card-copy";
 
-  const typeEl = document.createElement("p");
-  typeEl.className = "card-type";
-  typeEl.textContent = cardData.type;
-
   const nameEl = document.createElement("h2");
   nameEl.className = "card-name";
   nameEl.textContent = cardData.name;
 
-  const pathEl = document.createElement("p");
-  pathEl.className = "card-path";
-  pathEl.textContent = cardData.path;
-
-  const tagEl = document.createElement("p");
-  tagEl.className = "card-tagline";
-  tagEl.textContent = cardData.tagline;
-
-  copy.appendChild(typeEl);
   copy.appendChild(nameEl);
-  copy.appendChild(pathEl);
-  copy.appendChild(tagEl);
 
   const specular = document.createElement("div");
   specular.className = "card-specular";

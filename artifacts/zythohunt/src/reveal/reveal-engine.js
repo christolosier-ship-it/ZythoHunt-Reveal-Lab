@@ -16,6 +16,7 @@ export function createRevealEngine({
   revealOverlay,
   revealActions,
   revealHeadline,
+  btnContinue,
   motionTokens
 }) {
   let state = STATES.IDLE;
@@ -31,6 +32,15 @@ export function createRevealEngine({
 
   function hideActions() {
     if (revealActions) revealActions.hidden = true;
+  }
+
+  function waitForContinue() {
+    if (revealHeadline) revealHeadline.textContent = "Nouvelle carte révélée";
+    if (revealActions) revealActions.hidden = false;
+    return new Promise((resolve) => {
+      const done = () => resolve();
+      btnContinue?.addEventListener("click", done, { once: true });
+    });
   }
 
   function showOverlay() {
@@ -76,6 +86,7 @@ export function createRevealEngine({
       state = STATES.REVEALING;
       await currentTimeline.play();
       state = STATES.COMPLETE;
+      await waitForContinue();
       return { status: "completed", cardData };
     } catch (error) {
       await cleanupAfterError();
