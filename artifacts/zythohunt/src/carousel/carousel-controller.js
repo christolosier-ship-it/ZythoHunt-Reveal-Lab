@@ -50,8 +50,62 @@ export function createCarousel({ containerEl, cards, collection, tokens, store, 
   function unlock() { locked = false; draggableInstance?.enable(); }
   function createRevealContext(cardId) {
     const target = getCardElement(cardId);
-    const neighbors = cardEls.map((w) => w.querySelector(".beer-card")).filter((el) => el && el !== target).map((el, i) => ({ el, x: (i % 2 ? 1 : -1) * 18, y: 8, rotation: (i % 2 ? 1 : -1) * 2 }));
-    return { contentEl: containerEl, chromeEls: [document.getElementById("app-header"), document.getElementById("reveal-search-form")].filter(Boolean), neighborMotions: neighbors, async restore() { gsap.set(neighbors.map((n) => n.el), { clearProps: "filter" }); updateFromVPos(activeIndex, true); } };
+    const chromeEls = [
+      document.getElementById("app-header"),
+      document.getElementById("reveal-search-form")
+    ].filter(Boolean);
+    const neighbors = cardEls
+      .map((w) => w.querySelector(".beer-card"))
+      .filter((el) => el && el !== target)
+      .map((el, i) => ({
+        el,
+        x: (i % 2 ? 1 : -1) * 18,
+        y: 8,
+        rotation: (i % 2 ? 1 : -1) * 2
+      }));
+
+    return {
+      contentEl: containerEl,
+      chromeEls,
+      neighborMotions: neighbors,
+      async restore() {
+        const neighborEls = neighbors.map(({ el }) => el);
+        const timeline = gsap.timeline();
+
+        timeline.to(containerEl, {
+          filter: "none",
+          duration: 0.3,
+          ease: "power2.out",
+          overwrite: true
+        }, 0);
+
+        if (chromeEls.length) {
+          timeline.to(chromeEls, {
+            opacity: 1,
+            duration: 0.3,
+            ease: "power2.out",
+            overwrite: true
+          }, 0);
+        }
+
+        if (neighborEls.length) {
+          timeline.to(neighborEls, {
+            x: 0,
+            y: 0,
+            rotation: 0,
+            duration: 0.35,
+            ease: "power3.out",
+            overwrite: true
+          }, 0);
+        }
+
+        await timeline;
+
+        gsap.set(containerEl, { clearProps: "filter" });
+        if (chromeEls.length) gsap.set(chromeEls, { clearProps: "opacity" });
+        updateFromVPos(activeIndex, false);
+      }
+    };
   }
   function handleKeyDown(e) { if (locked || ["INPUT", "TEXTAREA"].includes(document.activeElement?.tagName)) return; if (e.key === "ArrowLeft") { e.preventDefault(); snapTo(activeIndex - 1); } else if (e.key === "ArrowRight") { e.preventDefault(); snapTo(activeIndex + 1); } else if (e.key === "Home") { e.preventDefault(); snapTo(0); } else if (e.key === "End") { e.preventDefault(); snapTo(cards.length - 1); } }
   function mount() {
