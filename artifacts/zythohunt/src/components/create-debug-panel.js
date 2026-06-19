@@ -31,9 +31,9 @@ export function createDebugPanel(panelBodyEl, onTokenChange) {
     const range = document.createElement("input");
     range.type = "range";
     range.id = `debug-${key}`;
-    range.min = min;
-    range.max = max;
-    range.step = step;
+    range.min = String(min);
+    range.max = String(max);
+    range.step = String(step);
     range.value = motionTokens[key];
     range.className = "debug-range";
 

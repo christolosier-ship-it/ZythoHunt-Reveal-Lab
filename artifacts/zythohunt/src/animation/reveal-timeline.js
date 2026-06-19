@@ -7,22 +7,8 @@ function prefersReducedMotion() {
   return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 
-/**
- * Main reveal timeline. Returns a promise that resolves when the flip completes
- * and the front is fully built. The clone is appended to stageEl.
- *
- * @param {HTMLElement} cardEl        – the .beer-card element in the grid
- * @param {object} cardData           – the card's data object
- * @param {HTMLElement[]} allCardEls  – all 9 .beer-card elements (for neighbor shifts)
- * @param {number} cardIndex          – index of the selected card in the grid
- * @param {HTMLElement} stageEl       – the #reveal-stage container
- * @param {HTMLElement} overlayEl     – the #scene-overlay element
- * @param {HTMLElement} gridEl        – the #grid-container (for blur)
- * @param {HTMLElement} navEl         – the #app-nav (for reducing opacity)
- * @param {HTMLElement} headerEl      – the #app-header (for reducing opacity)
- * @returns {{ tl: gsap.core.Timeline, cloneEl: HTMLElement }}
- */
-export function createRevealTimeline({
+/** @param {any} options @returns {any} */
+export function createRevealTimeline(/** @type {any} */ {
   cardEl,
   cardData,
   stageEl,
@@ -63,14 +49,16 @@ export function createRevealTimeline({
 
   // Target size: ~77% of viewport height, centered
   const vh = window.innerHeight;
-  const availableH = vh - 120; // header + nav
-  const targetH = Math.min(availableH * 0.77, 460);
+  const headerH = document.getElementById("app-header")?.getBoundingClientRect().height || 0;
+  const formH = document.getElementById("reveal-search-form")?.getBoundingClientRect().height || 0;
+  const availableH = Math.max(260, vh - headerH - formH - 40);
+  const targetH = Math.min(availableH * 0.82, 460);
   const cardAspect = rect.height / rect.width;
   const targetW = targetH / cardAspect;
 
   const vc = { x: window.innerWidth / 2, y: vh / 2 };
   const targetX = vc.x - targetW / 2;
-  const targetY = (vh - targetH) / 2;
+  const targetY = Math.max(headerH + 8, (vh - targetH) / 2);
 
   const tl = gsap.timeline({ paused: true });
 
@@ -105,6 +93,7 @@ export function createRevealTimeline({
       height: targetH,
       rotateX: motionTokens.tiltX * 0.4,
       rotateZ: motionTokens.tiltZ * 0.3,
+      scale: motionTokens.finalScale ?? 1,
       boxShadow: `0 30px 80px rgba(0,0,0,0.7), 0 0 40px rgba(180,100,20,${motionTokens.glowIntensity * 0.3})`,
       duration: ext,
       ease: "power3.inOut"
@@ -189,7 +178,7 @@ export function createRevealTimeline({
 /**
  * Simplified reveal for prefers-reduced-motion.
  */
-function createReducedReveal({ cardEl, cardData, stageEl, overlayEl }) {
+function createReducedReveal(/** @type {any} */ { cardEl, cardData, stageEl, overlayEl }) {
   const rect = captureRect(cardEl);
   const clone = cloneCardForReveal(cardEl, rect, cardData);
   stageEl.appendChild(clone);
@@ -207,12 +196,14 @@ function createReducedReveal({ cardEl, cardData, stageEl, overlayEl }) {
   gsap.set([cloneIll, cloneFrame, cloneCopy], { opacity: 0 });
 
   const vh = window.innerHeight;
-  const availableH = vh - 120;
-  const targetH = Math.min(availableH * 0.77, 460);
+  const headerH = document.getElementById("app-header")?.getBoundingClientRect().height || 0;
+  const formH = document.getElementById("reveal-search-form")?.getBoundingClientRect().height || 0;
+  const availableH = Math.max(260, vh - headerH - formH - 40);
+  const targetH = Math.min(availableH * 0.82, 460);
   const cardAspect = rect.height / rect.width;
   const targetW = targetH / cardAspect;
   const targetX = window.innerWidth / 2 - targetW / 2;
-  const targetY = (vh - targetH) / 2;
+  const targetY = Math.max(headerH + 8, (vh - targetH) / 2);
 
   const tl = gsap.timeline({ paused: true });
 
@@ -227,7 +218,7 @@ function createReducedReveal({ cardEl, cardData, stageEl, overlayEl }) {
 /**
  * Quick re-reveal for an already-revealed card (600–900ms).
  */
-export function createQuickReveal({ cardEl, cardData, stageEl, overlayEl }) {
+export function createQuickReveal(/** @type {any} */ { cardEl, cardData, stageEl, overlayEl }) {
   const rect = captureRect(cardEl);
   const clone = cloneCardForReveal(cardEl, rect, cardData);
   stageEl.appendChild(clone);
@@ -247,12 +238,14 @@ export function createQuickReveal({ cardEl, cardData, stageEl, overlayEl }) {
   gsap.set(cloneGlow, { opacity: 0 });
 
   const vh = window.innerHeight;
-  const availableH = vh - 120;
-  const targetH = Math.min(availableH * 0.77, 460);
+  const headerH = document.getElementById("app-header")?.getBoundingClientRect().height || 0;
+  const formH = document.getElementById("reveal-search-form")?.getBoundingClientRect().height || 0;
+  const availableH = Math.max(260, vh - headerH - formH - 40);
+  const targetH = Math.min(availableH * 0.82, 460);
   const cardAspect = rect.height / rect.width;
   const targetW = targetH / cardAspect;
   const targetX = window.innerWidth / 2 - targetW / 2;
-  const targetY = (vh - targetH) / 2;
+  const targetY = Math.max(headerH + 8, (vh - targetH) / 2);
 
   const tl = gsap.timeline({ paused: true });
 

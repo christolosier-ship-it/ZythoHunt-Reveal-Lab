@@ -23,9 +23,10 @@
   --glow-color:     rgba(200,124,40,0.35);
   --glow-color-dim: rgba(200,124,40,0.12);
 
-  --nav-h:   64px;
   --head-h:  58px;
   --card-r:  10px;
+  --card-frame-overscan-x: 2.4%;
+  --card-frame-overscan-y: 1.35%;
   --font-serif: "Cinzel", Georgia, serif;
   --font-body:  "Crimson Text", Georgia, serif;
 }
@@ -34,7 +35,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html, body {
-  width: 100%; height: 100%;
+  width: 100%; height: 100vh; height: 100dvh;
   overflow: hidden;
   background: var(--bg);
   color: var(--text);
@@ -1015,10 +1016,53 @@ html, body {
 .csl-card.card-slot { width: var(--csl-card-w); height: var(--csl-card-h); list-style: none; }
 .csl-card .beer-card { width: 100%; height: 100%; }
 .csl-card .card-front { transform: rotateY(180deg); }
-.csl-card .card-copy { bottom: 14%; top: auto; min-height: auto; padding: 0 8px; background: none; }
-.csl-card .card-name { font-size: clamp(.74rem, 2.2vw, .95rem); line-height: 1.1; }
+.csl-card .card-copy { background: none; }
+.csl-card .card-name { font-size: clamp(.72rem, 2.1vw, .95rem); line-height: 1.05; }
 .card-type, .card-path, .card-tagline, #data-panel, #app-nav, #grid-container, #collections-view, .carousel-settings-btn, #carousel-debug-panel { display: none !important; }
 #reveal-actions { bottom: calc(env(safe-area-inset-bottom, 0px) + 24px); }
 .debug-section-title { margin: 12px 0 8px; font-family: var(--font-serif); font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--amber-light); }
 .debug-panel-footer { display: flex; flex-wrap: wrap; gap: 8px; }
 @media (max-width: 640px) { #carousel-container { height: calc(100vh - var(--head-h) - 138px); } .reveal-search-row { flex-direction: column; } #reveal-search-submit { min-height: 40px; } }
+
+
+/* Phase 7.1 stabilization */
+.card-copy {
+  position: absolute;
+  left: 16%;
+  right: 16%;
+  top: 76%;
+  bottom: 7.5%;
+  z-index: 4;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  overflow: visible;
+  pointer-events: none;
+}
+.card-name {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  overflow-wrap: anywhere;
+  line-height: 1.05;
+  text-wrap: balance;
+}
+.beer-card--discovered { animation: none; }
+.csl-card.is-inspecting { z-index: 80 !important; }
+.beer-card.is-locked-feedback { outline: 1px solid rgba(232,160,64,.75); }
+#app-header[inert], #reveal-search-form[inert], #carousel-container[inert], #debug-panel[inert] { pointer-events: none; }
+@media (prefers-reduced-motion: reduce) {
+  .beer-card--revealable { animation: none !important; }
+  .card-glow-behind, .card-specular { animation: none !important; }
+  .carousel-stage { perspective: 800px; }
+  .beer-card--discovered { transform: rotateY(180deg); }
+}
+.card-frame {
+  left: calc(-1 * var(--card-frame-overscan-x));
+  top: calc(-1 * var(--card-frame-overscan-y));
+  width: calc(100% + 2 * var(--card-frame-overscan-x));
+  height: calc(100% + 2 * var(--card-frame-overscan-y));
+}

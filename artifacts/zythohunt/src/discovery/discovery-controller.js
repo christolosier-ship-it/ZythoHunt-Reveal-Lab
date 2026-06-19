@@ -8,18 +8,19 @@ export function createDiscoveryController({ formEl, inputEl, feedbackEl, submitE
   function updateProgress() { progressEl.textContent = progressText(); }
   async function ensureImage(card) { const img = carousel.getCardElement(card.id)?.querySelector(".card-illustration"); if (img?.decode) { try { await img.decode(); } catch {} } }
   async function handleSubmit(event) {
-    event.preventDefault(); if (busy) return;
+    event.preventDefault(); if (busy || revealEngine.isBusy()) return;
     const result = resolver.resolve(inputEl.value);
     if (!inputEl.value.trim() || result.status === "unknown") { setFeedback("Aucun style reconnu dans ce prototype.", true); inputEl.animate?.([{ transform: "translateX(0)" }, { transform: "translateX(-5px)" }, { transform: "translateX(5px)" }, { transform: "translateX(0)" }], { duration: 180 }); return; }
-    const card = byId[result.cardId]; setBusy(true); settingsPanelEl.hidden = true; carousel.lock();
+    const card = byId[result.cardId]; setBusy(true); settingsPanelEl.hidden = true; carousel.closeInspection?.(); carousel.lock();
     try {
       await carousel.focusCard(card.id);
       if (store.isDiscovered(card.id)) { await carousel.highlight(card.id); setFeedback("Cette carte est déjà découverte"); return; }
       await ensureImage(card);
       beforeReveal?.();
-      await revealEngine.reveal({ cardEl: carousel.getCardElement(card.id), cardData: card, sceneContext: carousel.createRevealContext(card.id), mode: "full" });
+      const revealResult = await revealEngine.reveal({ cardEl: carousel.getCardElement(card.id), cardData: card, sceneContext: carousel.createRevealContext(card.id), mode: "full" });
+      if (revealResult.status !== "completed") return;
       setFeedback("Nouvelle carte révélée");
-      await revealEngine.returnToSource({ beforeSourceRestore: () => { carousel.setDiscovered(card.id, true); store.markDiscovered(card.id); updateProgress(); } });
+      await revealEngine.returnToSource({ beforeSourceRestore: () => { store.markDiscovered(card.id); carousel.setDiscovered(card.id, true); updateProgress(); } });
     } catch (error) { console.error(error); setFeedback("La révélation a échoué. Réessaie.", true); }
     finally { carousel.unlock(); setBusy(false); inputEl.focus(); }
   }

@@ -1,3 +1,4 @@
+/** @typedef {any} Any */
 import gsap from "gsap";
 import { createQuickReveal, createRevealTimeline } from "../animation/reveal-timeline.js";
 
@@ -10,7 +11,7 @@ const STATES = {
   DESTROYED: "destroyed"
 };
 
-export function createRevealEngine({
+export function createRevealEngine(/** @type {any} */ {
   stageEl,
   overlayEl,
   revealOverlay,
@@ -25,18 +26,49 @@ export function createRevealEngine({
   let currentSourceEl = null;
   let currentCardData = null;
   let currentSceneContext = null;
+  let previousFocus = null;
+  const inertSelectors = ["#app-header", "#reveal-search-form", "#carousel-container", "#debug-panel"];
+  let cleanupModal = null;
 
   function isBusy() {
-    return state === STATES.PREPARING || state === STATES.REVEALING || state === STATES.RETURNING;
+    return [STATES.PREPARING, STATES.REVEALING, STATES.COMPLETE, STATES.RETURNING].includes(state);
   }
 
   function hideActions() {
     if (revealActions) revealActions.hidden = true;
   }
 
+  function setBackgroundInert(value) {
+    inertSelectors.forEach((selector) => {
+      const el = document.querySelector(selector);
+      if (el && el !== revealOverlay) (/** @type {any} */ (el)).inert = value;
+    });
+  }
+
+  function activateModal() {
+    previousFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    setBackgroundInert(true);
+    const onKeyDown = (event) => {
+      if (event.key !== "Escape" && event.key !== "Tab") return;
+      if (event.key === "Escape") {
+        if (state === STATES.COMPLETE) { event.preventDefault(); btnContinue?.click(); }
+        else event.preventDefault();
+        return;
+      }
+      const focusables = Array.from(revealOverlay?.querySelectorAll("button, [href], input, select, textarea, [tabindex]:not([tabindex='-1'])") || []).filter((el) => !el.disabled && el.offsetParent !== null);
+      if (!focusables.length) return;
+      const first = focusables[0], last = focusables[focusables.length - 1];
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+    };
+    document.addEventListener("keydown", onKeyDown);
+    cleanupModal = () => { document.removeEventListener("keydown", onKeyDown); setBackgroundInert(false); previousFocus?.focus?.(); cleanupModal = null; previousFocus = null; };
+  }
+
   function waitForContinue() {
     if (revealHeadline) revealHeadline.textContent = "Nouvelle carte révélée";
     if (revealActions) revealActions.hidden = false;
+    btnContinue?.focus();
     return new Promise((resolve) => {
       const done = () => resolve();
       btnContinue?.addEventListener("click", done, { once: true });
@@ -74,6 +106,7 @@ export function createRevealEngine({
     currentCardData = cardData;
     currentSceneContext = sceneContext || null;
     showOverlay();
+    activateModal();
     hideActions();
 
     try {
@@ -94,10 +127,11 @@ export function createRevealEngine({
     }
   }
 
-  async function returnToSource({ beforeSourceRestore } = {}) {
+  async function returnToSource(/** @type {any} */ { beforeSourceRestore } = {}) {
     if (state === STATES.DESTROYED) return { status: "destroyed" };
     if (!currentClone || !currentSourceEl) {
       resetSceneVisuals();
+      cleanupModal?.();
       await restoreContext();
       state = STATES.IDLE;
       return { status: "idle" };
@@ -129,6 +163,7 @@ export function createRevealEngine({
     currentClone = null;
     currentTimeline = null;
     resetSceneVisuals();
+    cleanupModal?.();
     await restoreContext();
     currentSourceEl = null;
     currentCardData = null;
@@ -143,6 +178,7 @@ export function createRevealEngine({
     currentClone = null;
     restoreSource();
     resetSceneVisuals();
+    cleanupModal?.();
     await restoreContext();
     state = STATES.IDLE;
   }
@@ -153,6 +189,7 @@ export function createRevealEngine({
     currentClone?.remove();
     restoreSource();
     resetSceneVisuals();
+    cleanupModal?.();
     if (currentSceneContext?.restore) currentSceneContext.restore();
     currentTimeline = null;
     currentClone = null;

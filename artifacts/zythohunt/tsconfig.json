@@ -1,20 +1,58 @@
 {
   "extends": "../../tsconfig.base.json",
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "build", "dist", "**/*.test.ts"],
+  "include": [
+    "src/main.js",
+    "src/animation/**/*.js",
+    "src/carousel/carousel-controller.js",
+    "src/carousel/carousel-tokens.js",
+    "src/components/create-card.js",
+    "src/components/create-debug-panel.js",
+    "src/discovery/**/*.js",
+    "src/data/**/*.js",
+    "src/utils/**/*.js",
+    "src/reveal/reveal-engine.js"
+  ],
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist",
+    "**/*.test.ts",
+    "**/*.test.js",
+    "src/lab/**",
+    "src/components/ui/**",
+    "src/carousel/create-carousel-view.js",
+    "src/components/create-grid.js"
+  ],
   "compilerOptions": {
     "incremental": true,
     "tsBuildInfoFile": ".tsbuildinfo",
     "noEmit": true,
     "jsx": "preserve",
-    "lib": ["esnext", "dom", "dom.iterable"],
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable"
+    ],
     "resolveJsonModule": true,
     "allowImportingTsExtensions": true,
     "moduleResolution": "bundler",
-    "types": ["node", "vite/client"],
+    "types": [
+      "node",
+      "vite/client"
+    ],
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "allowJs": true,
+    "checkJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noImplicitAny": false,
+    "strictNullChecks": false,
+    "strictPropertyInitialization": false,
+    "noImplicitReturns": false
   },
   "references": [
     {
