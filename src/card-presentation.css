@@ -1,29 +1,62 @@
 /* Final presentation overrides validated on tablet. */
 .card-copy {
-  left: 14%;
-  right: 14%;
-  top: 77%;
-  bottom: 8%;
-  width: auto;
-  height: auto;
-  display: grid;
-  place-items: center;
-  overflow: visible;
+  left: 15%;
+  right: 15%;
+  top: 76%;
+  bottom: 9%;
+  width: auto !important;
+  height: auto !important;
+  display: block;
+  padding: 0 2%;
+  overflow: hidden;
+  border-radius: 4px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(14, 8, 4, 0.34) 0%,
+    rgba(10, 6, 3, 0.16) 62%,
+    transparent 100%
+  );
   text-align: center;
 }
 
 .card-name {
-  width: 100%;
-  max-width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: block;
+  width: max-content;
+  max-width: 94%;
   margin: 0;
-  white-space: nowrap;
+  padding: 0;
   overflow: visible;
+  color: #f4e7c8;
+  font-family: "Marcellus SC", "Cinzel", Georgia, serif;
+  font-weight: 400;
+  font-synthesis: none;
+  line-height: 0.92;
+  letter-spacing: 0.035em;
+  white-space: nowrap;
   overflow-wrap: normal;
   word-break: normal;
   text-overflow: clip;
   text-align: center;
-  line-height: 1;
+  text-transform: uppercase;
   text-wrap: nowrap;
+  text-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.98),
+    0 2px 3px rgba(0, 0, 0, 0.9),
+    0 0 8px rgba(196, 126, 49, 0.2);
+  -webkit-text-stroke: 0.25px rgba(35, 18, 6, 0.94);
+  transform: translate(-50%, -56%);
+  transform-origin: center;
+}
+
+.card-name.is-short {
+  letter-spacing: 0.065em;
+}
+
+.card-name.is-long {
+  letter-spacing: 0.012em;
 }
 
 .csl-card.is-inspecting {

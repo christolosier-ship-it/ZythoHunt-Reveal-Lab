@@ -61,12 +61,18 @@ function createClickGlow() {
 export function fitCardName(nameEl, containerEl = nameEl?.parentElement) {
   if (!nameEl || !containerEl) return;
 
-  const availableWidth = Math.max(1, containerEl.clientWidth - 4);
-  const availableHeight = Math.max(1, containerEl.clientHeight - 2);
-  const max = Math.max(12, Math.min(34, availableHeight * 0.64));
+  const title = nameEl.textContent?.trim() || "";
+  nameEl.classList.toggle("is-short", title.length <= 10);
+  nameEl.classList.toggle("is-long", title.length >= 18);
+
+  const availableWidth = Math.max(1, containerEl.clientWidth * 0.94);
+  const availableHeight = Math.max(1, containerEl.clientHeight * 0.88);
+  const max = Math.max(12, Math.min(36, availableHeight * 0.72));
   const min = 7;
 
   nameEl.style.whiteSpace = "nowrap";
+  nameEl.style.width = "max-content";
+  nameEl.style.maxWidth = "94%";
   nameEl.style.fontSize = `${max}px`;
 
   for (let size = max; size >= min; size -= 0.5) {
