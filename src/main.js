@@ -1,6 +1,5 @@
 /** @typedef {any} Any */
 import "./styles.css";
-import "./card-presentation.css";
 import "./background/background-integration.css";
 import gsap from "gsap";
 import { preloadAssets } from "./utils/preload-assets.js";
