@@ -39,14 +39,25 @@ jobs:
         run: pnpm install --no-frozen-lockfile
 
       - name: Upload generated lockfile
-        if: github.event_name == 'pull_request'
         uses: actions/upload-artifact@v4
         with:
           name: generated-pnpm-lock
           path: pnpm-lock.yaml
 
       - name: Typecheck JavaScript
-        run: pnpm typecheck
+        id: typecheck
+        continue-on-error: true
+        run: pnpm typecheck 2>&1 | tee typecheck.log
+
+      - name: Upload typecheck diagnostics
+        uses: actions/upload-artifact@v4
+        with:
+          name: quality-typecheck-diagnostics
+          path: typecheck.log
+
+      - name: Stop after typecheck failure
+        if: steps.typecheck.outcome == 'failure'
+        run: exit 1
 
       - name: Run tests
         run: pnpm test
