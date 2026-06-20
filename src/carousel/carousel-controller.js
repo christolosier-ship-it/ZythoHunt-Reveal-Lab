@@ -40,7 +40,7 @@ export function createCarousel(/** @type {any} */ { containerEl, cards, collecti
     if (!inspectionId) return { status: "idle" };
     const id = inspectionId, wrap = cardEls[cards.findIndex((c) => c.id === id)], inner = getCardElement(id);
     inspectionId = null; inspectionTl?.kill(); wrap?.classList.remove("is-inspecting");
-    if (inner) await gsap.to(inner, { scale: 1, z: 0, y: 0, boxShadow: "0 4px 16px rgba(0,0,0,0.4)", duration: reducedMotion() ? 0.08 : 0.22, ease: "power2.out", overwrite: "auto" });
+    if (inner) await gsap.to(inner, { scale: 1, z: 0, y: 0, boxShadow: "0 4px 16px rgba(0,0,0,0.4)", duration: reducedMotion() ? 0.08 : 0.26, ease: "power2.out", overwrite: "auto" });
     updateFromVPos(activeIndex, false); return { status: "closed" };
   }
   function snapTo(index, duration) {
@@ -56,7 +56,43 @@ export function createCarousel(/** @type {any} */ { containerEl, cards, collecti
   function getCardElement(cardId) { const index = cards.findIndex((c) => c.id === cardId); return index < 0 ? null : cardEls[index]?.querySelector(".beer-card"); }
   function setDiscovered(cardId, discovered = true) { const el = getCardElement(cardId); if (!el) return; el.classList.toggle("beer-card--discovered", discovered); gsap.set(el, { rotateY: discovered ? 180 : 0 }); el.querySelector(".card-front")?.setAttribute("aria-hidden", discovered ? "false" : "true"); updateA11y(); fitAllCardNames(el); }
   function highlight(cardId) { const el = getCardElement(cardId); return el ? gsap.fromTo(el, { boxShadow: "0 0 0 rgba(255,214,137,0)" }, { boxShadow: "0 0 34px rgba(255,214,137,.75)", duration: .22, yoyo: true, repeat: 1 }) : Promise.resolve(); }
-  async function inspectCard(cardId) { if (locked) return { status: "locked" }; if (inspectionId === cardId) return closeInspection(); const i = cards.findIndex((c) => c.id === cardId); if (i < 0 || !isDiscovered(cardId)) return { status: "unavailable" }; await closeInspection(); if (i !== activeIndex) await snapTo(i); inspectionId = cardId; const wrap = cardEls[i], inner = getCardElement(cardId); wrap.classList.add("is-inspecting"); wrap.style.zIndex = "80"; inspectionTl = gsap.timeline(); inspectionTl.to(inner, { scale: reducedMotion() ? 1.02 : 1.06, z: reducedMotion() ? 0 : 44, y: -4, boxShadow: "0 22px 54px rgba(0,0,0,.68), 0 0 28px rgba(232,160,64,.35)", duration: reducedMotion() ? .08 : .28, ease: "power2.out", overwrite: "auto" }); await inspectionTl; return { status: "inspecting" }; }
+  async function inspectCard(cardId) {
+    if (locked) return { status: "locked" };
+    if (inspectionId === cardId) return closeInspection();
+    const i = cards.findIndex((c) => c.id === cardId);
+    if (i < 0 || !isDiscovered(cardId)) return { status: "unavailable" };
+
+    await closeInspection();
+    if (i !== activeIndex) await snapTo(i);
+
+    inspectionId = cardId;
+    const wrap = cardEls[i], inner = getCardElement(cardId);
+    const otherWraps = cardEls.filter((_, index) => index !== i);
+    wrap.classList.add("is-inspecting");
+    wrap.style.zIndex = "160";
+
+    inspectionTl = gsap.timeline();
+    if (otherWraps.length) {
+      inspectionTl.to(otherWraps, {
+        opacity: reducedMotion() ? 0.55 : 0.32,
+        duration: reducedMotion() ? 0.08 : 0.28,
+        ease: "power2.out",
+        overwrite: "auto"
+      }, 0);
+    }
+    inspectionTl.to(inner, {
+      scale: reducedMotion() ? 1.08 : 1.42,
+      z: reducedMotion() ? 0 : 220,
+      y: reducedMotion() ? -2 : -12,
+      boxShadow: "0 34px 86px rgba(0,0,0,.82), 0 0 46px rgba(232,160,64,.46)",
+      duration: reducedMotion() ? .1 : .38,
+      ease: "power3.out",
+      overwrite: "auto"
+    }, 0);
+
+    await inspectionTl;
+    return { status: "inspecting" };
+  }
   function isInspecting() { return Boolean(inspectionId); }
   async function playLockedFeedback(cardId) { const i = cards.findIndex((c) => c.id === cardId); if (i < 0) return; if (i !== activeIndex) await snapTo(i); const el = getCardElement(cardId); if (!el) return; feedbackTl?.kill(); feedbackTl = gsap.timeline(); feedbackTl.to(el, { y: 5, scale: .985, boxShadow: "0 0 20px rgba(200,124,40,.5)", duration: reducedMotion() ? .05 : .09, ease: "power2.out", overwrite: "auto" }).to(el, { y: 0, scale: 1, boxShadow: "0 4px 16px rgba(0,0,0,0.4)", duration: reducedMotion() ? .06 : .16, ease: "power2.out" }); await feedbackTl; }
   function lock() { locked = true; closeInspection(); draggableInstance?.disable(); updateA11y(); }
