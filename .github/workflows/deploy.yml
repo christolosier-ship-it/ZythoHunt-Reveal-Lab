@@ -2,11 +2,9 @@ name: Validate and deploy ZythoHunt
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   pull_request:
-    branches:
-      - main
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -22,41 +20,33 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Enable pnpm
-        run: |
+      - uses: actions/checkout@v4
+      - run: |
           corepack enable
           corepack prepare pnpm@10.12.4 --activate
-
-      - name: Install Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 24
           cache: pnpm
           cache-dependency-path: pnpm-lock.yaml
-
-      - name: Install frozen dependencies
-        run: pnpm install --frozen-lockfile
-
+      - run: pnpm install --frozen-lockfile
       - name: Typecheck JavaScript
-        run: pnpm typecheck
-
-      - name: Run tests
-        run: pnpm test
-
-      - name: Build GitHub Pages artifact
-        run: pnpm build
+        id: typecheck
+        continue-on-error: true
+        run: pnpm typecheck > typecheck.log 2>&1
+      - uses: actions/upload-artifact@v4
+        with:
+          name: frozen-typecheck-diagnostics
+          path: typecheck.log
+      - if: steps.typecheck.outcome == 'failure'
+        run: exit 1
+      - run: pnpm test
+      - run: pnpm build
         env:
           BASE_PATH: /ZythoHunt-Reveal-Lab/
-
-      - name: Configure GitHub Pages
-        if: github.event_name != 'pull_request'
+      - if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v5
-
-      - name: Upload GitHub Pages artifact
-        if: github.event_name != 'pull_request'
+      - if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist
@@ -69,6 +59,5 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy GitHub Pages
-        id: deployment
+      - id: deployment
         uses: actions/deploy-pages@v4
