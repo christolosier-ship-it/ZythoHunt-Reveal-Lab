@@ -10,6 +10,7 @@ const DRAG_CLICK_THRESHOLD = 8;
 export function createCarousel(/** @type {any} */ { containerEl, cards, collection, tokens, store, onActiveChange }) {
   let activeIndex = 4, draggableInstance = null, cardEls = [], proxyEl = null, stageEl = null, locked = false;
   let suppressClickUntil = 0, inspectionId = null, inspectionTl = null, feedbackTl = null;
+  let feedbackGlowEl = null, feedbackCardEl = null;
   const abortController = new AbortController();
   const { signal } = abortController;
   const reducedMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -94,15 +95,80 @@ export function createCarousel(/** @type {any} */ { containerEl, cards, collecti
     return { status: "inspecting" };
   }
   function isInspecting() { return Boolean(inspectionId); }
-  async function playLockedFeedback(cardId) { const i = cards.findIndex((c) => c.id === cardId); if (i < 0) return; if (i !== activeIndex) await snapTo(i); const el = getCardElement(cardId); if (!el) return; feedbackTl?.kill(); feedbackTl = gsap.timeline(); feedbackTl.to(el, { y: 5, scale: .985, boxShadow: "0 0 20px rgba(200,124,40,.5)", duration: reducedMotion() ? .05 : .09, ease: "power2.out", overwrite: "auto" }).to(el, { y: 0, scale: 1, boxShadow: "0 4px 16px rgba(0,0,0,0.4)", duration: reducedMotion() ? .06 : .16, ease: "power2.out" }); await feedbackTl; }
-  function lock() { locked = true; closeInspection(); draggableInstance?.disable(); updateA11y(); }
+
+  function resetLockedFeedback() {
+    feedbackTl?.kill();
+    if (feedbackGlowEl) gsap.set(feedbackGlowEl, { opacity: 0, scale: 0.92 });
+    if (feedbackCardEl) gsap.set(feedbackCardEl, { y: 0, scale: 1 });
+    feedbackTl = null;
+    feedbackGlowEl = null;
+    feedbackCardEl = null;
+  }
+
+  async function playLockedFeedback(cardId) {
+    const i = cards.findIndex((c) => c.id === cardId);
+    if (i < 0) return;
+    if (i !== activeIndex) await snapTo(i);
+
+    const wrap = cardEls[i];
+    const cardEl = getCardElement(cardId);
+    const glowEl = wrap?.querySelector(".card-click-glow");
+    if (!cardEl || !glowEl) return;
+
+    resetLockedFeedback();
+    feedbackGlowEl = glowEl;
+    feedbackCardEl = cardEl;
+    gsap.set(glowEl, { opacity: 0, scale: 0.9 });
+
+    feedbackTl = gsap.timeline({
+      onComplete: () => {
+        gsap.set(glowEl, { opacity: 0, scale: 0.92 });
+        gsap.set(cardEl, { y: 0, scale: 1 });
+        if (feedbackGlowEl === glowEl) feedbackGlowEl = null;
+        if (feedbackCardEl === cardEl) feedbackCardEl = null;
+        feedbackTl = null;
+      }
+    });
+
+    feedbackTl
+      .to(cardEl, {
+        y: reducedMotion() ? 2 : 5,
+        scale: reducedMotion() ? 0.995 : 0.982,
+        duration: reducedMotion() ? 0.05 : 0.1,
+        ease: "power2.out",
+        overwrite: "auto"
+      }, 0)
+      .to(glowEl, {
+        opacity: 1,
+        scale: reducedMotion() ? 1.02 : 1.08,
+        duration: reducedMotion() ? 0.06 : 0.12,
+        ease: "power2.out",
+        overwrite: "auto"
+      }, 0)
+      .to(cardEl, {
+        y: 0,
+        scale: 1,
+        duration: reducedMotion() ? 0.08 : 0.18,
+        ease: "power2.out"
+      }, reducedMotion() ? 0.05 : 0.1)
+      .to(glowEl, {
+        opacity: 0,
+        scale: reducedMotion() ? 1.05 : 1.2,
+        duration: reducedMotion() ? 0.12 : 0.28,
+        ease: "power2.out"
+      }, reducedMotion() ? 0.05 : 0.1);
+
+    await feedbackTl;
+  }
+
+  function lock() { locked = true; resetLockedFeedback(); closeInspection(); draggableInstance?.disable(); updateA11y(); }
   function unlock() { locked = false; draggableInstance?.enable(); updateA11y(); }
   function createRevealContext(cardId, options = {}) { const target = getCardElement(cardId); const shift = options.neighborShift ?? motionTokens.maxNeighborShift; const chromeEls = [document.getElementById("app-header"), document.getElementById("reveal-search-form")].filter(Boolean); const neighbors = cardEls.map((w) => w.querySelector(".beer-card")).filter((el) => el && el !== target).map((el, i) => ({ el, x: (i % 2 ? 1 : -1) * shift, y: Math.min(12, shift / 2), rotation: (i % 2 ? 1 : -1) * 2 })); return { contentEl: containerEl, chromeEls, neighborMotions: neighbors, async restore() { const tl = gsap.timeline(); tl.to(containerEl, { filter: "none", duration: .3, ease: "power2.out", overwrite: true }, 0); if (chromeEls.length) tl.to(chromeEls, { opacity: 1, duration: .3, ease: "power2.out", overwrite: true }, 0); if (neighbors.length) tl.to(neighbors.map(({ el }) => el), { x: 0, y: 0, rotation: 0, duration: .35, ease: "power3.out", overwrite: true }, 0); await tl; gsap.set(containerEl, { clearProps: "filter" }); if (chromeEls.length) gsap.set(chromeEls, { clearProps: "opacity" }); updateFromVPos(activeIndex, false); } }; }
   function handleKeyDown(e) { if (locked || isFormField(document.activeElement)) return; if (["ArrowLeft","ArrowRight","Home","End","Enter"," "].includes(e.key)) e.preventDefault(); if (e.key === "ArrowLeft") snapTo(activeIndex - 1); else if (e.key === "ArrowRight") snapTo(activeIndex + 1); else if (e.key === "Home") snapTo(0); else if (e.key === "End") snapTo(cards.length - 1); else if (e.key === "Enter" || e.key === " ") isDiscovered(cards[activeIndex].id) ? inspectCard(cards[activeIndex].id) : playLockedFeedback(cards[activeIndex].id); }
   function shouldIgnoreClick() { return locked || now() < suppressClickUntil; }
   async function handleCardClick(i) { if (shouldIgnoreClick()) return; const id = cards[i].id; if (isDiscovered(id)) await inspectCard(id); else await playLockedFeedback(id); }
-  function mount() { stageEl = document.createElement("div"); stageEl.className = "carousel-stage"; containerEl.appendChild(stageEl); const anchor = document.createElement("div"); anchor.className = "carousel-anchor"; stageEl.appendChild(anchor); proxyEl = document.createElement("div"); proxyEl.style.cssText = "position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;left:-9999px;top:-9999px;"; document.body.appendChild(proxyEl); cardEls = cards.map((card, index) => { const wrap = createCard({ index, cardData: card, revealable: card.revealable, discovered: isDiscovered(card.id), as: "carousel", collection }); anchor.appendChild(wrap); return wrap; }); gsap.set(proxyEl, { x: -activeIndex * tokens.spacing }); updateFromVPos(activeIndex, false); updateA11y(); draggableInstance = Draggable.create(proxyEl, { type: "x", trigger: stageEl, bounds: { minX: -(cards.length - 1) * tokens.spacing, maxX: 0 }, edgeResistance: .65, onDragStart() { if (locked) return false; closeInspection(); gsap.killTweensOf(proxyEl); }, onDrag() { updateFromVPos(-this.x / tokens.spacing, false); }, onDragEnd() { if (Math.abs(this.x - this.startX) > DRAG_CLICK_THRESHOLD) suppressClickUntil = now() + 180; snapTo(Math.round(-this.x / tokens.spacing)); } })[0]; cardEls.forEach((el, i) => el.addEventListener("click", () => handleCardClick(i), { signal })); document.addEventListener("click", (e) => { if (inspectionId && !(/** @type {Element} */ (e.target)).closest?.(".csl-card")) closeInspection(); }, { signal }); document.addEventListener("keydown", (e) => { if (e.key === "Escape" && inspectionId) closeInspection(); handleKeyDown(e); }, { signal }); window.addEventListener("resize", () => { closeInspection(); refresh(); fitAllCardNames(containerEl); }, { signal }); }
+  function mount() { stageEl = document.createElement("div"); stageEl.className = "carousel-stage"; containerEl.appendChild(stageEl); const anchor = document.createElement("div"); anchor.className = "carousel-anchor"; stageEl.appendChild(anchor); proxyEl = document.createElement("div"); proxyEl.style.cssText = "position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;left:-9999px;top:-9999px;"; document.body.appendChild(proxyEl); cardEls = cards.map((card, index) => { const wrap = createCard({ index, cardData: card, revealable: card.revealable, discovered: isDiscovered(card.id), as: "carousel", collection }); anchor.appendChild(wrap); return wrap; }); gsap.set(proxyEl, { x: -activeIndex * tokens.spacing }); updateFromVPos(activeIndex, false); updateA11y(); draggableInstance = Draggable.create(proxyEl, { type: "x", trigger: stageEl, bounds: { minX: -(cards.length - 1) * tokens.spacing, maxX: 0 }, edgeResistance: .65, onDragStart() { if (locked) return false; resetLockedFeedback(); closeInspection(); gsap.killTweensOf(proxyEl); }, onDrag() { updateFromVPos(-this.x / tokens.spacing, false); }, onDragEnd() { if (Math.abs(this.x - this.startX) > DRAG_CLICK_THRESHOLD) suppressClickUntil = now() + 180; snapTo(Math.round(-this.x / tokens.spacing)); } })[0]; cardEls.forEach((el, i) => el.addEventListener("click", () => handleCardClick(i), { signal })); document.addEventListener("click", (e) => { if (inspectionId && !(/** @type {Element} */ (e.target)).closest?.(".csl-card")) closeInspection(); }, { signal }); document.addEventListener("keydown", (e) => { if (e.key === "Escape" && inspectionId) closeInspection(); handleKeyDown(e); }, { signal }); window.addEventListener("resize", () => { resetLockedFeedback(); closeInspection(); refresh(); fitAllCardNames(containerEl); }, { signal }); }
   function refresh() { if (!proxyEl) return; draggableInstance?.applyBounds({ minX: -(cards.length - 1) * tokens.spacing, maxX: 0 }); gsap.set(proxyEl, { x: -activeIndex * tokens.spacing }); updateFromVPos(activeIndex, true); }
-  function destroy() { abortController.abort(); inspectionTl?.kill(); feedbackTl?.kill(); draggableInstance?.kill(); proxyEl?.remove(); containerEl.innerHTML = ""; }
+  function destroy() { abortController.abort(); resetLockedFeedback(); inspectionTl?.kill(); draggableInstance?.kill(); proxyEl?.remove(); containerEl.innerHTML = ""; }
   return { mount, destroy, snapTo, focusCard, getCardElement, setDiscovered, isDiscovered, lock, unlock, createRevealContext, highlight, refresh, inspectCard, closeInspection, isInspecting, playLockedFeedback, getActiveIndex: () => activeIndex, getActiveCardId: () => cards[activeIndex]?.id };
 }
