@@ -1,0 +1,1 @@
+Grid, bottom navigation, data panel, legacy carousel and duplicate card presentation styles were removed in Commit 3.
