@@ -1,0 +1,31 @@
+/* Final presentation overrides validated on tablet. */
+.card-copy {
+  left: 14%;
+  right: 14%;
+  top: 77%;
+  bottom: 8%;
+  width: auto;
+  height: auto;
+  display: grid;
+  place-items: center;
+  overflow: visible;
+  text-align: center;
+}
+
+.card-name {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  white-space: nowrap;
+  overflow: visible;
+  overflow-wrap: normal;
+  word-break: normal;
+  text-overflow: clip;
+  text-align: center;
+  line-height: 1;
+  text-wrap: nowrap;
+}
+
+.csl-card.is-inspecting {
+  z-index: 160 !important;
+}
