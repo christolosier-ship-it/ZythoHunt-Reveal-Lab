@@ -4,8 +4,7 @@ import "./card-presentation.css";
 import "./background/background-integration.css";
 import gsap from "gsap";
 import { preloadAssets } from "./utils/preload-assets.js";
-import { createDebugPanel, resetDebugPanel } from "./components/create-debug-panel.js";
-import { carouselTokens, resetCarouselTokens, updateCarouselToken } from "./carousel/carousel-tokens.js";
+import { carouselTokens, resetCarouselTokens } from "./carousel/carousel-tokens.js";
 import { createCarousel } from "./carousel/carousel-controller.js";
 import { collections } from "./data/collections.js";
 import { prototypeCards, revealablePrototypeCards } from "./data/prototype-carousel.js";
@@ -13,34 +12,15 @@ import { createDiscoveryStore } from "./discovery/discovery-store.js";
 import { createBeerResolver } from "./discovery/beer-resolver.js";
 import { createDiscoveryController } from "./discovery/discovery-controller.js";
 import { createRevealEngine } from "./reveal/reveal-engine.js";
-import { motionTokens } from "./animation/motion-tokens.js";
+import { motionTokens, resetTokens } from "./animation/motion-tokens.js";
 import { createBeerBackground } from "./background/beer-background.js";
-import { backgroundSettings, resetBackgroundSettings, updateBackgroundSetting } from "./background/background-settings.js";
+import { backgroundSettings, resetBackgroundSettings } from "./background/background-settings.js";
+import { createLabPanel } from "./lab/lab-panel.js";
 
 const $ = (id) => document.getElementById(id);
 const loadingScreen = $("loading-screen");
 const loadingBar = $("loading-bar");
-const settingsBtn = $("settings-btn");
-const debugPanel = $("debug-panel");
-const debugBody = $("debug-panel-body");
 const collection = collections[0];
-
-const BACKGROUND_CONTROLS = [
-  ["beerT", "Couleur de bière", 0, 100, 1, ""],
-  ["bubbleDensity", "Densité des bulles", 0, 100, 5, "%"],
-  ["foamIntensity", "Intensité de la mousse", 0, 100, 5, "%"]
-];
-
-const CAROUSEL_CONTROLS = [
-  ["spacing", "Espacement", 80, 280, 4, "px"],
-  ["depthStep", "Profondeur", 0, 250, 10, "px"],
-  ["rotationStep", "Rotation latérale", 0, 40, 1, "°"],
-  ["scaleStep", "Réduction d'échelle", 0, 0.25, 0.01, ""],
-  ["minScale", "Échelle minimale", 0.3, 1, 0.02, ""],
-  ["opacityStep", "Réduction d'opacité", 0, 0.4, 0.01, ""],
-  ["minOpacity", "Opacité minimale", 0.2, 1, 0.05, ""],
-  ["snapDuration", "Durée du snap", 0.05, 1.2, 0.05, "s"]
-];
 
 function createBackgroundFallback(hostEl, error) {
   console.error("Le fond animé n'a pas pu démarrer. Le laboratoire continue avec un fond statique.", error);
@@ -68,80 +48,8 @@ function mountBackground() {
   }
 }
 
-function appendSectionTitle(text) {
-  const title = document.createElement("h3");
-  title.className = "debug-section-title";
-  title.textContent = text;
-  debugBody.appendChild(title);
-}
-
-function appendRangeControl({ id, label, min, max, step, value, unit, onInput }) {
-  const row = document.createElement("div");
-  row.className = "debug-row";
-  row.innerHTML = `<label class="debug-label" for="${id}">${label}</label><div class="debug-input-row"><input class="debug-range" id="${id}" type="range" min="${min}" max="${max}" step="${step}" value="${value}"><span class="debug-value">${value}${unit}</span></div>`;
-  const input = row.querySelector("input");
-  const output = row.querySelector("span");
-  input.addEventListener("input", () => onInput(parseFloat(input.value), output));
-  debugBody.appendChild(row);
-}
-
-function addBackgroundPanel(background) {
-  if (!background.isAvailable) return;
-
-  appendSectionTitle(`Fond animé · ${background.getPaletteName()}`);
-  BACKGROUND_CONTROLS.forEach(([key, label, min, max, step, unit]) => appendRangeControl({
-    id: `bg-${key}`,
-    label,
-    min,
-    max,
-    step,
-    value: backgroundSettings[key],
-    unit,
-    onInput: (value, output) => {
-      updateBackgroundSetting(key, value);
-      background.update({ [key]: value });
-      output.textContent = key === "beerT"
-        ? `${value} · ${background.getPaletteName()}`
-        : `${value}${unit}`;
-    }
-  }));
-}
-
-function addCarouselPanel(carousel) {
-  appendSectionTitle("Carrousel");
-  CAROUSEL_CONTROLS.forEach(([key, label, min, max, step, unit]) => appendRangeControl({
-    id: `csl-${key}`,
-    label,
-    min,
-    max,
-    step,
-    value: carouselTokens[key],
-    unit,
-    onInput: (value, output) => {
-      updateCarouselToken(key, value);
-      output.textContent = `${value}${unit}`;
-      carousel.refresh();
-    }
-  }));
-}
-
-function rebuildDebugPanel(carousel, background) {
-  debugBody.innerHTML = "";
-  addBackgroundPanel(background);
-  appendSectionTitle("Révélation");
-  createDebugPanel(debugBody, () => {});
-  addCarouselPanel(carousel);
-}
-
-function closeSettings() {
-  debugPanel.hidden = true;
-  settingsBtn.setAttribute("aria-expanded", "false");
-}
-
 async function boot() {
   const background = mountBackground();
-  const resetBackgroundBtn = $("debug-reset-background");
-  if (resetBackgroundBtn) resetBackgroundBtn.hidden = !background.isAvailable;
 
   gsap.set(loadingScreen, { opacity: 1 });
   await preloadAssets((progress) => gsap.to(loadingBar, {
@@ -159,7 +67,6 @@ async function boot() {
     store
   });
   carousel.mount();
-  rebuildDebugPanel(carousel, background);
 
   const revealEngine = createRevealEngine({
     stageEl: $("reveal-stage"),
@@ -170,6 +77,18 @@ async function boot() {
     btnContinue: $("btn-continue"),
     motionTokens
   });
+
+  const labPanel = createLabPanel({
+    panelEl: $("debug-panel"),
+    bodyEl: $("debug-panel-body"),
+    settingsBtn: $("settings-btn"),
+    closeBtn: $("debug-close"),
+    resetBackgroundBtn: $("debug-reset-background"),
+    background,
+    carousel,
+    canOpen: () => !revealEngine.isBusy()
+  });
+  labPanel.mount();
 
   const discovery = createDiscoveryController({
     formEl: $("reveal-search-form"),
@@ -182,24 +101,11 @@ async function boot() {
     resolver: createBeerResolver(revealablePrototypeCards),
     cards: prototypeCards,
     progressEl: $("progress-display"),
-    closeSettings,
+    closeSettings: labPanel.close,
     beforeReveal: () => background.pause(),
     afterReveal: () => background.resume()
   });
   discovery.mount();
-
-  settingsBtn.addEventListener("click", async () => {
-    if (revealEngine.isBusy()) return;
-    await carousel.closeInspection();
-    const open = debugPanel.hidden;
-    debugPanel.hidden = !open;
-    settingsBtn.setAttribute("aria-expanded", String(open));
-  });
-
-  $("debug-close").addEventListener("click", closeSettings);
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && !debugPanel.hidden) closeSettings();
-  });
 
   document.querySelectorAll("[data-focus-card]").forEach((btn) => {
     btn.addEventListener("click", () => carousel.focusCard((/** @type {HTMLElement} */ (btn)).dataset.focusCard));
@@ -213,20 +119,20 @@ async function boot() {
     discovery.updateProgress();
   });
 
-  resetBackgroundBtn?.addEventListener("click", () => {
+  $("debug-reset-background").addEventListener("click", () => {
     resetBackgroundSettings();
     background.update(backgroundSettings);
-    rebuildDebugPanel(carousel, background);
+    labPanel.render();
   });
 
   $("debug-reset-settings").addEventListener("click", () => {
-    resetDebugPanel(debugBody, () => {});
-    rebuildDebugPanel(carousel, background);
+    resetTokens();
+    labPanel.render();
   });
 
   $("debug-reset-carousel").addEventListener("click", () => {
     resetCarouselTokens();
-    rebuildDebugPanel(carousel, background);
+    labPanel.render();
     carousel.refresh();
   });
 
@@ -235,8 +141,8 @@ async function boot() {
     resetBackgroundSettings();
     background.update(backgroundSettings);
     resetCarouselTokens();
-    resetDebugPanel(debugBody, () => {});
-    rebuildDebugPanel(carousel, background);
+    resetTokens();
+    labPanel.render();
     carousel.refresh();
   });
 
@@ -246,7 +152,7 @@ async function boot() {
     const card = revealablePrototypeCards.find((candidate) => candidate.id === id);
     if (!card) return;
 
-    closeSettings();
+    labPanel.close();
     background.pause();
     let prepared = false;
     try {
