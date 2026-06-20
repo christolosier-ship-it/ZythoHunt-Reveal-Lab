@@ -1,0 +1,286 @@
+#beer-background-root {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background: #1a0d02;
+}
+
+.beer-stage {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  isolation: isolate;
+  opacity: .82;
+  transform: translateZ(0);
+  contain: strict;
+}
+
+.beer-stage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 8;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 64% 55% at 50% 62%, rgba(5, 3, 2, .08), rgba(5, 3, 2, .32) 74%),
+    linear-gradient(180deg, rgba(5, 3, 2, .2), transparent 24%, rgba(5, 3, 2, .22));
+}
+
+.beer-stage.is-paused *,
+.beer-stage.is-paused::before,
+.beer-stage.is-paused::after {
+  animation-play-state: paused !important;
+}
+
+.beer-liquid {
+  position: absolute;
+  inset: -2%;
+  background:
+    radial-gradient(ellipse 70% 50% at 30% 22%, var(--liq-glow), transparent 65%),
+    radial-gradient(ellipse 60% 45% at 75% 55%, var(--liq-glow-soft), transparent 70%),
+    radial-gradient(ellipse 80% 40% at 50% 110%, var(--liq-deep), transparent 70%),
+    linear-gradient(180deg, var(--liq-top) 0%, var(--liq-mid) 55%, var(--liq-bot) 100%);
+  background-size: 140% 140%, 160% 160%, 160% 120%, 100% 100%;
+  animation: zbg-liquid-shift calc(28s / var(--speed, 1)) ease-in-out infinite alternate;
+  will-change: background-position;
+}
+
+@keyframes zbg-liquid-shift {
+  from { background-position: 30% 20%, 75% 60%, 50% 100%, 0 0; }
+  to { background-position: 38% 28%, 68% 64%, 54% 100%, 0 0; }
+}
+
+.beer-depth {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 70%, rgb(0 0 0 / .18) 0 14%, transparent 40%),
+    radial-gradient(circle at 78% 30%, rgb(0 0 0 / .14) 0 12%, transparent 38%),
+    radial-gradient(circle at 55% 85%, rgb(0 0 0 / .22) 0 18%, transparent 45%),
+    radial-gradient(circle 1px at 22% 40%, rgb(255 255 255 / .18) 0 1px, transparent 2px),
+    radial-gradient(circle 1px at 65% 62%, rgb(255 255 255 / .12) 0 1px, transparent 2px),
+    radial-gradient(circle 1px at 84% 78%, rgb(255 255 255 / .14) 0 1px, transparent 2px);
+  mix-blend-mode: overlay;
+  opacity: .65;
+  animation: zbg-depth-drift calc(70s / var(--speed, 1)) linear infinite;
+}
+
+@keyframes zbg-depth-drift {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-2%, -4%, 0); }
+}
+
+.beer-caustics {
+  position: absolute;
+  inset: -12%;
+  mix-blend-mode: screen;
+  filter: blur(22px);
+  opacity: var(--caustic-op, .35);
+  will-change: transform;
+}
+.beer-caustics.c1 {
+  background:
+    radial-gradient(ellipse 38% 16% at 20% 30%, var(--liq-glow-soft), transparent 70%),
+    radial-gradient(ellipse 28% 12% at 70% 55%, var(--liq-glow-soft), transparent 70%),
+    radial-gradient(ellipse 48% 18% at 40% 78%, var(--liq-glow-soft), transparent 70%);
+  animation: zbg-caustics-a calc(34s / var(--speed, 1)) ease-in-out infinite alternate;
+}
+.beer-caustics.c2 {
+  background:
+    radial-gradient(ellipse 22% 10% at 85% 22%, var(--liq-glow-soft), transparent 70%),
+    radial-gradient(ellipse 30% 14% at 12% 60%, var(--liq-glow-soft), transparent 70%),
+    radial-gradient(ellipse 36% 16% at 60% 40%, var(--liq-glow-soft), transparent 70%);
+  opacity: calc(var(--caustic-op, .35) * .7);
+  animation: zbg-caustics-b calc(52s / var(--speed, 1)) ease-in-out infinite alternate;
+}
+@keyframes zbg-caustics-a { from { transform: translate3d(-2%, -1%, 0) scale(1); } to { transform: translate3d(3%, 2%, 0) scale(1.04); } }
+@keyframes zbg-caustics-b { from { transform: translate3d(2%, 1%, 0) scale(1.02); } to { transform: translate3d(-3%, -2%, 0) scale(1.06); } }
+
+.beer-rim {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 100% at 0% 50%, var(--liq-rim), transparent 35%),
+    radial-gradient(ellipse 60% 100% at 100% 50%, var(--liq-rim), transparent 35%);
+  mix-blend-mode: screen;
+  opacity: .55;
+}
+.beer-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 90% 80% at 50% 55%, transparent 48%, rgb(0 0 0 / .48) 100%);
+}
+
+.beer-shine {
+  position: absolute;
+  top: -10%;
+  width: 35%;
+  height: 130%;
+  mix-blend-mode: screen;
+  filter: blur(3px);
+  opacity: 0;
+  background: linear-gradient(115deg, transparent 40%, rgb(255 255 255 / .06) 48%, rgb(255 255 255 / .14) 50%, rgb(255 255 255 / .06) 52%, transparent 60%);
+}
+.beer-shine.s1 { left: -40%; animation: zbg-shine calc(22s / var(--speed, 1)) ease-in-out -3s infinite; }
+.beer-shine.s2 { left: -20%; width: 22%; animation: zbg-shine calc(31s / var(--speed, 1)) ease-in-out -12s infinite; }
+.beer-shine.s3 { left: -60%; width: 45%; animation: zbg-shine calc(45s / var(--speed, 1)) ease-in-out -7s infinite; }
+@keyframes zbg-shine {
+  0% { transform: translateX(0); opacity: 0; }
+  15% { opacity: .5; }
+  60% { opacity: .7; }
+  85% { opacity: .2; }
+  100% { transform: translateX(380%); opacity: 0; }
+}
+
+.beer-bubbles { position: absolute; inset: 0; }
+.micro-layer { z-index: 1; opacity: var(--micro-vis, 1); filter: blur(.4px); }
+.main-layer { z-index: 3; }
+.hero-layer { z-index: 4; }
+
+.micro {
+  position: absolute;
+  bottom: -20px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, rgb(255 255 255 / .55), transparent 70%);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  will-change: transform;
+}
+.micro.f1 { animation-name: zbg-micro-a; }
+.micro.f2 { animation-name: zbg-micro-b; }
+.micro.f3 { animation-name: zbg-micro-c; }
+.micro.f4 { animation-name: zbg-micro-d; }
+@keyframes zbg-micro-a { 0% { transform: translate3d(0,0,0); opacity: 0; } 10% { opacity: .6; } 100% { transform: translate3d(var(--drift), -105vh, 0); opacity: 0; } }
+@keyframes zbg-micro-b { 0% { transform: translate3d(0,0,0) scale(.9); opacity: 0; } 20% { opacity: .7; } 50% { transform: translate3d(calc(var(--drift) * .6), -50vh, 0); } 100% { transform: translate3d(calc(var(--drift) * -.4), -110vh, 0) scale(1.1); opacity: 0; } }
+@keyframes zbg-micro-c { 0% { transform: translate3d(0,0,0); opacity: 0; } 15% { opacity: .45; } 100% { transform: translate3d(calc(var(--drift) * 1.4), -108vh, 0); opacity: 0; } }
+@keyframes zbg-micro-d { 0% { transform: translate3d(0,0,0) scale(.8); opacity: 0; } 25% { opacity: .55; } 100% { transform: translate3d(var(--drift), -112vh, 0) scale(1.15); opacity: 0; } }
+
+.beer-stage .bubble {
+  position: absolute;
+  bottom: -40px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at var(--sx,30%) var(--sy,30%), rgb(255 255 255 / .95), rgb(255 255 255 / .35) 18%, rgb(255 255 255 / .08) 45%, transparent 65%),
+    radial-gradient(circle at 70% 75%, rgb(255 255 255 / .18), transparent 30%),
+    radial-gradient(circle at 50% 50%, var(--bub-tint), transparent 70%);
+  box-shadow: inset 0 0 4px rgb(255 255 255 / .25), inset -1px -2px 6px rgb(55 30 10 / .2), 0 0 6px rgb(255 210 130 / .18);
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+.beer-stage .bubble.f1 { animation-name: zbg-rise-a; animation-timing-function: ease-in; }
+.beer-stage .bubble.f2 { animation-name: zbg-rise-b; animation-timing-function: ease-in-out; }
+.beer-stage .bubble.f3 { animation-name: zbg-rise-c; animation-timing-function: ease-in; }
+.beer-stage .bubble.f4 { animation-name: zbg-rise-d; animation-timing-function: linear; }
+@keyframes zbg-rise-a { 0% { transform: translate3d(0,0,0) scale(.55); opacity: 0; } 8% { opacity: .9; } 50% { transform: translate3d(calc(var(--drift) * .4), -50vh, 0) scale(1); } 100% { transform: translate3d(var(--drift), -108vh, 0) scale(1.08); opacity: 0; } }
+@keyframes zbg-rise-b { 0% { transform: translate3d(0,0,0) scale(.6); opacity: 0; } 10% { opacity: .85; } 30% { transform: translate3d(calc(var(--drift) * .5), -25vh, 0); } 60% { transform: translate3d(calc(var(--drift) * -.3), -55vh, 0); } 100% { transform: translate3d(var(--drift), -110vh, 0) scale(1.12); opacity: 0; } }
+@keyframes zbg-rise-c { 0% { transform: translate3d(0,0,0) scale(.5); opacity: 0; } 12% { opacity: .95; } 40% { transform: translate3d(calc(var(--drift) * .8), -38vh, 0) scale(.95); } 100% { transform: translate3d(calc(var(--drift) * 1.1), -112vh, 0) scale(1.15); opacity: 0; } }
+@keyframes zbg-rise-d { 0% { transform: translate3d(0,0,0) scale(.7); opacity: 0; } 15% { opacity: .8; } 50% { transform: translate3d(calc(var(--drift) * -.6), -45vh, 0) scale(1.02); } 100% { transform: translate3d(var(--drift), -106vh, 0) scale(1.2); opacity: 0; } }
+
+.hero-bubble {
+  position: absolute;
+  bottom: -120px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 28%, rgb(255 255 255 / .85), rgb(255 255 255 / .25) 15%, rgb(255 255 255 / .05) 40%, transparent 65%), radial-gradient(circle at 70% 80%, rgb(255 255 255 / .18), transparent 32%);
+  box-shadow: inset 0 0 10px rgb(255 255 255 / .25), inset -3px -5px 14px rgb(55 30 10 / .25);
+  animation: zbg-hero 8s ease-out infinite;
+  will-change: transform;
+}
+@keyframes zbg-hero { 0% { transform: translate3d(0,0,0) scale(.6); opacity: 0; } 10% { opacity: .7; } 100% { transform: translate3d(var(--drift), -130vh, 0) rotate(var(--tilt)) scale(1.1); opacity: 0; } }
+
+.beer-surface {
+  position: absolute;
+  left: -5%;
+  right: -5%;
+  height: 14px;
+  z-index: 5;
+}
+.surface-line {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgb(255 255 255 / .22), rgb(255 255 255 / .05) 50%, transparent);
+  filter: blur(1px);
+  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+.surface-ripple {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 90px 6px at 12% 50%, rgb(255 255 255 / .25), transparent 70%),
+    radial-gradient(ellipse 120px 5px at 34% 60%, rgb(255 255 255 / .18), transparent 70%),
+    radial-gradient(ellipse 70px 4px at 58% 40%, rgb(255 255 255 / .22), transparent 70%),
+    radial-gradient(ellipse 100px 5px at 82% 55%, rgb(255 255 255 / .2), transparent 70%);
+  filter: blur(.8px);
+}
+.surface-ripple.r1 { animation: zbg-ripple calc(11s / var(--speed,1)) ease-in-out infinite alternate; }
+.surface-ripple.r2 { animation: zbg-ripple calc(17s / var(--speed,1)) ease-in-out infinite alternate-reverse; opacity: .6; }
+@keyframes zbg-ripple { from { transform: translate(-6px,0); } to { transform: translate(8px,1px); } }
+
+.beer-foam { position: absolute; top: 0; left: 0; right: 0; z-index: 6; }
+.foam-layer { position: absolute; inset: 0; }
+.foam-layer.lo { background: linear-gradient(180deg, transparent, var(--foam-lo-soft) 30%, var(--foam-lo)); filter: blur(3px); opacity: .85; }
+.foam-layer.mid {
+  background:
+    radial-gradient(circle at 20% 70%, var(--foam-mid) 12px, transparent 14px),
+    radial-gradient(circle at 45% 60%, var(--foam-mid) 18px, transparent 20px),
+    radial-gradient(circle at 70% 75%, var(--foam-mid) 14px, transparent 16px),
+    radial-gradient(circle at 88% 65%, var(--foam-mid) 16px, transparent 18px),
+    linear-gradient(180deg, var(--foam-mid), color-mix(in oklab, var(--foam-mid) 60%, transparent) 70%, transparent);
+  filter: blur(2px);
+  opacity: .92;
+}
+.foam-layer.hi { background: linear-gradient(180deg, var(--foam-hi), var(--foam-hi) 40%, color-mix(in oklab, var(--foam-hi) 70%, transparent) 75%, transparent); filter: blur(1.2px); }
+.foam-bubbles { position: absolute; inset: 0; }
+.foam-bubble {
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%,-50%);
+  box-shadow: inset -1px -2px 4px rgb(80 50 25 / .2), inset 1px 2px 3px rgb(255 255 255 / .85);
+  animation-iteration-count: infinite;
+}
+.foam-bubble.fl-hi { background: radial-gradient(circle at 35% 30%, #fff, var(--foam-hi) 55%, var(--foam-mid)); }
+.foam-bubble.fl-mid { background: radial-gradient(circle at 35% 32%, #fff, var(--foam-hi) 50%, var(--foam-mid) 90%, var(--foam-lo)); }
+.foam-bubble.fl-lo { background: radial-gradient(circle at 38% 35%, var(--foam-hi), var(--foam-mid) 55%, var(--foam-lo)); }
+.foam-bubble.fa-1 { animation-name: zbg-foam-a; animation-direction: alternate; animation-timing-function: ease-in-out; }
+.foam-bubble.fa-2 { animation-name: zbg-foam-b; animation-direction: alternate; animation-timing-function: ease-in-out; }
+.foam-bubble.fa-3 { animation-name: zbg-foam-c; animation-timing-function: ease-in-out; }
+.foam-bubble.fa-4 { animation-name: zbg-foam-d; animation-direction: alternate; animation-timing-function: ease-in-out; }
+@keyframes zbg-foam-a { from { transform: translate(-50%,-50%) scale(1); } to { transform: translate(-50%,-50%) scale(1.06); } }
+@keyframes zbg-foam-b { from { transform: translate(-50%,-50%) scale(.96); } to { transform: translate(-50%,-50%) scale(1.04); } }
+@keyframes zbg-foam-c { 0%,100% { transform: translate(-50%,-50%) scale(1); opacity: 1; } 50% { transform: translate(-50%,-50%) scale(.92); opacity: .55; } }
+@keyframes zbg-foam-d { from { transform: translate(-50%,-50%) scale(1.02); } to { transform: translate(-50%,-50%) scale(1.06) translateY(-1px); } }
+
+.foam-edge {
+  position: absolute;
+  left: -5%;
+  right: -5%;
+  bottom: -3vh;
+  height: 7vh;
+  background:
+    radial-gradient(circle 14px at 4% 30%, var(--foam-mid) 99%, transparent 100%),
+    radial-gradient(circle 22px at 11% 45%, var(--foam-mid) 99%, transparent 100%),
+    radial-gradient(circle 9px at 16% 22%, var(--foam-hi) 99%, transparent 100%),
+    radial-gradient(circle 28px at 24% 50%, var(--foam-mid) 99%, transparent 100%),
+    radial-gradient(circle 12px at 31% 25%, var(--foam-hi) 99%, transparent 100%),
+    radial-gradient(circle 18px at 38% 42%, var(--foam-mid) 99%, transparent 100%),
+    radial-gradient(circle 26px at 47% 55%, var(--foam-lo) 99%, transparent 100%),
+    radial-gradient(circle 10px at 54% 22%, var(--foam-hi) 99%, transparent 100%),
+    radial-gradient(circle 20px at 61% 40%, var(--foam-mid) 99%, transparent 100%),
+    radial-gradient(circle 32px at 70% 52%, var(--foam-mid) 99%, transparent 100%),
+    radial-gradient(circle 14px at 78% 28%, var(--foam-hi) 99%, transparent 100%),
+    radial-gradient(circle 22px at 86% 45%, var(--foam-mid) 99%, transparent 100%),
+    radial-gradient(circle 11px at 93% 25%, var(--foam-hi) 99%, transparent 100%),
+    radial-gradient(circle 18px at 98% 40%, var(--foam-mid) 99%, transparent 100%);
+  filter: blur(1.4px);
+  animation: zbg-foam-edge calc(18s / var(--speed,1)) ease-in-out infinite alternate;
+}
+@keyframes zbg-foam-edge { from { transform: translate(0,0); } to { transform: translate(-6px,1px); } }
+
+.beer-stage.is-reduced .hero-layer,
+.beer-stage.is-reduced .beer-shine { display: none; }
+.beer-stage.is-reduced .micro-layer { opacity: .35 !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  .beer-stage * { animation-duration: 60s !important; }
+}
