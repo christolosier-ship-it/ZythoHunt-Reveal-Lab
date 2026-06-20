@@ -87,10 +87,15 @@ function makeFoam(count, seed = 404) {
 }
 
 const getTier = () => window.innerWidth < 480 ? "sm" : window.innerWidth < 1024 ? "md" : "lg";
+const toCssProperty = (property) => property.startsWith("--")
+  ? property
+  : property.replace(/[A-Z]/g, (letter) => `-${letter.toLowerCase()}`);
 const span = (className, styles = {}) => {
   const node = document.createElement("span");
   node.className = className;
-  Object.assign(node.style, styles);
+  Object.entries(styles).forEach(([property, value]) => {
+    node.style.setProperty(toCssProperty(property), String(value));
+  });
   return node;
 };
 

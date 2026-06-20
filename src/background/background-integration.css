@@ -2,6 +2,27 @@
   z-index: 10;
 }
 
+/* Keep the stout background dark without smothering the particles. */
+.beer-stage {
+  opacity: .94 !important;
+}
+
+.beer-stage::after {
+  background:
+    radial-gradient(ellipse 64% 55% at 50% 62%, rgba(5, 3, 2, .02), rgba(5, 3, 2, .18) 76%),
+    linear-gradient(180deg, rgba(5, 3, 2, .1), transparent 24%, rgba(5, 3, 2, .12)) !important;
+}
+
+.beer-stage .micro,
+.beer-stage .bubble,
+.beer-stage .hero-bubble {
+  mix-blend-mode: screen;
+}
+
+.beer-stage .bubble {
+  border: 1px solid rgba(255, 244, 218, .14);
+}
+
 #app-header {
   background: linear-gradient(180deg, rgba(14, 10, 6, .88), rgba(14, 10, 6, .52));
   backdrop-filter: blur(8px) saturate(.9);
