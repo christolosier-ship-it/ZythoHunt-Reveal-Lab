@@ -1,5 +1,6 @@
 /** @typedef {any} Any */
 import "./styles.css";
+import "./card-presentation.css";
 import "./background/background-integration.css";
 import gsap from "gsap";
 import { preloadAssets } from "./utils/preload-assets.js";
@@ -23,14 +24,6 @@ const settingsBtn = $("settings-btn");
 const debugPanel = $("debug-panel");
 const debugBody = $("debug-panel-body");
 const collection = collections[0];
-const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-
-function syncMotionPreference() {
-  document.documentElement.classList.toggle("reduce-motion", reducedMotionQuery.matches);
-}
-
-syncMotionPreference();
-reducedMotionQuery.addEventListener?.("change", syncMotionPreference);
 
 const BACKGROUND_CONTROLS = [
   ["beerT", "Couleur de bière", 0, 100, 1, ""],

@@ -1,0 +1,89 @@
+/* Final presentation overrides validated on tablet. */
+.card-copy {
+  left: 14%;
+  right: 14%;
+  top: 77%;
+  bottom: 8%;
+  width: auto;
+  height: auto;
+  display: grid;
+  place-items: center;
+  overflow: visible;
+  text-align: center;
+}
+
+.card-name {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  white-space: nowrap;
+  overflow: visible;
+  overflow-wrap: normal;
+  word-break: normal;
+  text-overflow: clip;
+  text-align: center;
+  line-height: 1;
+  text-wrap: nowrap;
+}
+
+.csl-card.is-inspecting {
+  z-index: 160 !important;
+}
+
+.card-click-glow {
+  position: absolute;
+  inset: -5%;
+  z-index: 20;
+  border: 2px solid rgba(255, 184, 82, 0.96);
+  border-radius: calc(var(--csl-radius) + 8px);
+  box-shadow:
+    0 0 14px rgba(255, 177, 67, 0.95),
+    0 0 34px rgba(232, 126, 32, 0.8),
+    0 0 62px rgba(180, 73, 12, 0.45),
+    inset 0 0 18px rgba(255, 195, 103, 0.34);
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.92);
+  transform-origin: center;
+  will-change: opacity, transform;
+}
+
+/* Safari fallback first, then the dynamic viewport value. */
+#carousel-container {
+  height: calc(100vh - var(--head-h) - 112px);
+  height: calc(100dvh - var(--head-h) - 112px);
+}
+
+#debug-panel {
+  max-height: calc(100vh - var(--head-h) - var(--nav-h) - 20px);
+  max-height: calc(100dvh - var(--head-h) - var(--nav-h) - 20px);
+}
+
+@media (max-width: 640px) {
+  #carousel-container {
+    height: calc(100vh - var(--head-h) - 138px);
+    height: calc(100dvh - var(--head-h) - 138px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-click-glow {
+    box-shadow:
+      0 0 12px rgba(255, 177, 67, 0.88),
+      0 0 26px rgba(232, 126, 32, 0.58);
+  }
+
+  /* Override the obsolete Carousel Lab rule that flattened every card. */
+  .csl-card-inner {
+    transform: rotateY(0deg) !important;
+    transition: none !important;
+  }
+
+  .csl-card-inner.beer-card--discovered {
+    transform: rotateY(180deg) !important;
+  }
+
+  .beer-card--revealable {
+    animation: none !important;
+  }
+}
