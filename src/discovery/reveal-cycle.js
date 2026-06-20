@@ -3,7 +3,7 @@ export async function runRevealCycle({
   carousel,
   revealEngine,
   store,
-  ensureImage = async () => {},
+  ensureImage = async (_card) => {},
   beforeReveal,
   afterReveal,
   onAlreadyDiscovered,
