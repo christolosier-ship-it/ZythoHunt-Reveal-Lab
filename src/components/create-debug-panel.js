@@ -2,7 +2,7 @@ import { motionTokens, updateToken, resetTokens, getDefaults } from "../animatio
 
 const CONTROLS = [
   { key: "extractionDuration", label: "Durée d'extraction", min: 0.1, max: 2, step: 0.05, unit: "s" },
-  { key: "flipDuration", label: "Durée du retournement", min: 0.1, max: 2, step: 0.05, unit: "s" },
+  { key: "flipDuration", label: "Durée du retournement", min: 0.1, max: 2, step: 0.01, unit: "s" },
   { key: "perspective", label: "Perspective", min: 400, max: 3000, step: 50, unit: "px" },
   { key: "tiltX", label: "Inclinaison X", min: -15, max: 15, step: 0.5, unit: "°" },
   { key: "tiltZ", label: "Inclinaison Z", min: -10, max: 10, step: 0.2, unit: "°" },
