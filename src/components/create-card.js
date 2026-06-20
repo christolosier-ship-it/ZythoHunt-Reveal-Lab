@@ -53,17 +53,28 @@ function createBackFace() {
 
 export function fitCardName(nameEl, containerEl = nameEl?.parentElement) {
   if (!nameEl || !containerEl) return;
-  const max = Math.max(12, Math.min(28, containerEl.clientHeight * 0.45));
-  const min = 10;
+
+  const availableWidth = Math.max(1, containerEl.clientWidth - 4);
+  const availableHeight = Math.max(1, containerEl.clientHeight - 2);
+  const max = Math.max(12, Math.min(34, availableHeight * 0.64));
+  const min = 7;
+
+  nameEl.style.whiteSpace = "nowrap";
   nameEl.style.fontSize = `${max}px`;
+
   for (let size = max; size >= min; size -= 0.5) {
     nameEl.style.fontSize = `${size}px`;
-    if (nameEl.scrollWidth <= containerEl.clientWidth + 1 && nameEl.scrollHeight <= containerEl.clientHeight + 1) break;
+    if (nameEl.scrollWidth <= availableWidth && nameEl.scrollHeight <= availableHeight) break;
   }
 }
 
 export function fitAllCardNames(/** @type {any} */ root = document) {
   root.querySelectorAll(".card-name").forEach((nameEl) => fitCardName(nameEl, nameEl.parentElement));
+}
+
+function scheduleCardNameFit(root) {
+  requestAnimationFrame(() => fitAllCardNames(root));
+  document.fonts?.ready.then(() => fitAllCardNames(root)).catch(() => {});
 }
 
 export function createCard({ index = 0, cardData, revealable, discovered = false, as = "slot", collection = null }) {
@@ -89,7 +100,7 @@ export function createCard({ index = 0, cardData, revealable, discovered = false
     card.style.transform = "rotateY(180deg)";
   }
   wrapper.appendChild(card);
-  requestAnimationFrame(() => fitAllCardNames(wrapper));
+  scheduleCardNameFit(wrapper);
   return wrapper;
 }
 
@@ -98,6 +109,6 @@ export function cloneCardForReveal(cardEl, rect, cardData) {
   clone.className = "beer-card beer-card--clone";
   clone.style.cssText = `position:fixed;left:${rect.left}px;top:${rect.top}px;width:${rect.width}px;height:${rect.height}px;z-index:1000;pointer-events:none;`;
   clone.append(createBackFace(), createCardFront({ cardData, frameUrl: CARD_FRAME_URL }));
-  requestAnimationFrame(() => fitAllCardNames(clone));
+  scheduleCardNameFit(clone);
   return clone;
 }
