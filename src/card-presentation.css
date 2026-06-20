@@ -48,10 +48,42 @@
   will-change: opacity, transform;
 }
 
+/* Safari fallback first, then the dynamic viewport value. */
+#carousel-container {
+  height: calc(100vh - var(--head-h) - 112px);
+  height: calc(100dvh - var(--head-h) - 112px);
+}
+
+#debug-panel {
+  max-height: calc(100vh - var(--head-h) - var(--nav-h) - 20px);
+  max-height: calc(100dvh - var(--head-h) - var(--nav-h) - 20px);
+}
+
+@media (max-width: 640px) {
+  #carousel-container {
+    height: calc(100vh - var(--head-h) - 138px);
+    height: calc(100dvh - var(--head-h) - 138px);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .card-click-glow {
     box-shadow:
       0 0 12px rgba(255, 177, 67, 0.88),
       0 0 26px rgba(232, 126, 32, 0.58);
+  }
+
+  /* Override the obsolete Carousel Lab rule that flattened every card. */
+  .csl-card-inner {
+    transform: rotateY(0deg) !important;
+    transition: none !important;
+  }
+
+  .csl-card-inner.beer-card--discovered {
+    transform: rotateY(180deg) !important;
+  }
+
+  .beer-card--revealable {
+    animation: none !important;
   }
 }
