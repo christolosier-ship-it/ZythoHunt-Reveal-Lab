@@ -13,14 +13,37 @@
     linear-gradient(180deg, rgba(5, 3, 2, .1), transparent 24%, rgba(5, 3, 2, .12)) !important;
 }
 
+/* One composited layer per particle family is cheaper than blending every node. */
+.beer-stage .micro-layer,
+.beer-stage .main-layer,
+.beer-stage .hero-layer {
+  mix-blend-mode: screen;
+  contain: layout paint;
+  transform: translateZ(0);
+}
+
 .beer-stage .micro,
 .beer-stage .bubble,
 .beer-stage .hero-bubble {
-  mix-blend-mode: screen;
+  mix-blend-mode: normal;
+}
+
+/* Microbubbles are numerous; avoid promoting every one to its own layer. */
+.beer-stage .micro {
+  will-change: auto;
 }
 
 .beer-stage .bubble {
   border: 1px solid rgba(255, 244, 218, .14);
+}
+
+/* Reduce large blurred surfaces on phones and tablets while preserving the look. */
+.beer-stage[data-tier="sm"] .beer-caustics {
+  filter: blur(14px);
+}
+
+.beer-stage[data-tier="md"] .beer-caustics {
+  filter: blur(18px);
 }
 
 #app-header {

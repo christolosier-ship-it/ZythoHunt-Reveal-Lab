@@ -1,10 +1,5 @@
 import "./beer-background.css";
-
-const PARTICLE_CAPS = {
-  sm: { micro: 50, main: 24, hero: 3, foam: 38 },
-  md: { micro: 80, main: 40, hero: 4, foam: 60 },
-  lg: { micro: 120, main: 60, hero: 6, foam: 85 }
-};
+import { PARTICLE_PROFILES, getParticleBucket, getParticleTier } from "./particle-profile.js";
 
 const BEER_STOPS = [
   { t: 0, name: "Stout", top: [22,55,10], mid: [20,70,5], bot: [20,85,2], glow: [28,70,22], rim: [35,80,35], foamHi: [32,25,78], foamMid: [30,30,68], foamLo: [28,35,55], lightness: .05 },
@@ -18,6 +13,7 @@ const BEER_STOPS = [
 
 const lerp = (a, b, t) => a + (b - a) * t;
 const lerpTriplet = (a, b, t) => [lerp(a[0], b[0], t), lerp(a[1], b[1], t), lerp(a[2], b[2], t)];
+
 /** @param {number[]} triplet */
 const toHsl = (triplet, alpha = 1) => {
   const [h, s, l] = triplet;
@@ -28,12 +24,17 @@ const toHsl = (triplet, alpha = 1) => {
 
 function getPalette(value) {
   const clamped = Math.max(0, Math.min(100, Number(value) || 0));
-  let start = BEER_STOPS[0], end = BEER_STOPS.at(-1);
+  let start = BEER_STOPS[0];
+  let end = BEER_STOPS.at(-1);
+
   for (let index = 0; index < BEER_STOPS.length - 1; index += 1) {
     if (clamped >= BEER_STOPS[index].t && clamped <= BEER_STOPS[index + 1].t) {
-      start = BEER_STOPS[index]; end = BEER_STOPS[index + 1]; break;
+      start = BEER_STOPS[index];
+      end = BEER_STOPS[index + 1];
+      break;
     }
   }
+
   const progress = (clamped - start.t) / Math.max(1, end.t - start.t);
   return {
     name: progress < .5 ? start.name : end.name,
@@ -61,35 +62,90 @@ function mulberry32(seed) {
 }
 
 const randomFamily = (random) => 1 + Math.floor(random() * 4);
+
 function makeMicro(count, seed = 101) {
   const random = mulberry32(seed);
-  return Array.from({ length: count }, (_, i) => ({ i, size: 1.2 + random() * 3.2, left: random() * 100, duration: 14 + random() * 18, delay: -random() * 30, drift: (random() - .5) * 18, opacity: .12 + random() * .35, family: randomFamily(random) }));
+  return Array.from({ length: count }, (_, i) => ({
+    i,
+    size: 1.2 + random() * 3.2,
+    left: random() * 100,
+    duration: 14 + random() * 18,
+    delay: -random() * 30,
+    drift: (random() - .5) * 18,
+    opacity: .12 + random() * .35,
+    family: randomFamily(random)
+  }));
 }
+
 function makeMain(count, seed = 202) {
   const random = mulberry32(seed);
   return Array.from({ length: count }, (_, i) => {
     const depth = random();
-    return { i, size: 5 + depth * 22 + random() * 6, left: random() * 100, duration: 7 + (1 - depth) * 8 + random() * 4, delay: -random() * 22, drift: (random() - .5) * 60, opacity: .35 + depth * .5, blur: (1 - depth) * 1.6, squash: .92 + random() * .16, family: randomFamily(random), shineX: 22 + random() * 24, shineY: 20 + random() * 22 };
+    return {
+      i,
+      size: 5 + depth * 22 + random() * 6,
+      left: random() * 100,
+      duration: 7 + (1 - depth) * 8 + random() * 4,
+      delay: -random() * 22,
+      drift: (random() - .5) * 60,
+      opacity: .35 + depth * .5,
+      blur: (1 - depth) * 1.6,
+      squash: .92 + random() * .16,
+      family: randomFamily(random),
+      shineX: 22 + random() * 24,
+      shineY: 20 + random() * 22
+    };
   });
 }
+
 function makeHero(count, seed = 303) {
   const random = mulberry32(seed);
-  return Array.from({ length: count }, (_, i) => ({ i, size: 36 + random() * 44, left: random() * 100, duration: 5 + random() * 4, delay: -random() * 12, drift: (random() - .5) * 120, opacity: .18 + random() * .18, blur: 2 + random() * 3, tilt: (random() - .5) * 30 }));
+  return Array.from({ length: count }, (_, i) => ({
+    i,
+    size: 36 + random() * 44,
+    left: random() * 100,
+    duration: 5 + random() * 4,
+    delay: -random() * 12,
+    drift: (random() - .5) * 120,
+    opacity: .18 + random() * .18,
+    blur: 2 + random() * 3,
+    tilt: (random() - .5) * 30
+  }));
 }
+
 function makeFoam(count, seed = 404) {
   const random = mulberry32(seed);
   return Array.from({ length: count }, (_, i) => {
     const top = random() * 100;
     const layer = top < 35 ? "hi" : top < 75 ? "mid" : "lo";
-    const size = layer === "hi" ? 4 + random() * 10 : layer === "mid" ? 8 + random() * 22 : 14 + random() * 34;
-    return { i, size, left: random() * 100, top, opacity: layer === "hi" ? .7 + random() * .3 : layer === "mid" ? .55 + random() * .4 : .35 + random() * .45, duration: 4 + random() * 8, delay: -random() * 10, family: randomFamily(random), layer };
+    const size = layer === "hi"
+      ? 4 + random() * 10
+      : layer === "mid"
+        ? 8 + random() * 22
+        : 14 + random() * 34;
+
+    return {
+      i,
+      size,
+      left: random() * 100,
+      top,
+      opacity: layer === "hi"
+        ? .7 + random() * .3
+        : layer === "mid"
+          ? .55 + random() * .4
+          : .35 + random() * .45,
+      duration: 4 + random() * 8,
+      delay: -random() * 10,
+      family: randomFamily(random),
+      layer
+    };
   });
 }
 
-const getTier = () => window.innerWidth < 480 ? "sm" : window.innerWidth < 1024 ? "md" : "lg";
 const toCssProperty = (property) => property.startsWith("--")
   ? property
   : property.replace(/[A-Z]/g, (letter) => `-${letter.toLowerCase()}`);
+
 const span = (className, styles = {}) => {
   const node = document.createElement("span");
   node.className = className;
@@ -99,11 +155,19 @@ const span = (className, styles = {}) => {
   return node;
 };
 
+const blurValue = (value, scale) => {
+  const scaled = value * scale;
+  return scaled > .2 ? `blur(${scaled.toFixed(2)}px)` : "";
+};
+
 export function createBeerBackground({ hostEl, settings }) {
   let root = null;
-  let tier = getTier();
+  let tier = getParticleTier();
+  let densityBucket = null;
+  let foamBucket = null;
   let manualPause = false;
   let resizeTimer = 0;
+
   const reducedQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
   const abortController = new AbortController();
   const { signal } = abortController;
@@ -112,6 +176,7 @@ export function createBeerBackground({ hostEl, settings }) {
   function buildStructure() {
     root = document.createElement("div");
     root.className = "beer-stage";
+    root.dataset.tier = tier;
     root.setAttribute("aria-hidden", "true");
     root.innerHTML = `
       <div class="beer-liquid"></div><div class="beer-depth"></div>
@@ -121,6 +186,7 @@ export function createBeerBackground({ hostEl, settings }) {
       <div class="beer-bubbles micro-layer"></div><div class="beer-bubbles main-layer"></div><div class="beer-bubbles hero-layer"></div>
       <div class="beer-surface"><div class="surface-line"></div><div class="surface-ripple r1"></div><div class="surface-ripple r2"></div></div>
       <div class="beer-foam"><div class="foam-layer lo"></div><div class="foam-layer mid"></div><div class="foam-layer hi"></div><div class="foam-bubbles"></div><div class="foam-edge"></div></div>`;
+
     refs.micro = root.querySelector(".micro-layer");
     refs.main = root.querySelector(".main-layer");
     refs.hero = root.querySelector(".hero-layer");
@@ -137,14 +203,24 @@ export function createBeerBackground({ hostEl, settings }) {
     const speed = (0.75 + lightness * .45) * (reducedQuery.matches ? .25 : 1);
     const rimStrength = .35 + (1 - lightness) * .55;
     const props = {
-      "--liq-top": toHsl(palette.top), "--liq-mid": toHsl(palette.mid), "--liq-bot": toHsl(palette.bot),
-      "--liq-glow": toHsl(palette.glow, .55), "--liq-glow-soft": toHsl(palette.glow, .22),
-      "--liq-rim": toHsl(palette.rim, rimStrength), "--liq-deep": toHsl([palette.bot[0], palette.bot[1], Math.max(2, palette.bot[2] - 4)], .85),
-      "--bub-tint": toHsl(palette.rim, .18), "--foam-hi": toHsl(palette.foamHi), "--foam-mid": toHsl(palette.foamMid),
-      "--foam-lo": toHsl(palette.foamLo, .85), "--foam-lo-soft": toHsl(palette.foamLo, 0),
-      "--speed": speed.toFixed(3), "--caustic-op": (.18 + lightness * .45).toFixed(3),
-      "--micro-vis": (.25 + lightness * .85).toFixed(3), "--foam-height": `${foamHeight}vh`
+      "--liq-top": toHsl(palette.top),
+      "--liq-mid": toHsl(palette.mid),
+      "--liq-bot": toHsl(palette.bot),
+      "--liq-glow": toHsl(palette.glow, .55),
+      "--liq-glow-soft": toHsl(palette.glow, .22),
+      "--liq-rim": toHsl(palette.rim, rimStrength),
+      "--liq-deep": toHsl([palette.bot[0], palette.bot[1], Math.max(2, palette.bot[2] - 4)], .85),
+      "--bub-tint": toHsl(palette.rim, .18),
+      "--foam-hi": toHsl(palette.foamHi),
+      "--foam-mid": toHsl(palette.foamMid),
+      "--foam-lo": toHsl(palette.foamLo, .85),
+      "--foam-lo-soft": toHsl(palette.foamLo, 0),
+      "--speed": speed.toFixed(3),
+      "--caustic-op": (.18 + lightness * .45).toFixed(3),
+      "--micro-vis": (.25 + lightness * .85).toFixed(3),
+      "--foam-height": `${foamHeight}vh`
     };
+
     Object.entries(props).forEach(([key, value]) => root.style.setProperty(key, value));
     refs.surface.style.top = "calc(var(--foam-height) - 6px)";
     refs.foam.style.height = "var(--foam-height)";
@@ -152,20 +228,86 @@ export function createBeerBackground({ hostEl, settings }) {
     root.dataset.palette = palette.name;
   }
 
-  function renderParticles() {
-    const caps = PARTICLE_CAPS[tier];
-    const density = Math.round(settings.bubbleDensity / 10) * 10 / 100;
-    const foam = Math.round(settings.foamIntensity / 10) * 10 / 100;
+  function renderBubbleLayers(profile, bucket) {
+    const density = bucket / 100;
     const counts = {
-      micro: Math.round(caps.micro * (.35 + density * .65)),
-      main: Math.round(caps.main * (.25 + density * .75)),
-      hero: Math.max(1, Math.round(caps.hero * (.2 + density * .8))),
-      foam: Math.round(caps.foam * (.3 + foam * .7))
+      micro: Math.round(profile.caps.micro * (.35 + density * .65)),
+      main: Math.round(profile.caps.main * (.25 + density * .75)),
+      hero: Math.max(1, Math.round(profile.caps.hero * (.2 + density * .8)))
     };
-    refs.micro.replaceChildren(...makeMicro(counts.micro).map((b) => span(`micro f${b.family}`, { width: `${b.size}px`, height: `${b.size}px`, left: `${b.left}%`, animationDuration: `${b.duration}s`, animationDelay: `${b.delay}s`, opacity: b.opacity, "--drift": `${b.drift}px` })));
-    refs.main.replaceChildren(...makeMain(counts.main).map((b) => span(`bubble f${b.family}`, { width: `${b.size}px`, height: `${b.size * b.squash}px`, left: `${b.left}%`, animationDuration: `${b.duration}s`, animationDelay: `${b.delay}s`, opacity: b.opacity, filter: b.blur > .2 ? `blur(${b.blur.toFixed(2)}px)` : "", "--drift": `${b.drift}px`, "--sx": `${b.shineX}%`, "--sy": `${b.shineY}%` })));
-    refs.hero.replaceChildren(...makeHero(counts.hero).map((b) => span("hero-bubble", { width: `${b.size}px`, height: `${b.size}px`, left: `${b.left}%`, animationDuration: `${b.duration}s`, animationDelay: `${b.delay}s`, opacity: b.opacity, filter: `blur(${b.blur.toFixed(2)}px)`, "--drift": `${b.drift}px`, "--tilt": `${b.tilt}deg` })));
-    refs.foamBubbles.replaceChildren(...makeFoam(counts.foam).map((b) => span(`foam-bubble fl-${b.layer} fa-${b.family}`, { width: `${b.size}px`, height: `${b.size}px`, left: `${b.left}%`, top: `${b.top}%`, opacity: b.opacity, animationDuration: `${b.duration}s`, animationDelay: `${b.delay}s` })));
+
+    refs.micro.replaceChildren(
+      ...makeMicro(counts.micro).map((bubble) => span(`micro f${bubble.family}`, {
+        width: `${bubble.size}px`,
+        height: `${bubble.size}px`,
+        left: `${bubble.left}%`,
+        animationDuration: `${bubble.duration}s`,
+        animationDelay: `${bubble.delay}s`,
+        opacity: bubble.opacity,
+        "--drift": `${bubble.drift}px`
+      }))
+    );
+
+    refs.main.replaceChildren(
+      ...makeMain(counts.main).map((bubble) => span(`bubble f${bubble.family}`, {
+        width: `${bubble.size}px`,
+        height: `${bubble.size * bubble.squash}px`,
+        left: `${bubble.left}%`,
+        animationDuration: `${bubble.duration}s`,
+        animationDelay: `${bubble.delay}s`,
+        opacity: bubble.opacity,
+        filter: blurValue(bubble.blur, profile.mainBlurScale),
+        "--drift": `${bubble.drift}px`,
+        "--sx": `${bubble.shineX}%`,
+        "--sy": `${bubble.shineY}%`
+      }))
+    );
+
+    refs.hero.replaceChildren(
+      ...makeHero(counts.hero).map((bubble) => span("hero-bubble", {
+        width: `${bubble.size}px`,
+        height: `${bubble.size}px`,
+        left: `${bubble.left}%`,
+        animationDuration: `${bubble.duration}s`,
+        animationDelay: `${bubble.delay}s`,
+        opacity: bubble.opacity,
+        filter: blurValue(bubble.blur, profile.heroBlurScale),
+        "--drift": `${bubble.drift}px`,
+        "--tilt": `${bubble.tilt}deg`
+      }))
+    );
+  }
+
+  function renderFoamLayer(profile, bucket) {
+    const foam = bucket / 100;
+    const count = Math.round(profile.caps.foam * (.3 + foam * .7));
+    refs.foamBubbles.replaceChildren(
+      ...makeFoam(count).map((bubble) => span(`foam-bubble fl-${bubble.layer} fa-${bubble.family}`, {
+        width: `${bubble.size}px`,
+        height: `${bubble.size}px`,
+        left: `${bubble.left}%`,
+        top: `${bubble.top}%`,
+        opacity: bubble.opacity,
+        animationDuration: `${bubble.duration}s`,
+        animationDelay: `${bubble.delay}s`
+      }))
+    );
+  }
+
+  function renderParticles({ force = false } = {}) {
+    const profile = PARTICLE_PROFILES[tier];
+    const nextDensityBucket = getParticleBucket(settings.bubbleDensity);
+    const nextFoamBucket = getParticleBucket(settings.foamIntensity);
+
+    if (force || nextDensityBucket !== densityBucket) {
+      densityBucket = nextDensityBucket;
+      renderBubbleLayers(profile, densityBucket);
+    }
+
+    if (force || nextFoamBucket !== foamBucket) {
+      foamBucket = nextFoamBucket;
+      renderFoamLayer(profile, foamBucket);
+    }
   }
 
   function syncPauseState() {
@@ -177,29 +319,56 @@ export function createBeerBackground({ hostEl, settings }) {
     if (root) return;
     buildStructure();
     applyPalette();
-    renderParticles();
+    renderParticles({ force: true });
     syncPauseState();
+
     document.addEventListener("visibilitychange", syncPauseState, { signal });
-    reducedQuery.addEventListener?.("change", () => { applyPalette(); syncPauseState(); }, { signal });
+    reducedQuery.addEventListener?.("change", () => {
+      applyPalette();
+      syncPauseState();
+    }, { signal });
+
     window.addEventListener("resize", () => {
       clearTimeout(resizeTimer);
       resizeTimer = window.setTimeout(() => {
-        const nextTier = getTier();
-        if (nextTier !== tier) { tier = nextTier; renderParticles(); }
+        const nextTier = getParticleTier();
+        if (nextTier === tier) return;
+        tier = nextTier;
+        root.dataset.tier = tier;
+        renderParticles({ force: true });
       }, 160);
     }, { signal });
   }
 
   function update(next = {}) {
-    const particlesChanged = "bubbleDensity" in next || "foamIntensity" in next;
     Object.assign(settings, next);
     applyPalette();
-    if (particlesChanged) renderParticles();
+    renderParticles();
   }
 
-  function pause() { manualPause = true; syncPauseState(); }
-  function resume() { manualPause = false; syncPauseState(); }
-  function destroy() { clearTimeout(resizeTimer); abortController.abort(); root?.remove(); root = null; }
+  function pause() {
+    manualPause = true;
+    syncPauseState();
+  }
 
-  return { mount, update, pause, resume, destroy, getPaletteName: () => root?.dataset.palette || getPalette(settings.beerT).name };
+  function resume() {
+    manualPause = false;
+    syncPauseState();
+  }
+
+  function destroy() {
+    clearTimeout(resizeTimer);
+    abortController.abort();
+    root?.remove();
+    root = null;
+  }
+
+  return {
+    mount,
+    update,
+    pause,
+    resume,
+    destroy,
+    getPaletteName: () => root?.dataset.palette || getPalette(settings.beerT).name
+  };
 }
