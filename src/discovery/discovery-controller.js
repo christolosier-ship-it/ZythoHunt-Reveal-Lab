@@ -1,3 +1,5 @@
+import { runRevealCycle } from "./reveal-cycle.js";
+
 export function createDiscoveryController({
   formEl,
   inputEl,
@@ -17,10 +19,12 @@ export function createDiscoveryController({
   const realCards = cards.filter((card) => card.revealable);
   const byId = Object.fromEntries(realCards.map((card) => [card.id, card]));
   const progressText = () => `${store.getDiscoveredIds().filter((id) => byId[id]).length} / ${realCards.length} révélées`;
+
   const setFeedback = (text, error = false) => {
     feedbackEl.textContent = text;
     feedbackEl.classList.toggle("is-error", error);
   };
+
   const setBusy = (value) => {
     busy = value;
     inputEl.disabled = value;
@@ -62,37 +66,19 @@ export function createDiscoveryController({
     const card = byId[result.cardId];
     setBusy(true);
     closeSettings?.();
-    let prepared = false;
-    let revealStarted = false;
 
     try {
-      await carousel.prepareForReveal();
-      prepared = true;
-      await carousel.focusCard(card.id);
-
-      if (store.isDiscovered(card.id)) {
-        await carousel.highlight(card.id);
-        setFeedback("Cette carte est déjà découverte");
-        return;
-      }
-
-      await ensureImage(card);
-      await beforeReveal?.();
-      revealStarted = true;
-
-      const revealResult = await revealEngine.reveal({
-        cardEl: carousel.getCardElement(card.id),
-        cardData: card,
-        sceneContext: carousel.createRevealContext(card.id),
-        mode: "full"
-      });
-
-      if (revealResult.status !== "completed") return;
-      setFeedback("Nouvelle carte révélée");
-      await revealEngine.returnToSource({
-        beforeSourceRestore: () => {
-          store.markDiscovered(card.id);
-          carousel.setDiscovered(card.id, true);
+      await runRevealCycle({
+        card,
+        carousel,
+        revealEngine,
+        store,
+        ensureImage,
+        beforeReveal,
+        afterReveal,
+        onAlreadyDiscovered: () => setFeedback("Cette carte est déjà découverte"),
+        onDiscovered: () => {
+          setFeedback("Nouvelle carte révélée");
           updateProgress();
         }
       });
@@ -100,8 +86,6 @@ export function createDiscoveryController({
       console.error(error);
       setFeedback("La révélation a échoué. Réessaie.", true);
     } finally {
-      if (revealStarted) await afterReveal?.();
-      if (prepared) carousel.unlock();
       setBusy(false);
       inputEl.focus();
     }
