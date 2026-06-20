@@ -1,0 +1,30 @@
+#app {
+  z-index: 10;
+}
+
+#app-header {
+  background: linear-gradient(180deg, rgba(14, 10, 6, .88), rgba(14, 10, 6, .52));
+  backdrop-filter: blur(8px) saturate(.9);
+  -webkit-backdrop-filter: blur(8px) saturate(.9);
+}
+
+.reveal-search-form {
+  background: linear-gradient(135deg, rgba(20, 13, 6, .78), rgba(12, 8, 4, .66));
+  backdrop-filter: blur(10px) saturate(.86);
+  -webkit-backdrop-filter: blur(10px) saturate(.86);
+}
+
+#debug-panel .debug-panel-inner {
+  background: rgba(18, 12, 6, .96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+#loading-screen {
+  background: #0e0a06;
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  #app-header { background: rgba(14, 10, 6, .94); }
+  .reveal-search-form { background: rgba(18, 12, 6, .9); }
+}
