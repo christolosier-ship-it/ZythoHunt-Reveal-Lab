@@ -64,7 +64,11 @@ async function boot() {
   if (!validation.valid) console.error("Collection Porters & Stouts invalide", validation.errors);
 
   const store = createDiscoveryStore();
-  const brassopediePanel = createBrassopediePanel({ cardsById: porterStoutCardsById });
+  const brassopediePanel = createBrassopediePanel({
+    cardsById: porterStoutCardsById,
+    onOpen: () => background.pause(),
+    onClose: () => background.resume()
+  });
   const carousel = createCarousel({
     containerEl: $("carousel-container"),
     cards: porterStoutCards,
