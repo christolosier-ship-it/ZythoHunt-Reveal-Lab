@@ -1,5 +1,13 @@
+/** @typedef {any} Any */
+
+/**
+ * @param {Any[]} collectionBundles
+ * @param {{ initialCollectionId?: string }} [options]
+ */
 export function createCollectionManager(collectionBundles, { initialCollectionId } = {}) {
+  /** @type {Any[]} */
   const orderedBundles = [...collectionBundles].sort((a, b) => (a.collection.order || 0) - (b.collection.order || 0));
+  /** @type {Map<string, Any>} */
   const bundlesById = new Map(orderedBundles.map((bundle) => [bundle.collection.id, bundle]));
   let activeCollectionId = initialCollectionId || orderedBundles[0]?.collection.id || null;
 
@@ -22,6 +30,7 @@ export function createCollectionManager(collectionBundles, { initialCollectionId
   };
 }
 
+/** @param {Any} bundle */
 export function validateCollectionBundle(bundle) {
   const errors = [];
   if (!bundle?.collection?.id) errors.push("Missing collection id.");
