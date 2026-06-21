@@ -60,7 +60,7 @@ export function createBrassopediePanel({ cardsById, onOpen, onClose }) {
     img.draggable = false;
     img.loading = "eager";
     img.decoding = "async";
-    img.fetchPriority = "high";
+    img.setAttribute("fetchpriority", "high");
     cardBox.append(img);
 
     const article = el("article", "brassopedie-panel");
