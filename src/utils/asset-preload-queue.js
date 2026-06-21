@@ -1,28 +1,49 @@
+/** @typedef {any} Any */
 import { assetUrl } from "./asset-url.js";
 
+/**
+ * @param {Any} card
+ * @param {"thumb"|"full"|string} [purpose]
+ */
 export function getCardImageForPurpose(card, purpose = "thumb") {
   if (!card) return null;
   if (purpose === "full") return card.fullImage || card.image || null;
   return card.thumbImage || card.image || null;
 }
 
+/**
+ * @param {Any[]} cards
+ * @param {number} activeIndex
+ * @param {number} [radius]
+ */
 export function getPreloadWindowCards(cards, activeIndex, radius = 3) {
   const start = Math.max(0, activeIndex - radius);
   const end = Math.min(cards.length - 1, activeIndex + radius);
   return cards.slice(start, end + 1);
 }
 
+/**
+ * @param {Any[]} cards
+ * @param {number} activeIndex
+ * @param {number} [radius]
+ * @param {"thumb"|"full"|string} [purpose]
+ */
 export function getPreloadWindowUrls(cards, activeIndex, radius = 3, purpose = "thumb") {
   return [...new Set(getPreloadWindowCards(cards, activeIndex, radius)
     .map((card) => getCardImageForPurpose(card, purpose))
-    .filter(Boolean)
+    .filter((path) => typeof path === "string" && path.length > 0)
     .map((path) => assetUrl(path)))];
 }
 
-export function createAssetPreloadQueue({ cards, radius = 3 } = {}) {
+/** @param {{ cards?: Any[], radius?: number }} [config] */
+export function createAssetPreloadQueue({ cards = [], radius = 3 } = {}) {
   const loaded = new Set();
   let generation = 0;
 
+  /**
+   * @param {string} url
+   * @param {number} currentGeneration
+   */
   const loadImage = (url, currentGeneration) => {
     if (!url || loaded.has(url)) return Promise.resolve({ status: "cached", url });
 
@@ -41,6 +62,7 @@ export function createAssetPreloadQueue({ cards, radius = 3 } = {}) {
     });
   };
 
+  /** @param {string[]} urls */
   function preloadUrls(urls) {
     const currentGeneration = generation;
     return Promise.all([...new Set(urls)].map((url) => loadImage(url, currentGeneration)));
