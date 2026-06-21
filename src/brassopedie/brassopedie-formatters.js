@@ -26,8 +26,10 @@ export function parentName(entry, byId) {
   return entry?.parentPrincipalId ? byId?.[entry.parentPrincipalId]?.nom || byId?.[entry.parentPrincipalId]?.name || entry.parentPrincipalId : null;
 }
 
-export function nonEmptyList(list) {
-  return Array.isArray(list) ? list.filter((item) => String(item || "").trim()) : [];
+export function nonEmptyList(value) {
+  if (Array.isArray(value)) return value.map((item) => String(item || "").trim()).filter(Boolean);
+  const item = String(value || "").trim();
+  return item ? [item] : [];
 }
 
 export function formatService(entry) {
@@ -48,7 +50,7 @@ export function recipeSections(recipe = {}) {
   add("Levures et microorganismes", recipe.levuresEtMicroorganismes);
   add("Ingrédients complémentaires", recipe.ingredientsComplementaires);
   add("Profil eau", recipe.profilEau);
-  add("Empâtage", recipe.empattage);
+  add("Empâtage", recipe.empatage ?? recipe.empattage);
   add("Ébullition et houblonnage", recipe.ebullitionEtHoublonnage);
   add("Fermentation", recipe.fermentation);
   add("Maturation", recipe.maturation);
