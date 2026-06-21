@@ -1,6 +1,9 @@
 import { assetUrl } from "../utils/asset-url.js";
 import { formatRange, formatService, natureLabel, parentName, recipeSections } from "./brassopedie-formatters.js";
 
+const INERT_SELECTORS = ["#app-header", "#reveal-search-form", "#carousel-container", "#debug-panel"];
+const FOCUSABLE_SELECTOR = "button, [href], input, select, textarea, summary, [tabindex]:not([tabindex='-1'])";
+
 const el = (tag, className, text) => {
   const node = document.createElement(tag);
   if (className) node.className = className;
@@ -24,17 +27,41 @@ export function shouldOpenBrassopedie({ cardId, isDiscovered }) {
   return Boolean(cardId && isDiscovered?.(cardId));
 }
 
+export function getFocusTrapWrapIndex(activeIndex, count, shiftKey) {
+  if (count <= 0) return null;
+  if (shiftKey && activeIndex <= 0) return count - 1;
+  if (!shiftKey && activeIndex >= count - 1) return 0;
+  return null;
+}
+
+function setBackgroundInert(value) {
+  INERT_SELECTORS.forEach((selector) => {
+    const node = document.querySelector(selector);
+    if (node) (/** @type {any} */ (node)).inert = value;
+  });
+}
+
+function getFocusableNodes(root) {
+  return Array.from(root.querySelectorAll(FOCUSABLE_SELECTOR))
+    .filter((node) => !node.disabled && node.offsetParent !== null);
+}
+
 export function createBrassopediePanel({ cardsById, onOpen, onClose }) {
   let overlay = null;
   let previousFocus = null;
+  let cleanupKeydown = null;
   const byBrassoId = Object.fromEntries(Object.values(cardsById).map((card) => [card.id, card.brassopedie]));
 
   function close() {
     if (!overlay) return;
+    cleanupKeydown?.();
+    cleanupKeydown = null;
     overlay.remove();
     overlay = null;
+    setBackgroundInert(false);
     onClose?.();
     previousFocus?.focus?.();
+    previousFocus = null;
   }
 
   function render(card) {
@@ -102,20 +129,45 @@ export function createBrassopediePanel({ cardsById, onOpen, onClose }) {
     return root;
   }
 
+  function activateKeyboardTrap(modal) {
+    const onKeyDown = (event) => {
+      if (!overlay) return;
+      if (event.key === "Escape") {
+        event.preventDefault();
+        close();
+        return;
+      }
+      if (event.key !== "Tab") return;
+
+      const focusables = getFocusableNodes(modal);
+      const activeIndex = focusables.indexOf(document.activeElement);
+      const nextIndex = getFocusTrapWrapIndex(activeIndex, focusables.length, event.shiftKey);
+      if (nextIndex == null) return;
+
+      event.preventDefault();
+      focusables[nextIndex]?.focus();
+    };
+
+    document.addEventListener("keydown", onKeyDown);
+    cleanupKeydown = () => document.removeEventListener("keydown", onKeyDown);
+  }
+
   function open(cardId) {
     const card = cardsById[cardId];
     if (!card) return { status: "missing" };
     close();
-    previousFocus = document.activeElement;
+    previousFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     overlay = el("div", "brassopedie-overlay");
     overlay.addEventListener("click", (event) => { if (event.target === overlay) close(); });
-    overlay.appendChild(render(card));
+    const modal = render(card);
+    overlay.appendChild(modal);
     document.body.appendChild(overlay);
+    setBackgroundInert(true);
+    activateKeyboardTrap(modal);
     onOpen?.();
-    overlay.querySelector(".brassopedie-modal")?.focus();
+    modal.focus();
     return { status: "opened", cardId };
   }
 
-  document.addEventListener("keydown", (event) => { if (event.key === "Escape") close(); });
   return { open, close, isOpen: () => Boolean(overlay) };
 }
