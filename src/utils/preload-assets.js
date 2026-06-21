@@ -1,4 +1,5 @@
 import { assetUrl } from "./asset-url.js";
+import { getPreloadWindowUrls } from "./asset-preload-queue.js";
 import { porterStoutCards, porterStoutCollection } from "../data/porters-stouts-collection.js";
 
 export const CARD_BACK_URL = assetUrl(porterStoutCollection.cardBack);
@@ -7,13 +8,11 @@ export const INITIAL_CAROUSEL_INDEX = 4;
 export const INITIAL_PRELOAD_RADIUS = 3;
 
 export function getInitialPreloadUrls(cards = porterStoutCards, activeIndex = INITIAL_CAROUSEL_INDEX, radius = INITIAL_PRELOAD_RADIUS) {
-  const start = Math.max(0, activeIndex - radius);
-  const end = Math.min(cards.length - 1, activeIndex + radius);
-  const cardUrls = cards
-    .slice(start, end + 1)
-    .map((card) => assetUrl(card.image));
-
-  return [...new Set([CARD_BACK_URL, CARD_FRAME_URL, ...cardUrls])];
+  return [...new Set([
+    CARD_BACK_URL,
+    CARD_FRAME_URL,
+    ...getPreloadWindowUrls(cards, activeIndex, radius, "thumb")
+  ])];
 }
 
 export async function preloadAssets(onProgress, options = {}) {
