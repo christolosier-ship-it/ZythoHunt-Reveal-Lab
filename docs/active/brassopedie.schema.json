@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ZythoHunt Brassopédie Collection",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "taxonomyVersion",
+    "collection",
+    "cartes"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string"
+    },
+    "taxonomyVersion": {
+      "type": "string"
+    },
+    "collection": {
+      "type": "object",
+      "required": [
+        "id",
+        "slug",
+        "nom"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9
+        },
+        "slug": {
+          "type": "string"
+        },
+        "nom": {
+          "type": "string"
+        }
+      }
+    },
+    "cartes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "nom",
+          "collectionId",
+          "nature",
+          "aliases",
+          "paysOrigine",
+          "origine",
+          "alcool",
+          "amertume",
+          "couleur",
+          "fermentation",
+          "service",
+          "description",
+          "histoireEtOrigines",
+          "recette",
+          "sources"
+        ]
+      }
+    }
+  }
+}
