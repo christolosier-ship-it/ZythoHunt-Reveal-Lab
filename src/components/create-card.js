@@ -2,7 +2,7 @@
 import { CARD_BACK_URL, CARD_FRAME_URL } from "../utils/preload-assets.js";
 import { assetUrl } from "../utils/asset-url.js";
 
-export function createCardFront({ cardData, frameUrl }) {
+export function createCardFront({ cardData, frameUrl, imageLoading = "eager", imageFetchPriority = "auto" }) {
   const frontFace = document.createElement("div");
   frontFace.className = "card-face card-front";
   frontFace.setAttribute("aria-hidden", "true");
@@ -15,6 +15,9 @@ export function createCardFront({ cardData, frameUrl }) {
     illImg.src = assetUrl(cardData.image);
     illImg.alt = cardData.name || "";
     illImg.draggable = false;
+    illImg.loading = imageLoading;
+    illImg.decoding = "async";
+    illImg.fetchPriority = imageFetchPriority;
     illWindow.appendChild(illImg);
 
     const resolvedFrameUrl = frameUrl || (cardData.frame ? assetUrl(cardData.frame) : CARD_FRAME_URL);
@@ -23,6 +26,7 @@ export function createCardFront({ cardData, frameUrl }) {
     frameImg.src = resolvedFrameUrl;
     frameImg.alt = "";
     frameImg.draggable = false;
+    frameImg.decoding = "async";
 
     const copy = document.createElement("div");
     copy.className = "card-copy";
@@ -48,6 +52,7 @@ function createBackFace(backUrl = CARD_BACK_URL) {
   backImg.src = backUrl;
   backImg.alt = "";
   backImg.draggable = false;
+  backImg.decoding = "async";
   backFace.appendChild(backImg);
   return backFace;
 }
@@ -107,7 +112,12 @@ export function createCard({ index = 0, cardData, revealable, discovered = false
 
   const frameUrl = cardData?.frame ? assetUrl(cardData.frame) : collection?.cardFrame ? assetUrl(collection.cardFrame) : CARD_FRAME_URL;
   const backUrl = collection?.cardBack ? assetUrl(collection.cardBack) : CARD_BACK_URL;
-  const frontFace = createCardFront({ cardData, frameUrl });
+  const frontFace = createCardFront({
+    cardData,
+    frameUrl,
+    imageLoading: discovered ? "eager" : "lazy",
+    imageFetchPriority: discovered ? "high" : "auto"
+  });
   card.append(createBackFace(backUrl), frontFace);
   if (discovered) {
     card.classList.add("beer-card--discovered");
@@ -127,7 +137,7 @@ export function cloneCardForReveal(cardEl, rect, cardData) {
   const frameUrl = cardData?.frame ? assetUrl(cardData.frame) : CARD_FRAME_URL;
   clone.className = "beer-card beer-card--clone";
   clone.style.cssText = `position:fixed;left:${rect.left}px;top:${rect.top}px;width:${rect.width}px;height:${rect.height}px;z-index:1000;pointer-events:none;`;
-  clone.append(createBackFace(), createCardFront({ cardData, frameUrl }));
+  clone.append(createBackFace(), createCardFront({ cardData, frameUrl, imageLoading: "eager", imageFetchPriority: "high" }));
   scheduleCardNameFit(clone);
   return clone;
 }
