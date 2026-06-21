@@ -24,7 +24,7 @@ export function shouldOpenBrassopedie({ cardId, isDiscovered }) {
   return Boolean(cardId && isDiscovered?.(cardId));
 }
 
-export function createBrassopediePanel({ cardsById }) {
+export function createBrassopediePanel({ cardsById, onOpen, onClose }) {
   let overlay = null;
   let previousFocus = null;
   const byBrassoId = Object.fromEntries(Object.values(cardsById).map((card) => [card.id, card.brassopedie]));
@@ -33,6 +33,7 @@ export function createBrassopediePanel({ cardsById }) {
     if (!overlay) return;
     overlay.remove();
     overlay = null;
+    onClose?.();
     previousFocus?.focus?.();
   }
 
@@ -57,6 +58,9 @@ export function createBrassopediePanel({ cardsById }) {
     img.src = assetUrl(card.image);
     img.alt = card.name;
     img.draggable = false;
+    img.loading = "eager";
+    img.decoding = "async";
+    img.fetchPriority = "high";
     cardBox.append(img);
 
     const article = el("article", "brassopedie-panel");
@@ -107,6 +111,7 @@ export function createBrassopediePanel({ cardsById }) {
     overlay.addEventListener("click", (event) => { if (event.target === overlay) close(); });
     overlay.appendChild(render(card));
     document.body.appendChild(overlay);
+    onOpen?.();
     overlay.querySelector(".brassopedie-modal")?.focus();
     return { status: "opened", cardId };
   }
