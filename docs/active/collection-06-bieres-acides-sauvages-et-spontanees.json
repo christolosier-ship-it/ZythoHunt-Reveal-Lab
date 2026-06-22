@@ -1,0 +1,1947 @@
+{
+  "schemaVersion": "1.0.0",
+  "taxonomyVersion": "1.0.0",
+  "collection": {
+    "id": 6,
+    "slug": "bieres-acides-sauvages-et-spontanees",
+    "nom": "Bières acides, sauvages et spontanées"
+  },
+  "cartes": [
+    {
+      "id": "biere-acide-sour-beer",
+      "nom": "Bière acide / Sour Beer",
+      "collectionId": 6,
+      "nature": "F",
+      "parentPrincipalId": null,
+      "aliases": [
+        "Sour",
+        "Sour Beer",
+        "Bière acide"
+      ],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "Traditions européennes et mouvement craft mondial",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": null,
+        "temperatureMax": null,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Verre adapté au sous-style"
+        ]
+      },
+      "description": "« Bière acide / Sour Beer » se caractérise généralement par une expression dont les traits principaux sont : acidité nette à complexe, arômes fruités, citronnés, vineux ou fermiers; le malt et le houblon restent généralement en retrait. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "La famille « Bière acide / Sour Beer » s’est construite progressivement autour de pratiques de fermentation, de couleur ou d’équilibre communes plutôt qu’autour d’une recette fondatrice unique. Elle rassemble aujourd’hui des traditions provenant de International et d’autres régions. La taxonomie ZythoHunt en fait une carte autonome afin de respecter les étiquettes qui n’emploient qu’un terme générique, tout en maintenant des cartes distinctes pour les styles plus précis.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Bière acide / Sour Beer » désigne une famille regroupant plusieurs styles dont la force, la couleur, l’amertume, les ingrédients et les procédés peuvent diverger. Aucun profil de recette unique ne serait représentatif de l’ensemble de la famille.",
+        "maltsEtCereales": [
+          "malt Pilsner",
+          "blé ou céréales crues selon la tradition"
+        ],
+        "houblons": [
+          "houblons très modérés, parfois vieillis"
+        ],
+        "levuresEtMicroorganismes": [
+          "levures, bactéries lactiques ou cultures mixtes"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "profil évitant une minéralité agressive",
+        "empatage": "empâtage adapté au style de base",
+        "ebullitionEtHoublonnage": "houblonnage limité pour ne pas inhiber les bactéries",
+        "fermentation": "acidification, fermentation mixte ou spontanée selon le style",
+        "maturation": "maturation de quelques semaines à plusieurs années",
+        "profilRecherche": "une bière acidulée ou aigre, complexe et équilibrée plutôt que simplement mordante"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Bière acide / Sour Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Bière acide / Sour Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Bière acide / Sour Beer — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "american-wild-ale",
+      "nom": "American Wild Ale",
+      "collectionId": 6,
+      "nature": "F",
+      "parentPrincipalId": "biere-acide-sour-beer",
+      "aliases": [],
+      "paysOrigine": [
+        "États-Unis"
+      ],
+      "origine": {
+        "libelle": "États-Unis",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "mixte",
+        "details": "Fermentation mixte associant levures et micro-organismes acidifiants selon le profil recherché."
+      },
+      "service": {
+        "temperatureMin": null,
+        "temperatureMax": null,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Verre adapté au sous-style"
+        ]
+      },
+      "description": "« American Wild Ale » se caractérise généralement par une expression dont les traits principaux sont : acidité nette à complexe, arômes fruités, citronnés, vineux ou fermiers; le malt et le houblon restent généralement en retrait. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "La famille « American Wild Ale » s’est construite progressivement autour de pratiques de fermentation, de couleur ou d’équilibre communes plutôt qu’autour d’une recette fondatrice unique. Elle rassemble aujourd’hui des traditions provenant de États-Unis et d’autres régions. La taxonomie ZythoHunt en fait une carte autonome afin de respecter les étiquettes qui n’emploient qu’un terme générique, tout en maintenant des cartes distinctes pour les styles plus précis.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« American Wild Ale » désigne une famille regroupant plusieurs styles dont la force, la couleur, l’amertume, les ingrédients et les procédés peuvent diverger. Aucun profil de recette unique ne serait représentatif de l’ensemble de la famille.",
+        "maltsEtCereales": [
+          "malt Pilsner",
+          "blé ou céréales crues selon la tradition"
+        ],
+        "houblons": [
+          "houblons très modérés, parfois vieillis"
+        ],
+        "levuresEtMicroorganismes": [
+          "levures, bactéries lactiques ou cultures mixtes"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "profil évitant une minéralité agressive",
+        "empatage": "empâtage adapté au style de base",
+        "ebullitionEtHoublonnage": "houblonnage limité pour ne pas inhiber les bactéries",
+        "fermentation": "acidification, fermentation mixte ou spontanée selon le style",
+        "maturation": "maturation de quelques semaines à plusieurs années",
+        "profilRecherche": "une bière acidulée ou aigre, complexe et équilibrée plutôt que simplement mordante"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "American Wild Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "American Wild Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "American Wild Ale — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "wild-beer",
+      "nom": "Wild Beer",
+      "collectionId": 6,
+      "nature": "F",
+      "parentPrincipalId": "biere-acide-sour-beer",
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "Traditions spontanées et craft",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "spontanee",
+        "details": "Fermentation spontanée assurée par une microflore environnementale complexe."
+      },
+      "service": {
+        "temperatureMin": null,
+        "temperatureMax": null,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Verre adapté au sous-style"
+        ]
+      },
+      "description": "« Wild Beer » se caractérise généralement par une expression dont les traits principaux sont : acidité nette à complexe, arômes fruités, citronnés, vineux ou fermiers; le malt et le houblon restent généralement en retrait. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "La famille « Wild Beer » s’est construite progressivement autour de pratiques de fermentation, de couleur ou d’équilibre communes plutôt qu’autour d’une recette fondatrice unique. Elle rassemble aujourd’hui des traditions provenant de International et d’autres régions. La taxonomie ZythoHunt en fait une carte autonome afin de respecter les étiquettes qui n’emploient qu’un terme générique, tout en maintenant des cartes distinctes pour les styles plus précis.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Wild Beer » désigne une famille regroupant plusieurs styles dont la force, la couleur, l’amertume, les ingrédients et les procédés peuvent diverger. Aucun profil de recette unique ne serait représentatif de l’ensemble de la famille.",
+        "maltsEtCereales": [
+          "malt Pilsner",
+          "blé ou céréales crues selon la tradition"
+        ],
+        "houblons": [
+          "houblons très modérés, parfois vieillis"
+        ],
+        "levuresEtMicroorganismes": [
+          "levures, bactéries lactiques ou cultures mixtes"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "profil évitant une minéralité agressive",
+        "empatage": "empâtage adapté au style de base",
+        "ebullitionEtHoublonnage": "houblonnage limité pour ne pas inhiber les bactéries",
+        "fermentation": "acidification, fermentation mixte ou spontanée selon le style",
+        "maturation": "maturation de quelques semaines à plusieurs années",
+        "profilRecherche": "une bière acidulée ou aigre, complexe et équilibrée plutôt que simplement mordante"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Wild Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Wild Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Wild Beer — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "biere-de-fermentation-spontanee-spontaneous-sour-ale",
+      "nom": "Bière de fermentation spontanée / Spontaneous Sour Ale",
+      "collectionId": 6,
+      "nature": "F",
+      "parentPrincipalId": "biere-acide-sour-beer",
+      "aliases": [
+        "Spontaneous Sour Ale"
+      ],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "Belgique et traditions spontanées",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "spontanee",
+        "details": "Ensemencement naturel par les micro-organismes de l’environnement, sans culture unique imposée."
+      },
+      "service": {
+        "temperatureMin": null,
+        "temperatureMax": null,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Verre adapté au sous-style"
+        ]
+      },
+      "description": "« Bière de fermentation spontanée / Spontaneous Sour Ale » se caractérise généralement par une expression dont les traits principaux sont : bière sèche et complexe, acidité vive, notes citronnées, de foin, de cave et de fruits mûrs; la carbonatation dépend de l’assemblage. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "La famille « Bière de fermentation spontanée / Spontaneous Sour Ale » s’est construite progressivement autour de pratiques de fermentation, de couleur ou d’équilibre communes plutôt qu’autour d’une recette fondatrice unique. Elle rassemble aujourd’hui des traditions provenant de International et d’autres régions. La taxonomie ZythoHunt en fait une carte autonome afin de respecter les étiquettes qui n’emploient qu’un terme générique, tout en maintenant des cartes distinctes pour les styles plus précis.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Bière de fermentation spontanée / Spontaneous Sour Ale » désigne une famille regroupant plusieurs styles dont la force, la couleur, l’amertume, les ingrédients et les procédés peuvent diverger. Aucun profil de recette unique ne serait représentatif de l’ensemble de la famille.",
+        "maltsEtCereales": [
+          "malt d’orge pâle",
+          "froment cru"
+        ],
+        "houblons": [
+          "houblons surannés à faible pouvoir amérisant"
+        ],
+        "levuresEtMicroorganismes": [
+          "fermentation spontanée par microflore locale"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "profil traditionnel du bassin de la Senne",
+        "empatage": "empâtage trouble traditionnel possible",
+        "ebullitionEtHoublonnage": "ébullition longue avec houblons vieillis",
+        "fermentation": "ensemencement spontané en refroidissoir",
+        "maturation": "élevage prolongé en foudres ou barriques, assemblage possible",
+        "profilRecherche": "une bière spontanée sèche, acidulée et profondément évolutive"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Bière de fermentation spontanée / Spontaneous Sour Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Bière de fermentation spontanée / Spontaneous Sour Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Bière de fermentation spontanée / Spontaneous Sour Ale — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "berliner-weisse",
+      "nom": "Berliner Weisse",
+      "collectionId": 6,
+      "nature": "S",
+      "parentPrincipalId": "biere-acide-sour-beer",
+      "aliases": [
+        "Berliner-style Weisse"
+      ],
+      "paysOrigine": [
+        "Allemagne"
+      ],
+      "origine": {
+        "libelle": "Berlin",
+        "ville": "Berlin",
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 2.8,
+        "max": 3.8,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 3,
+        "max": 8,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 4,
+        "max": 8,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "mixte",
+        "details": "Fermentation associant levure et bactéries lactiques, selon une méthode traditionnelle ou contrôlée."
+      },
+      "service": {
+        "temperatureMin": 4,
+        "temperatureMax": 7,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Berliner Weisse bowl",
+          "Flûte"
+        ]
+      },
+      "description": "« Berliner Weisse » se caractérise généralement par une expression dont les traits principaux sont : acidité nette à complexe, arômes fruités, citronnés, vineux ou fermiers; le malt et le houblon restent généralement en retrait. Son identité est habituellement rattachée à Berlin, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « Berliner Weisse » est associé à Berlin. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt Pilsner",
+          "blé ou céréales crues selon la tradition"
+        ],
+        "houblons": [
+          "houblons très modérés, parfois vieillis"
+        ],
+        "levuresEtMicroorganismes": [
+          "levures, bactéries lactiques ou cultures mixtes"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "profil évitant une minéralité agressive",
+        "empatage": "empâtage adapté au style de base",
+        "ebullitionEtHoublonnage": "houblonnage limité pour ne pas inhiber les bactéries",
+        "fermentation": "acidification, fermentation mixte ou spontanée selon le style",
+        "maturation": "maturation de quelques semaines à plusieurs années",
+        "profilRecherche": "une bière acidulée ou aigre, complexe et équilibrée plutôt que simplement mordante"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Berliner Weisse — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Berliner Weisse — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Berliner Weisse — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "specialty-berliner-weisse",
+      "nom": "Specialty Berliner Weisse",
+      "collectionId": 6,
+      "nature": "SS",
+      "parentPrincipalId": "berliner-weisse",
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "Interprétation contemporaine",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 2.5,
+        "max": 6.0,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 3,
+        "max": 15,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 4,
+        "max": 30,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "mixte",
+        "details": "Fermentation mixte associant levures et micro-organismes acidifiants selon le profil recherché."
+      },
+      "service": {
+        "temperatureMin": 4,
+        "temperatureMax": 8,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Flûte",
+          "Teku"
+        ]
+      },
+      "description": "« Specialty Berliner Weisse » se caractérise généralement par une expression dont les traits principaux sont : acidité nette à complexe, arômes fruités, citronnés, vineux ou fermiers; le malt et le houblon restent généralement en retrait. Son identité est habituellement rattachée à Interprétation contemporaine, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « Specialty Berliner Weisse » est associé à Interprétation contemporaine. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt Pilsner",
+          "blé ou céréales crues selon la tradition"
+        ],
+        "houblons": [
+          "houblons très modérés, parfois vieillis"
+        ],
+        "levuresEtMicroorganismes": [
+          "levures, bactéries lactiques ou cultures mixtes"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "profil évitant une minéralité agressive",
+        "empatage": "empâtage adapté au style de base",
+        "ebullitionEtHoublonnage": "houblonnage limité pour ne pas inhiber les bactéries",
+        "fermentation": "acidification, fermentation mixte ou spontanée selon le style",
+        "maturation": "maturation de quelques semaines à plusieurs années",
+        "profilRecherche": "une bière acidulée ou aigre, complexe et équilibrée plutôt que simplement mordante"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Specialty Berliner Weisse — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Specialty Berliner Weisse — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Specialty Berliner Weisse — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "gose",
+      "nom": "Gose",
+      "collectionId": 6,
+      "nature": "S",
+      "parentPrincipalId": "biere-acide-sour-beer",
+      "aliases": [],
+      "paysOrigine": [
+        "Allemagne"
+      ],
+      "origine": {
+        "libelle": "Goslar et Leipzig",
+        "ville": "Leipzig",
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 4.2,
+        "max": 4.8,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 5,
+        "max": 12,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 6,
+        "max": 12,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "mixte",
+        "details": "Fermentation haute avec acidification lactique, complétée par sel et coriandre selon la tradition."
+      },
+      "service": {
+        "temperatureMin": 5,
+        "temperatureMax": 8,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Gose glass",
+          "Tulipe"
+        ]
+      },
+      "description": "« Gose » se caractérise généralement par une expression dont les traits principaux sont : acidité nette à complexe, arômes fruités, citronnés, vineux ou fermiers; le malt et le houblon restent généralement en retrait. Une salinité légère et la coriandre complètent une acidité lactique modérée. Son identité est habituellement rattachée à Goslar et Leipzig, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « Gose » est associé à Goslar et Leipzig. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt Pilsner",
+          "blé ou céréales crues selon la tradition"
+        ],
+        "houblons": [
+          "houblons très modérés, parfois vieillis"
+        ],
+        "levuresEtMicroorganismes": [
+          "levures, bactéries lactiques ou cultures mixtes"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "profil évitant une minéralité agressive",
+        "empatage": "empâtage adapté au style de base",
+        "ebullitionEtHoublonnage": "houblonnage limité pour ne pas inhiber les bactéries",
+        "fermentation": "acidification, fermentation mixte ou spontanée selon le style",
+        "maturation": "maturation de quelques semaines à plusieurs années",
+        "profilRecherche": "une bière acidulée ou aigre, complexe et équilibrée plutôt que simplement mordante"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Gose — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Gose — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Gose — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "leipzig-gose",
+      "nom": "Leipzig Gose",
+      "collectionId": 6,
+      "nature": "S",
+      "parentPrincipalId": "gose",
+      "aliases": [
+        "Leipziger Gose"
+      ],
+      "paysOrigine": [
+        "Allemagne"
+      ],
+      "origine": {
+        "libelle": "Leipzig, Saxe",
+        "ville": "Leipzig",
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 4.2,
+        "max": 4.8,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 5,
+        "max": 12,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 6,
+        "max": 12,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "mixte",
+        "details": "Fermentation haute et lactique suivant la tradition de Leipzig."
+      },
+      "service": {
+        "temperatureMin": 5,
+        "temperatureMax": 8,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Gose glass",
+          "Tulipe"
+        ]
+      },
+      "description": "« Leipzig Gose » se caractérise généralement par une expression dont les traits principaux sont : acidité nette à complexe, arômes fruités, citronnés, vineux ou fermiers; le malt et le houblon restent généralement en retrait. Son identité est habituellement rattachée à Leipzig, Saxe, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « Leipzig Gose » est associé à Leipzig, Saxe. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt Pilsner",
+          "blé ou céréales crues selon la tradition"
+        ],
+        "houblons": [
+          "houblons très modérés, parfois vieillis"
+        ],
+        "levuresEtMicroorganismes": [
+          "levures, bactéries lactiques ou cultures mixtes"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "profil évitant une minéralité agressive",
+        "empatage": "empâtage adapté au style de base",
+        "ebullitionEtHoublonnage": "houblonnage limité pour ne pas inhiber les bactéries",
+        "fermentation": "acidification, fermentation mixte ou spontanée selon le style",
+        "maturation": "maturation de quelques semaines à plusieurs années",
+        "profilRecherche": "une bière acidulée ou aigre, complexe et équilibrée plutôt que simplement mordante"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Leipzig Gose — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Leipzig Gose — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Leipzig Gose — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "contemporary-gose",
+      "nom": "Contemporary Gose",
+      "collectionId": 6,
+      "nature": "S",
+      "parentPrincipalId": "gose",
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "Mouvement craft international",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 3.5,
+        "max": 7.0,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 5,
+        "max": 25,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 4,
+        "max": 40,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "mixte",
+        "details": "Fermentation mixte associant levures et micro-organismes acidifiants selon le profil recherché."
+      },
+      "service": {
+        "temperatureMin": 5,
+        "temperatureMax": 9,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Tulipe",
+          "Teku"
+        ]
+      },
+      "description": "« Contemporary Gose » se caractérise généralement par une expression dont les traits principaux sont : acidité nette à complexe, arômes fruités, citronnés, vineux ou fermiers; le malt et le houblon restent généralement en retrait. Son identité est habituellement rattachée à Mouvement craft international, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « Contemporary Gose » est associé à Mouvement craft international. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt Pilsner",
+          "blé ou céréales crues selon la tradition"
+        ],
+        "houblons": [
+          "houblons très modérés, parfois vieillis"
+        ],
+        "levuresEtMicroorganismes": [
+          "levures, bactéries lactiques ou cultures mixtes"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "profil évitant une minéralité agressive",
+        "empatage": "empâtage adapté au style de base",
+        "ebullitionEtHoublonnage": "houblonnage limité pour ne pas inhiber les bactéries",
+        "fermentation": "acidification, fermentation mixte ou spontanée selon le style",
+        "maturation": "maturation de quelques semaines à plusieurs années",
+        "profilRecherche": "une bière acidulée ou aigre, complexe et équilibrée plutôt que simplement mordante"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Contemporary Gose — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Contemporary Gose — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Contemporary Gose — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "flanders-red-ale",
+      "nom": "Flanders Red Ale",
+      "collectionId": 6,
+      "nature": "S",
+      "parentPrincipalId": "biere-acide-sour-beer",
+      "aliases": [],
+      "paysOrigine": [
+        "Belgique"
+      ],
+      "origine": {
+        "libelle": "Flandre-Occidentale",
+        "ville": null,
+        "region": "Flandre",
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 4.6,
+        "max": 6.5,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 10,
+        "max": 25,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 20,
+        "max": 44,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "mixte",
+        "details": "Fermentation mixte associant levures et micro-organismes acidifiants selon le profil recherché."
+      },
+      "service": {
+        "temperatureMin": 8,
+        "temperatureMax": 12,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Tulipe",
+          "Flûte"
+        ]
+      },
+      "description": "« Flanders Red Ale » se caractérise généralement par une expression dont les traits principaux sont : acidité nette à complexe, arômes fruités, citronnés, vineux ou fermiers; le malt et le houblon restent généralement en retrait. Son identité est habituellement rattachée à Flandre-Occidentale, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « Flanders Red Ale » est associé à Flandre-Occidentale. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt Pilsner",
+          "blé ou céréales crues selon la tradition"
+        ],
+        "houblons": [
+          "houblons très modérés, parfois vieillis"
+        ],
+        "levuresEtMicroorganismes": [
+          "levures, bactéries lactiques ou cultures mixtes"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "profil évitant une minéralité agressive",
+        "empatage": "empâtage adapté au style de base",
+        "ebullitionEtHoublonnage": "houblonnage limité pour ne pas inhiber les bactéries",
+        "fermentation": "acidification, fermentation mixte ou spontanée selon le style",
+        "maturation": "maturation de quelques semaines à plusieurs années",
+        "profilRecherche": "une bière acidulée ou aigre, complexe et équilibrée plutôt que simplement mordante"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Flanders Red Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Flanders Red Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Flanders Red Ale — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "oud-bruin",
+      "nom": "Oud Bruin",
+      "collectionId": 6,
+      "nature": "S",
+      "parentPrincipalId": "biere-acide-sour-beer",
+      "aliases": [
+        "Flanders Brown Ale"
+      ],
+      "paysOrigine": [
+        "Belgique"
+      ],
+      "origine": {
+        "libelle": "Flandre-Orientale",
+        "ville": null,
+        "region": "Flandre",
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 4.0,
+        "max": 8.0,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 20,
+        "max": 25,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 30,
+        "max": 44,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "mixte",
+        "details": "Fermentation mixte associant levures et micro-organismes acidifiants selon le profil recherché."
+      },
+      "service": {
+        "temperatureMin": 9,
+        "temperatureMax": 13,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Tulipe",
+          "Calice"
+        ]
+      },
+      "description": "« Oud Bruin » se caractérise généralement par une expression dont les traits principaux sont : acidité nette à complexe, arômes fruités, citronnés, vineux ou fermiers; le malt et le houblon restent généralement en retrait. Son identité est habituellement rattachée à Flandre-Orientale, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « Oud Bruin » est associé à Flandre-Orientale. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt Pilsner",
+          "blé ou céréales crues selon la tradition"
+        ],
+        "houblons": [
+          "houblons très modérés, parfois vieillis"
+        ],
+        "levuresEtMicroorganismes": [
+          "levures, bactéries lactiques ou cultures mixtes"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "profil évitant une minéralité agressive",
+        "empatage": "empâtage adapté au style de base",
+        "ebullitionEtHoublonnage": "houblonnage limité pour ne pas inhiber les bactéries",
+        "fermentation": "acidification, fermentation mixte ou spontanée selon le style",
+        "maturation": "maturation de quelques semaines à plusieurs années",
+        "profilRecherche": "une bière acidulée ou aigre, complexe et équilibrée plutôt que simplement mordante"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Oud Bruin — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Oud Bruin — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Oud Bruin — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "lambic",
+      "nom": "Lambic",
+      "collectionId": 6,
+      "nature": "S",
+      "parentPrincipalId": "biere-de-fermentation-spontanee-spontaneous-sour-ale",
+      "aliases": [],
+      "paysOrigine": [
+        "Belgique"
+      ],
+      "origine": {
+        "libelle": "Pajottenland et vallée de la Senne",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": "Pajottenland et vallée de la Senne"
+      },
+      "alcool": {
+        "min": 5.0,
+        "max": 6.5,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 0,
+        "max": 10,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 6,
+        "max": 26,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "spontanee",
+        "details": "Ensemencement spontané en refroidissoir, suivi d’une fermentation lente et d’un élevage prolongé."
+      },
+      "service": {
+        "temperatureMin": 8,
+        "temperatureMax": 12,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Tumbler lambic",
+          "Flûte"
+        ]
+      },
+      "description": "« Lambic » se caractérise généralement par une expression dont les traits principaux sont : bière sèche et complexe, acidité vive, notes citronnées, de foin, de cave et de fruits mûrs; la carbonatation dépend de l’assemblage. La fermentation spontanée et l’élevage en bois rendent chaque cuvée évolutive et fortement liée à son environnement. Son identité est habituellement rattachée à Pajottenland et vallée de la Senne, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « Lambic » est associé à Pajottenland et vallée de la Senne. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt d’orge pâle",
+          "froment cru"
+        ],
+        "houblons": [
+          "houblons surannés à faible pouvoir amérisant"
+        ],
+        "levuresEtMicroorganismes": [
+          "fermentation spontanée par microflore locale"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "profil traditionnel du bassin de la Senne",
+        "empatage": "empâtage trouble traditionnel possible",
+        "ebullitionEtHoublonnage": "ébullition longue avec houblons vieillis",
+        "fermentation": "ensemencement spontané en refroidissoir",
+        "maturation": "élevage prolongé en foudres ou barriques, assemblage possible",
+        "profilRecherche": "une bière spontanée sèche, acidulée et profondément évolutive"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Lambic — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Lambic — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Lambic — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "gueuze",
+      "nom": "Gueuze",
+      "collectionId": 6,
+      "nature": "S",
+      "parentPrincipalId": "lambic",
+      "aliases": [
+        "Geuze"
+      ],
+      "paysOrigine": [
+        "Belgique"
+      ],
+      "origine": {
+        "libelle": "Pajottenland et vallée de la Senne",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": "Pajottenland et vallée de la Senne"
+      },
+      "alcool": {
+        "min": 5.0,
+        "max": 8.0,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 0,
+        "max": 10,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 6,
+        "max": 26,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "spontanee",
+        "details": "Assemblage de lambics d’âges différents puis refermentation en bouteille."
+      },
+      "service": {
+        "temperatureMin": 8,
+        "temperatureMax": 12,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Flûte",
+          "Tumbler lambic"
+        ]
+      },
+      "description": "« Gueuze » se caractérise généralement par une expression dont les traits principaux sont : bière sèche et complexe, acidité vive, notes citronnées, de foin, de cave et de fruits mûrs; la carbonatation dépend de l’assemblage. L’assemblage de lambics jeunes et vieux déclenche une refermentation et construit une bière sèche, pétillante et complexe. Son identité est habituellement rattachée à Pajottenland et vallée de la Senne, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « Gueuze » est associé à Pajottenland et vallée de la Senne. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt d’orge pâle",
+          "froment cru"
+        ],
+        "houblons": [
+          "houblons surannés à faible pouvoir amérisant"
+        ],
+        "levuresEtMicroorganismes": [
+          "fermentation spontanée par microflore locale"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "profil traditionnel du bassin de la Senne",
+        "empatage": "empâtage trouble traditionnel possible",
+        "ebullitionEtHoublonnage": "ébullition longue avec houblons vieillis",
+        "fermentation": "ensemencement spontané en refroidissoir",
+        "maturation": "élevage prolongé en foudres ou barriques, assemblage possible",
+        "profilRecherche": "une bière spontanée sèche, acidulée et profondément évolutive"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Gueuze — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Gueuze — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Gueuze — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "fruit-lambic",
+      "nom": "Fruit Lambic",
+      "collectionId": 6,
+      "nature": "S",
+      "parentPrincipalId": "lambic",
+      "aliases": [
+        "Kriek",
+        "Framboise",
+        "Cassis",
+        "Pêche"
+      ],
+      "paysOrigine": [
+        "Belgique"
+      ],
+      "origine": {
+        "libelle": "Pajottenland et vallée de la Senne",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": "Pajottenland et vallée de la Senne"
+      },
+      "alcool": {
+        "min": 5.0,
+        "max": 7.0,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 0,
+        "max": 10,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 4,
+        "max": 50,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "spontanee",
+        "details": "Fermentation spontanée de lambic, complétée par une macération ou refermentation sur fruits."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 10,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Flûte",
+          "Tumbler lambic"
+        ]
+      },
+      "description": "« Fruit Lambic » se caractérise généralement par une expression dont les traits principaux sont : bière sèche et complexe, acidité vive, notes citronnées, de foin, de cave et de fruits mûrs; la carbonatation dépend de l’assemblage. Son identité est habituellement rattachée à Pajottenland et vallée de la Senne, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « Fruit Lambic » est associé à Pajottenland et vallée de la Senne. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt d’orge pâle",
+          "froment cru"
+        ],
+        "houblons": [
+          "houblons surannés à faible pouvoir amérisant"
+        ],
+        "levuresEtMicroorganismes": [
+          "fermentation spontanée par microflore locale"
+        ],
+        "ingredientsComplementaires": [
+          "fruits adaptés au profil recherché"
+        ],
+        "profilEau": "profil traditionnel du bassin de la Senne",
+        "empatage": "empâtage trouble traditionnel possible",
+        "ebullitionEtHoublonnage": "ébullition longue avec houblons vieillis",
+        "fermentation": "ensemencement spontané en refroidissoir",
+        "maturation": "élevage prolongé en foudres ou barriques, assemblage possible",
+        "profilRecherche": "une bière spontanée sèche, acidulée et profondément évolutive"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Fruit Lambic — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Fruit Lambic — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Fruit Lambic — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "american-sour-ale",
+      "nom": "American Sour Ale",
+      "collectionId": 6,
+      "nature": "S",
+      "parentPrincipalId": "american-wild-ale",
+      "aliases": [],
+      "paysOrigine": [
+        "États-Unis"
+      ],
+      "origine": {
+        "libelle": "États-Unis",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 4.0,
+        "max": 10.0,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 5,
+        "max": 30,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 4,
+        "max": 60,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "mixte",
+        "details": "Fermentation mixte associant levures et micro-organismes acidifiants selon le profil recherché."
+      },
+      "service": {
+        "temperatureMin": 7,
+        "temperatureMax": 12,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Teku",
+          "Tulipe"
+        ]
+      },
+      "description": "« American Sour Ale » se caractérise généralement par une expression dont les traits principaux sont : acidité nette à complexe, arômes fruités, citronnés, vineux ou fermiers; le malt et le houblon restent généralement en retrait. Son identité est habituellement rattachée à États-Unis, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « American Sour Ale » est associé à États-Unis. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt Pilsner",
+          "blé ou céréales crues selon la tradition"
+        ],
+        "houblons": [
+          "houblons très modérés, parfois vieillis"
+        ],
+        "levuresEtMicroorganismes": [
+          "levures, bactéries lactiques ou cultures mixtes"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "profil évitant une minéralité agressive",
+        "empatage": "empâtage adapté au style de base",
+        "ebullitionEtHoublonnage": "houblonnage limité pour ne pas inhiber les bactéries",
+        "fermentation": "acidification, fermentation mixte ou spontanée selon le style",
+        "maturation": "maturation de quelques semaines à plusieurs années",
+        "profilRecherche": "une bière acidulée ou aigre, complexe et équilibrée plutôt que simplement mordante"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "American Sour Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "American Sour Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "American Sour Ale — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "fruited-american-sour-ale",
+      "nom": "Fruited American Sour Ale",
+      "collectionId": 6,
+      "nature": "SS",
+      "parentPrincipalId": "american-sour-ale",
+      "aliases": [],
+      "paysOrigine": [
+        "États-Unis"
+      ],
+      "origine": {
+        "libelle": "États-Unis",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 4.0,
+        "max": 10.0,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 5,
+        "max": 30,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 4,
+        "max": 80,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "mixte",
+        "details": "Fermentation mixte associant levures et micro-organismes acidifiants selon le profil recherché."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 10,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Teku",
+          "Tulipe"
+        ]
+      },
+      "description": "« Fruited American Sour Ale » se caractérise généralement par une expression dont les traits principaux sont : acidité nette à complexe, arômes fruités, citronnés, vineux ou fermiers; le malt et le houblon restent généralement en retrait. Son identité est habituellement rattachée à États-Unis, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « Fruited American Sour Ale » est associé à États-Unis. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt Pilsner",
+          "blé ou céréales crues selon la tradition"
+        ],
+        "houblons": [
+          "houblons très modérés, parfois vieillis"
+        ],
+        "levuresEtMicroorganismes": [
+          "levures, bactéries lactiques ou cultures mixtes"
+        ],
+        "ingredientsComplementaires": [
+          "fruits adaptés au profil recherché"
+        ],
+        "profilEau": "profil évitant une minéralité agressive",
+        "empatage": "empâtage adapté au style de base",
+        "ebullitionEtHoublonnage": "houblonnage limité pour ne pas inhiber les bactéries",
+        "fermentation": "acidification, fermentation mixte ou spontanée selon le style",
+        "maturation": "maturation de quelques semaines à plusieurs années",
+        "profilRecherche": "une bière acidulée ou aigre, complexe et équilibrée plutôt que simplement mordante"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Fruited American Sour Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Fruited American Sour Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Fruited American Sour Ale — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "brett-beer",
+      "nom": "Brett Beer",
+      "collectionId": 6,
+      "nature": "S",
+      "parentPrincipalId": "wild-beer",
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "Mouvement craft international",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 4.0,
+        "max": 12.0,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 5,
+        "max": 50,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 4,
+        "max": 70,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "mixte",
+        "details": "Fermentation ou maturation faisant intervenir Brettanomyces comme caractère principal."
+      },
+      "service": {
+        "temperatureMin": 7,
+        "temperatureMax": 12,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Teku",
+          "Tulipe"
+        ]
+      },
+      "description": "« Brett Beer » se caractérise généralement par une expression dont les traits principaux sont : acidité nette à complexe, arômes fruités, citronnés, vineux ou fermiers; le malt et le houblon restent généralement en retrait. Son identité est habituellement rattachée à Mouvement craft international, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « Brett Beer » est associé à Mouvement craft international. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt Pilsner",
+          "blé ou céréales crues selon la tradition"
+        ],
+        "houblons": [
+          "houblons très modérés, parfois vieillis"
+        ],
+        "levuresEtMicroorganismes": [
+          "levures, bactéries lactiques ou cultures mixtes"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "profil évitant une minéralité agressive",
+        "empatage": "empâtage adapté au style de base",
+        "ebullitionEtHoublonnage": "houblonnage limité pour ne pas inhiber les bactéries",
+        "fermentation": "acidification, fermentation mixte ou spontanée selon le style",
+        "maturation": "maturation de quelques semaines à plusieurs années",
+        "profilRecherche": "une bière acidulée ou aigre, complexe et équilibrée plutôt que simplement mordante"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Brett Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Brett Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Brett Beer — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "mixed-culture-brett-beer",
+      "nom": "Mixed-Culture Brett Beer",
+      "collectionId": 6,
+      "nature": "SS",
+      "parentPrincipalId": "brett-beer",
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "Mouvement craft international",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 4.0,
+        "max": 12.0,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 5,
+        "max": 50,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 4,
+        "max": 70,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "mixte",
+        "details": "Culture mixte associant Brettanomyces à d’autres levures et bactéries."
+      },
+      "service": {
+        "temperatureMin": 7,
+        "temperatureMax": 12,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Teku",
+          "Tulipe"
+        ]
+      },
+      "description": "« Mixed-Culture Brett Beer » se caractérise généralement par une expression dont les traits principaux sont : acidité nette à complexe, arômes fruités, citronnés, vineux ou fermiers; le malt et le houblon restent généralement en retrait. Son identité est habituellement rattachée à Mouvement craft international, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « Mixed-Culture Brett Beer » est associé à Mouvement craft international. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt Pilsner",
+          "blé ou céréales crues selon la tradition"
+        ],
+        "houblons": [
+          "houblons très modérés, parfois vieillis"
+        ],
+        "levuresEtMicroorganismes": [
+          "levures, bactéries lactiques ou cultures mixtes"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "profil évitant une minéralité agressive",
+        "empatage": "empâtage adapté au style de base",
+        "ebullitionEtHoublonnage": "houblonnage limité pour ne pas inhiber les bactéries",
+        "fermentation": "acidification, fermentation mixte ou spontanée selon le style",
+        "maturation": "maturation de quelques semaines à plusieurs années",
+        "profilRecherche": "une bière acidulée ou aigre, complexe et équilibrée plutôt que simplement mordante"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Mixed-Culture Brett Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Mixed-Culture Brett Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Mixed-Culture Brett Beer — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "contemporary-belgian-style-spontaneously-fermented-ale",
+      "nom": "Contemporary Belgian-Style Spontaneously Fermented Ale",
+      "collectionId": 6,
+      "nature": "S",
+      "parentPrincipalId": "biere-de-fermentation-spontanee-spontaneous-sour-ale",
+      "aliases": [],
+      "paysOrigine": [
+        "Belgique",
+        "International"
+      ],
+      "origine": {
+        "libelle": "Belgique contemporaine et interprétations internationales",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 4.0,
+        "max": 10.0,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 0,
+        "max": 20,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 4,
+        "max": 60,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "spontanee",
+        "details": "Fermentation spontanée assurée par une microflore environnementale complexe."
+      },
+      "service": {
+        "temperatureMin": 7,
+        "temperatureMax": 12,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Flûte",
+          "Teku"
+        ]
+      },
+      "description": "« Contemporary Belgian-Style Spontaneously Fermented Ale » se caractérise généralement par une expression dont les traits principaux sont : bière sèche et complexe, acidité vive, notes citronnées, de foin, de cave et de fruits mûrs; la carbonatation dépend de l’assemblage. Son identité est habituellement rattachée à Belgique contemporaine et interprétations internationales, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « Contemporary Belgian-Style Spontaneously Fermented Ale » est associé à Belgique contemporaine et interprétations internationales. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt d’orge pâle",
+          "froment cru"
+        ],
+        "houblons": [
+          "houblons surannés à faible pouvoir amérisant"
+        ],
+        "levuresEtMicroorganismes": [
+          "fermentation spontanée par microflore locale"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "profil traditionnel du bassin de la Senne",
+        "empatage": "empâtage trouble traditionnel possible",
+        "ebullitionEtHoublonnage": "ébullition longue avec houblons vieillis",
+        "fermentation": "ensemencement spontané en refroidissoir",
+        "maturation": "élevage prolongé en foudres ou barriques, assemblage possible",
+        "profilRecherche": "une bière spontanée sèche, acidulée et profondément évolutive"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Contemporary Belgian-Style Spontaneously Fermented Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Contemporary Belgian-Style Spontaneously Fermented Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Contemporary Belgian-Style Spontaneously Fermented Ale — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "wood-and-barrel-aged-sour-beer",
+      "nom": "Wood- and Barrel-Aged Sour Beer",
+      "collectionId": 6,
+      "nature": "S",
+      "parentPrincipalId": "biere-acide-sour-beer",
+      "aliases": [
+        "Barrel-Aged Sour Beer",
+        "Wood-Aged Sour Beer"
+      ],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "International",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 4.0,
+        "max": 14.0,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 0,
+        "max": 40,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 4,
+        "max": 100,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "mixte",
+        "details": "Fermentation mixte associant levures et micro-organismes acidifiants selon le profil recherché."
+      },
+      "service": {
+        "temperatureMin": 8,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Teku",
+          "Tulipe"
+        ]
+      },
+      "description": "« Wood- and Barrel-Aged Sour Beer » se caractérise généralement par une expression dont les traits principaux sont : acidité nette à complexe, arômes fruités, citronnés, vineux ou fermiers; le malt et le houblon restent généralement en retrait. Son identité est habituellement rattachée à International, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « Wood- and Barrel-Aged Sour Beer » est associé à International. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt Pilsner",
+          "blé ou céréales crues selon la tradition"
+        ],
+        "houblons": [
+          "houblons très modérés, parfois vieillis"
+        ],
+        "levuresEtMicroorganismes": [
+          "levures, bactéries lactiques ou cultures mixtes"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "profil évitant une minéralité agressive",
+        "empatage": "empâtage adapté au style de base",
+        "ebullitionEtHoublonnage": "houblonnage limité pour ne pas inhiber les bactéries",
+        "fermentation": "acidification, fermentation mixte ou spontanée selon le style",
+        "maturation": "maturation de quelques semaines à plusieurs années",
+        "profilRecherche": "une bière acidulée ou aigre, complexe et équilibrée plutôt que simplement mordante"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Wood- and Barrel-Aged Sour Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Wood- and Barrel-Aged Sour Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Wood- and Barrel-Aged Sour Beer — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "fruited-wood-and-barrel-aged-sour-beer",
+      "nom": "Fruited Wood- and Barrel-Aged Sour Beer",
+      "collectionId": 6,
+      "nature": "SS",
+      "parentPrincipalId": "wood-and-barrel-aged-sour-beer",
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "International",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 4.0,
+        "max": 14.0,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 0,
+        "max": 40,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 4,
+        "max": 100,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "mixte",
+        "details": "Fermentation mixte associant levures et micro-organismes acidifiants selon le profil recherché."
+      },
+      "service": {
+        "temperatureMin": 7,
+        "temperatureMax": 12,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Teku",
+          "Tulipe"
+        ]
+      },
+      "description": "« Fruited Wood- and Barrel-Aged Sour Beer » se caractérise généralement par une expression dont les traits principaux sont : acidité nette à complexe, arômes fruités, citronnés, vineux ou fermiers; le malt et le houblon restent généralement en retrait. Son identité est habituellement rattachée à International, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « Fruited Wood- and Barrel-Aged Sour Beer » est associé à International. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt Pilsner",
+          "blé ou céréales crues selon la tradition"
+        ],
+        "houblons": [
+          "houblons très modérés, parfois vieillis"
+        ],
+        "levuresEtMicroorganismes": [
+          "levures, bactéries lactiques ou cultures mixtes"
+        ],
+        "ingredientsComplementaires": [
+          "fruits adaptés au profil recherché"
+        ],
+        "profilEau": "profil évitant une minéralité agressive",
+        "empatage": "empâtage adapté au style de base",
+        "ebullitionEtHoublonnage": "houblonnage limité pour ne pas inhiber les bactéries",
+        "fermentation": "acidification, fermentation mixte ou spontanée selon le style",
+        "maturation": "maturation de quelques semaines à plusieurs années",
+        "profilRecherche": "une bière acidulée ou aigre, complexe et équilibrée plutôt que simplement mordante"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Fruited Wood- and Barrel-Aged Sour Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Fruited Wood- and Barrel-Aged Sour Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Fruited Wood- and Barrel-Aged Sour Beer — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    }
+  ]
+}

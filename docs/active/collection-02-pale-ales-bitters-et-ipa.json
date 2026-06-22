@@ -1,0 +1,3320 @@
+{
+  "schemaVersion": "1.0.0",
+  "taxonomyVersion": "1.0.0",
+  "collection": {
+    "id": 2,
+    "slug": "pale-ales-bitters-et-ipa",
+    "nom": "Pale Ales, Bitters et IPA"
+  },
+  "cartes": [
+    {
+      "id": "pale-ale",
+      "nom": "Pale Ale",
+      "collectionId": 2,
+      "nature": "F",
+      "parentPrincipalId": "ale",
+      "aliases": [],
+      "paysOrigine": [
+        "Royaume-Uni",
+        "International"
+      ],
+      "origine": {
+        "libelle": "Royaume-Uni puis diffusion mondiale",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": null,
+        "temperatureMax": null,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Verre adapté au sous-style"
+        ]
+      },
+      "description": "« Pale Ale » se caractérise généralement par une expression dont les traits principaux sont : ale dorée à ambrée claire, propre, portée par des houblons d’agrumes, de pin ou de fruits; le malt est net et la finale plutôt sèche. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "La famille « Pale Ale » s’est construite progressivement autour de pratiques de fermentation, de couleur ou d’équilibre communes plutôt qu’autour d’une recette fondatrice unique. Elle rassemble aujourd’hui des traditions provenant de Royaume-Uni, International et d’autres régions. La taxonomie ZythoHunt en fait une carte autonome afin de respecter les étiquettes qui n’emploient qu’un terme générique, tout en maintenant des cartes distinctes pour les styles plus précis.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Pale Ale » désigne une famille regroupant plusieurs styles dont la force, la couleur, l’amertume, les ingrédients et les procédés peuvent diverger. Aucun profil de recette unique ne serait représentatif de l’ensemble de la famille.",
+        "maltsEtCereales": [
+          "malt pale américain",
+          "faible proportion de crystal"
+        ],
+        "houblons": [
+          "houblons américains ou du Nouveau Monde"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ale américaine neutre"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "souvent légèrement sulfatée",
+        "empatage": "empâtage favorisant l’atténuation",
+        "ebullitionEtHoublonnage": "amertume nette, ajouts tardifs et parfois houblonnage à cru",
+        "fermentation": "fermentation haute propre",
+        "maturation": "maturation courte",
+        "profilRecherche": "une pale ale nette, aromatique et équilibrée vers le houblon"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Pale Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Pale Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Pale Ale — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "bitter",
+      "nom": "Bitter",
+      "collectionId": 2,
+      "nature": "F",
+      "parentPrincipalId": "pale-ale",
+      "aliases": [],
+      "paysOrigine": [
+        "Royaume-Uni"
+      ],
+      "origine": {
+        "libelle": "Angleterre",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": null,
+        "temperatureMax": null,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Verre adapté au sous-style"
+        ]
+      },
+      "description": "« Bitter » se caractérise généralement par une expression dont les traits principaux sont : ale cuivrée à dorée, équilibrée entre malt biscuité, esters fruités et houblon terreux ou floral; la carbonatation est souvent modérée. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "La famille « Bitter » s’est construite progressivement autour de pratiques de fermentation, de couleur ou d’équilibre communes plutôt qu’autour d’une recette fondatrice unique. Elle rassemble aujourd’hui des traditions provenant de Royaume-Uni et d’autres régions. La taxonomie ZythoHunt en fait une carte autonome afin de respecter les étiquettes qui n’emploient qu’un terme générique, tout en maintenant des cartes distinctes pour les styles plus précis.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Bitter » désigne une famille regroupant plusieurs styles dont la force, la couleur, l’amertume, les ingrédients et les procédés peuvent diverger. Aucun profil de recette unique ne serait représentatif de l’ensemble de la famille.",
+        "maltsEtCereales": [
+          "pale ale malt britannique",
+          "crystal malt avec retenue"
+        ],
+        "houblons": [
+          "houblons britanniques"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ale britannique expressive"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "souvent minérale et sulfatée",
+        "empatage": "empâtage simple autour d’un profil moyennement fermentescible",
+        "ebullitionEtHoublonnage": "amertume ferme et houblon tardif modéré",
+        "fermentation": "fermentation haute avec esters maîtrisés",
+        "maturation": "maturation courte, service possible en cask",
+        "profilRecherche": "une ale de pub sèche, équilibrée et très buvable"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Bitter — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Bitter — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Bitter — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "ipa-india-pale-ale",
+      "nom": "IPA / India Pale Ale",
+      "collectionId": 2,
+      "nature": "F",
+      "parentPrincipalId": "pale-ale",
+      "aliases": [
+        "IPA",
+        "India Pale Ale"
+      ],
+      "paysOrigine": [
+        "Royaume-Uni",
+        "International"
+      ],
+      "origine": {
+        "libelle": "Royaume-Uni puis évolution mondiale",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": null,
+        "temperatureMax": null,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Verre adapté au sous-style"
+        ]
+      },
+      "description": "« IPA / India Pale Ale » se caractérise généralement par une expression dont les traits principaux sont : houblon dominant, amertume moyenne à élevée, arômes floraux, résineux, agrumés ou fruités selon l’origine; le malt sert d’appui et la finale reste sèche. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "La famille « IPA / India Pale Ale » s’est construite progressivement autour de pratiques de fermentation, de couleur ou d’équilibre communes plutôt qu’autour d’une recette fondatrice unique. Elle rassemble aujourd’hui des traditions provenant de Royaume-Uni, International et d’autres régions. La taxonomie ZythoHunt en fait une carte autonome afin de respecter les étiquettes qui n’emploient qu’un terme générique, tout en maintenant des cartes distinctes pour les styles plus précis.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« IPA / India Pale Ale » désigne une famille regroupant plusieurs styles dont la force, la couleur, l’amertume, les ingrédients et les procédés peuvent diverger. Aucun profil de recette unique ne serait représentatif de l’ensemble de la famille.",
+        "maltsEtCereales": [
+          "malt pâle",
+          "malts de soutien en quantité limitée"
+        ],
+        "houblons": [
+          "houblons expressifs selon la tradition nationale"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ale propre ou légèrement fruitée"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "souvent sulfatée pour accentuer la sécheresse",
+        "empatage": "empâtage visant une bonne atténuation",
+        "ebullitionEtHoublonnage": "charge amérisante et ajouts tardifs généreux",
+        "fermentation": "fermentation haute contrôlée",
+        "maturation": "houblonnage à cru et conditionnement frais",
+        "profilRecherche": "une bière sèche, amère et très aromatique sans déséquilibre brûlant"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "IPA / India Pale Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "IPA / India Pale Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "IPA / India Pale Ale — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "ordinary-bitter",
+      "nom": "Ordinary Bitter",
+      "collectionId": 2,
+      "nature": "S",
+      "parentPrincipalId": "bitter",
+      "aliases": [],
+      "paysOrigine": [
+        "Royaume-Uni"
+      ],
+      "origine": {
+        "libelle": "Angleterre",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 3.0,
+        "max": 4.0,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 25,
+        "max": 35,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 16,
+        "max": 28,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 9,
+        "temperatureMax": 12,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Nonic pint",
+          "Tulipe"
+        ]
+      },
+      "description": "« Ordinary Bitter » se caractérise généralement par une expression dont les traits principaux sont : ale cuivrée à dorée, équilibrée entre malt biscuité, esters fruités et houblon terreux ou floral; la carbonatation est souvent modérée. Son identité est habituellement rattachée à Angleterre, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « Ordinary Bitter » est associé à Angleterre. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "pale ale malt britannique",
+          "crystal malt avec retenue"
+        ],
+        "houblons": [
+          "houblons britanniques"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ale britannique expressive"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "souvent minérale et sulfatée",
+        "empatage": "empâtage simple autour d’un profil moyennement fermentescible",
+        "ebullitionEtHoublonnage": "amertume ferme et houblon tardif modéré",
+        "fermentation": "fermentation haute avec esters maîtrisés",
+        "maturation": "maturation courte, service possible en cask",
+        "profilRecherche": "une ale de pub sèche, équilibrée et très buvable"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Ordinary Bitter — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Ordinary Bitter — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Ordinary Bitter — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "special-best-bitter",
+      "nom": "Special / Best Bitter",
+      "collectionId": 2,
+      "nature": "S",
+      "parentPrincipalId": "bitter",
+      "aliases": [
+        "Special Bitter",
+        "Best Bitter"
+      ],
+      "paysOrigine": [
+        "Royaume-Uni"
+      ],
+      "origine": {
+        "libelle": "Angleterre",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 3.8,
+        "max": 4.7,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 25,
+        "max": 40,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 16,
+        "max": 32,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 9,
+        "temperatureMax": 12,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Nonic pint",
+          "Tulipe"
+        ]
+      },
+      "description": "« Special / Best Bitter » se caractérise généralement par une expression dont les traits principaux sont : ale cuivrée à dorée, équilibrée entre malt biscuité, esters fruités et houblon terreux ou floral; la carbonatation est souvent modérée. Son identité est habituellement rattachée à Angleterre, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « Special / Best Bitter » est associé à Angleterre. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "pale ale malt britannique",
+          "crystal malt avec retenue"
+        ],
+        "houblons": [
+          "houblons britanniques"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ale britannique expressive"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "souvent minérale et sulfatée",
+        "empatage": "empâtage simple autour d’un profil moyennement fermentescible",
+        "ebullitionEtHoublonnage": "amertume ferme et houblon tardif modéré",
+        "fermentation": "fermentation haute avec esters maîtrisés",
+        "maturation": "maturation courte, service possible en cask",
+        "profilRecherche": "une ale de pub sèche, équilibrée et très buvable"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Special / Best Bitter — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Special / Best Bitter — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Special / Best Bitter — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "extra-special-bitter-esb",
+      "nom": "Extra Special Bitter / ESB",
+      "collectionId": 2,
+      "nature": "S",
+      "parentPrincipalId": "bitter",
+      "aliases": [
+        "ESB"
+      ],
+      "paysOrigine": [
+        "Royaume-Uni"
+      ],
+      "origine": {
+        "libelle": "Angleterre",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 4.6,
+        "max": 6.2,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 30,
+        "max": 50,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 16,
+        "max": 36,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 10,
+        "temperatureMax": 13,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Nonic pint",
+          "Tulipe"
+        ]
+      },
+      "description": "« Extra Special Bitter / ESB » se caractérise généralement par une expression dont les traits principaux sont : ale cuivrée à dorée, équilibrée entre malt biscuité, esters fruités et houblon terreux ou floral; la carbonatation est souvent modérée. Son identité est habituellement rattachée à Angleterre, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « Extra Special Bitter / ESB » est associé à Angleterre. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "pale ale malt britannique",
+          "crystal malt avec retenue"
+        ],
+        "houblons": [
+          "houblons britanniques"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ale britannique expressive"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "souvent minérale et sulfatée",
+        "empatage": "empâtage simple autour d’un profil moyennement fermentescible",
+        "ebullitionEtHoublonnage": "amertume ferme et houblon tardif modéré",
+        "fermentation": "fermentation haute avec esters maîtrisés",
+        "maturation": "maturation courte, service possible en cask",
+        "profilRecherche": "une ale de pub sèche, équilibrée et très buvable"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Extra Special Bitter / ESB — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Extra Special Bitter / ESB — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Extra Special Bitter / ESB — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "english-summer-ale",
+      "nom": "English Summer Ale",
+      "collectionId": 2,
+      "nature": "S",
+      "parentPrincipalId": "pale-ale",
+      "aliases": [],
+      "paysOrigine": [
+        "Royaume-Uni"
+      ],
+      "origine": {
+        "libelle": "Angleterre",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 3.4,
+        "max": 4.7,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 20,
+        "max": 40,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 5,
+        "max": 16,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 9,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Nonic pint",
+          "Tulipe"
+        ]
+      },
+      "description": "« English Summer Ale » se caractérise généralement par une expression dont les traits principaux sont : ale cuivrée à dorée, équilibrée entre malt biscuité, esters fruités et houblon terreux ou floral; la carbonatation est souvent modérée. Son identité est habituellement rattachée à Angleterre, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « English Summer Ale » est associé à Angleterre. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "pale ale malt britannique",
+          "crystal malt avec retenue"
+        ],
+        "houblons": [
+          "houblons britanniques"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ale britannique expressive"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "souvent minérale et sulfatée",
+        "empatage": "empâtage simple autour d’un profil moyennement fermentescible",
+        "ebullitionEtHoublonnage": "amertume ferme et houblon tardif modéré",
+        "fermentation": "fermentation haute avec esters maîtrisés",
+        "maturation": "maturation courte, service possible en cask",
+        "profilRecherche": "une ale de pub sèche, équilibrée et très buvable"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "English Summer Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "English Summer Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "English Summer Ale — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "classic-english-pale-ale",
+      "nom": "Classic English Pale Ale",
+      "collectionId": 2,
+      "nature": "S",
+      "parentPrincipalId": "pale-ale",
+      "aliases": [
+        "English Pale Ale"
+      ],
+      "paysOrigine": [
+        "Royaume-Uni"
+      ],
+      "origine": {
+        "libelle": "Angleterre",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 4.5,
+        "max": 6.2,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 25,
+        "max": 50,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 12,
+        "max": 30,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 9,
+        "temperatureMax": 12,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Nonic pint",
+          "Tulipe"
+        ]
+      },
+      "description": "« Classic English Pale Ale » se caractérise généralement par une expression dont les traits principaux sont : ale cuivrée à dorée, équilibrée entre malt biscuité, esters fruités et houblon terreux ou floral; la carbonatation est souvent modérée. Son identité est habituellement rattachée à Angleterre, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « Classic English Pale Ale » est associé à Angleterre. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "pale ale malt britannique",
+          "crystal malt avec retenue"
+        ],
+        "houblons": [
+          "houblons britanniques"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ale britannique expressive"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "souvent minérale et sulfatée",
+        "empatage": "empâtage simple autour d’un profil moyennement fermentescible",
+        "ebullitionEtHoublonnage": "amertume ferme et houblon tardif modéré",
+        "fermentation": "fermentation haute avec esters maîtrisés",
+        "maturation": "maturation courte, service possible en cask",
+        "profilRecherche": "une ale de pub sèche, équilibrée et très buvable"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Classic English Pale Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Classic English Pale Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Classic English Pale Ale — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "british-golden-ale",
+      "nom": "British Golden Ale",
+      "collectionId": 2,
+      "nature": "S",
+      "parentPrincipalId": "pale-ale",
+      "aliases": [],
+      "paysOrigine": [
+        "Royaume-Uni"
+      ],
+      "origine": {
+        "libelle": "Royaume-Uni",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 3.8,
+        "max": 5.0,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 20,
+        "max": 45,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 4,
+        "max": 14,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 9,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Nonic pint",
+          "Tulipe"
+        ]
+      },
+      "description": "« British Golden Ale » se caractérise généralement par une expression dont les traits principaux sont : ale cuivrée à dorée, équilibrée entre malt biscuité, esters fruités et houblon terreux ou floral; la carbonatation est souvent modérée. Son identité est habituellement rattachée à Royaume-Uni, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « British Golden Ale » est associé à Royaume-Uni. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "pale ale malt britannique",
+          "crystal malt avec retenue"
+        ],
+        "houblons": [
+          "houblons britanniques"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ale britannique expressive"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "souvent minérale et sulfatée",
+        "empatage": "empâtage simple autour d’un profil moyennement fermentescible",
+        "ebullitionEtHoublonnage": "amertume ferme et houblon tardif modéré",
+        "fermentation": "fermentation haute avec esters maîtrisés",
+        "maturation": "maturation courte, service possible en cask",
+        "profilRecherche": "une ale de pub sèche, équilibrée et très buvable"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "British Golden Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "British Golden Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "British Golden Ale — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "golden-blonde-ale",
+      "nom": "Golden / Blonde Ale",
+      "collectionId": 2,
+      "nature": "S",
+      "parentPrincipalId": "pale-ale",
+      "aliases": [
+        "Golden Ale",
+        "Blonde Ale"
+      ],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "International",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 3.8,
+        "max": 5.5,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 15,
+        "max": 30,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 4,
+        "max": 16,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 5,
+        "temperatureMax": 8,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Pint",
+          "Tulipe"
+        ]
+      },
+      "description": "« Golden / Blonde Ale » se caractérise généralement par une expression dont les traits principaux sont : ale dorée à ambrée claire, propre, portée par des houblons d’agrumes, de pin ou de fruits; le malt est net et la finale plutôt sèche. Son identité est habituellement rattachée à International, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « Golden / Blonde Ale » est associé à International. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt pale américain",
+          "faible proportion de crystal"
+        ],
+        "houblons": [
+          "houblons américains ou du Nouveau Monde"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ale américaine neutre"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "souvent légèrement sulfatée",
+        "empatage": "empâtage favorisant l’atténuation",
+        "ebullitionEtHoublonnage": "amertume nette, ajouts tardifs et parfois houblonnage à cru",
+        "fermentation": "fermentation haute propre",
+        "maturation": "maturation courte",
+        "profilRecherche": "une pale ale nette, aromatique et équilibrée vers le houblon"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Golden / Blonde Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Golden / Blonde Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Golden / Blonde Ale — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "australian-sparkling-ale",
+      "nom": "Australian Sparkling Ale",
+      "collectionId": 2,
+      "nature": "S",
+      "parentPrincipalId": "pale-ale",
+      "aliases": [],
+      "paysOrigine": [
+        "Australie"
+      ],
+      "origine": {
+        "libelle": "Australie, tradition de Burton adaptée localement",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 4.5,
+        "max": 6.0,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 20,
+        "max": 35,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 8,
+        "max": 18,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 9,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Schooner",
+          "Pint"
+        ]
+      },
+      "description": "« Australian Sparkling Ale » se caractérise généralement par une expression dont les traits principaux sont : ale cuivrée à dorée, équilibrée entre malt biscuité, esters fruités et houblon terreux ou floral; la carbonatation est souvent modérée. Son identité est habituellement rattachée à Australie, tradition de Burton adaptée localement, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « Australian Sparkling Ale » est associé à Australie, tradition de Burton adaptée localement. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "pale ale malt britannique",
+          "crystal malt avec retenue"
+        ],
+        "houblons": [
+          "houblons britanniques"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ale britannique expressive"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "souvent minérale et sulfatée",
+        "empatage": "empâtage simple autour d’un profil moyennement fermentescible",
+        "ebullitionEtHoublonnage": "amertume ferme et houblon tardif modéré",
+        "fermentation": "fermentation haute avec esters maîtrisés",
+        "maturation": "maturation courte, service possible en cask",
+        "profilRecherche": "une ale de pub sèche, équilibrée et très buvable"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Australian Sparkling Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Australian Sparkling Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Australian Sparkling Ale — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "classic-australian-pale-ale",
+      "nom": "Classic Australian Pale Ale",
+      "collectionId": 2,
+      "nature": "S",
+      "parentPrincipalId": "pale-ale",
+      "aliases": [],
+      "paysOrigine": [
+        "Australie"
+      ],
+      "origine": {
+        "libelle": "Australie",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 4.2,
+        "max": 6.0,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 20,
+        "max": 45,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 6,
+        "max": 20,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 5,
+        "temperatureMax": 8,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Schooner",
+          "Pint"
+        ]
+      },
+      "description": "« Classic Australian Pale Ale » se caractérise généralement par une expression dont les traits principaux sont : ale dorée à ambrée claire, propre, portée par des houblons d’agrumes, de pin ou de fruits; le malt est net et la finale plutôt sèche. Son identité est habituellement rattachée à Australie, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « Classic Australian Pale Ale » est associé à Australie. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt pale américain",
+          "faible proportion de crystal"
+        ],
+        "houblons": [
+          "houblons américains ou du Nouveau Monde"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ale américaine neutre"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "souvent légèrement sulfatée",
+        "empatage": "empâtage favorisant l’atténuation",
+        "ebullitionEtHoublonnage": "amertume nette, ajouts tardifs et parfois houblonnage à cru",
+        "fermentation": "fermentation haute propre",
+        "maturation": "maturation courte",
+        "profilRecherche": "une pale ale nette, aromatique et équilibrée vers le houblon"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Classic Australian Pale Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Classic Australian Pale Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Classic Australian Pale Ale — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "australian-pale-ale",
+      "nom": "Australian Pale Ale",
+      "collectionId": 2,
+      "nature": "S",
+      "parentPrincipalId": "pale-ale",
+      "aliases": [],
+      "paysOrigine": [
+        "Australie"
+      ],
+      "origine": {
+        "libelle": "Australie",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 4.2,
+        "max": 6.0,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 20,
+        "max": 45,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 6,
+        "max": 20,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 5,
+        "temperatureMax": 8,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Schooner",
+          "Pint"
+        ]
+      },
+      "description": "« Australian Pale Ale » se caractérise généralement par une expression dont les traits principaux sont : ale dorée à ambrée claire, propre, portée par des houblons d’agrumes, de pin ou de fruits; le malt est net et la finale plutôt sèche. Son identité est habituellement rattachée à Australie, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « Australian Pale Ale » est associé à Australie. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt pale américain",
+          "faible proportion de crystal"
+        ],
+        "houblons": [
+          "houblons américains ou du Nouveau Monde"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ale américaine neutre"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "souvent légèrement sulfatée",
+        "empatage": "empâtage favorisant l’atténuation",
+        "ebullitionEtHoublonnage": "amertume nette, ajouts tardifs et parfois houblonnage à cru",
+        "fermentation": "fermentation haute propre",
+        "maturation": "maturation courte",
+        "profilRecherche": "une pale ale nette, aromatique et équilibrée vers le houblon"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Australian Pale Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Australian Pale Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Australian Pale Ale — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "international-pale-ale",
+      "nom": "International Pale Ale",
+      "collectionId": 2,
+      "nature": "S",
+      "parentPrincipalId": "pale-ale",
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "International",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 4.0,
+        "max": 6.0,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 20,
+        "max": 50,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 6,
+        "max": 24,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 9,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Pint",
+          "Tulipe"
+        ]
+      },
+      "description": "« International Pale Ale » se caractérise généralement par une expression dont les traits principaux sont : ale dorée à ambrée claire, propre, portée par des houblons d’agrumes, de pin ou de fruits; le malt est net et la finale plutôt sèche. Son identité est habituellement rattachée à International, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « International Pale Ale » est associé à International. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt pale américain",
+          "faible proportion de crystal"
+        ],
+        "houblons": [
+          "houblons américains ou du Nouveau Monde"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ale américaine neutre"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "souvent légèrement sulfatée",
+        "empatage": "empâtage favorisant l’atténuation",
+        "ebullitionEtHoublonnage": "amertume nette, ajouts tardifs et parfois houblonnage à cru",
+        "fermentation": "fermentation haute propre",
+        "maturation": "maturation courte",
+        "profilRecherche": "une pale ale nette, aromatique et équilibrée vers le houblon"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "International Pale Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "International Pale Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "International Pale Ale — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "new-zealand-pale-ale",
+      "nom": "New Zealand Pale Ale",
+      "collectionId": 2,
+      "nature": "S",
+      "parentPrincipalId": "pale-ale",
+      "aliases": [],
+      "paysOrigine": [
+        "Nouvelle-Zélande"
+      ],
+      "origine": {
+        "libelle": "Nouvelle-Zélande",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 4.5,
+        "max": 6.0,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 25,
+        "max": 50,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 6,
+        "max": 20,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 9,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "IPA glass",
+          "Tulipe"
+        ]
+      },
+      "description": "« New Zealand Pale Ale » se caractérise généralement par une expression dont les traits principaux sont : ale dorée à ambrée claire, propre, portée par des houblons d’agrumes, de pin ou de fruits; le malt est net et la finale plutôt sèche. Son identité est habituellement rattachée à Nouvelle-Zélande, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « New Zealand Pale Ale » est associé à Nouvelle-Zélande. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt pale américain",
+          "faible proportion de crystal"
+        ],
+        "houblons": [
+          "houblons américains ou du Nouveau Monde"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ale américaine neutre"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "souvent légèrement sulfatée",
+        "empatage": "empâtage favorisant l’atténuation",
+        "ebullitionEtHoublonnage": "amertume nette, ajouts tardifs et parfois houblonnage à cru",
+        "fermentation": "fermentation haute propre",
+        "maturation": "maturation courte",
+        "profilRecherche": "une pale ale nette, aromatique et équilibrée vers le houblon"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "New Zealand Pale Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "New Zealand Pale Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "New Zealand Pale Ale — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "american-pale-ale",
+      "nom": "American Pale Ale",
+      "collectionId": 2,
+      "nature": "S",
+      "parentPrincipalId": "pale-ale",
+      "aliases": [
+        "APA"
+      ],
+      "paysOrigine": [
+        "États-Unis"
+      ],
+      "origine": {
+        "libelle": "États-Unis",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 4.5,
+        "max": 6.2,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 30,
+        "max": 50,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 10,
+        "max": 28,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 9,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "American pint",
+          "IPA glass"
+        ]
+      },
+      "description": "« American Pale Ale » se caractérise généralement par une expression dont les traits principaux sont : ale dorée à ambrée claire, propre, portée par des houblons d’agrumes, de pin ou de fruits; le malt est net et la finale plutôt sèche. Son identité est habituellement rattachée à États-Unis, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « American Pale Ale » est associé à États-Unis. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt pale américain",
+          "faible proportion de crystal"
+        ],
+        "houblons": [
+          "houblons américains ou du Nouveau Monde"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ale américaine neutre"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "souvent légèrement sulfatée",
+        "empatage": "empâtage favorisant l’atténuation",
+        "ebullitionEtHoublonnage": "amertume nette, ajouts tardifs et parfois houblonnage à cru",
+        "fermentation": "fermentation haute propre",
+        "maturation": "maturation courte",
+        "profilRecherche": "une pale ale nette, aromatique et équilibrée vers le houblon"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "American Pale Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "American Pale Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "American Pale Ale — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "american-extra-special-bitter",
+      "nom": "American Extra Special Bitter",
+      "collectionId": 2,
+      "nature": "S",
+      "parentPrincipalId": "bitter",
+      "aliases": [],
+      "paysOrigine": [
+        "États-Unis"
+      ],
+      "origine": {
+        "libelle": "États-Unis",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 5.0,
+        "max": 6.5,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 30,
+        "max": 55,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 16,
+        "max": 36,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 8,
+        "temperatureMax": 11,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "American pint",
+          "Tulipe"
+        ]
+      },
+      "description": "« American Extra Special Bitter » se caractérise généralement par une expression dont les traits principaux sont : ale dorée à ambrée claire, propre, portée par des houblons d’agrumes, de pin ou de fruits; le malt est net et la finale plutôt sèche. Son identité est habituellement rattachée à États-Unis, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « American Extra Special Bitter » est associé à États-Unis. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt pale américain",
+          "faible proportion de crystal"
+        ],
+        "houblons": [
+          "houblons américains ou du Nouveau Monde"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ale américaine neutre"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "souvent légèrement sulfatée",
+        "empatage": "empâtage favorisant l’atténuation",
+        "ebullitionEtHoublonnage": "amertume nette, ajouts tardifs et parfois houblonnage à cru",
+        "fermentation": "fermentation haute propre",
+        "maturation": "maturation courte",
+        "profilRecherche": "une pale ale nette, aromatique et équilibrée vers le houblon"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "American Extra Special Bitter — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "American Extra Special Bitter — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "American Extra Special Bitter — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "juicy-hazy-pale-ale",
+      "nom": "Juicy / Hazy Pale Ale",
+      "collectionId": 2,
+      "nature": "S",
+      "parentPrincipalId": "pale-ale",
+      "aliases": [
+        "Hazy Pale Ale",
+        "Juicy Pale Ale"
+      ],
+      "paysOrigine": [
+        "États-Unis"
+      ],
+      "origine": {
+        "libelle": "Nord-Est des États-Unis, diffusion internationale",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 4.0,
+        "max": 6.0,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 20,
+        "max": 50,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 6,
+        "max": 20,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 9,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "IPA glass",
+          "Teku"
+        ]
+      },
+      "description": "« Juicy / Hazy Pale Ale » se caractérise généralement par une expression dont les traits principaux sont : robe voilée, texture douce, amertume arrondie et arômes intenses de fruits tropicaux, agrumes mûrs ou fruits à noyau; l’astringence doit rester faible. Son identité est habituellement rattachée à Nord-Est des États-Unis, diffusion internationale, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « Juicy / Hazy Pale Ale » est associé à Nord-Est des États-Unis, diffusion internationale. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt pâle",
+          "avoine et blé fréquents"
+        ],
+        "houblons": [
+          "houblons riches en huiles, ajoutés tardivement et à cru"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure expressive favorisant les esters et la biotransformation"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "chlorures dominants pour une bouche souple",
+        "empatage": "empâtage conservant du corps sans sucrosité lourde",
+        "ebullitionEtHoublonnage": "faible charge amérisante et très forts ajouts tardifs",
+        "fermentation": "fermentation haute avec houblonnage en fermentation possible",
+        "maturation": "conditionnement rapide, faible oxygène",
+        "profilRecherche": "une bière juteuse, veloutée et intensément aromatique"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Juicy / Hazy Pale Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Juicy / Hazy Pale Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Juicy / Hazy Pale Ale — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "american-strong-pale-ale",
+      "nom": "American Strong Pale Ale",
+      "collectionId": 2,
+      "nature": "S",
+      "parentPrincipalId": "pale-ale",
+      "aliases": [],
+      "paysOrigine": [
+        "États-Unis"
+      ],
+      "origine": {
+        "libelle": "États-Unis",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 5.5,
+        "max": 7.5,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 35,
+        "max": 65,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 10,
+        "max": 28,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 7,
+        "temperatureMax": 10,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "IPA glass",
+          "Tulipe"
+        ]
+      },
+      "description": "« American Strong Pale Ale » se caractérise généralement par une expression dont les traits principaux sont : ale dorée à ambrée claire, propre, portée par des houblons d’agrumes, de pin ou de fruits; le malt est net et la finale plutôt sèche. Son identité est habituellement rattachée à États-Unis, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « American Strong Pale Ale » est associé à États-Unis. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt pale américain",
+          "faible proportion de crystal"
+        ],
+        "houblons": [
+          "houblons américains ou du Nouveau Monde"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ale américaine neutre"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "souvent légèrement sulfatée",
+        "empatage": "empâtage favorisant l’atténuation",
+        "ebullitionEtHoublonnage": "amertume nette, ajouts tardifs et parfois houblonnage à cru",
+        "fermentation": "fermentation haute propre",
+        "maturation": "maturation courte",
+        "profilRecherche": "une pale ale nette, aromatique et équilibrée vers le houblon"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "American Strong Pale Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "American Strong Pale Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "American Strong Pale Ale — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "juicy-hazy-strong-pale-ale",
+      "nom": "Juicy / Hazy Strong Pale Ale",
+      "collectionId": 2,
+      "nature": "S",
+      "parentPrincipalId": "pale-ale",
+      "aliases": [],
+      "paysOrigine": [
+        "États-Unis"
+      ],
+      "origine": {
+        "libelle": "États-Unis contemporain",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 5.5,
+        "max": 7.5,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 25,
+        "max": 60,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 6,
+        "max": 22,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 7,
+        "temperatureMax": 10,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "IPA glass",
+          "Teku"
+        ]
+      },
+      "description": "« Juicy / Hazy Strong Pale Ale » se caractérise généralement par une expression dont les traits principaux sont : robe voilée, texture douce, amertume arrondie et arômes intenses de fruits tropicaux, agrumes mûrs ou fruits à noyau; l’astringence doit rester faible. Son identité est habituellement rattachée à États-Unis contemporain, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « Juicy / Hazy Strong Pale Ale » est associé à États-Unis contemporain. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt pâle",
+          "avoine et blé fréquents"
+        ],
+        "houblons": [
+          "houblons riches en huiles, ajoutés tardivement et à cru"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure expressive favorisant les esters et la biotransformation"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "chlorures dominants pour une bouche souple",
+        "empatage": "empâtage conservant du corps sans sucrosité lourde",
+        "ebullitionEtHoublonnage": "faible charge amérisante et très forts ajouts tardifs",
+        "fermentation": "fermentation haute avec houblonnage en fermentation possible",
+        "maturation": "conditionnement rapide, faible oxygène",
+        "profilRecherche": "une bière juteuse, veloutée et intensément aromatique"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Juicy / Hazy Strong Pale Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Juicy / Hazy Strong Pale Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Juicy / Hazy Strong Pale Ale — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "kolsch",
+      "nom": "Kölsch",
+      "collectionId": 2,
+      "nature": "S",
+      "parentPrincipalId": "ale",
+      "aliases": [
+        "Koelsch"
+      ],
+      "paysOrigine": [
+        "Allemagne"
+      ],
+      "origine": {
+        "libelle": "Cologne, Rhénanie-du-Nord-Westphalie",
+        "ville": "Cologne",
+        "region": "Rhénanie-du-Nord-Westphalie",
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 4.4,
+        "max": 5.2,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 18,
+        "max": 30,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 7,
+        "max": 14,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "hybride",
+        "details": "Fermentation haute menée plus fraîchement que la plupart des ales, puis maturation prolongée à froid."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 9,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Stange"
+        ]
+      },
+      "description": "« Kölsch » se caractérise généralement par une expression dont les traits principaux sont : robe paille à dorée, mousse persistante, profil net où le malt céréale et l’amertume franche s’équilibrent; la finale est sèche et précise. La fermentation haute suivie d’une garde froide crée un profil hybride entre ale discrètement fruitée et lager nette. Son identité est habituellement rattachée à Cologne, Rhénanie-du-Nord-Westphalie, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « Kölsch » est associé à Cologne, Rhénanie-du-Nord-Westphalie. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt Pilsner"
+        ],
+        "houblons": [
+          "houblons nobles européens ou variétés modernes apparentées"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure lager propre"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "douce à modérément sulfatée selon l’école",
+        "empatage": "empâtage clair, parfois par décoction",
+        "ebullitionEtHoublonnage": "amertume structurante et houblon aromatique mesuré",
+        "fermentation": "fermentation basse fraîche",
+        "maturation": "lagering prolongé",
+        "profilRecherche": "une lager brillante, sèche, croustillante et élégamment houblonnée"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Kölsch — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Kölsch — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Kölsch — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "session-ipa",
+      "nom": "Session IPA",
+      "collectionId": 2,
+      "nature": "S",
+      "parentPrincipalId": "ipa-india-pale-ale",
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "Mouvement craft international",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 3.0,
+        "max": 5.0,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 30,
+        "max": 60,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 5,
+        "max": 18,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 5,
+        "temperatureMax": 8,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "IPA glass",
+          "American pint"
+        ]
+      },
+      "description": "« Session IPA » se caractérise généralement par une expression dont les traits principaux sont : houblon dominant, amertume moyenne à élevée, arômes floraux, résineux, agrumés ou fruités selon l’origine; le malt sert d’appui et la finale reste sèche. Son identité est habituellement rattachée à Mouvement craft international, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « Session IPA » est associé à Mouvement craft international. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt pâle",
+          "malts de soutien en quantité limitée"
+        ],
+        "houblons": [
+          "houblons expressifs selon la tradition nationale"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ale propre ou légèrement fruitée"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "souvent sulfatée pour accentuer la sécheresse",
+        "empatage": "empâtage visant une bonne atténuation",
+        "ebullitionEtHoublonnage": "charge amérisante et ajouts tardifs généreux",
+        "fermentation": "fermentation haute contrôlée",
+        "maturation": "houblonnage à cru et conditionnement frais",
+        "profilRecherche": "une bière sèche, amère et très aromatique sans déséquilibre brûlant"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Session IPA — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Session IPA — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Session IPA — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "english-ipa",
+      "nom": "English IPA",
+      "collectionId": 2,
+      "nature": "S",
+      "parentPrincipalId": "ipa-india-pale-ale",
+      "aliases": [],
+      "paysOrigine": [
+        "Royaume-Uni"
+      ],
+      "origine": {
+        "libelle": "Angleterre",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 5.0,
+        "max": 7.5,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 40,
+        "max": 60,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 12,
+        "max": 28,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 9,
+        "temperatureMax": 12,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Nonic pint",
+          "Tulipe"
+        ]
+      },
+      "description": "« English IPA » se caractérise généralement par une expression dont les traits principaux sont : houblon dominant, amertume moyenne à élevée, arômes floraux, résineux, agrumés ou fruités selon l’origine; le malt sert d’appui et la finale reste sèche. Son identité est habituellement rattachée à Angleterre, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « English IPA » est associé à Angleterre. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt pâle",
+          "malts de soutien en quantité limitée"
+        ],
+        "houblons": [
+          "houblons expressifs selon la tradition nationale"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ale propre ou légèrement fruitée"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "souvent sulfatée pour accentuer la sécheresse",
+        "empatage": "empâtage visant une bonne atténuation",
+        "ebullitionEtHoublonnage": "charge amérisante et ajouts tardifs généreux",
+        "fermentation": "fermentation haute contrôlée",
+        "maturation": "houblonnage à cru et conditionnement frais",
+        "profilRecherche": "une bière sèche, amère et très aromatique sans déséquilibre brûlant"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "English IPA — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "English IPA — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "English IPA — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "american-ipa",
+      "nom": "American IPA",
+      "collectionId": 2,
+      "nature": "S",
+      "parentPrincipalId": "ipa-india-pale-ale",
+      "aliases": [],
+      "paysOrigine": [
+        "États-Unis"
+      ],
+      "origine": {
+        "libelle": "États-Unis",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 5.5,
+        "max": 7.5,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 40,
+        "max": 70,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 10,
+        "max": 28,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 7,
+        "temperatureMax": 10,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "IPA glass",
+          "American pint"
+        ]
+      },
+      "description": "« American IPA » se caractérise généralement par une expression dont les traits principaux sont : houblon dominant, amertume moyenne à élevée, arômes floraux, résineux, agrumés ou fruités selon l’origine; le malt sert d’appui et la finale reste sèche. Son identité est habituellement rattachée à États-Unis, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « American IPA » est associé à États-Unis. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt pâle",
+          "malts de soutien en quantité limitée"
+        ],
+        "houblons": [
+          "houblons expressifs selon la tradition nationale"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ale propre ou légèrement fruitée"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "souvent sulfatée pour accentuer la sécheresse",
+        "empatage": "empâtage visant une bonne atténuation",
+        "ebullitionEtHoublonnage": "charge amérisante et ajouts tardifs généreux",
+        "fermentation": "fermentation haute contrôlée",
+        "maturation": "houblonnage à cru et conditionnement frais",
+        "profilRecherche": "une bière sèche, amère et très aromatique sans déséquilibre brûlant"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "American IPA — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "American IPA — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "American IPA — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "new-zealand-ipa",
+      "nom": "New Zealand IPA",
+      "collectionId": 2,
+      "nature": "S",
+      "parentPrincipalId": "ipa-india-pale-ale",
+      "aliases": [],
+      "paysOrigine": [
+        "Nouvelle-Zélande"
+      ],
+      "origine": {
+        "libelle": "Nouvelle-Zélande",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 5.5,
+        "max": 7.5,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 40,
+        "max": 70,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 8,
+        "max": 24,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 7,
+        "temperatureMax": 10,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "IPA glass",
+          "Teku"
+        ]
+      },
+      "description": "« New Zealand IPA » se caractérise généralement par une expression dont les traits principaux sont : houblon dominant, amertume moyenne à élevée, arômes floraux, résineux, agrumés ou fruités selon l’origine; le malt sert d’appui et la finale reste sèche. Son identité est habituellement rattachée à Nouvelle-Zélande, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « New Zealand IPA » est associé à Nouvelle-Zélande. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt pâle",
+          "malts de soutien en quantité limitée"
+        ],
+        "houblons": [
+          "houblons expressifs selon la tradition nationale"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ale propre ou légèrement fruitée"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "souvent sulfatée pour accentuer la sécheresse",
+        "empatage": "empâtage visant une bonne atténuation",
+        "ebullitionEtHoublonnage": "charge amérisante et ajouts tardifs généreux",
+        "fermentation": "fermentation haute contrôlée",
+        "maturation": "houblonnage à cru et conditionnement frais",
+        "profilRecherche": "une bière sèche, amère et très aromatique sans déséquilibre brûlant"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "New Zealand IPA — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "New Zealand IPA — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "New Zealand IPA — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "west-coast-ipa",
+      "nom": "West Coast IPA",
+      "collectionId": 2,
+      "nature": "SS",
+      "parentPrincipalId": "american-ipa",
+      "aliases": [],
+      "paysOrigine": [
+        "États-Unis"
+      ],
+      "origine": {
+        "libelle": "Côte Ouest des États-Unis",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 6.0,
+        "max": 8.0,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 50,
+        "max": 80,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 6,
+        "max": 20,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 7,
+        "temperatureMax": 10,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "IPA glass",
+          "American pint"
+        ]
+      },
+      "description": "« West Coast IPA » se caractérise généralement par une expression dont les traits principaux sont : houblon dominant, amertume moyenne à élevée, arômes floraux, résineux, agrumés ou fruités selon l’origine; le malt sert d’appui et la finale reste sèche. Son identité est habituellement rattachée à Côte Ouest des États-Unis, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « West Coast IPA » est associé à Côte Ouest des États-Unis. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt pâle",
+          "malts de soutien en quantité limitée"
+        ],
+        "houblons": [
+          "houblons expressifs selon la tradition nationale"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ale propre ou légèrement fruitée"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "souvent sulfatée pour accentuer la sécheresse",
+        "empatage": "empâtage visant une bonne atténuation",
+        "ebullitionEtHoublonnage": "charge amérisante et ajouts tardifs généreux",
+        "fermentation": "fermentation haute contrôlée",
+        "maturation": "houblonnage à cru et conditionnement frais",
+        "profilRecherche": "une bière sèche, amère et très aromatique sans déséquilibre brûlant"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "West Coast IPA — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "West Coast IPA — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "West Coast IPA — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "neipa-juicy-hazy-ipa",
+      "nom": "NEIPA / Juicy-Hazy IPA",
+      "collectionId": 2,
+      "nature": "SS",
+      "parentPrincipalId": "american-ipa",
+      "aliases": [
+        "NEIPA",
+        "New England IPA",
+        "Juicy IPA",
+        "Hazy IPA"
+      ],
+      "paysOrigine": [
+        "États-Unis"
+      ],
+      "origine": {
+        "libelle": "Nouvelle-Angleterre, États-Unis",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 6.0,
+        "max": 9.0,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 25,
+        "max": 60,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 6,
+        "max": 20,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 7,
+        "temperatureMax": 10,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "IPA glass",
+          "Teku"
+        ]
+      },
+      "description": "« NEIPA / Juicy-Hazy IPA » se caractérise généralement par une expression dont les traits principaux sont : robe voilée, texture douce, amertume arrondie et arômes intenses de fruits tropicaux, agrumes mûrs ou fruits à noyau; l’astringence doit rester faible. Son identité est habituellement rattachée à Nouvelle-Angleterre, États-Unis, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « NEIPA / Juicy-Hazy IPA » est associé à Nouvelle-Angleterre, États-Unis. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt pâle",
+          "avoine et blé fréquents"
+        ],
+        "houblons": [
+          "houblons riches en huiles, ajoutés tardivement et à cru"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure expressive favorisant les esters et la biotransformation"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "chlorures dominants pour une bouche souple",
+        "empatage": "empâtage conservant du corps sans sucrosité lourde",
+        "ebullitionEtHoublonnage": "faible charge amérisante et très forts ajouts tardifs",
+        "fermentation": "fermentation haute avec houblonnage en fermentation possible",
+        "maturation": "conditionnement rapide, faible oxygène",
+        "profilRecherche": "une bière juteuse, veloutée et intensément aromatique"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "NEIPA / Juicy-Hazy IPA — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "NEIPA / Juicy-Hazy IPA — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "NEIPA / Juicy-Hazy IPA — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "double-imperial-ipa",
+      "nom": "Double / Imperial IPA",
+      "collectionId": 2,
+      "nature": "S",
+      "parentPrincipalId": "ipa-india-pale-ale",
+      "aliases": [
+        "Double IPA",
+        "DIPA",
+        "Imperial IPA"
+      ],
+      "paysOrigine": [
+        "États-Unis"
+      ],
+      "origine": {
+        "libelle": "États-Unis",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 7.5,
+        "max": 10.5,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 60,
+        "max": 100,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 10,
+        "max": 30,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 8,
+        "temperatureMax": 11,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "IPA glass",
+          "Snifter"
+        ]
+      },
+      "description": "« Double / Imperial IPA » se caractérise généralement par une expression dont les traits principaux sont : houblon dominant, amertume moyenne à élevée, arômes floraux, résineux, agrumés ou fruités selon l’origine; le malt sert d’appui et la finale reste sèche. Son identité est habituellement rattachée à États-Unis, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « Double / Imperial IPA » est associé à États-Unis. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt pâle",
+          "malts de soutien en quantité limitée"
+        ],
+        "houblons": [
+          "houblons expressifs selon la tradition nationale"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ale propre ou légèrement fruitée"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "souvent sulfatée pour accentuer la sécheresse",
+        "empatage": "empâtage visant une bonne atténuation",
+        "ebullitionEtHoublonnage": "charge amérisante et ajouts tardifs généreux",
+        "fermentation": "fermentation haute contrôlée",
+        "maturation": "houblonnage à cru et conditionnement frais",
+        "profilRecherche": "une bière sèche, amère et très aromatique sans déséquilibre brûlant"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Double / Imperial IPA — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Double / Imperial IPA — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Double / Imperial IPA — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "juicy-hazy-double-imperial-ipa",
+      "nom": "Juicy-Hazy Double / Imperial IPA",
+      "collectionId": 2,
+      "nature": "SS",
+      "parentPrincipalId": "double-imperial-ipa",
+      "aliases": [
+        "Hazy Double IPA",
+        "Juicy Double IPA"
+      ],
+      "paysOrigine": [
+        "États-Unis"
+      ],
+      "origine": {
+        "libelle": "États-Unis contemporain",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 7.5,
+        "max": 10.5,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 35,
+        "max": 80,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 6,
+        "max": 24,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 8,
+        "temperatureMax": 11,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "IPA glass",
+          "Teku"
+        ]
+      },
+      "description": "« Juicy-Hazy Double / Imperial IPA » se caractérise généralement par une expression dont les traits principaux sont : robe voilée, texture douce, amertume arrondie et arômes intenses de fruits tropicaux, agrumes mûrs ou fruits à noyau; l’astringence doit rester faible. Son identité est habituellement rattachée à États-Unis contemporain, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « Juicy-Hazy Double / Imperial IPA » est associé à États-Unis contemporain. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt pâle",
+          "avoine et blé fréquents"
+        ],
+        "houblons": [
+          "houblons riches en huiles, ajoutés tardivement et à cru"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure expressive favorisant les esters et la biotransformation"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "chlorures dominants pour une bouche souple",
+        "empatage": "empâtage conservant du corps sans sucrosité lourde",
+        "ebullitionEtHoublonnage": "faible charge amérisante et très forts ajouts tardifs",
+        "fermentation": "fermentation haute avec houblonnage en fermentation possible",
+        "maturation": "conditionnement rapide, faible oxygène",
+        "profilRecherche": "une bière juteuse, veloutée et intensément aromatique"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Juicy-Hazy Double / Imperial IPA — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Juicy-Hazy Double / Imperial IPA — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Juicy-Hazy Double / Imperial IPA — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "belgian-ipa",
+      "nom": "Belgian IPA",
+      "collectionId": 2,
+      "nature": "S",
+      "parentPrincipalId": "ipa-india-pale-ale",
+      "aliases": [],
+      "paysOrigine": [
+        "Belgique",
+        "États-Unis"
+      ],
+      "origine": {
+        "libelle": "Belgique et mouvement craft américain",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 6.0,
+        "max": 9.0,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 50,
+        "max": 100,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 8,
+        "max": 30,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 8,
+        "temperatureMax": 11,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Tulipe belge",
+          "IPA glass"
+        ]
+      },
+      "description": "« Belgian IPA » se caractérise généralement par une expression dont les traits principaux sont : profil de fermentation expressif mêlant esters fruités et phénols épicés, souvent sur une base maltée claire à foncée; l’alcool peut être élevé mais doit rester élégant. Son identité est habituellement rattachée à Belgique et mouvement craft américain, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « Belgian IPA » est associé à Belgique et mouvement craft américain. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt Pilsner belge",
+          "malts de spécialité selon la couleur",
+          "sucres fermentescibles fréquents"
+        ],
+        "houblons": [
+          "houblons continentaux modérés"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure belge expressive"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "modérément minérale",
+        "empatage": "empâtage favorisant une forte atténuation",
+        "ebullitionEtHoublonnage": "houblonnage d’équilibre, épices parfois discrètes",
+        "fermentation": "fermentation haute avec montée contrôlée de température",
+        "maturation": "conditionnement en cuve ou refermentation en bouteille",
+        "profilRecherche": "une ale complexe, sèche malgré sa force, fruitée et épicée"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Belgian IPA — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Belgian IPA — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Belgian IPA — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "black-ipa",
+      "nom": "Black IPA",
+      "collectionId": 2,
+      "nature": "S",
+      "parentPrincipalId": "ipa-india-pale-ale",
+      "aliases": [
+        "Cascadian Dark Ale"
+      ],
+      "paysOrigine": [
+        "États-Unis"
+      ],
+      "origine": {
+        "libelle": "Nord-Ouest des États-Unis",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 5.5,
+        "max": 9.0,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 50,
+        "max": 90,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 40,
+        "max": 80,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 8,
+        "temperatureMax": 11,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "IPA glass",
+          "American pint"
+        ]
+      },
+      "description": "« Black IPA » se caractérise généralement par une expression dont les traits principaux sont : houblon dominant, amertume moyenne à élevée, arômes floraux, résineux, agrumés ou fruités selon l’origine; le malt sert d’appui et la finale reste sèche. Son identité est habituellement rattachée à Nord-Ouest des États-Unis, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « Black IPA » est associé à Nord-Ouest des États-Unis. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt pâle",
+          "malts de soutien en quantité limitée"
+        ],
+        "houblons": [
+          "houblons expressifs selon la tradition nationale"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ale propre ou légèrement fruitée"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "souvent sulfatée pour accentuer la sécheresse",
+        "empatage": "empâtage visant une bonne atténuation",
+        "ebullitionEtHoublonnage": "charge amérisante et ajouts tardifs généreux",
+        "fermentation": "fermentation haute contrôlée",
+        "maturation": "houblonnage à cru et conditionnement frais",
+        "profilRecherche": "une bière sèche, amère et très aromatique sans déséquilibre brûlant"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Black IPA — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Black IPA — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Black IPA — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "brown-ipa",
+      "nom": "Brown IPA",
+      "collectionId": 2,
+      "nature": "S",
+      "parentPrincipalId": "ipa-india-pale-ale",
+      "aliases": [],
+      "paysOrigine": [
+        "États-Unis"
+      ],
+      "origine": {
+        "libelle": "États-Unis",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 5.5,
+        "max": 9.0,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 40,
+        "max": 80,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 24,
+        "max": 50,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 8,
+        "temperatureMax": 11,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "IPA glass",
+          "American pint"
+        ]
+      },
+      "description": "« Brown IPA » se caractérise généralement par une expression dont les traits principaux sont : houblon dominant, amertume moyenne à élevée, arômes floraux, résineux, agrumés ou fruités selon l’origine; le malt sert d’appui et la finale reste sèche. Son identité est habituellement rattachée à États-Unis, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « Brown IPA » est associé à États-Unis. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt pâle",
+          "malts de soutien en quantité limitée"
+        ],
+        "houblons": [
+          "houblons expressifs selon la tradition nationale"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ale propre ou légèrement fruitée"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "souvent sulfatée pour accentuer la sécheresse",
+        "empatage": "empâtage visant une bonne atténuation",
+        "ebullitionEtHoublonnage": "charge amérisante et ajouts tardifs généreux",
+        "fermentation": "fermentation haute contrôlée",
+        "maturation": "houblonnage à cru et conditionnement frais",
+        "profilRecherche": "une bière sèche, amère et très aromatique sans déséquilibre brûlant"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Brown IPA — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Brown IPA — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Brown IPA — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "red-ipa",
+      "nom": "Red IPA",
+      "collectionId": 2,
+      "nature": "S",
+      "parentPrincipalId": "ipa-india-pale-ale",
+      "aliases": [],
+      "paysOrigine": [
+        "États-Unis"
+      ],
+      "origine": {
+        "libelle": "États-Unis",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 5.5,
+        "max": 9.0,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 40,
+        "max": 80,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 22,
+        "max": 40,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 8,
+        "temperatureMax": 11,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "IPA glass",
+          "American pint"
+        ]
+      },
+      "description": "« Red IPA » se caractérise généralement par une expression dont les traits principaux sont : houblon dominant, amertume moyenne à élevée, arômes floraux, résineux, agrumés ou fruités selon l’origine; le malt sert d’appui et la finale reste sèche. Son identité est habituellement rattachée à États-Unis, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « Red IPA » est associé à États-Unis. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt pâle",
+          "malts de soutien en quantité limitée"
+        ],
+        "houblons": [
+          "houblons expressifs selon la tradition nationale"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ale propre ou légèrement fruitée"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "souvent sulfatée pour accentuer la sécheresse",
+        "empatage": "empâtage visant une bonne atténuation",
+        "ebullitionEtHoublonnage": "charge amérisante et ajouts tardifs généreux",
+        "fermentation": "fermentation haute contrôlée",
+        "maturation": "houblonnage à cru et conditionnement frais",
+        "profilRecherche": "une bière sèche, amère et très aromatique sans déséquilibre brûlant"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Red IPA — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Red IPA — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Red IPA — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "rye-ipa",
+      "nom": "Rye IPA",
+      "collectionId": 2,
+      "nature": "S",
+      "parentPrincipalId": "ipa-india-pale-ale",
+      "aliases": [],
+      "paysOrigine": [
+        "États-Unis"
+      ],
+      "origine": {
+        "libelle": "États-Unis",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 5.5,
+        "max": 9.0,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 50,
+        "max": 90,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 10,
+        "max": 36,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 8,
+        "temperatureMax": 11,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "IPA glass",
+          "American pint"
+        ]
+      },
+      "description": "« Rye IPA » se caractérise généralement par une expression dont les traits principaux sont : houblon dominant, amertume moyenne à élevée, arômes floraux, résineux, agrumés ou fruités selon l’origine; le malt sert d’appui et la finale reste sèche. Son identité est habituellement rattachée à États-Unis, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « Rye IPA » est associé à États-Unis. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt pâle",
+          "malts de soutien en quantité limitée"
+        ],
+        "houblons": [
+          "houblons expressifs selon la tradition nationale"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ale propre ou légèrement fruitée"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "souvent sulfatée pour accentuer la sécheresse",
+        "empatage": "empâtage visant une bonne atténuation",
+        "ebullitionEtHoublonnage": "charge amérisante et ajouts tardifs généreux",
+        "fermentation": "fermentation haute contrôlée",
+        "maturation": "houblonnage à cru et conditionnement frais",
+        "profilRecherche": "une bière sèche, amère et très aromatique sans déséquilibre brûlant"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Rye IPA — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Rye IPA — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Rye IPA — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "white-ipa",
+      "nom": "White IPA",
+      "collectionId": 2,
+      "nature": "S",
+      "parentPrincipalId": "ipa-india-pale-ale",
+      "aliases": [],
+      "paysOrigine": [
+        "États-Unis"
+      ],
+      "origine": {
+        "libelle": "États-Unis, hybridation witbier-IPA",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 5.5,
+        "max": 7.5,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 40,
+        "max": 70,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 5,
+        "max": 14,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 9,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "IPA glass",
+          "Tulipe"
+        ]
+      },
+      "description": "« White IPA » se caractérise généralement par une expression dont les traits principaux sont : houblon dominant, amertume moyenne à élevée, arômes floraux, résineux, agrumés ou fruités selon l’origine; le malt sert d’appui et la finale reste sèche. Son identité est habituellement rattachée à États-Unis, hybridation witbier-IPA, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « White IPA » est associé à États-Unis, hybridation witbier-IPA. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt pâle",
+          "malts de soutien en quantité limitée"
+        ],
+        "houblons": [
+          "houblons expressifs selon la tradition nationale"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ale propre ou légèrement fruitée"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "souvent sulfatée pour accentuer la sécheresse",
+        "empatage": "empâtage visant une bonne atténuation",
+        "ebullitionEtHoublonnage": "charge amérisante et ajouts tardifs généreux",
+        "fermentation": "fermentation haute contrôlée",
+        "maturation": "houblonnage à cru et conditionnement frais",
+        "profilRecherche": "une bière sèche, amère et très aromatique sans déséquilibre brûlant"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "White IPA — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "White IPA — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "White IPA — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "brut-ipa",
+      "nom": "Brut IPA",
+      "collectionId": 2,
+      "nature": "S",
+      "parentPrincipalId": "ipa-india-pale-ale",
+      "aliases": [],
+      "paysOrigine": [
+        "États-Unis"
+      ],
+      "origine": {
+        "libelle": "San Francisco, Californie",
+        "ville": "San Francisco",
+        "region": "Californie",
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 6.0,
+        "max": 8.0,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 20,
+        "max": 50,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 4,
+        "max": 14,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 9,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Flûte",
+          "IPA glass"
+        ]
+      },
+      "description": "« Brut IPA » se caractérise généralement par une expression dont les traits principaux sont : houblon dominant, amertume moyenne à élevée, arômes floraux, résineux, agrumés ou fruités selon l’origine; le malt sert d’appui et la finale reste sèche. L’emploi d’enzymes pousse l’atténuation très loin et donne une finale presque effervescente de vin mousseux. Son identité est habituellement rattachée à San Francisco, Californie, avec des variations modernes possibles selon les brasseries.",
+      "histoireEtOrigines": "Le style « Brut IPA » est associé à San Francisco, Californie. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt pâle",
+          "malts de soutien en quantité limitée"
+        ],
+        "houblons": [
+          "houblons expressifs selon la tradition nationale"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ale propre ou légèrement fruitée"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "souvent sulfatée pour accentuer la sécheresse",
+        "empatage": "empâtage visant une bonne atténuation",
+        "ebullitionEtHoublonnage": "charge amérisante et ajouts tardifs généreux",
+        "fermentation": "fermentation haute contrôlée",
+        "maturation": "houblonnage à cru et conditionnement frais",
+        "profilRecherche": "une bière sèche, amère et très aromatique sans déséquilibre brûlant"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Brut IPA — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Brut IPA — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Brut IPA — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    }
+  ]
+}

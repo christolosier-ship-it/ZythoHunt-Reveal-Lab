@@ -1,0 +1,2375 @@
+{
+  "schemaVersion": "1.0.0",
+  "taxonomyVersion": "1.0.0",
+  "collection": {
+    "id": 9,
+    "slug": "appellations-commerciales",
+    "nom": "Appellations commerciales"
+  },
+  "cartes": [
+    {
+      "id": "blonde",
+      "nom": "Blonde",
+      "collectionId": 9,
+      "nature": "A",
+      "parentPrincipalId": null,
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "Usage commercial international",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 3,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Pint",
+          "Tulipe"
+        ]
+      },
+      "description": "« Blonde » se caractérise généralement par une expression dont les traits principaux sont : appellation d’usage ou de marketing couvrant des bières très différentes; le nom seul ne permet pas de déduire un profil sensoriel précis. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "Le terme « Blonde » s’est imposé dans l’étiquetage, le commerce ou la réglementation pour informer le consommateur sur une couleur, une force, une méthode, une certification ou une composition. Il ne correspond pas nécessairement à un style technique. Son sens peut varier selon les pays ; dans ZythoHunt, il reste séparé des styles brassicoles afin de reproduire fidèlement le vocabulaire réellement visible sur les étiquettes.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Blonde » est une appellation d’usage, commerciale ou réglementaire, et non une recette brassicole homogène. Elle peut être portée par des bières de couleurs, de fermentations et de forces différentes ; le libellé seul ne permet pas de proposer une formule unique.",
+        "maltsEtCereales": [],
+        "houblons": [],
+        "levuresEtMicroorganismes": [],
+        "ingredientsComplementaires": [],
+        "profilEau": "",
+        "empatage": "",
+        "ebullitionEtHoublonnage": "",
+        "fermentation": "",
+        "maturation": "",
+        "profilRecherche": "aucun profil technique unique ne peut être attribué à cette appellation"
+      },
+      "sources": [
+        {
+          "organisme": "Brasseurs de France",
+          "edition": "consultation 2026",
+          "reference": "Blonde — Ressources de dégustation et types de bière",
+          "type": "source_professionnelle"
+        },
+        {
+          "organisme": "DGCCRF",
+          "edition": "fiche pratique",
+          "reference": "Blonde — Tout savoir sur l’étiquetage des bières",
+          "type": "source_reglementaire"
+        }
+      ]
+    },
+    {
+      "id": "blanche",
+      "nom": "Blanche",
+      "collectionId": 9,
+      "nature": "A",
+      "parentPrincipalId": null,
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "Usage commercial international",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 3,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Pint",
+          "Tulipe"
+        ]
+      },
+      "description": "« Blanche » se caractérise généralement par une expression dont les traits principaux sont : appellation d’usage ou de marketing couvrant des bières très différentes; le nom seul ne permet pas de déduire un profil sensoriel précis. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "Le terme « Blanche » s’est imposé dans l’étiquetage, le commerce ou la réglementation pour informer le consommateur sur une couleur, une force, une méthode, une certification ou une composition. Il ne correspond pas nécessairement à un style technique. Son sens peut varier selon les pays ; dans ZythoHunt, il reste séparé des styles brassicoles afin de reproduire fidèlement le vocabulaire réellement visible sur les étiquettes.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Blanche » est une appellation d’usage, commerciale ou réglementaire, et non une recette brassicole homogène. Elle peut être portée par des bières de couleurs, de fermentations et de forces différentes ; le libellé seul ne permet pas de proposer une formule unique.",
+        "maltsEtCereales": [],
+        "houblons": [],
+        "levuresEtMicroorganismes": [],
+        "ingredientsComplementaires": [],
+        "profilEau": "",
+        "empatage": "",
+        "ebullitionEtHoublonnage": "",
+        "fermentation": "",
+        "maturation": "",
+        "profilRecherche": "aucun profil technique unique ne peut être attribué à cette appellation"
+      },
+      "sources": [
+        {
+          "organisme": "Brasseurs de France",
+          "edition": "consultation 2026",
+          "reference": "Blanche — Ressources de dégustation et types de bière",
+          "type": "source_professionnelle"
+        },
+        {
+          "organisme": "DGCCRF",
+          "edition": "fiche pratique",
+          "reference": "Blanche — Tout savoir sur l’étiquetage des bières",
+          "type": "source_reglementaire"
+        }
+      ]
+    },
+    {
+      "id": "ambree",
+      "nom": "Ambrée",
+      "collectionId": 9,
+      "nature": "A",
+      "parentPrincipalId": null,
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "Usage commercial international",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 3,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Pint",
+          "Tulipe"
+        ]
+      },
+      "description": "« Ambrée » se caractérise généralement par une expression dont les traits principaux sont : appellation d’usage ou de marketing couvrant des bières très différentes; le nom seul ne permet pas de déduire un profil sensoriel précis. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "Le terme « Ambrée » s’est imposé dans l’étiquetage, le commerce ou la réglementation pour informer le consommateur sur une couleur, une force, une méthode, une certification ou une composition. Il ne correspond pas nécessairement à un style technique. Son sens peut varier selon les pays ; dans ZythoHunt, il reste séparé des styles brassicoles afin de reproduire fidèlement le vocabulaire réellement visible sur les étiquettes.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Ambrée » est une appellation d’usage, commerciale ou réglementaire, et non une recette brassicole homogène. Elle peut être portée par des bières de couleurs, de fermentations et de forces différentes ; le libellé seul ne permet pas de proposer une formule unique.",
+        "maltsEtCereales": [],
+        "houblons": [],
+        "levuresEtMicroorganismes": [],
+        "ingredientsComplementaires": [],
+        "profilEau": "",
+        "empatage": "",
+        "ebullitionEtHoublonnage": "",
+        "fermentation": "",
+        "maturation": "",
+        "profilRecherche": "aucun profil technique unique ne peut être attribué à cette appellation"
+      },
+      "sources": [
+        {
+          "organisme": "Brasseurs de France",
+          "edition": "consultation 2026",
+          "reference": "Ambrée — Ressources de dégustation et types de bière",
+          "type": "source_professionnelle"
+        },
+        {
+          "organisme": "DGCCRF",
+          "edition": "fiche pratique",
+          "reference": "Ambrée — Tout savoir sur l’étiquetage des bières",
+          "type": "source_reglementaire"
+        }
+      ]
+    },
+    {
+      "id": "rousse",
+      "nom": "Rousse",
+      "collectionId": 9,
+      "nature": "A",
+      "parentPrincipalId": null,
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "Usage commercial international",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 3,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Pint",
+          "Tulipe"
+        ]
+      },
+      "description": "« Rousse » se caractérise généralement par une expression dont les traits principaux sont : appellation d’usage ou de marketing couvrant des bières très différentes; le nom seul ne permet pas de déduire un profil sensoriel précis. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "Le terme « Rousse » s’est imposé dans l’étiquetage, le commerce ou la réglementation pour informer le consommateur sur une couleur, une force, une méthode, une certification ou une composition. Il ne correspond pas nécessairement à un style technique. Son sens peut varier selon les pays ; dans ZythoHunt, il reste séparé des styles brassicoles afin de reproduire fidèlement le vocabulaire réellement visible sur les étiquettes.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Rousse » est une appellation d’usage, commerciale ou réglementaire, et non une recette brassicole homogène. Elle peut être portée par des bières de couleurs, de fermentations et de forces différentes ; le libellé seul ne permet pas de proposer une formule unique.",
+        "maltsEtCereales": [],
+        "houblons": [],
+        "levuresEtMicroorganismes": [],
+        "ingredientsComplementaires": [],
+        "profilEau": "",
+        "empatage": "",
+        "ebullitionEtHoublonnage": "",
+        "fermentation": "",
+        "maturation": "",
+        "profilRecherche": "aucun profil technique unique ne peut être attribué à cette appellation"
+      },
+      "sources": [
+        {
+          "organisme": "Brasseurs de France",
+          "edition": "consultation 2026",
+          "reference": "Rousse — Ressources de dégustation et types de bière",
+          "type": "source_professionnelle"
+        },
+        {
+          "organisme": "DGCCRF",
+          "edition": "fiche pratique",
+          "reference": "Rousse — Tout savoir sur l’étiquetage des bières",
+          "type": "source_reglementaire"
+        }
+      ]
+    },
+    {
+      "id": "brune",
+      "nom": "Brune",
+      "collectionId": 9,
+      "nature": "A",
+      "parentPrincipalId": null,
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "Usage commercial international",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 3,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Pint",
+          "Tulipe"
+        ]
+      },
+      "description": "« Brune » se caractérise généralement par une expression dont les traits principaux sont : appellation d’usage ou de marketing couvrant des bières très différentes; le nom seul ne permet pas de déduire un profil sensoriel précis. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "Le terme « Brune » s’est imposé dans l’étiquetage, le commerce ou la réglementation pour informer le consommateur sur une couleur, une force, une méthode, une certification ou une composition. Il ne correspond pas nécessairement à un style technique. Son sens peut varier selon les pays ; dans ZythoHunt, il reste séparé des styles brassicoles afin de reproduire fidèlement le vocabulaire réellement visible sur les étiquettes.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Brune » est une appellation d’usage, commerciale ou réglementaire, et non une recette brassicole homogène. Elle peut être portée par des bières de couleurs, de fermentations et de forces différentes ; le libellé seul ne permet pas de proposer une formule unique.",
+        "maltsEtCereales": [],
+        "houblons": [],
+        "levuresEtMicroorganismes": [],
+        "ingredientsComplementaires": [],
+        "profilEau": "",
+        "empatage": "",
+        "ebullitionEtHoublonnage": "",
+        "fermentation": "",
+        "maturation": "",
+        "profilRecherche": "aucun profil technique unique ne peut être attribué à cette appellation"
+      },
+      "sources": [
+        {
+          "organisme": "Brasseurs de France",
+          "edition": "consultation 2026",
+          "reference": "Brune — Ressources de dégustation et types de bière",
+          "type": "source_professionnelle"
+        },
+        {
+          "organisme": "DGCCRF",
+          "edition": "fiche pratique",
+          "reference": "Brune — Tout savoir sur l’étiquetage des bières",
+          "type": "source_reglementaire"
+        }
+      ]
+    },
+    {
+      "id": "noire",
+      "nom": "Noire",
+      "collectionId": 9,
+      "nature": "A",
+      "parentPrincipalId": null,
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "Usage commercial international",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 3,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Pint",
+          "Tulipe"
+        ]
+      },
+      "description": "« Noire » se caractérise généralement par une expression dont les traits principaux sont : appellation d’usage ou de marketing couvrant des bières très différentes; le nom seul ne permet pas de déduire un profil sensoriel précis. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "Le terme « Noire » s’est imposé dans l’étiquetage, le commerce ou la réglementation pour informer le consommateur sur une couleur, une force, une méthode, une certification ou une composition. Il ne correspond pas nécessairement à un style technique. Son sens peut varier selon les pays ; dans ZythoHunt, il reste séparé des styles brassicoles afin de reproduire fidèlement le vocabulaire réellement visible sur les étiquettes.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Noire » est une appellation d’usage, commerciale ou réglementaire, et non une recette brassicole homogène. Elle peut être portée par des bières de couleurs, de fermentations et de forces différentes ; le libellé seul ne permet pas de proposer une formule unique.",
+        "maltsEtCereales": [],
+        "houblons": [],
+        "levuresEtMicroorganismes": [],
+        "ingredientsComplementaires": [],
+        "profilEau": "",
+        "empatage": "",
+        "ebullitionEtHoublonnage": "",
+        "fermentation": "",
+        "maturation": "",
+        "profilRecherche": "aucun profil technique unique ne peut être attribué à cette appellation"
+      },
+      "sources": [
+        {
+          "organisme": "Brasseurs de France",
+          "edition": "consultation 2026",
+          "reference": "Noire — Ressources de dégustation et types de bière",
+          "type": "source_professionnelle"
+        },
+        {
+          "organisme": "DGCCRF",
+          "edition": "fiche pratique",
+          "reference": "Noire — Tout savoir sur l’étiquetage des bières",
+          "type": "source_reglementaire"
+        }
+      ]
+    },
+    {
+      "id": "rouge",
+      "nom": "Rouge",
+      "collectionId": 9,
+      "nature": "A",
+      "parentPrincipalId": null,
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "Usage commercial international",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 3,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Pint",
+          "Tulipe"
+        ]
+      },
+      "description": "« Rouge » se caractérise généralement par une expression dont les traits principaux sont : appellation d’usage ou de marketing couvrant des bières très différentes; le nom seul ne permet pas de déduire un profil sensoriel précis. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "Le terme « Rouge » s’est imposé dans l’étiquetage, le commerce ou la réglementation pour informer le consommateur sur une couleur, une force, une méthode, une certification ou une composition. Il ne correspond pas nécessairement à un style technique. Son sens peut varier selon les pays ; dans ZythoHunt, il reste séparé des styles brassicoles afin de reproduire fidèlement le vocabulaire réellement visible sur les étiquettes.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Rouge » est une appellation d’usage, commerciale ou réglementaire, et non une recette brassicole homogène. Elle peut être portée par des bières de couleurs, de fermentations et de forces différentes ; le libellé seul ne permet pas de proposer une formule unique.",
+        "maltsEtCereales": [],
+        "houblons": [],
+        "levuresEtMicroorganismes": [],
+        "ingredientsComplementaires": [],
+        "profilEau": "",
+        "empatage": "",
+        "ebullitionEtHoublonnage": "",
+        "fermentation": "",
+        "maturation": "",
+        "profilRecherche": "aucun profil technique unique ne peut être attribué à cette appellation"
+      },
+      "sources": [
+        {
+          "organisme": "Brasseurs de France",
+          "edition": "consultation 2026",
+          "reference": "Rouge — Ressources de dégustation et types de bière",
+          "type": "source_professionnelle"
+        },
+        {
+          "organisme": "DGCCRF",
+          "edition": "fiche pratique",
+          "reference": "Rouge — Tout savoir sur l’étiquetage des bières",
+          "type": "source_reglementaire"
+        }
+      ]
+    },
+    {
+      "id": "biere-dabbaye",
+      "nom": "Bière d’abbaye",
+      "collectionId": 9,
+      "nature": "A",
+      "parentPrincipalId": null,
+      "aliases": [
+        "Abbey Beer"
+      ],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "Usage commercial international",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 3,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Pint",
+          "Tulipe"
+        ]
+      },
+      "description": "« Bière d’abbaye » se caractérise généralement par une expression dont les traits principaux sont : appellation d’usage ou de marketing couvrant des bières très différentes; le nom seul ne permet pas de déduire un profil sensoriel précis. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "Le terme « Bière d’abbaye » s’est imposé dans l’étiquetage, le commerce ou la réglementation pour informer le consommateur sur une couleur, une force, une méthode, une certification ou une composition. Il ne correspond pas nécessairement à un style technique. Son sens peut varier selon les pays ; dans ZythoHunt, il reste séparé des styles brassicoles afin de reproduire fidèlement le vocabulaire réellement visible sur les étiquettes.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Bière d’abbaye » est une appellation d’usage, commerciale ou réglementaire, et non une recette brassicole homogène. Elle peut être portée par des bières de couleurs, de fermentations et de forces différentes ; le libellé seul ne permet pas de proposer une formule unique.",
+        "maltsEtCereales": [],
+        "houblons": [],
+        "levuresEtMicroorganismes": [],
+        "ingredientsComplementaires": [],
+        "profilEau": "",
+        "empatage": "",
+        "ebullitionEtHoublonnage": "",
+        "fermentation": "",
+        "maturation": "",
+        "profilRecherche": "aucun profil technique unique ne peut être attribué à cette appellation"
+      },
+      "sources": [
+        {
+          "organisme": "Brasseurs de France",
+          "edition": "consultation 2026",
+          "reference": "Bière d’abbaye — Ressources de dégustation et types de bière",
+          "type": "source_professionnelle"
+        },
+        {
+          "organisme": "DGCCRF",
+          "edition": "fiche pratique",
+          "reference": "Bière d’abbaye — Tout savoir sur l’étiquetage des bières",
+          "type": "source_reglementaire"
+        }
+      ]
+    },
+    {
+      "id": "trappiste",
+      "nom": "Trappiste",
+      "collectionId": 9,
+      "nature": "R",
+      "parentPrincipalId": null,
+      "aliases": [
+        "Trappist"
+      ],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "Monastères trappistes reconnus",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Calice",
+          "Tulipe belge"
+        ]
+      },
+      "description": "« Trappiste » se caractérise généralement par une expression dont les traits principaux sont : appellation d’usage ou de marketing couvrant des bières très différentes; le nom seul ne permet pas de déduire un profil sensoriel précis. Il s’agit d’une certification d’origine monastique, non d’un style brassicole : chaque abbaye conserve ses propres recettes. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "Le terme « Trappiste » s’est imposé dans l’étiquetage, le commerce ou la réglementation pour informer le consommateur sur une couleur, une force, une méthode, une certification ou une composition. Il ne correspond pas nécessairement à un style technique. Son sens peut varier selon les pays ; dans ZythoHunt, il reste séparé des styles brassicoles afin de reproduire fidèlement le vocabulaire réellement visible sur les étiquettes.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Trappiste » est une appellation d’usage, commerciale ou réglementaire, et non une recette brassicole homogène. Elle peut être portée par des bières de couleurs, de fermentations et de forces différentes ; le libellé seul ne permet pas de proposer une formule unique.",
+        "maltsEtCereales": [],
+        "houblons": [],
+        "levuresEtMicroorganismes": [],
+        "ingredientsComplementaires": [],
+        "profilEau": "",
+        "empatage": "",
+        "ebullitionEtHoublonnage": "",
+        "fermentation": "",
+        "maturation": "",
+        "profilRecherche": "aucun profil technique unique ne peut être attribué à cette appellation"
+      },
+      "sources": [
+        {
+          "organisme": "Association internationale trappiste",
+          "edition": "consultation 2026",
+          "reference": "Trappiste — FAQ et critères Authentic Trappist Product",
+          "type": "source_institutionnelle"
+        }
+      ]
+    },
+    {
+      "id": "biere-artisanale-craft-beer",
+      "nom": "Bière artisanale / Craft Beer",
+      "collectionId": 9,
+      "nature": "A",
+      "parentPrincipalId": null,
+      "aliases": [
+        "Bière artisanale",
+        "Craft Beer"
+      ],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "Usage commercial international",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 3,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Pint",
+          "Tulipe"
+        ]
+      },
+      "description": "« Bière artisanale / Craft Beer » se caractérise généralement par une expression dont les traits principaux sont : appellation d’usage ou de marketing couvrant des bières très différentes; le nom seul ne permet pas de déduire un profil sensoriel précis. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "Le terme « Bière artisanale / Craft Beer » s’est imposé dans l’étiquetage, le commerce ou la réglementation pour informer le consommateur sur une couleur, une force, une méthode, une certification ou une composition. Il ne correspond pas nécessairement à un style technique. Son sens peut varier selon les pays ; dans ZythoHunt, il reste séparé des styles brassicoles afin de reproduire fidèlement le vocabulaire réellement visible sur les étiquettes.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Bière artisanale / Craft Beer » est une appellation d’usage, commerciale ou réglementaire, et non une recette brassicole homogène. Elle peut être portée par des bières de couleurs, de fermentations et de forces différentes ; le libellé seul ne permet pas de proposer une formule unique.",
+        "maltsEtCereales": [],
+        "houblons": [],
+        "levuresEtMicroorganismes": [],
+        "ingredientsComplementaires": [],
+        "profilEau": "",
+        "empatage": "",
+        "ebullitionEtHoublonnage": "",
+        "fermentation": "",
+        "maturation": "",
+        "profilRecherche": "aucun profil technique unique ne peut être attribué à cette appellation"
+      },
+      "sources": [
+        {
+          "organisme": "Brasseurs de France",
+          "edition": "consultation 2026",
+          "reference": "Bière artisanale / Craft Beer — Ressources de dégustation et types de bière",
+          "type": "source_professionnelle"
+        },
+        {
+          "organisme": "DGCCRF",
+          "edition": "fiche pratique",
+          "reference": "Bière artisanale / Craft Beer — Tout savoir sur l’étiquetage des bières",
+          "type": "source_reglementaire"
+        }
+      ]
+    },
+    {
+      "id": "biere-biologique-bio",
+      "nom": "Bière biologique / Bio",
+      "collectionId": 9,
+      "nature": "R",
+      "parentPrincipalId": null,
+      "aliases": [
+        "Bière bio",
+        "Organic Beer"
+      ],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "Certification selon la réglementation applicable",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 3,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Verre adapté au style de base"
+        ]
+      },
+      "description": "« Bière biologique / Bio » se caractérise généralement par une expression dont les traits principaux sont : appellation d’usage ou de marketing couvrant des bières très différentes; le nom seul ne permet pas de déduire un profil sensoriel précis. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "Le terme « Bière biologique / Bio » s’est imposé dans l’étiquetage, le commerce ou la réglementation pour informer le consommateur sur une couleur, une force, une méthode, une certification ou une composition. Il ne correspond pas nécessairement à un style technique. Son sens peut varier selon les pays ; dans ZythoHunt, il reste séparé des styles brassicoles afin de reproduire fidèlement le vocabulaire réellement visible sur les étiquettes.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Bière biologique / Bio » est une appellation d’usage, commerciale ou réglementaire, et non une recette brassicole homogène. Elle peut être portée par des bières de couleurs, de fermentations et de forces différentes ; le libellé seul ne permet pas de proposer une formule unique.",
+        "maltsEtCereales": [],
+        "houblons": [],
+        "levuresEtMicroorganismes": [],
+        "ingredientsComplementaires": [],
+        "profilEau": "",
+        "empatage": "",
+        "ebullitionEtHoublonnage": "",
+        "fermentation": "",
+        "maturation": "",
+        "profilRecherche": "aucun profil technique unique ne peut être attribué à cette appellation"
+      },
+      "sources": [
+        {
+          "organisme": "Union européenne",
+          "edition": "règlement UE 2018/848",
+          "reference": "Bière biologique / Bio — Production biologique et étiquetage des produits biologiques",
+          "type": "source_reglementaire"
+        },
+        {
+          "organisme": "DGCCRF",
+          "edition": "fiche pratique",
+          "reference": "Bière biologique / Bio — Tout savoir sur l’étiquetage des bières",
+          "type": "source_reglementaire"
+        }
+      ]
+    },
+    {
+      "id": "biere-speciale",
+      "nom": "Bière spéciale",
+      "collectionId": 9,
+      "nature": "A",
+      "parentPrincipalId": null,
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "Usage commercial international",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 3,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Pint",
+          "Tulipe"
+        ]
+      },
+      "description": "« Bière spéciale » se caractérise généralement par une expression dont les traits principaux sont : appellation d’usage ou de marketing couvrant des bières très différentes; le nom seul ne permet pas de déduire un profil sensoriel précis. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "Le terme « Bière spéciale » s’est imposé dans l’étiquetage, le commerce ou la réglementation pour informer le consommateur sur une couleur, une force, une méthode, une certification ou une composition. Il ne correspond pas nécessairement à un style technique. Son sens peut varier selon les pays ; dans ZythoHunt, il reste séparé des styles brassicoles afin de reproduire fidèlement le vocabulaire réellement visible sur les étiquettes.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Bière spéciale » est une appellation d’usage, commerciale ou réglementaire, et non une recette brassicole homogène. Elle peut être portée par des bières de couleurs, de fermentations et de forces différentes ; le libellé seul ne permet pas de proposer une formule unique.",
+        "maltsEtCereales": [],
+        "houblons": [],
+        "levuresEtMicroorganismes": [],
+        "ingredientsComplementaires": [],
+        "profilEau": "",
+        "empatage": "",
+        "ebullitionEtHoublonnage": "",
+        "fermentation": "",
+        "maturation": "",
+        "profilRecherche": "aucun profil technique unique ne peut être attribué à cette appellation"
+      },
+      "sources": [
+        {
+          "organisme": "Brasseurs de France",
+          "edition": "consultation 2026",
+          "reference": "Bière spéciale — Ressources de dégustation et types de bière",
+          "type": "source_professionnelle"
+        },
+        {
+          "organisme": "DGCCRF",
+          "edition": "fiche pratique",
+          "reference": "Bière spéciale — Tout savoir sur l’étiquetage des bières",
+          "type": "source_reglementaire"
+        }
+      ]
+    },
+    {
+      "id": "biere-de-noel",
+      "nom": "Bière de Noël",
+      "collectionId": 9,
+      "nature": "A",
+      "parentPrincipalId": null,
+      "aliases": [
+        "Christmas Beer"
+      ],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "Usage commercial international",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 3,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Pint",
+          "Tulipe"
+        ]
+      },
+      "description": "« Bière de Noël » se caractérise généralement par une expression dont les traits principaux sont : appellation d’usage ou de marketing couvrant des bières très différentes; le nom seul ne permet pas de déduire un profil sensoriel précis. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "Le terme « Bière de Noël » s’est imposé dans l’étiquetage, le commerce ou la réglementation pour informer le consommateur sur une couleur, une force, une méthode, une certification ou une composition. Il ne correspond pas nécessairement à un style technique. Son sens peut varier selon les pays ; dans ZythoHunt, il reste séparé des styles brassicoles afin de reproduire fidèlement le vocabulaire réellement visible sur les étiquettes.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Bière de Noël » est une appellation d’usage, commerciale ou réglementaire, et non une recette brassicole homogène. Elle peut être portée par des bières de couleurs, de fermentations et de forces différentes ; le libellé seul ne permet pas de proposer une formule unique.",
+        "maltsEtCereales": [],
+        "houblons": [],
+        "levuresEtMicroorganismes": [],
+        "ingredientsComplementaires": [],
+        "profilEau": "",
+        "empatage": "",
+        "ebullitionEtHoublonnage": "",
+        "fermentation": "",
+        "maturation": "",
+        "profilRecherche": "aucun profil technique unique ne peut être attribué à cette appellation"
+      },
+      "sources": [
+        {
+          "organisme": "Brasseurs de France",
+          "edition": "consultation 2026",
+          "reference": "Bière de Noël — Ressources de dégustation et types de bière",
+          "type": "source_professionnelle"
+        },
+        {
+          "organisme": "DGCCRF",
+          "edition": "fiche pratique",
+          "reference": "Bière de Noël — Tout savoir sur l’étiquetage des bières",
+          "type": "source_reglementaire"
+        }
+      ]
+    },
+    {
+      "id": "biere-de-printemps-biere-de-mars",
+      "nom": "Bière de printemps / Bière de mars",
+      "collectionId": 9,
+      "nature": "A",
+      "parentPrincipalId": null,
+      "aliases": [
+        "Bière de printemps",
+        "Bière de mars",
+        "Spring Beer"
+      ],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "Usage commercial international",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 3,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Pint",
+          "Tulipe"
+        ]
+      },
+      "description": "« Bière de printemps / Bière de mars » se caractérise généralement par une expression dont les traits principaux sont : appellation d’usage ou de marketing couvrant des bières très différentes; le nom seul ne permet pas de déduire un profil sensoriel précis. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "Le terme « Bière de printemps / Bière de mars » s’est imposé dans l’étiquetage, le commerce ou la réglementation pour informer le consommateur sur une couleur, une force, une méthode, une certification ou une composition. Il ne correspond pas nécessairement à un style technique. Son sens peut varier selon les pays ; dans ZythoHunt, il reste séparé des styles brassicoles afin de reproduire fidèlement le vocabulaire réellement visible sur les étiquettes.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Bière de printemps / Bière de mars » est une appellation d’usage, commerciale ou réglementaire, et non une recette brassicole homogène. Elle peut être portée par des bières de couleurs, de fermentations et de forces différentes ; le libellé seul ne permet pas de proposer une formule unique.",
+        "maltsEtCereales": [],
+        "houblons": [],
+        "levuresEtMicroorganismes": [],
+        "ingredientsComplementaires": [],
+        "profilEau": "",
+        "empatage": "",
+        "ebullitionEtHoublonnage": "",
+        "fermentation": "",
+        "maturation": "",
+        "profilRecherche": "aucun profil technique unique ne peut être attribué à cette appellation"
+      },
+      "sources": [
+        {
+          "organisme": "Brasseurs de France",
+          "edition": "consultation 2026",
+          "reference": "Bière de printemps / Bière de mars — Ressources de dégustation et types de bière",
+          "type": "source_professionnelle"
+        },
+        {
+          "organisme": "DGCCRF",
+          "edition": "fiche pratique",
+          "reference": "Bière de printemps / Bière de mars — Tout savoir sur l’étiquetage des bières",
+          "type": "source_reglementaire"
+        }
+      ]
+    },
+    {
+      "id": "biere-forte-strong-beer",
+      "nom": "Bière forte / Strong Beer",
+      "collectionId": 9,
+      "nature": "A",
+      "parentPrincipalId": null,
+      "aliases": [
+        "Bière forte",
+        "Strong Beer"
+      ],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "Usage commercial international",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 3,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Pint",
+          "Tulipe"
+        ]
+      },
+      "description": "« Bière forte / Strong Beer » se caractérise généralement par une expression dont les traits principaux sont : appellation d’usage ou de marketing couvrant des bières très différentes; le nom seul ne permet pas de déduire un profil sensoriel précis. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "Le terme « Bière forte / Strong Beer » s’est imposé dans l’étiquetage, le commerce ou la réglementation pour informer le consommateur sur une couleur, une force, une méthode, une certification ou une composition. Il ne correspond pas nécessairement à un style technique. Son sens peut varier selon les pays ; dans ZythoHunt, il reste séparé des styles brassicoles afin de reproduire fidèlement le vocabulaire réellement visible sur les étiquettes.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Bière forte / Strong Beer » est une appellation d’usage, commerciale ou réglementaire, et non une recette brassicole homogène. Elle peut être portée par des bières de couleurs, de fermentations et de forces différentes ; le libellé seul ne permet pas de proposer une formule unique.",
+        "maltsEtCereales": [],
+        "houblons": [],
+        "levuresEtMicroorganismes": [],
+        "ingredientsComplementaires": [],
+        "profilEau": "",
+        "empatage": "",
+        "ebullitionEtHoublonnage": "",
+        "fermentation": "",
+        "maturation": "",
+        "profilRecherche": "aucun profil technique unique ne peut être attribué à cette appellation"
+      },
+      "sources": [
+        {
+          "organisme": "Brasseurs de France",
+          "edition": "consultation 2026",
+          "reference": "Bière forte / Strong Beer — Ressources de dégustation et types de bière",
+          "type": "source_professionnelle"
+        },
+        {
+          "organisme": "DGCCRF",
+          "edition": "fiche pratique",
+          "reference": "Bière forte / Strong Beer — Tout savoir sur l’étiquetage des bières",
+          "type": "source_reglementaire"
+        }
+      ]
+    },
+    {
+      "id": "biere-legere-light-beer",
+      "nom": "Bière légère / Light Beer",
+      "collectionId": 9,
+      "nature": "A",
+      "parentPrincipalId": null,
+      "aliases": [
+        "Bière légère",
+        "Light Beer"
+      ],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "Usage commercial international",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 3,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Pint",
+          "Tulipe"
+        ]
+      },
+      "description": "« Bière légère / Light Beer » se caractérise généralement par une expression dont les traits principaux sont : appellation d’usage ou de marketing couvrant des bières très différentes; le nom seul ne permet pas de déduire un profil sensoriel précis. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "Le terme « Bière légère / Light Beer » s’est imposé dans l’étiquetage, le commerce ou la réglementation pour informer le consommateur sur une couleur, une force, une méthode, une certification ou une composition. Il ne correspond pas nécessairement à un style technique. Son sens peut varier selon les pays ; dans ZythoHunt, il reste séparé des styles brassicoles afin de reproduire fidèlement le vocabulaire réellement visible sur les étiquettes.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Bière légère / Light Beer » est une appellation d’usage, commerciale ou réglementaire, et non une recette brassicole homogène. Elle peut être portée par des bières de couleurs, de fermentations et de forces différentes ; le libellé seul ne permet pas de proposer une formule unique.",
+        "maltsEtCereales": [],
+        "houblons": [],
+        "levuresEtMicroorganismes": [],
+        "ingredientsComplementaires": [],
+        "profilEau": "",
+        "empatage": "",
+        "ebullitionEtHoublonnage": "",
+        "fermentation": "",
+        "maturation": "",
+        "profilRecherche": "aucun profil technique unique ne peut être attribué à cette appellation"
+      },
+      "sources": [
+        {
+          "organisme": "Brasseurs de France",
+          "edition": "consultation 2026",
+          "reference": "Bière légère / Light Beer — Ressources de dégustation et types de bière",
+          "type": "source_professionnelle"
+        },
+        {
+          "organisme": "DGCCRF",
+          "edition": "fiche pratique",
+          "reference": "Bière légère / Light Beer — Tout savoir sur l’étiquetage des bières",
+          "type": "source_reglementaire"
+        }
+      ]
+    },
+    {
+      "id": "session-beer",
+      "nom": "Session Beer",
+      "collectionId": 9,
+      "nature": "A",
+      "parentPrincipalId": null,
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "Usage commercial international",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 3,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Pint",
+          "Tulipe"
+        ]
+      },
+      "description": "« Session Beer » se caractérise généralement par une expression dont les traits principaux sont : appellation d’usage ou de marketing couvrant des bières très différentes; le nom seul ne permet pas de déduire un profil sensoriel précis. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "Le terme « Session Beer » s’est imposé dans l’étiquetage, le commerce ou la réglementation pour informer le consommateur sur une couleur, une force, une méthode, une certification ou une composition. Il ne correspond pas nécessairement à un style technique. Son sens peut varier selon les pays ; dans ZythoHunt, il reste séparé des styles brassicoles afin de reproduire fidèlement le vocabulaire réellement visible sur les étiquettes.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Session Beer » est une appellation d’usage, commerciale ou réglementaire, et non une recette brassicole homogène. Elle peut être portée par des bières de couleurs, de fermentations et de forces différentes ; le libellé seul ne permet pas de proposer une formule unique.",
+        "maltsEtCereales": [],
+        "houblons": [],
+        "levuresEtMicroorganismes": [],
+        "ingredientsComplementaires": [],
+        "profilEau": "",
+        "empatage": "",
+        "ebullitionEtHoublonnage": "",
+        "fermentation": "",
+        "maturation": "",
+        "profilRecherche": "aucun profil technique unique ne peut être attribué à cette appellation"
+      },
+      "sources": [
+        {
+          "organisme": "Brasseurs de France",
+          "edition": "consultation 2026",
+          "reference": "Session Beer — Ressources de dégustation et types de bière",
+          "type": "source_professionnelle"
+        },
+        {
+          "organisme": "DGCCRF",
+          "edition": "fiche pratique",
+          "reference": "Session Beer — Tout savoir sur l’étiquetage des bières",
+          "type": "source_reglementaire"
+        }
+      ]
+    },
+    {
+      "id": "double",
+      "nom": "Double",
+      "collectionId": 9,
+      "nature": "A",
+      "parentPrincipalId": null,
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "Usage commercial international",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 3,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Pint",
+          "Tulipe"
+        ]
+      },
+      "description": "« Double » se caractérise généralement par une expression dont les traits principaux sont : appellation d’usage ou de marketing couvrant des bières très différentes; le nom seul ne permet pas de déduire un profil sensoriel précis. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "Le terme « Double » s’est imposé dans l’étiquetage, le commerce ou la réglementation pour informer le consommateur sur une couleur, une force, une méthode, une certification ou une composition. Il ne correspond pas nécessairement à un style technique. Son sens peut varier selon les pays ; dans ZythoHunt, il reste séparé des styles brassicoles afin de reproduire fidèlement le vocabulaire réellement visible sur les étiquettes.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Double » est une appellation d’usage, commerciale ou réglementaire, et non une recette brassicole homogène. Elle peut être portée par des bières de couleurs, de fermentations et de forces différentes ; le libellé seul ne permet pas de proposer une formule unique.",
+        "maltsEtCereales": [],
+        "houblons": [],
+        "levuresEtMicroorganismes": [],
+        "ingredientsComplementaires": [],
+        "profilEau": "",
+        "empatage": "",
+        "ebullitionEtHoublonnage": "",
+        "fermentation": "",
+        "maturation": "",
+        "profilRecherche": "aucun profil technique unique ne peut être attribué à cette appellation"
+      },
+      "sources": [
+        {
+          "organisme": "Brasseurs de France",
+          "edition": "consultation 2026",
+          "reference": "Double — Ressources de dégustation et types de bière",
+          "type": "source_professionnelle"
+        },
+        {
+          "organisme": "DGCCRF",
+          "edition": "fiche pratique",
+          "reference": "Double — Tout savoir sur l’étiquetage des bières",
+          "type": "source_reglementaire"
+        }
+      ]
+    },
+    {
+      "id": "triple",
+      "nom": "Triple",
+      "collectionId": 9,
+      "nature": "A",
+      "parentPrincipalId": null,
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "Usage commercial international",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 3,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Pint",
+          "Tulipe"
+        ]
+      },
+      "description": "« Triple » se caractérise généralement par une expression dont les traits principaux sont : appellation d’usage ou de marketing couvrant des bières très différentes; le nom seul ne permet pas de déduire un profil sensoriel précis. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "Le terme « Triple » s’est imposé dans l’étiquetage, le commerce ou la réglementation pour informer le consommateur sur une couleur, une force, une méthode, une certification ou une composition. Il ne correspond pas nécessairement à un style technique. Son sens peut varier selon les pays ; dans ZythoHunt, il reste séparé des styles brassicoles afin de reproduire fidèlement le vocabulaire réellement visible sur les étiquettes.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Triple » est une appellation d’usage, commerciale ou réglementaire, et non une recette brassicole homogène. Elle peut être portée par des bières de couleurs, de fermentations et de forces différentes ; le libellé seul ne permet pas de proposer une formule unique.",
+        "maltsEtCereales": [],
+        "houblons": [],
+        "levuresEtMicroorganismes": [],
+        "ingredientsComplementaires": [],
+        "profilEau": "",
+        "empatage": "",
+        "ebullitionEtHoublonnage": "",
+        "fermentation": "",
+        "maturation": "",
+        "profilRecherche": "aucun profil technique unique ne peut être attribué à cette appellation"
+      },
+      "sources": [
+        {
+          "organisme": "Brasseurs de France",
+          "edition": "consultation 2026",
+          "reference": "Triple — Ressources de dégustation et types de bière",
+          "type": "source_professionnelle"
+        },
+        {
+          "organisme": "DGCCRF",
+          "edition": "fiche pratique",
+          "reference": "Triple — Tout savoir sur l’étiquetage des bières",
+          "type": "source_reglementaire"
+        }
+      ]
+    },
+    {
+      "id": "quadruple",
+      "nom": "Quadruple",
+      "collectionId": 9,
+      "nature": "A",
+      "parentPrincipalId": null,
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "Usage commercial international",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 3,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Pint",
+          "Tulipe"
+        ]
+      },
+      "description": "« Quadruple » se caractérise généralement par une expression dont les traits principaux sont : appellation d’usage ou de marketing couvrant des bières très différentes; le nom seul ne permet pas de déduire un profil sensoriel précis. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "Le terme « Quadruple » s’est imposé dans l’étiquetage, le commerce ou la réglementation pour informer le consommateur sur une couleur, une force, une méthode, une certification ou une composition. Il ne correspond pas nécessairement à un style technique. Son sens peut varier selon les pays ; dans ZythoHunt, il reste séparé des styles brassicoles afin de reproduire fidèlement le vocabulaire réellement visible sur les étiquettes.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Quadruple » est une appellation d’usage, commerciale ou réglementaire, et non une recette brassicole homogène. Elle peut être portée par des bières de couleurs, de fermentations et de forces différentes ; le libellé seul ne permet pas de proposer une formule unique.",
+        "maltsEtCereales": [],
+        "houblons": [],
+        "levuresEtMicroorganismes": [],
+        "ingredientsComplementaires": [],
+        "profilEau": "",
+        "empatage": "",
+        "ebullitionEtHoublonnage": "",
+        "fermentation": "",
+        "maturation": "",
+        "profilRecherche": "aucun profil technique unique ne peut être attribué à cette appellation"
+      },
+      "sources": [
+        {
+          "organisme": "Brasseurs de France",
+          "edition": "consultation 2026",
+          "reference": "Quadruple — Ressources de dégustation et types de bière",
+          "type": "source_professionnelle"
+        },
+        {
+          "organisme": "DGCCRF",
+          "edition": "fiche pratique",
+          "reference": "Quadruple — Tout savoir sur l’étiquetage des bières",
+          "type": "source_reglementaire"
+        }
+      ]
+    },
+    {
+      "id": "biere-sans-alcool",
+      "nom": "Bière sans alcool",
+      "collectionId": 9,
+      "nature": "R",
+      "parentPrincipalId": null,
+      "aliases": [
+        "Alcohol-Free Beer",
+        "Non-Alcoholic Beer"
+      ],
+      "paysOrigine": [
+        "France",
+        "International"
+      ],
+      "origine": {
+        "libelle": "Cadres réglementaires nationaux",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 0.0,
+        "max": 1.2,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 3,
+        "temperatureMax": 7,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Pilsner",
+          "Pint"
+        ]
+      },
+      "description": "« Bière sans alcool » se caractérise généralement par une expression dont les traits principaux sont : appellation d’usage ou de marketing couvrant des bières très différentes; le nom seul ne permet pas de déduire un profil sensoriel précis. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "Le terme « Bière sans alcool » s’est imposé dans l’étiquetage, le commerce ou la réglementation pour informer le consommateur sur une couleur, une force, une méthode, une certification ou une composition. Il ne correspond pas nécessairement à un style technique. Son sens peut varier selon les pays ; dans ZythoHunt, il reste séparé des styles brassicoles afin de reproduire fidèlement le vocabulaire réellement visible sur les étiquettes.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Bière sans alcool » est une appellation d’usage, commerciale ou réglementaire, et non une recette brassicole homogène. Elle peut être portée par des bières de couleurs, de fermentations et de forces différentes ; le libellé seul ne permet pas de proposer une formule unique.",
+        "maltsEtCereales": [],
+        "houblons": [],
+        "levuresEtMicroorganismes": [],
+        "ingredientsComplementaires": [],
+        "profilEau": "",
+        "empatage": "",
+        "ebullitionEtHoublonnage": "",
+        "fermentation": "",
+        "maturation": "",
+        "profilRecherche": "aucun profil technique unique ne peut être attribué à cette appellation"
+      },
+      "sources": [
+        {
+          "organisme": "Légifrance",
+          "edition": "version consolidée",
+          "reference": "Bière sans alcool — Décret n° 92-307 du 31 mars 1992 relatif aux bières",
+          "type": "source_reglementaire"
+        },
+        {
+          "organisme": "DGCCRF",
+          "edition": "fiche pratique",
+          "reference": "Bière sans alcool — Tout savoir sur l’étiquetage des bières",
+          "type": "source_reglementaire"
+        }
+      ]
+    },
+    {
+      "id": "0-0-pourcent",
+      "nom": "0,0 %",
+      "collectionId": 9,
+      "nature": "A",
+      "parentPrincipalId": null,
+      "aliases": [
+        "0.0%"
+      ],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "Allégation commerciale",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 0.0,
+        "max": 0.05,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 3,
+        "temperatureMax": 7,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Pilsner",
+          "Pint"
+        ]
+      },
+      "description": "« 0,0 % » se caractérise généralement par une expression dont les traits principaux sont : appellation d’usage ou de marketing couvrant des bières très différentes; le nom seul ne permet pas de déduire un profil sensoriel précis. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "Le terme « 0,0 % » s’est imposé dans l’étiquetage, le commerce ou la réglementation pour informer le consommateur sur une couleur, une force, une méthode, une certification ou une composition. Il ne correspond pas nécessairement à un style technique. Son sens peut varier selon les pays ; dans ZythoHunt, il reste séparé des styles brassicoles afin de reproduire fidèlement le vocabulaire réellement visible sur les étiquettes.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« 0,0 % » est une appellation d’usage, commerciale ou réglementaire, et non une recette brassicole homogène. Elle peut être portée par des bières de couleurs, de fermentations et de forces différentes ; le libellé seul ne permet pas de proposer une formule unique.",
+        "maltsEtCereales": [],
+        "houblons": [],
+        "levuresEtMicroorganismes": [],
+        "ingredientsComplementaires": [],
+        "profilEau": "",
+        "empatage": "",
+        "ebullitionEtHoublonnage": "",
+        "fermentation": "",
+        "maturation": "",
+        "profilRecherche": "aucun profil technique unique ne peut être attribué à cette appellation"
+      },
+      "sources": [
+        {
+          "organisme": "Brasseurs de France",
+          "edition": "consultation 2026",
+          "reference": "0,0 % — Ressources de dégustation et types de bière",
+          "type": "source_professionnelle"
+        },
+        {
+          "organisme": "DGCCRF",
+          "edition": "fiche pratique",
+          "reference": "0,0 % — Tout savoir sur l’étiquetage des bières",
+          "type": "source_reglementaire"
+        }
+      ]
+    },
+    {
+      "id": "biere-sans-gluten",
+      "nom": "Bière sans gluten",
+      "collectionId": 9,
+      "nature": "R",
+      "parentPrincipalId": null,
+      "aliases": [
+        "Gluten-Free Beer"
+      ],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "Allégation réglementée",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 3,
+        "temperatureMax": 12,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Verre adapté au style de base"
+        ]
+      },
+      "description": "« Bière sans gluten » se caractérise généralement par une expression dont les traits principaux sont : appellation d’usage ou de marketing couvrant des bières très différentes; le nom seul ne permet pas de déduire un profil sensoriel précis. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "Le terme « Bière sans gluten » s’est imposé dans l’étiquetage, le commerce ou la réglementation pour informer le consommateur sur une couleur, une force, une méthode, une certification ou une composition. Il ne correspond pas nécessairement à un style technique. Son sens peut varier selon les pays ; dans ZythoHunt, il reste séparé des styles brassicoles afin de reproduire fidèlement le vocabulaire réellement visible sur les étiquettes.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Bière sans gluten » est une appellation d’usage, commerciale ou réglementaire, et non une recette brassicole homogène. Elle peut être portée par des bières de couleurs, de fermentations et de forces différentes ; le libellé seul ne permet pas de proposer une formule unique.",
+        "maltsEtCereales": [],
+        "houblons": [],
+        "levuresEtMicroorganismes": [],
+        "ingredientsComplementaires": [],
+        "profilEau": "",
+        "empatage": "",
+        "ebullitionEtHoublonnage": "",
+        "fermentation": "",
+        "maturation": "",
+        "profilRecherche": "aucun profil technique unique ne peut être attribué à cette appellation"
+      },
+      "sources": [
+        {
+          "organisme": "Union européenne",
+          "edition": "règlement UE n° 828/2014",
+          "reference": "Bière sans gluten — Exigences relatives à l’absence ou à la présence réduite de gluten",
+          "type": "source_reglementaire"
+        }
+      ]
+    },
+    {
+      "id": "pur-malt",
+      "nom": "Pur malt",
+      "collectionId": 9,
+      "nature": "R",
+      "parentPrincipalId": null,
+      "aliases": [
+        "All Malt"
+      ],
+      "paysOrigine": [
+        "France",
+        "International"
+      ],
+      "origine": {
+        "libelle": "Mention de composition",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 3,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Verre adapté au style de base"
+        ]
+      },
+      "description": "« Pur malt » se caractérise généralement par une expression dont les traits principaux sont : appellation d’usage ou de marketing couvrant des bières très différentes; le nom seul ne permet pas de déduire un profil sensoriel précis. La mention indique une composition issue exclusivement de malt de céréales, sans imposer couleur, fermentation ou intensité. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "Le terme « Pur malt » s’est imposé dans l’étiquetage, le commerce ou la réglementation pour informer le consommateur sur une couleur, une force, une méthode, une certification ou une composition. Il ne correspond pas nécessairement à un style technique. Son sens peut varier selon les pays ; dans ZythoHunt, il reste séparé des styles brassicoles afin de reproduire fidèlement le vocabulaire réellement visible sur les étiquettes.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Pur malt » est une appellation d’usage, commerciale ou réglementaire, et non une recette brassicole homogène. Elle peut être portée par des bières de couleurs, de fermentations et de forces différentes ; le libellé seul ne permet pas de proposer une formule unique.",
+        "maltsEtCereales": [],
+        "houblons": [],
+        "levuresEtMicroorganismes": [],
+        "ingredientsComplementaires": [],
+        "profilEau": "",
+        "empatage": "",
+        "ebullitionEtHoublonnage": "",
+        "fermentation": "",
+        "maturation": "",
+        "profilRecherche": "aucun profil technique unique ne peut être attribué à cette appellation"
+      },
+      "sources": [
+        {
+          "organisme": "Légifrance",
+          "edition": "version consolidée",
+          "reference": "Pur malt — Décret n° 92-307 du 31 mars 1992 relatif aux bières",
+          "type": "source_reglementaire"
+        },
+        {
+          "organisme": "DGCCRF",
+          "edition": "fiche pratique",
+          "reference": "Pur malt — Tout savoir sur l’étiquetage des bières",
+          "type": "source_reglementaire"
+        }
+      ]
+    },
+    {
+      "id": "biere-a",
+      "nom": "Bière à…",
+      "collectionId": 9,
+      "nature": "R",
+      "parentPrincipalId": null,
+      "aliases": [],
+      "paysOrigine": [
+        "France"
+      ],
+      "origine": {
+        "libelle": "Dénomination réglementaire française",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 3,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Verre adapté au style de base"
+        ]
+      },
+      "description": "« Bière à… » se caractérise généralement par une expression dont les traits principaux sont : appellation d’usage ou de marketing couvrant des bières très différentes; le nom seul ne permet pas de déduire un profil sensoriel précis. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "Le terme « Bière à… » s’est imposé dans l’étiquetage, le commerce ou la réglementation pour informer le consommateur sur une couleur, une force, une méthode, une certification ou une composition. Il ne correspond pas nécessairement à un style technique. Son sens peut varier selon les pays ; dans ZythoHunt, il reste séparé des styles brassicoles afin de reproduire fidèlement le vocabulaire réellement visible sur les étiquettes.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Bière à… » est une appellation d’usage, commerciale ou réglementaire, et non une recette brassicole homogène. Elle peut être portée par des bières de couleurs, de fermentations et de forces différentes ; le libellé seul ne permet pas de proposer une formule unique.",
+        "maltsEtCereales": [],
+        "houblons": [],
+        "levuresEtMicroorganismes": [],
+        "ingredientsComplementaires": [],
+        "profilEau": "",
+        "empatage": "",
+        "ebullitionEtHoublonnage": "",
+        "fermentation": "",
+        "maturation": "",
+        "profilRecherche": "aucun profil technique unique ne peut être attribué à cette appellation"
+      },
+      "sources": [
+        {
+          "organisme": "Légifrance",
+          "edition": "version consolidée",
+          "reference": "Bière à… — Décret n° 92-307 du 31 mars 1992 relatif aux bières",
+          "type": "source_reglementaire"
+        },
+        {
+          "organisme": "DGCCRF",
+          "edition": "fiche pratique",
+          "reference": "Bière à… — Tout savoir sur l’étiquetage des bières",
+          "type": "source_reglementaire"
+        }
+      ]
+    },
+    {
+      "id": "biere-aromatisee-a",
+      "nom": "Bière aromatisée à…",
+      "collectionId": 9,
+      "nature": "R",
+      "parentPrincipalId": null,
+      "aliases": [],
+      "paysOrigine": [
+        "France"
+      ],
+      "origine": {
+        "libelle": "Dénomination réglementaire française",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 3,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Verre adapté au style de base"
+        ]
+      },
+      "description": "« Bière aromatisée à… » se caractérise généralement par une expression dont les traits principaux sont : appellation d’usage ou de marketing couvrant des bières très différentes; le nom seul ne permet pas de déduire un profil sensoriel précis. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "Le terme « Bière aromatisée à… » s’est imposé dans l’étiquetage, le commerce ou la réglementation pour informer le consommateur sur une couleur, une force, une méthode, une certification ou une composition. Il ne correspond pas nécessairement à un style technique. Son sens peut varier selon les pays ; dans ZythoHunt, il reste séparé des styles brassicoles afin de reproduire fidèlement le vocabulaire réellement visible sur les étiquettes.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Bière aromatisée à… » est une appellation d’usage, commerciale ou réglementaire, et non une recette brassicole homogène. Elle peut être portée par des bières de couleurs, de fermentations et de forces différentes ; le libellé seul ne permet pas de proposer une formule unique.",
+        "maltsEtCereales": [],
+        "houblons": [],
+        "levuresEtMicroorganismes": [],
+        "ingredientsComplementaires": [],
+        "profilEau": "",
+        "empatage": "",
+        "ebullitionEtHoublonnage": "",
+        "fermentation": "",
+        "maturation": "",
+        "profilRecherche": "aucun profil technique unique ne peut être attribué à cette appellation"
+      },
+      "sources": [
+        {
+          "organisme": "Légifrance",
+          "edition": "version consolidée",
+          "reference": "Bière aromatisée à… — Décret n° 92-307 du 31 mars 1992 relatif aux bières",
+          "type": "source_reglementaire"
+        },
+        {
+          "organisme": "DGCCRF",
+          "edition": "fiche pratique",
+          "reference": "Bière aromatisée à… — Tout savoir sur l’étiquetage des bières",
+          "type": "source_reglementaire"
+        }
+      ]
+    },
+    {
+      "id": "biere-de-fermentation-lactique",
+      "nom": "Bière de fermentation lactique",
+      "collectionId": 9,
+      "nature": "R",
+      "parentPrincipalId": null,
+      "aliases": [],
+      "paysOrigine": [
+        "France"
+      ],
+      "origine": {
+        "libelle": "Dénomination réglementaire française",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "mixte",
+        "details": "Fermentation mixte associant levures et micro-organismes acidifiants selon le profil recherché."
+      },
+      "service": {
+        "temperatureMin": 4,
+        "temperatureMax": 10,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Tulipe",
+          "Teku"
+        ]
+      },
+      "description": "« Bière de fermentation lactique » se caractérise généralement par une expression dont les traits principaux sont : appellation d’usage ou de marketing couvrant des bières très différentes; le nom seul ne permet pas de déduire un profil sensoriel précis. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "Le terme « Bière de fermentation lactique » s’est imposé dans l’étiquetage, le commerce ou la réglementation pour informer le consommateur sur une couleur, une force, une méthode, une certification ou une composition. Il ne correspond pas nécessairement à un style technique. Son sens peut varier selon les pays ; dans ZythoHunt, il reste séparé des styles brassicoles afin de reproduire fidèlement le vocabulaire réellement visible sur les étiquettes.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Bière de fermentation lactique » est une appellation d’usage, commerciale ou réglementaire, et non une recette brassicole homogène. Elle peut être portée par des bières de couleurs, de fermentations et de forces différentes ; le libellé seul ne permet pas de proposer une formule unique.",
+        "maltsEtCereales": [],
+        "houblons": [],
+        "levuresEtMicroorganismes": [],
+        "ingredientsComplementaires": [],
+        "profilEau": "",
+        "empatage": "",
+        "ebullitionEtHoublonnage": "",
+        "fermentation": "",
+        "maturation": "",
+        "profilRecherche": "aucun profil technique unique ne peut être attribué à cette appellation"
+      },
+      "sources": [
+        {
+          "organisme": "Légifrance",
+          "edition": "version consolidée",
+          "reference": "Bière de fermentation lactique — Décret n° 92-307 du 31 mars 1992 relatif aux bières",
+          "type": "source_reglementaire"
+        },
+        {
+          "organisme": "DGCCRF",
+          "edition": "fiche pratique",
+          "reference": "Bière de fermentation lactique — Tout savoir sur l’étiquetage des bières",
+          "type": "source_reglementaire"
+        }
+      ]
+    },
+    {
+      "id": "biere-de-garde-mention-legale-francaise",
+      "nom": "Bière de garde — mention légale française",
+      "collectionId": 9,
+      "nature": "R",
+      "parentPrincipalId": null,
+      "aliases": [
+        "Bière de garde"
+      ],
+      "paysOrigine": [
+        "France"
+      ],
+      "origine": {
+        "libelle": "France",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 12,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Tulipe",
+          "Calice"
+        ]
+      },
+      "description": "« Bière de garde — mention légale française » se caractérise généralement par une expression dont les traits principaux sont : appellation d’usage ou de marketing couvrant des bières très différentes; le nom seul ne permet pas de déduire un profil sensoriel précis. La mention repose sur une garde minimale après fermentation primaire et ne définit pas à elle seule un profil sensoriel. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "Le terme « Bière de garde — mention légale française » s’est imposé dans l’étiquetage, le commerce ou la réglementation pour informer le consommateur sur une couleur, une force, une méthode, une certification ou une composition. Il ne correspond pas nécessairement à un style technique. Son sens peut varier selon les pays ; dans ZythoHunt, il reste séparé des styles brassicoles afin de reproduire fidèlement le vocabulaire réellement visible sur les étiquettes.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Bière de garde — mention légale française » est une appellation d’usage, commerciale ou réglementaire, et non une recette brassicole homogène. Elle peut être portée par des bières de couleurs, de fermentations et de forces différentes ; le libellé seul ne permet pas de proposer une formule unique.",
+        "maltsEtCereales": [],
+        "houblons": [],
+        "levuresEtMicroorganismes": [],
+        "ingredientsComplementaires": [],
+        "profilEau": "",
+        "empatage": "",
+        "ebullitionEtHoublonnage": "",
+        "fermentation": "",
+        "maturation": "",
+        "profilRecherche": "aucun profil technique unique ne peut être attribué à cette appellation"
+      },
+      "sources": [
+        {
+          "organisme": "Légifrance",
+          "edition": "version consolidée",
+          "reference": "Bière de garde — mention légale française — Décret n° 92-307 du 31 mars 1992 relatif aux bières",
+          "type": "source_reglementaire"
+        },
+        {
+          "organisme": "DGCCRF",
+          "edition": "fiche pratique",
+          "reference": "Bière de garde — mention légale française — Tout savoir sur l’étiquetage des bières",
+          "type": "source_reglementaire"
+        }
+      ]
+    },
+    {
+      "id": "panache",
+      "nom": "Panaché",
+      "collectionId": 9,
+      "nature": "R",
+      "parentPrincipalId": null,
+      "aliases": [],
+      "paysOrigine": [
+        "France",
+        "Europe"
+      ],
+      "origine": {
+        "libelle": "France et Europe",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 0.5,
+        "max": 2.0,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 0,
+        "max": 10,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 3,
+        "max": 20,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 2,
+        "temperatureMax": 5,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Chope",
+          "Pilsner"
+        ]
+      },
+      "description": "« Panaché » se caractérise généralement par une expression dont les traits principaux sont : appellation d’usage ou de marketing couvrant des bières très différentes; le nom seul ne permet pas de déduire un profil sensoriel précis. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "Le terme « Panaché » s’est imposé dans l’étiquetage, le commerce ou la réglementation pour informer le consommateur sur une couleur, une force, une méthode, une certification ou une composition. Il ne correspond pas nécessairement à un style technique. Son sens peut varier selon les pays ; dans ZythoHunt, il reste séparé des styles brassicoles afin de reproduire fidèlement le vocabulaire réellement visible sur les étiquettes.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Panaché » est une appellation d’usage, commerciale ou réglementaire, et non une recette brassicole homogène. Elle peut être portée par des bières de couleurs, de fermentations et de forces différentes ; le libellé seul ne permet pas de proposer une formule unique.",
+        "maltsEtCereales": [],
+        "houblons": [],
+        "levuresEtMicroorganismes": [],
+        "ingredientsComplementaires": [],
+        "profilEau": "",
+        "empatage": "",
+        "ebullitionEtHoublonnage": "",
+        "fermentation": "",
+        "maturation": "",
+        "profilRecherche": "aucun profil technique unique ne peut être attribué à cette appellation"
+      },
+      "sources": [
+        {
+          "organisme": "Légifrance",
+          "edition": "version consolidée",
+          "reference": "Panaché — Décret n° 92-307 du 31 mars 1992 relatif aux bières",
+          "type": "source_reglementaire"
+        },
+        {
+          "organisme": "DGCCRF",
+          "edition": "fiche pratique",
+          "reference": "Panaché — Tout savoir sur l’étiquetage des bières",
+          "type": "source_reglementaire"
+        }
+      ]
+    },
+    {
+      "id": "radler-shandy",
+      "nom": "Radler / Shandy",
+      "collectionId": 9,
+      "nature": "A",
+      "parentPrincipalId": null,
+      "aliases": [
+        "Radler",
+        "Shandy"
+      ],
+      "paysOrigine": [
+        "Allemagne",
+        "Royaume-Uni",
+        "International"
+      ],
+      "origine": {
+        "libelle": "Europe, diffusion internationale",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 0.5,
+        "max": 3.5,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 0,
+        "max": 15,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 3,
+        "max": 24,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 2,
+        "temperatureMax": 5,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Chope",
+          "Pilsner"
+        ]
+      },
+      "description": "« Radler / Shandy » se caractérise généralement par une expression dont les traits principaux sont : appellation d’usage ou de marketing couvrant des bières très différentes; le nom seul ne permet pas de déduire un profil sensoriel précis. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
+      "histoireEtOrigines": "Le terme « Radler / Shandy » s’est imposé dans l’étiquetage, le commerce ou la réglementation pour informer le consommateur sur une couleur, une force, une méthode, une certification ou une composition. Il ne correspond pas nécessairement à un style technique. Son sens peut varier selon les pays ; dans ZythoHunt, il reste séparé des styles brassicoles afin de reproduire fidèlement le vocabulaire réellement visible sur les étiquettes.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Radler / Shandy » est une appellation d’usage, commerciale ou réglementaire, et non une recette brassicole homogène. Elle peut être portée par des bières de couleurs, de fermentations et de forces différentes ; le libellé seul ne permet pas de proposer une formule unique.",
+        "maltsEtCereales": [],
+        "houblons": [],
+        "levuresEtMicroorganismes": [],
+        "ingredientsComplementaires": [],
+        "profilEau": "",
+        "empatage": "",
+        "ebullitionEtHoublonnage": "",
+        "fermentation": "",
+        "maturation": "",
+        "profilRecherche": "aucun profil technique unique ne peut être attribué à cette appellation"
+      },
+      "sources": [
+        {
+          "organisme": "Brasseurs de France",
+          "edition": "consultation 2026",
+          "reference": "Radler / Shandy — Ressources de dégustation et types de bière",
+          "type": "source_professionnelle"
+        },
+        {
+          "organisme": "DGCCRF",
+          "edition": "fiche pratique",
+          "reference": "Radler / Shandy — Tout savoir sur l’étiquetage des bières",
+          "type": "source_reglementaire"
+        }
+      ]
+    }
+  ]
+}
