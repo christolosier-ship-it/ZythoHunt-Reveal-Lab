@@ -1,0 +1,24 @@
+import collectionJson from "../../docs/active/collection-07-ales-ambrees-brunes-maltees-et-fortes.json" with { type: "json" };
+import { createCollectionBundle } from "./create-collection-bundle.js";
+import { alesAmbreesBrunesMalteesEtFortesAssets, alesAmbreesBrunesMalteesEtFortesAssetPath, alesAmbreesBrunesMalteesEtFortesCardImages, alesAmbreesBrunesMalteesEtFortesThumbPath } from "./card-assets/ales-ambrees-brunes-maltees-et-fortes-assets.js";
+
+export const alesAmbreesBrunesMalteesEtFortesBundle = createCollectionBundle({
+  collectionJson,
+  collectionId: "ales-ambrees-brunes-maltees-et-fortes",
+  slug: "ales-ambrees-brunes-maltees-et-fortes",
+  subtitle: "27 cartes Brassopédie à illustrer",
+  order: 70,
+  discoveryKey: "zythohunt.discovery.ales-ambrees-brunes-maltees-et-fortes.v1",
+  assets: {
+    cardImages: alesAmbreesBrunesMalteesEtFortesCardImages,
+    collectionAssets: alesAmbreesBrunesMalteesEtFortesAssets,
+    assetPath: alesAmbreesBrunesMalteesEtFortesAssetPath,
+    thumbPath: alesAmbreesBrunesMalteesEtFortesThumbPath
+  },
+  backgroundPreset: {
+      "beerT": 57,
+      "bubbleDensity": 58,
+      "foamIntensity": 54
+  },
+  assetsReady: false
+});

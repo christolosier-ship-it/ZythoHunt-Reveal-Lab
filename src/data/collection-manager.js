@@ -9,7 +9,11 @@ export function createCollectionManager(collectionBundles, { initialCollectionId
   const orderedBundles = [...collectionBundles].sort((a, b) => (a.collection.order || 0) - (b.collection.order || 0));
   /** @type {Map<string, Any>} */
   const bundlesById = new Map(orderedBundles.map((bundle) => [bundle.collection.id, bundle]));
-  let activeCollectionId = initialCollectionId || orderedBundles[0]?.collection.id || null;
+  const firstReadyBundle = orderedBundles.find((bundle) => bundle.collection.assetsReady !== false);
+  const requestedInitialBundle = initialCollectionId ? bundlesById.get(initialCollectionId) : null;
+  let activeCollectionId = requestedInitialBundle?.collection.assetsReady === false
+    ? firstReadyBundle?.collection.id || null
+    : initialCollectionId || firstReadyBundle?.collection.id || orderedBundles[0]?.collection.id || null;
 
   function getActiveBundle() {
     const bundle = activeCollectionId ? bundlesById.get(activeCollectionId) : null;
@@ -24,6 +28,8 @@ export function createCollectionManager(collectionBundles, { initialCollectionId
     getActiveCollection: () => getActiveBundle().collection,
     setActiveCollection(collectionId) {
       if (!bundlesById.has(collectionId)) return { status: "missing", collectionId };
+      const nextBundle = bundlesById.get(collectionId);
+      if (nextBundle.collection.assetsReady === false) return { status: "pending-assets", collectionId };
       activeCollectionId = collectionId;
       return { status: "active", collectionId, bundle: getActiveBundle() };
     }
