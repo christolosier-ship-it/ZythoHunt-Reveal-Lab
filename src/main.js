@@ -26,6 +26,33 @@ const loadingScreen = $("loading-screen");
 const loadingBar = $("loading-bar");
 const collectionManager = createCollectionManager(collectionBundles);
 
+function renderCollectionSelector(manager, activeCollectionId, onSelect) {
+  const listEl = $("collection-selector-list");
+  if (!listEl) return;
+  listEl.replaceChildren();
+
+  manager.listCollections().forEach((collection) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "collection-selector-item";
+    button.disabled = !collection.assetsReady;
+    button.setAttribute("aria-pressed", collection.id === activeCollectionId ? "true" : "false");
+    if (!collection.assetsReady) button.title = "Assets à ajouter avant activation";
+
+    const name = document.createElement("span");
+    name.className = "collection-selector-name";
+    name.textContent = collection.name || collection.nom || collection.id;
+
+    const status = document.createElement("span");
+    status.className = collection.assetsReady ? "collection-selector-status is-ready" : "collection-selector-status is-pending";
+    status.textContent = collection.assetsReady ? "Disponible" : "Assets à ajouter";
+
+    button.append(name, status);
+    button.addEventListener("click", () => onSelect(collection.id));
+    listEl.appendChild(button);
+  });
+}
+
 function createBackgroundFallback(hostEl, error) {
   console.error("Le fond animé n'a pas pu démarrer. Le laboratoire continue avec un fond statique.", error);
   hostEl?.replaceChildren();
@@ -64,6 +91,13 @@ async function boot() {
   const background = mountBackground();
   applyCollectionBackground(background, collection);
   const assetQueue = createAssetPreloadQueue({ cards });
+  const activeCollectionLabel = $("active-collection-label");
+  if (activeCollectionLabel) activeCollectionLabel.textContent = `Collection ${collection.name || collection.nom}`;
+  renderCollectionSelector(collectionManager, collection.id, (collectionId) => {
+    const result = collectionManager.setActiveCollection(collectionId);
+    if (result.status === "pending-assets") return;
+    if (result.status === "active" && result.collectionId !== collection.id) window.location.reload();
+  });
 
   gsap.set(loadingScreen, { opacity: 1 });
   await preloadAssets((progress) => gsap.to(loadingBar, {
