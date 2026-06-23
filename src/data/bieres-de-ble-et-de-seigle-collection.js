@@ -20,5 +20,5 @@ export const bieresDeBleEtDeSeigleBundle = createCollectionBundle({
     bubbleDensity: 66,
     foamIntensity: 72
   },
-  assetsReady: false
+  assetsReady: true
 });
