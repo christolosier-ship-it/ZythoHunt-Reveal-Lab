@@ -20,5 +20,5 @@ export const traditionsBelgesEtFrancaisesBundle = createCollectionBundle({
     bubbleDensity: 62,
     foamIntensity: 70
   },
-  assetsReady: false
+  assetsReady: true
 });
