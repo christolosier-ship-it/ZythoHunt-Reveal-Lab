@@ -11,8 +11,8 @@ import { createCarousel } from "./carousel/carousel-controller.js";
 import { collectionBundles } from "./data/collections.js";
 import { createCollectionManager, validateCollectionBundle } from "./data/collection-manager.js";
 import { createDiscoveryStore } from "./discovery/discovery-store.js";
-import { createBeerResolver } from "./discovery/beer-resolver.js";
 import { createDiscoveryController } from "./discovery/discovery-controller.js";
+import { normalizeBeerName } from "./discovery/normalize-text.js";
 import { createRevealEngine } from "./reveal/reveal-engine.js";
 import { motionTokens, resetTokens } from "./animation/motion-tokens.js";
 import { createBeerBackground } from "./background/beer-background.js";
@@ -22,6 +22,7 @@ import { createLabPanel } from "./lab/lab-panel.js";
 import { createBrassopediePanel, shouldOpenBrassopedie } from "./brassopedie/brassopedie-panel.js";
 
 const ACTIVE_COLLECTION_STORAGE_KEY = "zythohunt.activeCollectionId.v1";
+const PENDING_REVEAL_STORAGE_KEY = "zythohunt.pendingReveal.v1";
 const $ = (id) => document.getElementById(id);
 const loadingScreen = $("loading-screen");
 const loadingBar = $("loading-bar");
@@ -38,6 +39,49 @@ function setStoredActiveCollectionId(collectionId) {
   try {
     localStorage.setItem(ACTIVE_COLLECTION_STORAGE_KEY, collectionId);
   } catch {}
+}
+
+function setPendingReveal(match) {
+  try {
+    localStorage.setItem(PENDING_REVEAL_STORAGE_KEY, JSON.stringify({ collectionId: match.collectionId, cardId: match.cardId }));
+  } catch {}
+}
+
+function takePendingReveal() {
+  try {
+    const value = JSON.parse(localStorage.getItem(PENDING_REVEAL_STORAGE_KEY) || "null");
+    localStorage.removeItem(PENDING_REVEAL_STORAGE_KEY);
+    return value && value.collectionId && value.cardId ? value : null;
+  } catch {
+    return null;
+  }
+}
+
+function createGlobalBeerResolver(bundles, preferredCollectionId) {
+  const aliases = new Map();
+  bundles.forEach((bundle) => {
+    bundle.revealableCards.forEach((card) => {
+      [card.name, ...(card.aliases || [])].forEach((alias) => {
+        const key = normalizeBeerName(alias);
+        if (!aliases.has(key)) aliases.set(key, []);
+        aliases.get(key).push({
+          collectionId: bundle.collection.id,
+          collectionName: bundle.collection.name || bundle.collection.nom || bundle.collection.id,
+          cardId: card.id,
+          cardName: card.name
+        });
+      });
+    });
+  });
+
+  return {
+    resolve(input) {
+      const matches = aliases.get(normalizeBeerName(input)) || [];
+      if (!matches.length) return { status: "unknown" };
+      const match = matches.find((candidate) => candidate.collectionId === preferredCollectionId) || matches[0];
+      return { status: "matched", ...match, matches };
+    }
+  };
 }
 
 const collectionManager = createCollectionManager(collectionBundles, { initialCollectionId: getStoredActiveCollectionId() });
@@ -101,6 +145,7 @@ function applyCollectionBackground(background, collection) {
 }
 
 async function boot() {
+  const pendingReveal = takePendingReveal();
   const activeBundle = collectionManager.getActiveBundle();
   const { collection, cards, cardsById, revealableCards } = activeBundle;
   const background = mountBackground();
@@ -176,12 +221,18 @@ async function boot() {
     carousel,
     revealEngine,
     store,
-    resolver: createBeerResolver(revealableCards),
+    resolver: createGlobalBeerResolver(collectionBundles, collection.id),
     cards,
     progressEl: $("progress-display"),
     closeSettings: labPanel.close,
     beforeReveal: () => background.pause(),
-    afterReveal: () => background.resume()
+    afterReveal: () => background.resume(),
+    currentCollectionId: collection.id,
+    onExternalMatch: (match) => {
+      setStoredActiveCollectionId(match.collectionId);
+      setPendingReveal(match);
+      window.location.reload();
+    }
   });
   discovery.mount();
 
@@ -252,6 +303,10 @@ async function boot() {
   await gsap.to(loadingScreen, { opacity: 0, duration: 0.5, ease: "power2.out" }).then();
   loadingScreen.style.display = "none";
   gsap.fromTo("#app", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.out" });
+
+  if (pendingReveal?.collectionId === collection.id) {
+    requestAnimationFrame(() => { void discovery.revealCard(pendingReveal.cardId, { focusInput: false }); });
+  }
 }
 
 document.addEventListener("DOMContentLoaded", boot);
