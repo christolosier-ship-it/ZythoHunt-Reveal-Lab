@@ -60,7 +60,7 @@ function createBackgroundFallback(hostEl, error) {
 function mountBackground() {
   const hostEl = $("beer-background-root");
   try {
-    const engine = createBeerBackground({ hostEl, settings: backgroundSettings });
+    const engine = createBeerBackground({ hostEl, settings: { ...backgroundSettings } });
     engine.mount();
     return { ...engine, isAvailable: true };
   } catch (error) {
@@ -132,4 +132,10 @@ async function boot() {
   gsap.fromTo("#app", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.out" });
 }
 
-document.addEventListener("DOMContentLoaded", boot);
+function showStartupError(error) {
+  console.error("ZythoHunt startup failed", error);
+  const loadingLabel = document.querySelector(".loading-label");
+  if (loadingLabel) loadingLabel.textContent = "Erreur de chargement. Recharge la page.";
+}
+
+document.addEventListener("DOMContentLoaded", () => { void boot().catch(showStartupError); });
