@@ -21,10 +21,26 @@ import { getCollectionBackgroundSettings } from "./background/background-presets
 import { createLabPanel } from "./lab/lab-panel.js";
 import { createBrassopediePanel, shouldOpenBrassopedie } from "./brassopedie/brassopedie-panel.js";
 
+const ACTIVE_COLLECTION_STORAGE_KEY = "zythohunt.activeCollectionId.v1";
 const $ = (id) => document.getElementById(id);
 const loadingScreen = $("loading-screen");
 const loadingBar = $("loading-bar");
-const collectionManager = createCollectionManager(collectionBundles);
+
+function getStoredActiveCollectionId() {
+  try {
+    return localStorage.getItem(ACTIVE_COLLECTION_STORAGE_KEY) || undefined;
+  } catch {
+    return undefined;
+  }
+}
+
+function setStoredActiveCollectionId(collectionId) {
+  try {
+    localStorage.setItem(ACTIVE_COLLECTION_STORAGE_KEY, collectionId);
+  } catch {}
+}
+
+const collectionManager = createCollectionManager(collectionBundles, { initialCollectionId: getStoredActiveCollectionId() });
 
 function renderCollectionSelector(manager, activeCollectionId, onSelect) {
   const listEl = $("collection-selector-list");
@@ -35,9 +51,8 @@ function renderCollectionSelector(manager, activeCollectionId, onSelect) {
     const button = document.createElement("button");
     button.type = "button";
     button.className = "collection-selector-item";
-    button.disabled = !collection.assetsReady;
     button.setAttribute("aria-pressed", collection.id === activeCollectionId ? "true" : "false");
-    if (!collection.assetsReady) button.title = "Assets à ajouter avant activation";
+    if (!collection.assetsReady) button.title = "Collection jouable avec placeholders en attendant les assets";
 
     const name = document.createElement("span");
     name.className = "collection-selector-name";
@@ -45,7 +60,7 @@ function renderCollectionSelector(manager, activeCollectionId, onSelect) {
 
     const status = document.createElement("span");
     status.className = collection.assetsReady ? "collection-selector-status is-ready" : "collection-selector-status is-pending";
-    status.textContent = collection.assetsReady ? "Disponible" : "Assets à ajouter";
+    status.textContent = collection.assetsReady ? "Disponible" : "Images à compléter";
 
     button.append(name, status);
     button.addEventListener("click", () => onSelect(collection.id));
@@ -95,8 +110,9 @@ async function boot() {
   if (activeCollectionLabel) activeCollectionLabel.textContent = `Collection ${collection.name || collection.nom}`;
   renderCollectionSelector(collectionManager, collection.id, (collectionId) => {
     const result = collectionManager.setActiveCollection(collectionId);
-    if (result.status === "pending-assets") return;
-    if (result.status === "active" && result.collectionId !== collection.id) window.location.reload();
+    if (result.status !== "active") return;
+    setStoredActiveCollectionId(collectionId);
+    if (collectionId !== collection.id) window.location.reload();
   });
 
   gsap.set(loadingScreen, { opacity: 1 });
