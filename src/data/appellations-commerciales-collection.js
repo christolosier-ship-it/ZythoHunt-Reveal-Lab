@@ -16,9 +16,9 @@ export const appellationsCommercialesBundle = createCollectionBundle({
     thumbPath: appellationsCommercialesThumbPath
   },
   backgroundPreset: {
-      "beerT": 75,
-      "bubbleDensity": 66,
-      "foamIntensity": 62
+    beerT: 75,
+    bubbleDensity: 66,
+    foamIntensity: 62
   },
-  assetsReady: false
+  assetsReady: true
 });
