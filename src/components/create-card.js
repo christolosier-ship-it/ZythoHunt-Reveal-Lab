@@ -2,9 +2,27 @@
 import { CARD_BACK_URL, CARD_FRAME_URL } from "../utils/preload-assets.js";
 import { assetUrl } from "../utils/asset-url.js";
 
+const PLACEHOLDER_STYLE = [
+  "width:100%",
+  "height:100%",
+  "display:grid",
+  "place-items:center",
+  "border-radius:inherit",
+  "background:#120904",
+  "border:1px solid rgba(232,160,64,.28)",
+  "color:#e8a040",
+  "font-family:var(--font-serif)",
+  "font-size:clamp(2rem,12vw,5rem)",
+  "font-weight:700",
+  "line-height:1",
+  "user-select:none",
+  "pointer-events:none"
+].join(";");
+
 function createAssetPlaceholder(label = "Image à venir") {
   const placeholder = document.createElement("div");
   placeholder.className = "asset-placeholder";
+  placeholder.style.cssText = PLACEHOLDER_STYLE;
   placeholder.setAttribute("role", "img");
   placeholder.setAttribute("aria-label", label);
   placeholder.textContent = "?";
