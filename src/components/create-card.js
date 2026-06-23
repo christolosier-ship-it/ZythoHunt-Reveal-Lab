@@ -1,16 +1,8 @@
 /** @typedef {any} Any */
-import { CARD_BACK_URL, CARD_FRAME_URL } from "../utils/preload-assets.js";
 import { assetUrl } from "../utils/asset-url.js";
+import { FALLBACK_SVG, shouldAttemptImageLoad, useFallbackImage } from "../utils/missing-assets.js";
 
-const FALLBACK_SVG = `data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 504"><rect width="360" height="504" rx="18" fill="#120904"/><rect x="12" y="12" width="336" height="480" rx="16" fill="none" stroke="#e8a040" stroke-opacity="0.32" stroke-width="3"/><text x="180" y="270" text-anchor="middle" font-family="Georgia,serif" font-size="150" font-weight="700" fill="#e8a040">?</text></svg>`)}`;
-
-function useFallbackImage(img) {
-  img.onerror = null;
-  img.src = FALLBACK_SVG;
-  img.classList.add("is-missing-asset");
-}
-
-export function createCardFront({ cardData, frameUrl, imagePath, imageLoading = "eager", imageFetchPriority = "auto" }) {
+export function createCardFront({ cardData, frameUrl, imagePath, imageLoading = "eager", imageFetchPriority = "auto", collection = null }) {
   const frontFace = document.createElement("div");
   frontFace.className = "card-face card-front";
   frontFace.setAttribute("aria-hidden", "true");
@@ -20,7 +12,8 @@ export function createCardFront({ cardData, frameUrl, imagePath, imageLoading = 
     illWindow.className = "illustration-window";
     const illImg = document.createElement("img");
     illImg.className = "card-illustration";
-    illImg.src = assetUrl(imagePath || cardData.image);
+    illImg.src = shouldAttemptImageLoad(collection, cardData, "thumb") ? assetUrl(imagePath || cardData.image) : FALLBACK_SVG;
+    if (!shouldAttemptImageLoad(collection, cardData, "thumb")) illImg.classList.add("is-missing-asset");
     illImg.alt = cardData.name || "";
     illImg.draggable = false;
     illImg.setAttribute("loading", imageLoading);
@@ -29,10 +22,10 @@ export function createCardFront({ cardData, frameUrl, imagePath, imageLoading = 
     illImg.onerror = () => useFallbackImage(illImg);
     illWindow.appendChild(illImg);
 
-    const resolvedFrameUrl = frameUrl || (cardData.frame ? assetUrl(cardData.frame) : CARD_FRAME_URL);
+    const resolvedFrameUrl = frameUrl || (cardData.frame ? assetUrl(cardData.frame) : null);
     const frameImg = document.createElement("img");
     frameImg.className = "card-frame";
-    frameImg.src = resolvedFrameUrl;
+    if (resolvedFrameUrl) frameImg.src = resolvedFrameUrl;
     frameImg.alt = "";
     frameImg.draggable = false;
     frameImg.decoding = "async";
@@ -55,11 +48,12 @@ export function createCardFront({ cardData, frameUrl, imagePath, imageLoading = 
   return frontFace;
 }
 
-function createBackFace(backUrl = CARD_BACK_URL) {
+function createBackFace(backUrl = null, collection = null) {
   const backFace = document.createElement("div");
   backFace.className = "card-face card-back";
   const backImg = document.createElement("img");
-  backImg.src = backUrl;
+  backImg.src = shouldAttemptImageLoad(collection, null, "back") && backUrl ? backUrl : FALLBACK_SVG;
+  if (!shouldAttemptImageLoad(collection, null, "back") || !backUrl) backImg.classList.add("is-missing-asset");
   backImg.alt = "";
   backImg.draggable = false;
   backImg.decoding = "async";
@@ -121,16 +115,17 @@ export function createCard({ index = 0, cardData, revealable, discovered = false
   card.setAttribute("tabindex", "-1");
   card.setAttribute("role", "button");
 
-  const frameUrl = cardData?.frame ? assetUrl(cardData.frame) : collection?.cardFrame ? assetUrl(collection.cardFrame) : CARD_FRAME_URL;
-  const backUrl = collection?.cardBack ? assetUrl(collection.cardBack) : CARD_BACK_URL;
+  const frameUrl = cardData?.frame ? assetUrl(cardData.frame) : collection?.cardFrame ? assetUrl(collection.cardFrame) : null;
+  const backUrl = collection?.cardBack ? assetUrl(collection.cardBack) : null;
   const frontFace = createCardFront({
     cardData,
     frameUrl,
     imagePath: cardData?.thumbImage || cardData?.image,
     imageLoading: discovered ? "eager" : "lazy",
-    imageFetchPriority: discovered ? "high" : "auto"
+    imageFetchPriority: discovered ? "high" : "auto",
+    collection
   });
-  card.append(createBackFace(backUrl), frontFace);
+  card.append(createBackFace(backUrl, collection), frontFace);
   if (discovered) {
     card.classList.add("beer-card--discovered");
     frontFace.setAttribute("aria-hidden", "false");
@@ -146,15 +141,16 @@ export function createCard({ index = 0, cardData, revealable, discovered = false
 
 export function cloneCardForReveal(cardEl, rect, cardData) {
   const clone = document.createElement("div");
-  const frameUrl = cardData?.frame ? assetUrl(cardData.frame) : CARD_FRAME_URL;
+  const frameUrl = cardData?.frame ? assetUrl(cardData.frame) : null;
   clone.className = "beer-card beer-card--clone";
   clone.style.cssText = `position:fixed;left:${rect.left}px;top:${rect.top}px;width:${rect.width}px;height:${rect.height}px;z-index:1000;pointer-events:none;`;
-  clone.append(createBackFace(), createCardFront({
+  clone.append(createBackFace(null, null), createCardFront({
     cardData,
     frameUrl,
     imagePath: cardData?.fullImage || cardData?.image,
     imageLoading: "eager",
-    imageFetchPriority: "high"
+    imageFetchPriority: "high",
+    collection: { assetsReady: true }
   }));
   scheduleCardNameFit(clone);
   return clone;

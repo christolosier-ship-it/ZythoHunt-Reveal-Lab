@@ -27,7 +27,7 @@ export function createRevealEngine(/** @type {any} */ {
   let currentCardData = null;
   let currentSceneContext = null;
   let previousFocus = null;
-  const inertSelectors = ["#app-header", "#reveal-search-form", "#carousel-container", "#debug-panel"];
+  const inertSelectors = ["#app-header", "#reveal-search-form", "#carousel-container"];
   let cleanupModal = null;
 
   function isBusy() {
