@@ -20,5 +20,5 @@ export const stylesSinguliersHistoriquesEtHybridesBundle = createCollectionBundl
     bubbleDensity: 50,
     foamIntensity: 50
   },
-  assetsReady: false
+  assetsReady: true
 });
