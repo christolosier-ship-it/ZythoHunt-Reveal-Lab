@@ -20,5 +20,5 @@ export const lagersEtFermentationsBassesBundle = createCollectionBundle({
     bubbleDensity: 68,
     foamIntensity: 40
   },
-  assetsReady: false
+  assetsReady: true
 });
