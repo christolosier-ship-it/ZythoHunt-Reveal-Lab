@@ -16,9 +16,9 @@ export const paleAlesBittersEtIpaBundle = createCollectionBundle({
     thumbPath: paleAlesBittersEtIpaThumbPath
   },
   backgroundPreset: {
-      "beerT": 21,
-      "bubbleDensity": 42,
-      "foamIntensity": 38
+    beerT: 72,
+    bubbleDensity: 58,
+    foamIntensity: 48
   },
   assetsReady: false
 });

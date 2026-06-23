@@ -16,9 +16,9 @@ export const bieresDeBleEtDeSeigleBundle = createCollectionBundle({
     thumbPath: bieresDeBleEtDeSeigleThumbPath
   },
   backgroundPreset: {
-      "beerT": 39,
-      "bubbleDensity": 50,
-      "foamIntensity": 46
+    beerT: 92,
+    bubbleDensity: 66,
+    foamIntensity: 72
   },
   assetsReady: false
 });

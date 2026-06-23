@@ -16,9 +16,9 @@ export const lagersEtFermentationsBassesBundle = createCollectionBundle({
     thumbPath: lagersEtFermentationsBassesThumbPath
   },
   backgroundPreset: {
-      "beerT": 12,
-      "bubbleDensity": 38,
-      "foamIntensity": 34
+    beerT: 88,
+    bubbleDensity: 68,
+    foamIntensity: 40
   },
   assetsReady: false
 });

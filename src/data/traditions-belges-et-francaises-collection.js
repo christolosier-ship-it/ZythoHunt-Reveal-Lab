@@ -16,9 +16,9 @@ export const traditionsBelgesEtFrancaisesBundle = createCollectionBundle({
     thumbPath: traditionsBelgesEtFrancaisesThumbPath
   },
   backgroundPreset: {
-      "beerT": 30,
-      "bubbleDensity": 46,
-      "foamIntensity": 42
+    beerT: 62,
+    bubbleDensity: 62,
+    foamIntensity: 70
   },
   assetsReady: false
 });

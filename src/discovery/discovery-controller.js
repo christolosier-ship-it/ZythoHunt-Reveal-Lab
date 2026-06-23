@@ -13,7 +13,9 @@ export function createDiscoveryController({
   progressEl,
   closeSettings,
   beforeReveal,
-  afterReveal
+  afterReveal,
+  currentCollectionId,
+  onExternalMatch
 }) {
   let busy = false;
   const realCards = cards.filter((card) => card.revealable);
@@ -44,31 +46,19 @@ export function createDiscoveryController({
     }
   }
 
-  async function handleSubmit(event) {
-    event.preventDefault();
-    if (busy || revealEngine.isBusy()) return;
-
-    const result = resolver.resolve(inputEl.value);
-    if (!inputEl.value.trim() || result.status === "unknown") {
-      setFeedback("Aucun style reconnu dans cette collection.", true);
-      inputEl.animate?.(
-        [
-          { transform: "translateX(0)" },
-          { transform: "translateX(-5px)" },
-          { transform: "translateX(5px)" },
-          { transform: "translateX(0)" }
-        ],
-        { duration: 180 }
-      );
-      return;
+  async function revealCard(cardId, { focusInput = true } = {}) {
+    if (busy || revealEngine.isBusy()) return { status: "busy" };
+    const card = byId[cardId];
+    if (!card) {
+      setFeedback("Carte introuvable dans cette collection.", true);
+      return { status: "missing", cardId };
     }
 
-    const card = byId[result.cardId];
     setBusy(true);
     closeSettings?.();
 
     try {
-      await runRevealCycle({
+      const result = await runRevealCycle({
         card,
         carousel,
         revealEngine,
@@ -82,13 +72,43 @@ export function createDiscoveryController({
           updateProgress();
         }
       });
+      return result;
     } catch (error) {
       console.error(error);
       setFeedback("La révélation a échoué. Réessaie.", true);
+      return { status: "failed", error };
     } finally {
       setBusy(false);
-      inputEl.focus();
+      if (focusInput) inputEl.focus();
     }
+  }
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    if (busy || revealEngine.isBusy()) return;
+
+    const result = resolver.resolve(inputEl.value);
+    if (!inputEl.value.trim() || result.status === "unknown") {
+      setFeedback("Aucun style reconnu.", true);
+      inputEl.animate?.(
+        [
+          { transform: "translateX(0)" },
+          { transform: "translateX(-5px)" },
+          { transform: "translateX(5px)" },
+          { transform: "translateX(0)" }
+        ],
+        { duration: 180 }
+      );
+      return;
+    }
+
+    if (result.collectionId && result.collectionId !== currentCollectionId) {
+      setFeedback(`Direction ${result.collectionName || "autre collection"}…`);
+      onExternalMatch?.(result);
+      return;
+    }
+
+    await revealCard(result.cardId);
   }
 
   function mount() {
@@ -101,5 +121,5 @@ export function createDiscoveryController({
     formEl.removeEventListener("submit", handleSubmit);
   }
 
-  return { mount, destroy, updateProgress };
+  return { mount, destroy, updateProgress, revealCard };
 }

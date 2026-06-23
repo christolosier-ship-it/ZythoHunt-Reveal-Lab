@@ -16,9 +16,9 @@ export const stylesSinguliersHistoriquesEtHybridesBundle = createCollectionBundl
     thumbPath: stylesSinguliersHistoriquesEtHybridesThumbPath
   },
   backgroundPreset: {
-      "beerT": 66,
-      "bubbleDensity": 62,
-      "foamIntensity": 58
+    beerT: 50,
+    bubbleDensity: 50,
+    foamIntensity: 50
   },
   assetsReady: false
 });
