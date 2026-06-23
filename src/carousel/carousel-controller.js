@@ -32,7 +32,7 @@ export function createCarousel(/** @type {any} */ { containerEl, cards, collecti
   const reducedMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const isDiscovered = (id) => store?.isDiscovered(id) || false;
   const now = () => performance.now();
-  const isFormField = (el) => ["INPUT", "TEXTAREA", "SELECT", "BUTTON"].includes(el?.tagName) || el?.closest?.("#debug-panel");
+  const isFormField = (el) => ["INPUT", "TEXTAREA", "SELECT", "BUTTON"].includes(el?.tagName);
   const getRenderWindow = () => Number(tokens.renderWindow) || DEFAULT_RENDER_WINDOW;
 
   function getVisualState(index, vPos) {

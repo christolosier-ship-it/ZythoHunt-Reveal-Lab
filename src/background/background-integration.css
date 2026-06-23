@@ -58,11 +58,7 @@
   -webkit-backdrop-filter: blur(10px) saturate(.86);
 }
 
-#debug-panel .debug-panel-inner {
-  background: rgba(18, 12, 6, .96);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-}
+
 
 #loading-screen {
   background: #0e0a06;

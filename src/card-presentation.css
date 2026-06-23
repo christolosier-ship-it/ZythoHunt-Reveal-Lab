@@ -87,10 +87,7 @@
   height: calc(100dvh - var(--head-h) - 112px);
 }
 
-#debug-panel {
-  max-height: calc(100vh - var(--head-h) - var(--nav-h) - 20px);
-  max-height: calc(100dvh - var(--head-h) - var(--nav-h) - 20px);
-}
+
 
 @media (max-width: 640px) {
   #carousel-container {

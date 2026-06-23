@@ -1,5 +1,6 @@
 /** @typedef {any} Any */
 import { assetUrl } from "./asset-url.js";
+import { shouldAttemptImageLoad } from "./missing-assets.js";
 
 /**
  * @param {Any} card
@@ -35,8 +36,8 @@ export function getPreloadWindowUrls(cards, activeIndex, radius = 3, purpose = "
     .map((path) => assetUrl(path)))];
 }
 
-/** @param {{ cards?: Any[], radius?: number }} [config] */
-export function createAssetPreloadQueue({ cards = [], radius = 3 } = {}) {
+/** @param {{ cards?: Any[], collection?: Any, radius?: number }} [config] */
+export function createAssetPreloadQueue({ cards = [], collection = null, radius = 3 } = {}) {
   const loaded = new Set();
   let generation = 0;
 
@@ -78,13 +79,14 @@ export function createAssetPreloadQueue({ cards = [], radius = 3 } = {}) {
     preloadAround(activeIndex, options = {}) {
       const nextRadius = options.radius ?? radius;
       const purpose = options.purpose || "thumb";
+      if (!collection?.assetsReady) return Promise.resolve([]);
       return preloadUrls(getPreloadWindowUrls(cards, activeIndex, nextRadius, purpose));
     },
     preloadCard(cardId, options = {}) {
       const card = cards.find((candidate) => candidate.id === cardId);
       const purpose = options.purpose || "full";
       const path = getCardImageForPurpose(card, purpose);
-      return path ? preloadUrls([assetUrl(path)]) : Promise.resolve([]);
+      return path && shouldAttemptImageLoad(collection, card, purpose) ? preloadUrls([assetUrl(path)]) : Promise.resolve([]);
     }
   };
 }

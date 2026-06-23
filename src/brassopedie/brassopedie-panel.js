@@ -1,7 +1,7 @@
 import { assetUrl } from "../utils/asset-url.js";
 import { formatRange, formatService, natureLabel, parentName, recipeSections } from "./brassopedie-formatters.js";
 
-const INERT_SELECTORS = ["#app-header", "#reveal-search-form", "#carousel-container", "#debug-panel"];
+const INERT_SELECTORS = ["#app-header", "#reveal-search-form", "#carousel-container"];
 const FOCUSABLE_SELECTOR = "button, [href], input, select, textarea, summary, [tabindex]:not([tabindex='-1'])";
 
 const el = (tag, className, text) => {
