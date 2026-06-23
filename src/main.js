@@ -18,6 +18,7 @@ import { motionTokens, resetTokens } from "./animation/motion-tokens.js";
 import { createBeerBackground } from "./background/beer-background.js";
 import { backgroundSettings, resetBackgroundSettings } from "./background/background-settings.js";
 import { getCollectionBackgroundSettings } from "./background/background-presets.js";
+import { getEditorialBackgroundPreset } from "./background/editorial-background-presets.js";
 import { createLabPanel } from "./lab/lab-panel.js";
 import { createBrassopediePanel, shouldOpenBrassopedie } from "./brassopedie/brassopedie-panel.js";
 
@@ -139,7 +140,7 @@ function mountBackground() {
 }
 
 function applyCollectionBackground(background, collection) {
-  const nextSettings = getCollectionBackgroundSettings(backgroundSettings, collection.backgroundPreset);
+  const nextSettings = getCollectionBackgroundSettings(backgroundSettings, getEditorialBackgroundPreset(collection));
   background.update(nextSettings);
   return nextSettings;
 }
