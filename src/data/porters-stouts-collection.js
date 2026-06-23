@@ -1,25 +1,9 @@
 import collectionJson from "./brassopedie/collection-03-porters-et-stouts.json" with { type: "json" };
-import collectionEditorial from "./brassopedie/collection-03-porters-et-stouts-editorial.json" with { type: "json" };
 import { porterStoutAssetPath, porterStoutCardImages, porterStoutCollectionAssets } from "./card-assets/porters-stouts-assets.js";
 
 const porterStoutThumbPath = (fileName) => porterStoutAssetPath("thumb/" + fileName);
-const brassopedieTextOverrides = collectionEditorial?.overrides || {};
 
-function applyBrassopedieTextOverride(entry) {
-  const override = brassopedieTextOverrides[entry.id];
-  if (!override) return entry;
-  return {
-    ...entry,
-    description: override.description ?? entry.description,
-    histoireEtOrigines: override.histoireEtOrigines ?? entry.histoireEtOrigines,
-    recette: {
-      ...entry.recette,
-      ...(override.recette || {})
-    }
-  };
-}
-
-const porterStoutEntries = collectionJson.cartes.map(applyBrassopedieTextOverride);
+const porterStoutEntries = collectionJson.cartes.map((entry) => entry);
 
 export const porterStoutCollection = {
   ...collectionJson.collection,
