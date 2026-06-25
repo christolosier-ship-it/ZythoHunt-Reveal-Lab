@@ -6,7 +6,10 @@ export const INITIAL_PRELOAD_RADIUS = 3;
 
 function collectionAssetUrls(collection) {
   if (!collection?.assetsReady) return [];
-  return [collection.cardBack, collection.cardFrame].filter(Boolean).map((path) => assetUrl(path));
+  return [
+    collection.cardBackThumb || collection.cardBack,
+    collection.collectionFaceThumb || collection.cardFrame
+  ].filter(Boolean).map((path) => assetUrl(path));
 }
 
 /** @param {{ collection?: any, cards?: any[], activeIndex?: number, radius?: number }} [options] */
