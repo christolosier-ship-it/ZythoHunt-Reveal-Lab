@@ -1,0 +1,3685 @@
+{
+  "schemaVersion": "1.0.0",
+  "taxonomyVersion": "1.0.0",
+  "collection": {
+    "id": 8,
+    "slug": "styles-singuliers-historiques-et-hybrides",
+    "nom": "Styles singuliers, historiques et hybrides"
+  },
+  "cartes": [
+    {
+      "id": "cream-ale",
+      "nom": "Cream Ale",
+      "collectionId": 8,
+      "nature": "S",
+      "parentPrincipalId": "ale",
+      "aliases": [],
+      "paysOrigine": [
+        "États-Unis"
+      ],
+      "origine": {
+        "libelle": "Nord-Est des États-Unis",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 4.2,
+        "max": 5.6,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 8,
+        "max": 20,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 5,
+        "max": 10,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "hybride",
+        "details": "Procédé hybride combinant une fermentation atypique pour la famille et une maturation destinée à nettoyer le profil."
+      },
+      "service": {
+        "temperatureMin": 3,
+        "temperatureMax": 6,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "American pint",
+          "Pilsner"
+        ]
+      },
+      "description": "La Cream Ale est une bière américaine de tondeuse, mais avec un peu de malice : très pâle, propre, pétillante, légère, parfois grainée ou légèrement maïs, avec une finale sèche à douce. Elle se boit comme une lager, mais garde une petite âme d’ale.",
+      "histoireEtOrigines": "Née aux États-Unis dans la seconde moitié du XIXe siècle, la Cream Ale est une ale de consommation immédiate conçue pour rivaliser avec les lagers américaines et canadiennes. Elle a survécu à la Prohibition, ce qui, dans le monde brassicole américain, mérite presque une médaille en capsule.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt Pilsner ou lager très pâle",
+          "riz ou maïs selon la tradition"
+        ],
+        "houblons": [
+          "houblons doux et peu envahissants"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure lager neutre"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "douce à modérément minérale",
+        "empatage": "empâtage favorisant une forte fermentescibilité",
+        "ebullitionEtHoublonnage": "houblonnage précoce modéré, peu ou pas de houblon tardif",
+        "fermentation": "fermentation basse propre et fraîche",
+        "maturation": "lagering court à moyen",
+        "profilRecherche": "une ale américaine très pâle, propre et pétillante, légère mais plus expressive qu’une lager industrielle"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Cream Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Cream Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Cream Ale — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "california-common-steam-beer",
+      "nom": "California Common / Steam Beer",
+      "collectionId": 8,
+      "nature": "S",
+      "parentPrincipalId": null,
+      "aliases": [
+        "California Common",
+        "Steam Beer"
+      ],
+      "paysOrigine": [
+        "États-Unis"
+      ],
+      "origine": {
+        "libelle": "San Francisco, Californie",
+        "ville": "San Francisco",
+        "region": "Californie",
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 4.5,
+        "max": 5.5,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 30,
+        "max": 45,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 20,
+        "max": 28,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "hybride",
+        "details": "Levure lager fermentée à une température relativement chaude, sans long lagering classique."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 9,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "American pint",
+          "Pokal"
+        ]
+      },
+      "description": "La California Common est une lager qui fermente comme si elle avait raté le train du froid : robe ambrée, malt toasté, caramel sec, houblon boisé ou mentholé, fermentation nette malgré la température plus haute. Elle a le goût d’un compromis devenu identité.",
+      "histoireEtOrigines": "Originaire de San Francisco, le style vient des contraintes de brassage sans réfrigération moderne : des levures lager fermentées plus chaudement donnaient une bière robuste, ambrée et sèche. “Steam Beer” est lié historiquement à Anchor, tandis que “California Common” désigne le style générique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malts Munich et Vienna",
+          "malts torréfiés désamérisés en faible quantité"
+        ],
+        "houblons": [
+          "houblons nobles discrets"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure lager propre"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "modérément carbonatée",
+        "empatage": "empâtage ou décoction favorisant les notes de pain",
+        "ebullitionEtHoublonnage": "houblonnage équilibrant",
+        "fermentation": "fermentation basse",
+        "maturation": "lagering moyen à long",
+        "profilRecherche": "une lager hybride californienne, ambrée et toastée, avec houblon rustique, fermentation propre et finale sèche"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "California Common / Steam Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "California Common / Steam Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "California Common / Steam Beer — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "kentucky-common",
+      "nom": "Kentucky Common",
+      "collectionId": 8,
+      "nature": "S",
+      "parentPrincipalId": null,
+      "aliases": [],
+      "paysOrigine": [
+        "États-Unis"
+      ],
+      "origine": {
+        "libelle": "Louisville, Kentucky",
+        "ville": "Louisville",
+        "region": "Kentucky",
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 4.0,
+        "max": 5.5,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 15,
+        "max": 30,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 20,
+        "max": 40,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 9,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "American pint",
+          "Dimple mug"
+        ]
+      },
+      "description": "La Kentucky Common est une bière de saloon rapide, sombre mais légère : maïs, caramel, pain grillé, légère minéralité, haute carbonatation et finale sèche. Elle n’est pas censée être franchement acide ; si elle pique comme une sour, le cheval est parti sans la selle.",
+      "histoireEtOrigines": "Produite autour de Louisville après la guerre de Sécession et jusqu’à la Prohibition, elle était bon marché, servie très fraîche et souvent consommée quelques jours seulement après brassage. Les récits modernes de sour mash sont contestés par les archives brassicoles, qui décrivent plutôt une ale propre et rapide.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "céréales définies par la tradition locale"
+        ],
+        "houblons": [
+          "houblons faibles à modérés ou substituts historiques"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ou culture conforme à la tradition"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "profil local lorsque documenté",
+        "empatage": "procédé traditionnel ou reconstitution historique",
+        "ebullitionEtHoublonnage": "houblonnage et épices selon la source historique",
+        "fermentation": "fermentation conforme au style reconstitué",
+        "maturation": "maturation variable",
+        "profilRecherche": "une ale historique de Louisville, sombre, légère et très fraîche, avec maïs, caramel discret et finale sèche sans acidité marquée"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Kentucky Common — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Kentucky Common — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Kentucky Common — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "american-malt-liquor",
+      "nom": "American Malt Liquor",
+      "collectionId": 8,
+      "nature": "S",
+      "parentPrincipalId": null,
+      "aliases": [
+        "Malt Liquor"
+      ],
+      "paysOrigine": [
+        "États-Unis"
+      ],
+      "origine": {
+        "libelle": "États-Unis",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 6.0,
+        "max": 9.0,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 5,
+        "max": 25,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 4,
+        "max": 14,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "basse",
+        "details": "Fermentation basse à température fraîche, généralement suivie d’une maturation à froid."
+      },
+      "service": {
+        "temperatureMin": 3,
+        "temperatureMax": 6,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Shaker",
+          "Chope"
+        ]
+      },
+      "description": "L’American Malt Liquor ressemble à une lager claire passée en mode turbo : pâle, très fermentée, alcool plus élevé, corps léger, amertume faible et profil volontairement direct. Elle cherche l’impact sans la complexité, le moteur plus que la dentelle.",
+      "histoireEtOrigines": "Le malt liquor américain s’inscrit dans la culture industrielle des lagers fortes, souvent brassées avec adjuvants pour garder un corps léger malgré un degré plus haut. Ce n’est pas une bière de dégustation contemplative, mais une extension américaine de la lager de grande consommation.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt Pilsner ou lager très pâle",
+          "riz ou maïs selon la tradition"
+        ],
+        "houblons": [
+          "houblons doux et peu envahissants"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure lager neutre"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "douce à modérément minérale",
+        "empatage": "empâtage favorisant une forte fermentescibilité",
+        "ebullitionEtHoublonnage": "houblonnage précoce modéré, peu ou pas de houblon tardif",
+        "fermentation": "fermentation basse propre et fraîche",
+        "maturation": "lagering court à moyen",
+        "profilRecherche": "une lager américaine forte et très atténuée, claire, légère en corps, peu amère et franchement directe"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "American Malt Liquor — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "American Malt Liquor — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "American Malt Liquor — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "pre-prohibition-lager",
+      "nom": "Pre-Prohibition Lager",
+      "collectionId": 8,
+      "nature": "S",
+      "parentPrincipalId": "lager",
+      "aliases": [],
+      "paysOrigine": [
+        "États-Unis"
+      ],
+      "origine": {
+        "libelle": "États-Unis avant 1920",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 4.5,
+        "max": 6.0,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 25,
+        "max": 40,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 5,
+        "max": 14,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "basse",
+        "details": "Fermentation basse à température fraîche, généralement suivie d’une maturation à froid."
+      },
+      "service": {
+        "temperatureMin": 4,
+        "temperatureMax": 7,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Pilsner",
+          "American pint"
+        ]
+      },
+      "description": "La Pre-Prohibition Lager est une lager américaine avant amnésie : dorée, sèche, plus maltée, plus amère et plus houblonnée que les lagers industrielles modernes. Le maïs ou le riz peuvent l’alléger, mais elle garde du nerf.",
+      "histoireEtOrigines": "Adaptée par les brasseurs germano-américains au XIXe siècle, elle utilisait les céréales et houblons disponibles aux États-Unis avant la Prohibition. Après 1920, les lagers américaines deviennent plus faibles et plus neutres ; ce style reconstruit la version plus robuste d’avant.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt Pilsner"
+        ],
+        "houblons": [
+          "houblons nobles européens ou variétés modernes apparentées"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure lager propre"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "douce à modérément sulfatée selon l’école",
+        "empatage": "empâtage clair, parfois par décoction",
+        "ebullitionEtHoublonnage": "amertume structurante et houblon aromatique mesuré",
+        "fermentation": "fermentation basse fraîche",
+        "maturation": "lagering prolongé",
+        "profilRecherche": "une lager américaine historique, dorée, sèche et plus houblonnée, avec céréale nette et caractère pré-Prohibition"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Pre-Prohibition Lager — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Pre-Prohibition Lager — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Pre-Prohibition Lager — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "kellerbier-zwickelbier",
+      "nom": "Kellerbier / Zwickelbier",
+      "collectionId": 8,
+      "nature": "S",
+      "parentPrincipalId": "lager",
+      "aliases": [
+        "Kellerbier",
+        "Zwickelbier"
+      ],
+      "paysOrigine": [
+        "Allemagne",
+        "Europe"
+      ],
+      "origine": {
+        "libelle": "Franconie et régions brassicoles européennes",
+        "ville": null,
+        "region": "Franconie",
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 3.5,
+        "max": 7.0,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 15,
+        "max": 50,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 5,
+        "max": 60,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 10,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Seidel",
+          "Willi Becher"
+        ]
+      },
+      "description": "La Kellerbier est une lager de cave encore vivante : non filtrée, fraîche, parfois trouble, plus ronde, plus pain, plus levure et plus rustique que sa base. Elle doit sentir la cuve ouverte et la Franconie, pas le fond de seau.",
+      "histoireEtOrigines": "“Kellerbier” signifie bière de cave : une lager maturée puis servie depuis les caves ou fûts de garde, historiquement en Franconie. “Zwickelbier” évoque la bière prélevée au robinet de dégustation, souvent jeune, non filtrée et destinée à une consommation locale.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "céréales définies par la tradition locale"
+        ],
+        "houblons": [
+          "houblons faibles à modérés ou substituts historiques"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ou culture conforme à la tradition"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "profil local lorsque documenté",
+        "empatage": "procédé traditionnel ou reconstitution historique",
+        "ebullitionEtHoublonnage": "houblonnage et épices selon la source historique",
+        "fermentation": "fermentation conforme au style reconstitué",
+        "maturation": "maturation variable",
+        "profilRecherche": "une lager allemande non filtrée, fraîche et rustique, avec pain, levure fine, base propre et sensation de cave vivante"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Kellerbier / Zwickelbier — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Kellerbier / Zwickelbier — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Kellerbier / Zwickelbier — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "grodziskie-piwo-grodziskie",
+      "nom": "Grodziskie / Piwo Grodziskie",
+      "collectionId": 8,
+      "nature": "S",
+      "parentPrincipalId": null,
+      "aliases": [
+        "Grodziskie",
+        "Piwo Grodziskie"
+      ],
+      "paysOrigine": [
+        "Pologne"
+      ],
+      "origine": {
+        "libelle": "Grodzisk Wielkopolski",
+        "ville": "Grodzisk Wielkopolski",
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 2.5,
+        "max": 3.3,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 20,
+        "max": 35,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 5,
+        "max": 12,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 5,
+        "temperatureMax": 8,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Flûte",
+          "Pokal"
+        ]
+      },
+      "description": "La Grodziskie est une flûte de fumée polonaise : très claire, faible en alcool, très pétillante, sèche, amère, brassée avec blé fumé au chêne. Elle doit être nerveuse et élégante, pas bacon liquide ni bière de barbecue.",
+      "histoireEtOrigines": "Née à Grodzisk Wielkopolski, connue aussi sous le nom allemand Grätzer, elle fut exportée largement avant de disparaître commercialement au XXe siècle. Sa renaissance moderne s’appuie sur sa réputation de “champagne polonais” : clair, sec, fumé, très carbonaté.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "céréales définies par la tradition locale"
+        ],
+        "houblons": [
+          "houblons faibles à modérés ou substituts historiques"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ou culture conforme à la tradition"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "profil local lorsque documenté",
+        "empatage": "procédé traditionnel ou reconstitution historique",
+        "ebullitionEtHoublonnage": "houblonnage et épices selon la source historique",
+        "fermentation": "fermentation conforme au style reconstitué",
+        "maturation": "maturation variable",
+        "profilRecherche": "une bière polonaise historique au blé fumé au chêne, claire, sèche, amère, très pétillante et faible en alcool"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Grodziskie / Piwo Grodziskie — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Grodziskie / Piwo Grodziskie — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Grodziskie / Piwo Grodziskie — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "lichtenhainer",
+      "nom": "Lichtenhainer",
+      "collectionId": 8,
+      "nature": "S",
+      "parentPrincipalId": null,
+      "aliases": [],
+      "paysOrigine": [
+        "Allemagne"
+      ],
+      "origine": {
+        "libelle": "Thuringe, autour de Lichtenhain",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 3.5,
+        "max": 4.7,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 5,
+        "max": 12,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 6,
+        "max": 20,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "mixte",
+        "details": "Fermentation mixte associant levures et micro-organismes acidifiants selon le profil recherché."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 9,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Seidel",
+          "Tulipe"
+        ]
+      },
+      "description": "La Lichtenhainer est un drôle de duel : acidité lactique propre, fumée sèche, blé discret, citron, pomme verte et finale très vive. Elle marie deux mondes rarement copains, la sour et la fumée, sans tomber dans la saucisse au vinaigre.",
+      "histoireEtOrigines": "Originaire de Thuringe, autour de Lichtenhain, elle était populaire à la fin du XIXe siècle. Elle appartient à la famille des bières historiques allemandes légères, avec quelque chose de Berliner Weisse ancienne, mais fumée en plus.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "céréales définies par la tradition locale"
+        ],
+        "houblons": [
+          "houblons faibles à modérés ou substituts historiques"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ou culture conforme à la tradition"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "profil local lorsque documenté",
+        "empatage": "procédé traditionnel ou reconstitution historique",
+        "ebullitionEtHoublonnage": "houblonnage et épices selon la source historique",
+        "fermentation": "fermentation conforme au style reconstitué",
+        "maturation": "maturation variable",
+        "profilRecherche": "une bière historique allemande légère, acidulée et fumée, avec blé discret, haute carbonatation et finale sèche"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Lichtenhainer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Lichtenhainer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Lichtenhainer — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "adambier",
+      "nom": "Adambier",
+      "collectionId": 8,
+      "nature": "S",
+      "parentPrincipalId": null,
+      "aliases": [],
+      "paysOrigine": [
+        "Allemagne"
+      ],
+      "origine": {
+        "libelle": "Dortmund, Westphalie",
+        "ville": "Dortmund",
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 8.0,
+        "max": 14.0,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 30,
+        "max": 50,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 30,
+        "max": 70,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 11,
+        "temperatureMax": 15,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Snifter",
+          "Tulipe"
+        ]
+      },
+      "description": "L’Adambier est une vieille ombre de Dortmund : forte, sombre, maltée, parfois fumée, boisée, acide ou Brettée selon les reconstructions. Elle doit sentir la bière de garde oubliée dans une cave noble, pas le bricolage historique en costume.",
+      "histoireEtOrigines": "Style historique de Dortmund, l’Adambier est aujourd’hui surtout connu par des reconstitutions. Les descriptions le placent dans une famille de fortes ales allemandes vieillies, parfois fumées et acidulées, avant que les lagers de Dortmund n’occupent la scène.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "céréales définies par la tradition locale"
+        ],
+        "houblons": [
+          "houblons faibles à modérés ou substituts historiques"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ou culture conforme à la tradition"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "profil local lorsque documenté",
+        "empatage": "procédé traditionnel ou reconstitution historique",
+        "ebullitionEtHoublonnage": "houblonnage et épices selon la source historique",
+        "fermentation": "fermentation conforme au style reconstitué",
+        "maturation": "maturation variable",
+        "profilRecherche": "une forte ale historique de Dortmund, sombre et vieillie, avec malt profond, bois, fumée possible et acidité maîtrisée"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Adambier — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Adambier — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Adambier — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "dutch-kuyt-kuit",
+      "nom": "Dutch Kuyt / Kuit",
+      "collectionId": 8,
+      "nature": "S",
+      "parentPrincipalId": null,
+      "aliases": [
+        "Kuyt",
+        "Kuit"
+      ],
+      "paysOrigine": [
+        "Pays-Bas"
+      ],
+      "origine": {
+        "libelle": "Hollande médiévale",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 4.5,
+        "max": 8.0,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 25,
+        "max": 35,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 10,
+        "max": 40,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 7,
+        "temperatureMax": 11,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Tulipe",
+          "Gobelet"
+        ]
+      },
+      "description": "Le Dutch Kuyt est une bière de céréales ancienne : avoine, orge, blé, douceur grainée, corps soyeux, houblon modéré et fermentation haute. L’avoine doit donner une texture ronde, pas transformer le verre en porridge médiéval.",
+      "histoireEtOrigines": "Kuyt ou Kuit est un style néerlandais médiéval documenté aux Pays-Bas, particulièrement lié à des grists riches en avoine. Recréé par les brasseurs modernes, il permet de sortir du duo malt d’orge-houblon pour retrouver une logique céréalière plus ancienne.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "céréales définies par la tradition locale"
+        ],
+        "houblons": [
+          "houblons faibles à modérés ou substituts historiques"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ou culture conforme à la tradition"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "profil local lorsque documenté",
+        "empatage": "procédé traditionnel ou reconstitution historique",
+        "ebullitionEtHoublonnage": "houblonnage et épices selon la source historique",
+        "fermentation": "fermentation conforme au style reconstitué",
+        "maturation": "maturation variable",
+        "profilRecherche": "une ale historique néerlandaise aux céréales mixtes, dominée par l’avoine, avec texture soyeuse et malt doux"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Dutch Kuyt / Kuit — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Dutch Kuyt / Kuit — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Dutch Kuyt / Kuit — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "sahti",
+      "nom": "Sahti",
+      "collectionId": 8,
+      "nature": "S",
+      "parentPrincipalId": null,
+      "aliases": [],
+      "paysOrigine": [
+        "Finlande"
+      ],
+      "origine": {
+        "libelle": "Finlande",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 7.0,
+        "max": 11.0,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 0,
+        "max": 15,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 8,
+        "max": 44,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 9,
+        "temperatureMax": 13,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Sahti haarikka",
+          "Gobelet"
+        ]
+      },
+      "description": "La Sahti est une bière-ferme finlandaise massive : seigle possible, genièvre, banane, girofle, malt doux, corps épais, peu de bulles et chaleur alcoolique. Elle est rustique, fraîche, presque primitive, comme si une Weizenbock avait dormi dans une forêt.",
+      "histoireEtOrigines": "Style traditionnel finlandais vieux d’au moins plusieurs siècles, la Sahti est souvent brassée pour des fêtes et consommée jeune. Elle utilise fréquemment des branches de genièvre pour la filtration ou l’aromatique, de la levure de boulanger et un moût non bouilli.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "céréales définies par la tradition locale"
+        ],
+        "houblons": [
+          "houblons faibles à modérés ou substituts historiques"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ou culture conforme à la tradition"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "profil local lorsque documenté",
+        "empatage": "procédé traditionnel ou reconstitution historique",
+        "ebullitionEtHoublonnage": "houblonnage et épices selon la source historique",
+        "fermentation": "fermentation conforme au style reconstitué",
+        "maturation": "maturation variable",
+        "profilRecherche": "une bière fermière finlandaise forte, douce et peu carbonatée, avec genièvre, banane, seigle possible et corps épais"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Sahti — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Sahti — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Sahti — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "gotlandsdricke",
+      "nom": "Gotlandsdricke",
+      "collectionId": 8,
+      "nature": "S",
+      "parentPrincipalId": null,
+      "aliases": [],
+      "paysOrigine": [
+        "Suède"
+      ],
+      "origine": {
+        "libelle": "Île de Gotland",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 6.0,
+        "max": 11.0,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 0,
+        "max": 20,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 12,
+        "max": 50,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 9,
+        "temperatureMax": 13,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Gobelet",
+          "Chope"
+        ]
+      },
+      "description": "La Gotlandsdricke est la cousine suédoise plus sauvage de la Sahti : malt fumé possible, genièvre, douceur amère, corps plein, rusticité, sucre ou miel selon les maisons. Elle se boit jeune, vivante, parfois trouble, avec un accent d’île baltique.",
+      "histoireEtOrigines": "Tradition domestique de l’île de Gotland, la Gotlandsdricke est restée un marqueur culturel local plus qu’un style industriel. Elle partage avec les boissons nordiques anciennes l’usage du genièvre, des malts maison et d’une production familiale très liée aux fermes.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "céréales définies par la tradition locale"
+        ],
+        "houblons": [
+          "houblons faibles à modérés ou substituts historiques"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ou culture conforme à la tradition"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "profil local lorsque documenté",
+        "empatage": "procédé traditionnel ou reconstitution historique",
+        "ebullitionEtHoublonnage": "houblonnage et épices selon la source historique",
+        "fermentation": "fermentation conforme au style reconstitué",
+        "maturation": "maturation variable",
+        "profilRecherche": "une bière traditionnelle de Gotland, rustique et jeune, avec genièvre, malt parfois fumé, douceur amère et caractère fermier"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Gotlandsdricke — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Gotlandsdricke — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Gotlandsdricke — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "breslau-schoeps",
+      "nom": "Breslau Schoeps",
+      "collectionId": 8,
+      "nature": "S",
+      "parentPrincipalId": null,
+      "aliases": [],
+      "paysOrigine": [
+        "Pologne"
+      ],
+      "origine": {
+        "libelle": "Breslau/Wrocław, Silésie",
+        "ville": "Wrocław",
+        "region": "Silésie",
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 4.5,
+        "max": 6.5,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 15,
+        "max": 30,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 8,
+        "max": 30,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 7,
+        "temperatureMax": 10,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Seidel",
+          "Tulipe"
+        ]
+      },
+      "description": "Le Breslau Schoeps est une relique silésienne de blé fort : malt de blé, corps ample, douceur céréalière, chaleur, parfois couleur claire à ambrée selon les reconstructions. C’est moins une bière moderne qu’un fantôme de taverne de Wrocław.",
+      "histoireEtOrigines": "Le Schöps de Breslau, aujourd’hui Wrocław, est décrit comme un ancien style de bière de blé forte lié à la Silésie. Les reconstitutions modernes s’appuient sur les traces historiques d’une ville brassicole où les bières de blé occupaient une place importante.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "céréales définies par la tradition locale"
+        ],
+        "houblons": [
+          "houblons faibles à modérés ou substituts historiques"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ou culture conforme à la tradition"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "profil local lorsque documenté",
+        "empatage": "procédé traditionnel ou reconstitution historique",
+        "ebullitionEtHoublonnage": "houblonnage et épices selon la source historique",
+        "fermentation": "fermentation conforme au style reconstitué",
+        "maturation": "maturation variable",
+        "profilRecherche": "une bière historique silésienne au blé, forte et céréalière, avec corps ample, chaleur douce et profil de reconstitution"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Breslau Schoeps — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Breslau Schoeps — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Breslau Schoeps — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "grape-ale-italian-grape-ale",
+      "nom": "Grape Ale / Italian Grape Ale",
+      "collectionId": 8,
+      "nature": "S",
+      "parentPrincipalId": null,
+      "aliases": [
+        "Grape Ale",
+        "Italian Grape Ale",
+        "IGA"
+      ],
+      "paysOrigine": [
+        "Italie"
+      ],
+      "origine": {
+        "libelle": "Italie",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 4.8,
+        "max": 10.0,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 10,
+        "max": 30,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 4,
+        "max": 40,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 7,
+        "temperatureMax": 11,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Teku",
+          "Calice"
+        ]
+      },
+      "description": "L’Italian Grape Ale ouvre une porte entre brasserie et chai : moût, raisin ou marc rencontrent malt, levure et parfois bois. Elle peut évoquer pêche, raisin, vin blanc, cerise, tanin ou acidité, mais la bière doit rester visible derrière la vigne.",
+      "histoireEtOrigines": "Née dans la scène artisanale italienne des années 2000, l’Italian Grape Ale valorise la proximité entre culture brassicole et terroirs viticoles. Elle a été reconnue par le BJCP comme style local en 2015, signe rare d’une contribution italienne moderne à la taxonomie bière.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "Les interprétations de « Grape Ale / Italian Grape Ale » couvrent plusieurs styles de base ou procédés. Aucun profil de recette unique ne peut être retenu sans préciser la bière sous-jacente.",
+        "maltsEtCereales": [
+          "variables selon le style de base"
+        ],
+        "houblons": [
+          "variables selon le style de base"
+        ],
+        "levuresEtMicroorganismes": [
+          "variable selon le style de base"
+        ],
+        "ingredientsComplementaires": [
+          "raisins, moût ou marc de raisin"
+        ],
+        "profilEau": "adapté au style de base",
+        "empatage": "adapté au style de base et aux ingrédients",
+        "ebullitionEtHoublonnage": "ajouts planifiés pour préserver l’équilibre",
+        "fermentation": "fermentation du style de base avec gestion de l’ingrédient spécial",
+        "maturation": "variable selon le procédé",
+        "profilRecherche": "une bière italienne au raisin, hybride bière-vin, où moût ou marc apporte fruit, acidité et tanin sans effacer la base maltée"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Grape Ale / Italian Grape Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Grape Ale / Italian Grape Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Grape Ale / Italian Grape Ale — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "fruit-beer",
+      "nom": "Fruit Beer",
+      "collectionId": 8,
+      "nature": "T",
+      "parentPrincipalId": null,
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "International",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Teku",
+          "Tulipe"
+        ]
+      },
+      "description": "La Fruit Beer n’est pas une bière au sirop : le fruit doit dialoguer avec une base, lui donner parfum, couleur, acidité, tanins ou sécheresse. Framboise, cerise, agrume, pêche ou fruits tropicaux peuvent parler fort, mais pas transformer la bière en jus gazeux.",
+      "histoireEtOrigines": "La catégorie moderne sert surtout à juger les bières où le fruit complète un style existant. Le BJCP insiste sur l’intégration : le fruit doit être évident, équilibré et encore reconnaissable comme bière, pas comme boisson aromatisée artificielle.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Fruit Beer » est une catégorie transversale définie principalement par un ingrédient ou un procédé appliqué à des styles de base très différents. Les paramètres et la recette dépendent donc du style choisi et de l’intensité recherchée.",
+        "maltsEtCereales": [
+          "variables selon le style de base"
+        ],
+        "houblons": [
+          "variables selon le style de base"
+        ],
+        "levuresEtMicroorganismes": [
+          "variable selon le style de base"
+        ],
+        "ingredientsComplementaires": [
+          "fruits adaptés au profil recherché"
+        ],
+        "profilEau": "adapté au style de base",
+        "empatage": "adapté au style de base et aux ingrédients",
+        "ebullitionEtHoublonnage": "ajouts planifiés pour préserver l’équilibre",
+        "fermentation": "fermentation du style de base avec gestion de l’ingrédient spécial",
+        "maturation": "variable selon le procédé",
+        "profilRecherche": "une bière fruitée équilibrée, où le fruit est net, fermenté ou intégré, sans masquer le style de base"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Fruit Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Fruit Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Fruit Beer — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "field-beer",
+      "nom": "Field Beer",
+      "collectionId": 8,
+      "nature": "T",
+      "parentPrincipalId": null,
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "International",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Teku",
+          "Tulipe"
+        ]
+      },
+      "description": "La Field Beer fait entrer le potager ou le champ dans la brasserie : légumes, plantes cultivées, racines ou ingrédients agricoles non classiques. Le défi est simple : faire une bière avec un ingrédient de champ, pas une soupe gazeuse en costume houblonné.",
+      "histoireEtOrigines": "Les concours modernes ont créé des catégories transversales pour décrire les bières utilisant des végétaux ou ingrédients agricoles hors fruits classiques. Cette carte couvre ces créations où le style de base reste important, mais où l’ingrédient de champ devient le marqueur distinctif.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Field Beer » est une catégorie transversale définie principalement par un ingrédient ou un procédé appliqué à des styles de base très différents. Les paramètres et la recette dépendent donc du style choisi et de l’intensité recherchée.",
+        "maltsEtCereales": [
+          "variables selon le style de base"
+        ],
+        "houblons": [
+          "variables selon le style de base"
+        ],
+        "levuresEtMicroorganismes": [
+          "variable selon le style de base"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "adapté au style de base",
+        "empatage": "adapté au style de base et aux ingrédients",
+        "ebullitionEtHoublonnage": "ajouts planifiés pour préserver l’équilibre",
+        "fermentation": "fermentation du style de base avec gestion de l’ingrédient spécial",
+        "maturation": "variable selon le procédé",
+        "profilRecherche": "une bière aux ingrédients de champ ou de potager, où l’élément végétal complète clairement une base brassicole cohérente"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Field Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Field Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Field Beer — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "pumpkin-squash-pumpkin-spice-beer",
+      "nom": "Pumpkin / Squash / Pumpkin Spice Beer",
+      "collectionId": 8,
+      "nature": "T",
+      "parentPrincipalId": null,
+      "aliases": [
+        "Pumpkin Beer",
+        "Squash Beer",
+        "Pumpkin Spice Beer"
+      ],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "International",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 2.5,
+        "max": 12.0,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": 5,
+        "max": 35,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": 10,
+        "max": 100,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Teku",
+          "Tulipe"
+        ]
+      },
+      "description": "La Pumpkin Beer peut jouer deux partitions : vraie courge douce et terreuse, ou épices d’automne façon cannelle, muscade, gingembre et clou de girofle. Le meilleur verre sent la tarte maîtrisée ; le pire ressemble à une bougie parfumée tombée dans une amber ale.",
+      "histoireEtOrigines": "Les bières à la courge ont des racines coloniales américaines, où la citrouille pouvait servir de fermentescible disponible. Les versions modernes sont surtout saisonnières et souvent centrées sur le mélange d’épices associé aux desserts d’automne.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Pumpkin / Squash / Pumpkin Spice Beer » est une catégorie transversale définie principalement par un ingrédient ou un procédé appliqué à des styles de base très différents. Les paramètres et la recette dépendent donc du style choisi et de l’intensité recherchée.",
+        "maltsEtCereales": [
+          "variables selon le style de base"
+        ],
+        "houblons": [
+          "variables selon le style de base"
+        ],
+        "levuresEtMicroorganismes": [
+          "variable selon le style de base"
+        ],
+        "ingredientsComplementaires": [
+          "courge ou potiron",
+          "épices éventuelles"
+        ],
+        "profilEau": "adapté au style de base",
+        "empatage": "adapté au style de base et aux ingrédients",
+        "ebullitionEtHoublonnage": "ajouts planifiés pour préserver l’équilibre",
+        "fermentation": "fermentation du style de base avec gestion de l’ingrédient spécial",
+        "maturation": "variable selon le procédé",
+        "profilRecherche": "une bière d’automne à la courge ou aux épices, chaleureuse et équilibrée, avec base maltée encore lisible"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Pumpkin / Squash / Pumpkin Spice Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Pumpkin / Squash / Pumpkin Spice Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Pumpkin / Squash / Pumpkin Spice Beer — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "chili-beer",
+      "nom": "Chili Beer",
+      "collectionId": 8,
+      "nature": "T",
+      "parentPrincipalId": null,
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "International",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Teku",
+          "Tulipe"
+        ]
+      },
+      "description": "La Chili Beer ajoute le piment comme une lame chaude : arôme végétal, fruité, fumé ou terreux, puis chaleur en finale. Elle doit piquer avec précision, pas brûler la table ; le piment est un ingrédient, pas une punition.",
+      "histoireEtOrigines": "Les bières au piment s’inscrivent dans les catégories modernes de bières aux épices ou légumes, où l’ingrédient doit être déclaré et équilibré avec le style de base. Leur développement suit la créativité craft et l’attrait pour les profils culinaires.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Chili Beer » est une catégorie transversale définie principalement par un ingrédient ou un procédé appliqué à des styles de base très différents. Les paramètres et la recette dépendent donc du style choisi et de l’intensité recherchée.",
+        "maltsEtCereales": [
+          "variables selon le style de base"
+        ],
+        "houblons": [
+          "variables selon le style de base"
+        ],
+        "levuresEtMicroorganismes": [
+          "variable selon le style de base"
+        ],
+        "ingredientsComplementaires": [
+          "piments"
+        ],
+        "profilEau": "adapté au style de base",
+        "empatage": "adapté au style de base et aux ingrédients",
+        "ebullitionEtHoublonnage": "ajouts planifiés pour préserver l’équilibre",
+        "fermentation": "fermentation du style de base avec gestion de l’ingrédient spécial",
+        "maturation": "variable selon le procédé",
+        "profilRecherche": "une bière au piment expressive mais maîtrisée, avec chaleur nette, arôme identifiable et base encore agréable à boire"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Chili Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Chili Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Chili Beer — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "herb-and-spice-beer",
+      "nom": "Herb and Spice Beer",
+      "collectionId": 8,
+      "nature": "T",
+      "parentPrincipalId": null,
+      "aliases": [
+        "Herb Beer",
+        "Spice Beer"
+      ],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "International",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Teku",
+          "Tulipe"
+        ]
+      },
+      "description": "La Herb and Spice Beer ouvre l’armoire à aromates : gingembre, cannelle, romarin, cardamome, poivre, fleur, racine ou mélange d’épices. Tout est possible, donc tout est dangereux : l’épice doit compléter la bière, pas la prendre en otage.",
+      "histoireEtOrigines": "Avant la domination du houblon, de nombreuses bières utilisaient déjà plantes, herbes et mélanges aromatiques. La catégorie moderne reprend cette liberté sous forme contrôlée : l’ingrédient doit être perceptible, équilibré et cohérent avec la base.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Herb and Spice Beer » est une catégorie transversale définie principalement par un ingrédient ou un procédé appliqué à des styles de base très différents. Les paramètres et la recette dépendent donc du style choisi et de l’intensité recherchée.",
+        "maltsEtCereales": [
+          "variables selon le style de base"
+        ],
+        "houblons": [
+          "variables selon le style de base"
+        ],
+        "levuresEtMicroorganismes": [
+          "variable selon le style de base"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "adapté au style de base",
+        "empatage": "adapté au style de base et aux ingrédients",
+        "ebullitionEtHoublonnage": "ajouts planifiés pour préserver l’équilibre",
+        "fermentation": "fermentation du style de base avec gestion de l’ingrédient spécial",
+        "maturation": "variable selon le procédé",
+        "profilRecherche": "une bière aux herbes ou épices, aromatique et équilibrée, où l’ingrédient spécial enrichit sans dominer"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Herb and Spice Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Herb and Spice Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Herb and Spice Beer — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "tea-beer",
+      "nom": "Tea Beer",
+      "collectionId": 8,
+      "nature": "T",
+      "parentPrincipalId": null,
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "International",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Teku",
+          "Tulipe"
+        ]
+      },
+      "description": "La Tea Beer infuse le malt avec la feuille : thé noir, vert, fumé, floral, oxydé ou tannique. Elle peut apporter bergamote, jasmin, foin, agrume, bois ou astringence fine, mais l’infusion doit rester élégante, pas donner l’impression d’un sachet oublié.",
+      "histoireEtOrigines": "Le thé est entré dans les bières modernes par la voie des styles spéciaux aux herbes et épices. Les brasseurs l’utilisent pour ses tanins, ses arômes floraux, fumés ou végétaux, et sa capacité à créer un pont entre bière, infusion et gastronomie.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Tea Beer » est une catégorie transversale définie principalement par un ingrédient ou un procédé appliqué à des styles de base très différents. Les paramètres et la recette dépendent donc du style choisi et de l’intensité recherchée.",
+        "maltsEtCereales": [
+          "variables selon le style de base"
+        ],
+        "houblons": [
+          "variables selon le style de base"
+        ],
+        "levuresEtMicroorganismes": [
+          "variable selon le style de base"
+        ],
+        "ingredientsComplementaires": [
+          "thé"
+        ],
+        "profilEau": "adapté au style de base",
+        "empatage": "adapté au style de base et aux ingrédients",
+        "ebullitionEtHoublonnage": "ajouts planifiés pour préserver l’équilibre",
+        "fermentation": "fermentation du style de base avec gestion de l’ingrédient spécial",
+        "maturation": "variable selon le procédé",
+        "profilRecherche": "une bière au thé, fine et tannique, où l’infusion apporte parfum, structure et fraîcheur sans amertume végétale excessive"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Tea Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Tea Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Tea Beer — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "green-tea-beer",
+      "nom": "Green Tea Beer",
+      "collectionId": 8,
+      "nature": "SS",
+      "parentPrincipalId": "tea-beer",
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "International",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Teku",
+          "Tulipe"
+        ]
+      },
+      "description": "La Green Tea Beer pousse le registre végétal : thé vert, herbe coupée, riz soufflé, algue légère, jasmin ou matcha selon l’approche. Elle doit être fraîche et précise, pas poudreuse, amère ou crayeuse comme un mauvais fond de bol.",
+      "histoireEtOrigines": "Les versions au thé vert sont surtout liées à la créativité moderne, avec une affinité naturelle pour les bières légères, les lagers, les blanches ou les styles japonais. Le thé vert apporte une signature végétale plus délicate que les épices classiques.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "Les interprétations de « Green Tea Beer » couvrent plusieurs styles de base ou procédés. Aucun profil de recette unique ne peut être retenu sans préciser la bière sous-jacente.",
+        "maltsEtCereales": [
+          "variables selon le style de base"
+        ],
+        "houblons": [
+          "variables selon le style de base"
+        ],
+        "levuresEtMicroorganismes": [
+          "variable selon le style de base"
+        ],
+        "ingredientsComplementaires": [
+          "thé"
+        ],
+        "profilEau": "adapté au style de base",
+        "empatage": "adapté au style de base et aux ingrédients",
+        "ebullitionEtHoublonnage": "ajouts planifiés pour préserver l’équilibre",
+        "fermentation": "fermentation du style de base avec gestion de l’ingrédient spécial",
+        "maturation": "variable selon le procédé",
+        "profilRecherche": "une bière au thé vert, végétale et fraîche, avec tanin fin, parfum net et base légère bien tenue"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Green Tea Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Green Tea Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Green Tea Beer — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "chocolate-beer",
+      "nom": "Chocolate Beer",
+      "collectionId": 8,
+      "nature": "T",
+      "parentPrincipalId": null,
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "International",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Teku",
+          "Tulipe"
+        ]
+      },
+      "description": "La Chocolate Beer doit sentir le cacao, pas la barre chocolatée fondue : poudre de cacao, fèves, chocolat noir, vanille possible, malt torréfié ou caramel selon la base. Elle fonctionne très bien avec stouts, porters et brunes, mais doit éviter le sucre collant.",
+      "histoireEtOrigines": "La catégorie vient des bières aux ingrédients spéciaux, particulièrement popularisées par les porters, stouts et bières dessert modernes. Le cacao peut renforcer des malts torréfiés déjà chocolatés ou devenir un ingrédient clairement déclaré.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Chocolate Beer » est une catégorie transversale définie principalement par un ingrédient ou un procédé appliqué à des styles de base très différents. Les paramètres et la recette dépendent donc du style choisi et de l’intensité recherchée.",
+        "maltsEtCereales": [
+          "variables selon le style de base"
+        ],
+        "houblons": [
+          "variables selon le style de base"
+        ],
+        "levuresEtMicroorganismes": [
+          "variable selon le style de base"
+        ],
+        "ingredientsComplementaires": [
+          "cacao ou chocolat"
+        ],
+        "profilEau": "adapté au style de base",
+        "empatage": "adapté au style de base et aux ingrédients",
+        "ebullitionEtHoublonnage": "ajouts planifiés pour préserver l’équilibre",
+        "fermentation": "fermentation du style de base avec gestion de l’ingrédient spécial",
+        "maturation": "variable selon le procédé",
+        "profilRecherche": "une bière au chocolat ou cacao, riche mais équilibrée, avec cacao identifiable et base maltée cohérente"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Chocolate Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Chocolate Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Chocolate Beer — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "coffee-beer",
+      "nom": "Coffee Beer",
+      "collectionId": 8,
+      "nature": "T",
+      "parentPrincipalId": null,
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "International",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Teku",
+          "Tulipe"
+        ]
+      },
+      "description": "La Coffee Beer ajoute café, moka, torréfaction, noisette, cacao, fruit noir ou acidité de grain selon la méthode. Elle peut être stout, porter, blonde ou barrel-aged, mais le café doit être frais et intégré, pas vieux marc froid.",
+      "histoireEtOrigines": "Les bières au café se sont surtout développées avec les stouts et porters modernes, puis avec le craft et les collaborations avec torréfacteurs. La catégorie fonctionne comme une spécialité : le café doit compléter le style de base sans le réduire à un arôme unique.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Coffee Beer » est une catégorie transversale définie principalement par un ingrédient ou un procédé appliqué à des styles de base très différents. Les paramètres et la recette dépendent donc du style choisi et de l’intensité recherchée.",
+        "maltsEtCereales": [
+          "variables selon le style de base"
+        ],
+        "houblons": [
+          "variables selon le style de base"
+        ],
+        "levuresEtMicroorganismes": [
+          "variable selon le style de base"
+        ],
+        "ingredientsComplementaires": [
+          "café, extrait ou grains selon la méthode"
+        ],
+        "profilEau": "adapté au style de base",
+        "empatage": "adapté au style de base et aux ingrédients",
+        "ebullitionEtHoublonnage": "ajouts planifiés pour préserver l’équilibre",
+        "fermentation": "fermentation du style de base avec gestion de l’ingrédient spécial",
+        "maturation": "variable selon le procédé",
+        "profilRecherche": "une bière au café, torréfiée et aromatique, où café et base maltée se renforcent sans âcreté ni marc oxydé"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Coffee Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Coffee Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Coffee Beer — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "honey-beer",
+      "nom": "Honey Beer",
+      "collectionId": 8,
+      "nature": "T",
+      "parentPrincipalId": null,
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "International",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Teku",
+          "Tulipe"
+        ]
+      },
+      "description": "La Honey Beer utilise le miel comme parfum, fermentescible ou signature florale : acacia, châtaignier, fleurs, cire, douceur ou finale plus sèche selon la fermentation. Le miel doit se sentir, mais la bière ne doit pas devenir une hydromel déguisée.",
+      "histoireEtOrigines": "Les bières au miel entrent dans les catégories de sucres alternatifs quand le miel modifie clairement le profil. Le BJCP rappelle qu’un ajout sucré peut fermenter et alléger le corps ; le caractère attendu vient autant de l’arôme que de la douceur résiduelle.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Honey Beer » est une catégorie transversale définie principalement par un ingrédient ou un procédé appliqué à des styles de base très différents. Les paramètres et la recette dépendent donc du style choisi et de l’intensité recherchée.",
+        "maltsEtCereales": [
+          "variables selon le style de base"
+        ],
+        "houblons": [
+          "variables selon le style de base"
+        ],
+        "levuresEtMicroorganismes": [
+          "variable selon le style de base"
+        ],
+        "ingredientsComplementaires": [
+          "miel"
+        ],
+        "profilEau": "adapté au style de base",
+        "empatage": "adapté au style de base et aux ingrédients",
+        "ebullitionEtHoublonnage": "ajouts planifiés pour préserver l’équilibre",
+        "fermentation": "fermentation du style de base avec gestion de l’ingrédient spécial",
+        "maturation": "variable selon le procédé",
+        "profilRecherche": "une bière au miel, florale et intégrée, avec caractère miellé perceptible sans basculer vers l’hydromel"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Honey Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Honey Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Honey Beer — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "alternative-grain-beer",
+      "nom": "Alternative Grain Beer",
+      "collectionId": 8,
+      "nature": "T",
+      "parentPrincipalId": null,
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "International",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Teku",
+          "Tulipe"
+        ]
+      },
+      "description": "L’Alternative Grain Beer donne la parole aux céréales secondaires : seigle, avoine, épeautre, sarrasin, millet, sorgho, riz ou autres grains. Selon le choix, elle devient plus sèche, plus noisettée, plus soyeuse, plus rustique ou plus nerveuse.",
+      "histoireEtOrigines": "La catégorie moderne décrit les bières où une céréale non standard apporte un caractère notable, sans être déjà fondamentale au style de base. Elle permet de juger l’effet du grain ajouté plutôt que d’enfermer la bière dans une tradition géographique précise.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Alternative Grain Beer » est une catégorie transversale définie principalement par un ingrédient ou un procédé appliqué à des styles de base très différents. Les paramètres et la recette dépendent donc du style choisi et de l’intensité recherchée.",
+        "maltsEtCereales": [
+          "variables selon le style de base"
+        ],
+        "houblons": [
+          "variables selon le style de base"
+        ],
+        "levuresEtMicroorganismes": [
+          "variable selon le style de base"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "adapté au style de base",
+        "empatage": "adapté au style de base et aux ingrédients",
+        "ebullitionEtHoublonnage": "ajouts planifiés pour préserver l’équilibre",
+        "fermentation": "fermentation du style de base avec gestion de l’ingrédient spécial",
+        "maturation": "variable selon le procédé",
+        "profilRecherche": "une bière à céréale alternative, où le grain choisi apporte texture, goût ou sécheresse clairement perceptible"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Alternative Grain Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Alternative Grain Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Alternative Grain Beer — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "alternative-sugar-beer",
+      "nom": "Alternative Sugar Beer",
+      "collectionId": 8,
+      "nature": "T",
+      "parentPrincipalId": null,
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "International",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Teku",
+          "Tulipe"
+        ]
+      },
+      "description": "L’Alternative Sugar Beer utilise miel, mélasse, sirop d’érable, sucre brun, lactose ou autre sucrant comme moteur aromatique. Le sucre peut alléger, enrichir, parfumer ou arrondir ; s’il sent cru ou artificiel, la magie devient colle.",
+      "histoireEtOrigines": "Les sucres spéciaux sont utilisés depuis longtemps pour ajuster force, corps ou aromatique, mais les catégories modernes demandent que leur contribution soit clairement perceptible. Le sucre ne doit pas seulement augmenter l’alcool : il doit participer au profil sensoriel.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Alternative Sugar Beer » est une catégorie transversale définie principalement par un ingrédient ou un procédé appliqué à des styles de base très différents. Les paramètres et la recette dépendent donc du style choisi et de l’intensité recherchée.",
+        "maltsEtCereales": [
+          "variables selon le style de base"
+        ],
+        "houblons": [
+          "variables selon le style de base"
+        ],
+        "levuresEtMicroorganismes": [
+          "variable selon le style de base"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "adapté au style de base",
+        "empatage": "adapté au style de base et aux ingrédients",
+        "ebullitionEtHoublonnage": "ajouts planifiés pour préserver l’équilibre",
+        "fermentation": "fermentation du style de base avec gestion de l’ingrédient spécial",
+        "maturation": "variable selon le procédé",
+        "profilRecherche": "une bière au sucre alternatif identifiable, équilibrée, où le sucrant apporte parfum, corps ou sécheresse selon sa nature"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Alternative Sugar Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Alternative Sugar Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Alternative Sugar Beer — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "autumn-seasonal-beer",
+      "nom": "Autumn Seasonal Beer",
+      "collectionId": 8,
+      "nature": "T",
+      "parentPrincipalId": null,
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "International",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Teku",
+          "Tulipe"
+        ]
+      },
+      "description": "L’Autumn Seasonal Beer condense l’automne : malt ambré, caramel, courge, épices chaudes, noix, fruits mûrs, feuillage humide ou dessert selon la base. Elle doit être réconfortante, pas saturée de cannelle comme une boutique de bougies en octobre.",
+      "histoireEtOrigines": "Les bières saisonnières d’automne se sont structurées dans les concours modernes autour d’ingrédients, d’épices et de profils associés à la récolte. Elles peuvent varier énormément, mais doivent présenter un thème automnal lisible et équilibré.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Autumn Seasonal Beer » est une catégorie transversale définie principalement par un ingrédient ou un procédé appliqué à des styles de base très différents. Les paramètres et la recette dépendent donc du style choisi et de l’intensité recherchée.",
+        "maltsEtCereales": [
+          "variables selon le style de base"
+        ],
+        "houblons": [
+          "variables selon le style de base"
+        ],
+        "levuresEtMicroorganismes": [
+          "variable selon le style de base"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "adapté au style de base",
+        "empatage": "adapté au style de base et aux ingrédients",
+        "ebullitionEtHoublonnage": "ajouts planifiés pour préserver l’équilibre",
+        "fermentation": "fermentation du style de base avec gestion de l’ingrédient spécial",
+        "maturation": "variable selon le procédé",
+        "profilRecherche": "une bière saisonnière d’automne, maltée ou épicée, chaleureuse mais buvable, avec thème clairement intégré"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Autumn Seasonal Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Autumn Seasonal Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Autumn Seasonal Beer — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "winter-seasonal-beer",
+      "nom": "Winter Seasonal Beer",
+      "collectionId": 8,
+      "nature": "T",
+      "parentPrincipalId": null,
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "International",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Teku",
+          "Tulipe"
+        ]
+      },
+      "description": "La Winter Seasonal Beer sort le manteau : malt riche, alcool possible, fruits secs, épices, caramel, chocolat, pain d’épices ou agrumes confits. Elle doit réchauffer sans devenir lourde, comme un feu de cheminée qui connaît ses limites.",
+      "histoireEtOrigines": "Les bières d’hiver prolongent les traditions de bières de Noël, winter warmers et spécialités de saison. Le style moderne est transversal : la base peut changer, mais le profil doit évoquer clairement l’hiver, la chaleur ou les fêtes.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Winter Seasonal Beer » est une catégorie transversale définie principalement par un ingrédient ou un procédé appliqué à des styles de base très différents. Les paramètres et la recette dépendent donc du style choisi et de l’intensité recherchée.",
+        "maltsEtCereales": [
+          "variables selon le style de base"
+        ],
+        "houblons": [
+          "variables selon le style de base"
+        ],
+        "levuresEtMicroorganismes": [
+          "variable selon le style de base"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "adapté au style de base",
+        "empatage": "adapté au style de base et aux ingrédients",
+        "ebullitionEtHoublonnage": "ajouts planifiés pour préserver l’équilibre",
+        "fermentation": "fermentation du style de base avec gestion de l’ingrédient spécial",
+        "maturation": "variable selon le procédé",
+        "profilRecherche": "une bière saisonnière d’hiver, riche et chaleureuse, avec épices ou malt profond en équilibre avec la base"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Winter Seasonal Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Winter Seasonal Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Winter Seasonal Beer — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "ginjo-beer-sake-yeast-beer",
+      "nom": "Ginjo Beer / Sake-Yeast Beer",
+      "collectionId": 8,
+      "nature": "S",
+      "parentPrincipalId": null,
+      "aliases": [
+        "Ginjo Beer",
+        "Sake-Yeast Beer"
+      ],
+      "paysOrigine": [
+        "Japon"
+      ],
+      "origine": {
+        "libelle": "Japon",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 5.0,
+        "max": 12.0,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 5,
+        "max": 35,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 4,
+        "max": 30,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 10,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Teku",
+          "Verre à saké"
+        ]
+      },
+      "description": "La Ginjo Beer emprunte au saké son parfum de fruit clair : poire, melon, pomme, raisin, fleurs, riz ou alcool délicat selon la levure. Elle doit rester bière, mais avec cette élégance fermentaire japonaise qui remplace le houblon par une brume aromatique.",
+      "histoireEtOrigines": "Les levures de saké, notamment utilisées pour les profils ginjo, produisent des arômes fruités marqués grâce à des fermentations lentes et contrôlées. Les brasseurs modernes les emploient dans la bière pour créer des hybrides entre culture brassicole et fermentation japonaise.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "Les interprétations de « Ginjo Beer / Sake-Yeast Beer » couvrent plusieurs styles de base ou procédés. Aucun profil de recette unique ne peut être retenu sans préciser la bière sous-jacente.",
+        "maltsEtCereales": [
+          "variables selon le style de base"
+        ],
+        "houblons": [
+          "variables selon le style de base"
+        ],
+        "levuresEtMicroorganismes": [
+          "variable selon le style de base"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "adapté au style de base",
+        "empatage": "adapté au style de base et aux ingrédients",
+        "ebullitionEtHoublonnage": "ajouts planifiés pour préserver l’équilibre",
+        "fermentation": "fermentation du style de base avec gestion de l’ingrédient spécial",
+        "maturation": "variable selon le procédé",
+        "profilRecherche": "une bière fermentée avec levure de saké ou profil ginjo, fruitée, florale et propre, avec élégance fermentaire japonaise"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Ginjo Beer / Sake-Yeast Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Ginjo Beer / Sake-Yeast Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Ginjo Beer / Sake-Yeast Beer — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "fresh-hop-beer",
+      "nom": "Fresh Hop Beer",
+      "collectionId": 8,
+      "nature": "T",
+      "parentPrincipalId": null,
+      "aliases": [
+        "Wet Hop Beer"
+      ],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "International",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 3.5,
+        "max": 10.0,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": 20,
+        "max": 100,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": 4,
+        "max": 80,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Teku",
+          "Tulipe"
+        ]
+      },
+      "description": "La Fresh Hop Beer capture le houblon encore vert : herbe fraîche, résine humide, agrume vif, fleurs, chlorophylle, fruits verts et intensité saisonnière. Elle doit sentir la récolte, pas le gazon tondu dans une IPA trop pressée.",
+      "histoireEtOrigines": "Les fresh hop ou wet hop beers utilisent des cônes fraîchement récoltés, souvent dans les heures ou le jour suivant la cueillette. Elles sont devenues des bières saisonnières très attendues, particulièrement dans les régions proches des houblonnières comme le Nord-Ouest américain.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Fresh Hop Beer » est une catégorie transversale définie principalement par un ingrédient ou un procédé appliqué à des styles de base très différents. Les paramètres et la recette dépendent donc du style choisi et de l’intensité recherchée.",
+        "maltsEtCereales": [
+          "variables selon le style de base"
+        ],
+        "houblons": [
+          "variables selon le style de base"
+        ],
+        "levuresEtMicroorganismes": [
+          "variable selon le style de base"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "adapté au style de base",
+        "empatage": "adapté au style de base et aux ingrédients",
+        "ebullitionEtHoublonnage": "ajouts planifiés pour préserver l’équilibre",
+        "fermentation": "fermentation du style de base avec gestion de l’ingrédient spécial",
+        "maturation": "variable selon le procédé",
+        "profilRecherche": "une bière de récolte au houblon frais, verte et aromatique, avec fraîcheur végétale nette et base adaptée"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Fresh Hop Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Fresh Hop Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Fresh Hop Beer — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "wood-and-barrel-aged-beer",
+      "nom": "Wood- and Barrel-Aged Beer",
+      "collectionId": 8,
+      "nature": "T",
+      "parentPrincipalId": null,
+      "aliases": [
+        "Wood-Aged Beer",
+        "Barrel-Aged Beer"
+      ],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "International",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Teku",
+          "Tulipe"
+        ]
+      },
+      "description": "La Wood- and Barrel-Aged Beer laisse le bois écrire dans la bière : vanille, chêne, toast, coco, tanins, vin, bourbon, rhum ou oxydation douce selon le fût. Le bois doit apporter profondeur et structure, pas coller une planche aromatisée sur le style.",
+      "histoireEtOrigines": "Le vieillissement en bois appartient aux pratiques historiques de stockage, mais les catégories modernes l’utilisent comme outil sensoriel déclaré. Fûts de bourbon, vin, sherry, rhum ou bois neutre peuvent modifier le corps, la finale, l’aromatique et la perception de l’alcool.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Wood- and Barrel-Aged Beer » est une catégorie transversale définie principalement par un ingrédient ou un procédé appliqué à des styles de base très différents. Les paramètres et la recette dépendent donc du style choisi et de l’intensité recherchée.",
+        "maltsEtCereales": [
+          "variables selon le style de base"
+        ],
+        "houblons": [
+          "variables selon le style de base"
+        ],
+        "levuresEtMicroorganismes": [
+          "variable selon le style de base"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "adapté au style de base",
+        "empatage": "adapté au style de base et aux ingrédients",
+        "ebullitionEtHoublonnage": "ajouts planifiés pour préserver l’équilibre",
+        "fermentation": "fermentation du style de base avec gestion de l’ingrédient spécial",
+        "maturation": "variable selon le procédé",
+        "profilRecherche": "une bière vieillie en bois, où chêne, tanins et éventuel ancien alcool enrichissent la base sans l’écraser"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Wood- and Barrel-Aged Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Wood- and Barrel-Aged Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Wood- and Barrel-Aged Beer — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "wood-and-barrel-aged-strong-beer",
+      "nom": "Wood- and Barrel-Aged Strong Beer",
+      "collectionId": 8,
+      "nature": "SS",
+      "parentPrincipalId": "wood-and-barrel-aged-beer",
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "International",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 7.0,
+        "max": 16.0,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": 10,
+        "max": 100,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": 8,
+        "max": 120,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Teku",
+          "Tulipe"
+        ]
+      },
+      "description": "La Wood- and Barrel-Aged Strong Beer met une bière forte en fût : alcool, malt riche, vanille, chêne, caramel, fruits secs, spiritueux et chaleur arrondie. Le fût doit civiliser la force, pas transformer la bière en whisky dilué.",
+      "histoireEtOrigines": "Les bières fortes supportent particulièrement bien le vieillissement en barrique, car leur corps et leur alcool résistent aux apports du bois. Cette carte couvre les barley wines, strong ales, bocks fortes et autres bases puissantes passées au fût.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "Les interprétations de « Wood- and Barrel-Aged Strong Beer » couvrent plusieurs styles de base ou procédés. Aucun profil de recette unique ne peut être retenu sans préciser la bière sous-jacente.",
+        "maltsEtCereales": [
+          "variables selon le style de base"
+        ],
+        "houblons": [
+          "variables selon le style de base"
+        ],
+        "levuresEtMicroorganismes": [
+          "variable selon le style de base"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "adapté au style de base",
+        "empatage": "adapté au style de base et aux ingrédients",
+        "ebullitionEtHoublonnage": "ajouts planifiés pour préserver l’équilibre",
+        "fermentation": "fermentation du style de base avec gestion de l’ingrédient spécial",
+        "maturation": "variable selon le procédé",
+        "profilRecherche": "une bière forte élevée en barrique, riche et fondue, avec bois, alcool complémentaire et profondeur sans chaleur brûlante"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Wood- and Barrel-Aged Strong Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Wood- and Barrel-Aged Strong Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Wood- and Barrel-Aged Strong Beer — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "wood-and-barrel-aged-strong-stout",
+      "nom": "Wood- and Barrel-Aged Strong Stout",
+      "collectionId": 8,
+      "nature": "SS",
+      "parentPrincipalId": "wood-and-barrel-aged-beer",
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "International",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 8.0,
+        "max": 18.0,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": 30,
+        "max": 100,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": 70,
+        "max": 160,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Teku",
+          "Tulipe"
+        ]
+      },
+      "description": "La Wood- and Barrel-Aged Strong Stout est le grand puits noir du fût : café, cacao, mélasse, vanille, bourbon, chêne, fruits noirs, chaleur et torréfaction. Elle peut être immense, mais elle doit rester intégrée, pas juste un tonneau de pétrole sucré.",
+      "histoireEtOrigines": "Les stouts fortes vieillies en barrique sont devenues emblématiques de la scène craft, notamment avec les fûts de bourbon. Elles exploitent la rencontre entre malts torréfiés, alcool élevé, bois toasté et traces du spiritueux précédent.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "Les interprétations de « Wood- and Barrel-Aged Strong Stout » couvrent plusieurs styles de base ou procédés. Aucun profil de recette unique ne peut être retenu sans préciser la bière sous-jacente.",
+        "maltsEtCereales": [
+          "variables selon le style de base"
+        ],
+        "houblons": [
+          "variables selon le style de base"
+        ],
+        "levuresEtMicroorganismes": [
+          "variable selon le style de base"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "adapté au style de base",
+        "empatage": "adapté au style de base et aux ingrédients",
+        "ebullitionEtHoublonnage": "ajouts planifiés pour préserver l’équilibre",
+        "fermentation": "fermentation du style de base avec gestion de l’ingrédient spécial",
+        "maturation": "variable selon le procédé",
+        "profilRecherche": "une stout forte vieillie en barrique, noire et intense, avec torréfaction, vanille, bois et alcool parfaitement intégrés"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Wood- and Barrel-Aged Strong Stout — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Wood- and Barrel-Aged Strong Stout — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Wood- and Barrel-Aged Strong Stout — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "wood-and-barrel-aged-dessert-pastry-beer",
+      "nom": "Wood- and Barrel-Aged Dessert / Pastry Beer",
+      "collectionId": 8,
+      "nature": "SS",
+      "parentPrincipalId": "wood-and-barrel-aged-beer",
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "International",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 7.0,
+        "max": 16.0,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": 10,
+        "max": 70,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": 25,
+        "max": 140,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Teku",
+          "Tulipe"
+        ]
+      },
+      "description": "La Wood- and Barrel-Aged Dessert Beer pousse le fût vers la pâtisserie : vanille, cacao, noix de coco, érable, café, caramel, biscuit, bourbon ou fruits confits. Le plaisir doit rester brassicole ; sinon, on sert un gâteau liquide avec une mousse de regret.",
+      "histoireEtOrigines": "Cette famille vient de la rencontre entre pastry beers modernes et vieillissement en barrique. Elle est moins une tradition qu’un terrain craft récent, où la difficulté consiste à intégrer sucres, arômes dessert, bois et alcool sans perdre l’équilibre.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "Les interprétations de « Wood- and Barrel-Aged Dessert / Pastry Beer » couvrent plusieurs styles de base ou procédés. Aucun profil de recette unique ne peut être retenu sans préciser la bière sous-jacente.",
+        "maltsEtCereales": [
+          "variables selon le style de base"
+        ],
+        "houblons": [
+          "variables selon le style de base"
+        ],
+        "levuresEtMicroorganismes": [
+          "variable selon le style de base"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "adapté au style de base",
+        "empatage": "adapté au style de base et aux ingrédients",
+        "ebullitionEtHoublonnage": "ajouts planifiés pour préserver l’équilibre",
+        "fermentation": "fermentation du style de base avec gestion de l’ingrédient spécial",
+        "maturation": "variable selon le procédé",
+        "profilRecherche": "une bière dessert vieillie en barrique, gourmande mais structurée, avec bois, sucre, arômes pâtissiers et base encore lisible"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Wood- and Barrel-Aged Dessert / Pastry Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Wood- and Barrel-Aged Dessert / Pastry Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Wood- and Barrel-Aged Dessert / Pastry Beer — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "aged-beer",
+      "nom": "Aged Beer",
+      "collectionId": 8,
+      "nature": "T",
+      "parentPrincipalId": null,
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "International",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Teku",
+          "Tulipe"
+        ]
+      },
+      "description": "L’Aged Beer met le temps au premier plan : oxydation noble, sherry, cuir, noix, fruits secs, miel sombre, madérisation ou fondu alcoolique. Le vieillissement doit complexifier la bière, pas la fatiguer ; vieux ne veut pas dire poussiéreux.",
+      "histoireEtOrigines": "De nombreuses traditions fortes ou acides utilisent la garde, mais les catégories modernes permettent aussi de déclarer l’âge comme caractère principal. Cette carte couvre les bières où l’évolution temporelle devient l’élément distinctif, avec ou sans bois.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Aged Beer » est une catégorie transversale définie principalement par un ingrédient ou un procédé appliqué à des styles de base très différents. Les paramètres et la recette dépendent donc du style choisi et de l’intensité recherchée.",
+        "maltsEtCereales": [
+          "variables selon le style de base"
+        ],
+        "houblons": [
+          "variables selon le style de base"
+        ],
+        "levuresEtMicroorganismes": [
+          "variable selon le style de base"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "adapté au style de base",
+        "empatage": "adapté au style de base et aux ingrédients",
+        "ebullitionEtHoublonnage": "ajouts planifiés pour préserver l’équilibre",
+        "fermentation": "fermentation du style de base avec gestion de l’ingrédient spécial",
+        "maturation": "variable selon le procédé",
+        "profilRecherche": "une bière vieillie, marquée par le temps, avec oxydation noble, complexité et fondu sans défaut rance"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Aged Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Aged Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Aged Beer — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "rauchbier-smoke-beer",
+      "nom": "Rauchbier / Smoke Beer",
+      "collectionId": 8,
+      "nature": "F",
+      "parentPrincipalId": null,
+      "aliases": [
+        "Rauchbier",
+        "Smoke Beer",
+        "Smoked Beer"
+      ],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "Tradition de Bamberg et interprétations internationales",
+        "ville": "Bamberg",
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 3.5,
+        "max": 10.0,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 10,
+        "max": 50,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 6,
+        "max": 80,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 7,
+        "temperatureMax": 12,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Seidel",
+          "Tulipe"
+        ]
+      },
+      "description": "La Smoke Beer parle en fumée : hêtre, chêne, aulne, érable, bois fruitier, bacon léger, feu de bois ou toast sec selon le malt. Le principe est simple et cruel : la fumée doit épouser la bière, pas camper dessus avec ses bottes sales.",
+      "histoireEtOrigines": "Avant les malteries modernes à chaleur indirecte, la fumée était souvent inévitable dans le séchage du malt. Bamberg a conservé une tradition célèbre de Rauchbier, tandis que les catégories modernes ouvrent la fumée à presque tous les styles de base.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Rauchbier / Smoke Beer » désigne une famille regroupant plusieurs styles dont la force, la couleur, l’amertume, les ingrédients et les procédés peuvent diverger. Aucun profil de recette unique ne serait représentatif de l’ensemble de la famille.",
+        "maltsEtCereales": [
+          "céréales définies par la tradition locale"
+        ],
+        "houblons": [
+          "houblons faibles à modérés ou substituts historiques"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ou culture conforme à la tradition"
+        ],
+        "ingredientsComplementaires": [
+          "malt fumé"
+        ],
+        "profilEau": "profil local lorsque documenté",
+        "empatage": "procédé traditionnel ou reconstitution historique",
+        "ebullitionEtHoublonnage": "houblonnage et épices selon la source historique",
+        "fermentation": "fermentation conforme au style reconstitué",
+        "maturation": "maturation variable",
+        "profilRecherche": "une bière fumée équilibrée, où le bois choisi apporte une signature nette sans âcreté médicinale ni brûlé dur"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Rauchbier / Smoke Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Rauchbier / Smoke Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Rauchbier / Smoke Beer — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "weiss-rauchbier",
+      "nom": "Weiss Rauchbier",
+      "collectionId": 8,
+      "nature": "SS",
+      "parentPrincipalId": "rauchbier-smoke-beer",
+      "aliases": [],
+      "paysOrigine": [
+        "Allemagne"
+      ],
+      "origine": {
+        "libelle": "Bavière et Franconie",
+        "ville": null,
+        "region": "Bavière",
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 4.3,
+        "max": 6.0,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 10,
+        "max": 25,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 6,
+        "max": 40,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 9,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Weizen",
+          "Seidel"
+        ]
+      },
+      "description": "La Weiss Rauchbier croise blé bavarois et fumée : banane, girofle, pain frais, mousse, blé souple et fumée de bois. Elle doit rester une Weizen avant tout, avec fumée en manteau, pas en incendie de grange.",
+      "histoireEtOrigines": "Les bières fumées peuvent être appliquées à des bases classiques, et les brasseries allemandes ont utilisé la fumée sur plusieurs familles, dont les bières de blé. Cette variante combine le profil levuré de la Weissbier avec un malt fumé plus ou moins marqué.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt de blé en proportion importante",
+          "malt Pilsner ou pale"
+        ],
+        "houblons": [
+          "houblons peu dominants"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure de blé ou levure neutre selon le style"
+        ],
+        "ingredientsComplementaires": [
+          "malt fumé"
+        ],
+        "profilEau": "douce à modérément minérale",
+        "empatage": "paliers adaptés au blé, éventuellement repos protéique",
+        "ebullitionEtHoublonnage": "houblonnage faible à modéré",
+        "fermentation": "fermentation haute, parfois avec levure spécifique",
+        "maturation": "conditionnement court pour préserver fraîcheur et levure",
+        "profilRecherche": "une Weissbier fumée, mousseuse et fruitée-épicée, avec blé souple et fumée de bois intégrée"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Weiss Rauchbier — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Weiss Rauchbier — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Weiss Rauchbier — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "helles-rauchbier",
+      "nom": "Helles Rauchbier",
+      "collectionId": 8,
+      "nature": "SS",
+      "parentPrincipalId": "rauchbier-smoke-beer",
+      "aliases": [],
+      "paysOrigine": [
+        "Allemagne"
+      ],
+      "origine": {
+        "libelle": "Bamberg, Franconie",
+        "ville": "Bamberg",
+        "region": "Franconie",
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 4.3,
+        "max": 5.8,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 15,
+        "max": 30,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 6,
+        "max": 16,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "basse",
+        "details": "Fermentation basse à température fraîche, généralement suivie d’une maturation à froid."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 9,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Seidel",
+          "Pokal"
+        ]
+      },
+      "description": "La Helles Rauchbier est la fumée en mode clair : lager blonde, malt doux, pain, miel léger, houblon discret et fumée fine. Elle doit rester limpide et buvable, pas devenir une cheminée blonde.",
+      "histoireEtOrigines": "Les Rauchbiers modernes peuvent prendre une base Helles et y introduire du malt fumé, souvent de manière plus délicate que dans un Märzen Rauchbier. C’est une porte d’entrée plus douce vers la famille fumée.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt Pilsner ou lager très pâle",
+          "riz ou maïs selon la tradition"
+        ],
+        "houblons": [
+          "houblons doux et peu envahissants"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure lager neutre"
+        ],
+        "ingredientsComplementaires": [
+          "malt fumé"
+        ],
+        "profilEau": "douce à modérément minérale",
+        "empatage": "empâtage favorisant une forte fermentescibilité",
+        "ebullitionEtHoublonnage": "houblonnage précoce modéré, peu ou pas de houblon tardif",
+        "fermentation": "fermentation basse propre et fraîche",
+        "maturation": "lagering court à moyen",
+        "profilRecherche": "une lager blonde fumée, douce et propre, avec malt clair, fumée fine et grande buvabilité"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Helles Rauchbier — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Helles Rauchbier — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Helles Rauchbier — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "marzen-rauchbier",
+      "nom": "Märzen Rauchbier",
+      "collectionId": 8,
+      "nature": "SS",
+      "parentPrincipalId": "rauchbier-smoke-beer",
+      "aliases": [],
+      "paysOrigine": [
+        "Allemagne"
+      ],
+      "origine": {
+        "libelle": "Bamberg, Franconie",
+        "ville": "Bamberg",
+        "region": "Franconie",
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 5.1,
+        "max": 6.5,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 20,
+        "max": 30,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 20,
+        "max": 40,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "basse",
+        "details": "Fermentation basse à température fraîche, généralement suivie d’une maturation à froid."
+      },
+      "service": {
+        "temperatureMin": 7,
+        "temperatureMax": 10,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Seidel",
+          "Mass"
+        ]
+      },
+      "description": "La Märzen Rauchbier est la forme bambergienne iconique : robe ambrée, malt de pain, toast, légère douceur, fumée de hêtre, finale sèche et équilibre lager. Elle peut rappeler le jambon fumé, mais elle doit surtout rester une Märzen.",
+      "histoireEtOrigines": "Le Rauchbier de Bamberg est historiquement associé aux lagers ambrées fumées, notamment les Märzen servies par les maisons traditionnelles comme Schlenkerla ou Spezial. Le malt fumé au bois devient ici l’âme du style, pas un simple ajout.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malts Munich et Vienna",
+          "malts torréfiés désamérisés en faible quantité"
+        ],
+        "houblons": [
+          "houblons nobles discrets"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure lager propre"
+        ],
+        "ingredientsComplementaires": [
+          "malt fumé"
+        ],
+        "profilEau": "modérément carbonatée",
+        "empatage": "empâtage ou décoction favorisant les notes de pain",
+        "ebullitionEtHoublonnage": "houblonnage équilibrant",
+        "fermentation": "fermentation basse",
+        "maturation": "lagering moyen à long",
+        "profilRecherche": "une Märzen fumée de Bamberg, ambrée et maltée, avec fumée de hêtre, pain toasté et finale propre"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Märzen Rauchbier — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Märzen Rauchbier — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Märzen Rauchbier — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "bock-rauchbier",
+      "nom": "Bock Rauchbier",
+      "collectionId": 8,
+      "nature": "SS",
+      "parentPrincipalId": "rauchbier-smoke-beer",
+      "aliases": [],
+      "paysOrigine": [
+        "Allemagne"
+      ],
+      "origine": {
+        "libelle": "Bamberg, Franconie",
+        "ville": "Bamberg",
+        "region": "Franconie",
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 6.3,
+        "max": 9.0,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 20,
+        "max": 40,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 24,
+        "max": 70,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "basse",
+        "details": "Fermentation basse à température fraîche, généralement suivie d’une maturation à froid."
+      },
+      "service": {
+        "temperatureMin": 8,
+        "temperatureMax": 12,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Pokal",
+          "Snifter"
+        ]
+      },
+      "description": "La Bock Rauchbier donne du muscle à la fumée : malt riche, pain brun, caramel, fruits secs, alcool doux, corps plus ample et fumée boisée. Elle doit être profonde et chaleureuse, pas lourde comme une bûche trempée dans du sirop.",
+      "histoireEtOrigines": "Les versions Bock ou Doppelbock fumées prolongent la tradition allemande des bières fortes maltées en y intégrant du malt fumé. Le bois doit soutenir la richesse du style de base et non masquer la profondeur maltée.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malts Munich et Vienna",
+          "malt Pilsner selon la version"
+        ],
+        "houblons": [
+          "houblons allemands sobres"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure lager à forte atténuation"
+        ],
+        "ingredientsComplementaires": [
+          "malt fumé"
+        ],
+        "profilEau": "modérément minérale",
+        "empatage": "décoction traditionnelle possible pour renforcer la profondeur maltée",
+        "ebullitionEtHoublonnage": "houblonnage d’équilibre sans domination aromatique",
+        "fermentation": "fermentation basse lente",
+        "maturation": "lagering long",
+        "profilRecherche": "une Bock fumée, forte et maltée, avec pain brun, caramel, alcool doux et fumée boisée bien fondue"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Bock Rauchbier — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Bock Rauchbier — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Bock Rauchbier — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    }
+  ]
+}
