@@ -31,9 +31,14 @@
   height: var(--csl-card-h);
   border-radius: var(--csl-radius, 10px);
   transform-style: preserve-3d;
-  will-change: transform, opacity;
+  will-change: auto;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
+}
+
+.csl-card.is-visible,
+.csl-card.is-active {
+  will-change: transform, opacity;
 }
 
 .csl-card-inner {

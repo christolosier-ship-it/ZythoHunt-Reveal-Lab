@@ -6,6 +6,6 @@ export const carouselTokens = Object.freeze({
   minScale: 0.62,
   opacityStep: 0.15,
   minOpacity: 0.55,
-  snapDuration: 0.55,
-  renderWindow: 8
+  snapDuration: 0.42,
+  renderWindow: 4
 });

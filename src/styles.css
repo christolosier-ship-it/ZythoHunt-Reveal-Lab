@@ -242,7 +242,7 @@ html, body {
   0%, 100% { box-shadow: 0 2px 12px rgba(0,0,0,0.5); }
   50%       { box-shadow: 0 2px 20px rgba(180,100,20,0.22), 0 2px 12px rgba(0,0,0,0.5); }
 }
-.beer-card--revealable {
+.csl-card.is-active .beer-card--revealable {
   animation: hintPulse 5s ease-in-out infinite;
 }
 .beer-card--locked {

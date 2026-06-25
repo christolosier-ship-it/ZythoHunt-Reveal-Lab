@@ -108,8 +108,35 @@ export function fitCardName(nameEl, containerEl = nameEl?.parentElement) {
   }
 }
 
+function getCardNameFitSignature(nameEl, containerEl) {
+  return `${containerEl.clientWidth}x${containerEl.clientHeight}:${nameEl.textContent || ""}`;
+}
+
+export function fitCardNameOnce(nameEl, containerEl = nameEl?.parentElement) {
+  if (!nameEl || !containerEl) return false;
+  const signature = getCardNameFitSignature(nameEl, containerEl);
+  if (nameEl.dataset.nameFitted === "true" && nameEl.dataset.nameFitSignature === signature) return false;
+
+  fitCardName(nameEl, containerEl);
+  nameEl.dataset.nameFitted = "true";
+  nameEl.dataset.nameFitSignature = signature;
+  return true;
+}
+
+export function resetCardNameFit(/** @type {any} */ root = document) {
+  root.querySelectorAll(".card-name").forEach((nameEl) => {
+    delete nameEl.dataset.nameFitted;
+    delete nameEl.dataset.nameFitSignature;
+  });
+}
+
+export function fitVisibleCardNames(/** @type {any} */ root = document) {
+  root.querySelectorAll(".csl-card.is-visible .card-name, .csl-card.is-active .card-name, .card-name:not(.csl-card .card-name)")
+    .forEach((nameEl) => fitCardNameOnce(nameEl, nameEl.parentElement));
+}
+
 export function fitAllCardNames(/** @type {any} */ root = document) {
-  root.querySelectorAll(".card-name").forEach((nameEl) => fitCardName(nameEl, nameEl.parentElement));
+  root.querySelectorAll(".card-name").forEach((nameEl) => fitCardNameOnce(nameEl, nameEl.parentElement));
 }
 
 function scheduleCardNameFit(root) {

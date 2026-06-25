@@ -1,15 +1,20 @@
 /** @typedef {any} Any */
 import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
-import { createCard, fitAllCardNames } from "../components/create-card.js";
+import { createCard, fitVisibleCardNames, resetCardNameFit } from "../components/create-card.js";
 import { motionTokens } from "../animation/motion-tokens.js";
 
 gsap.registerPlugin(Draggable);
 const DRAG_CLICK_THRESHOLD = 8;
-const DEFAULT_RENDER_WINDOW = 8;
+const DEFAULT_RENDER_WINDOW = 4;
 
 export function isInsideRenderWindow(index, vPos, renderWindow = DEFAULT_RENDER_WINDOW) {
   return Math.abs(index - vPos) <= renderWindow;
+}
+
+export function setCarouselCardRenderClasses(cardEl, { visible = false, active = false } = {}) {
+  cardEl.classList.toggle("is-visible", visible);
+  cardEl.classList.toggle("is-active", active);
 }
 
 export function createCarousel(/** @type {any} */ { containerEl, cards, collection, tokens, store, onActiveChange, onInspect }) {
@@ -62,10 +67,18 @@ export function createCarousel(/** @type {any} */ { containerEl, cards, collecti
 
   function setRenderState(cardEl, visible) {
     const state = visible ? "visible" : "hidden";
-    if (cardEl.dataset.renderState === state) return;
-    cardEl.dataset.renderState = state;
-    cardEl.style.visibility = visible ? "visible" : "hidden";
-    cardEl.style.pointerEvents = visible ? "" : "none";
+    if (cardEl.dataset.renderState !== state) {
+      cardEl.dataset.renderState = state;
+      cardEl.style.visibility = visible ? "visible" : "hidden";
+      cardEl.style.pointerEvents = visible ? "" : "none";
+    }
+    setCarouselCardRenderClasses(cardEl, { visible, active: cardEl.classList.contains("is-active") });
+  }
+
+  function updateActiveState() {
+    cardEls.forEach((el, i) => {
+      setCarouselCardRenderClasses(el, { visible: el.classList.contains("is-visible"), active: i === activeIndex });
+    });
   }
 
   function updateA11y() {
@@ -141,9 +154,10 @@ export function createCarousel(/** @type {any} */ { containerEl, cards, collecti
       const done = () => {
         activeIndex = clamped;
         updateFromVPos(clamped, false);
+        updateActiveState();
         updateA11y();
         onActiveChange?.(clamped);
-        fitAllCardNames(containerEl);
+        fitVisibleCardNames(containerEl);
         resolve({ status: "focused", index: clamped });
       };
 
@@ -181,7 +195,7 @@ export function createCarousel(/** @type {any} */ { containerEl, cards, collecti
     gsap.set(el, { rotateY: discovered ? 180 : 0 });
     el.querySelector(".card-front")?.setAttribute("aria-hidden", discovered ? "false" : "true");
     updateA11y();
-    fitAllCardNames(el);
+    fitVisibleCardNames(el);
   }
 
   function highlight(cardId) {
@@ -395,6 +409,7 @@ export function createCarousel(/** @type {any} */ { containerEl, cards, collecti
 
     gsap.set(proxyEl, { x: -activeIndex * tokens.spacing });
     updateFromVPos(activeIndex, false);
+    updateActiveState();
     updateA11y();
 
     draggableInstance = Draggable.create(proxyEl, {
@@ -428,8 +443,9 @@ export function createCarousel(/** @type {any} */ { containerEl, cards, collecti
     window.addEventListener("resize", () => {
       resetLockedFeedback();
       closeInspection();
+      resetCardNameFit(containerEl);
       refresh();
-      fitAllCardNames(containerEl);
+      fitVisibleCardNames(containerEl);
     }, { signal });
   }
 
