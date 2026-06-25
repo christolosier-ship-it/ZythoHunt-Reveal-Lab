@@ -137,7 +137,9 @@ async function boot(navigation) {
       root: brassopedieRoot,
       collectionBundles,
       registry: discoveryRegistry,
-      initialCollectionId: collection.id
+      initialCollectionId: collection.id,
+      onOpen: () => background.pause(),
+      onClose: () => background.resume()
     });
   }
   navigation?.onViewChange((viewId) => {

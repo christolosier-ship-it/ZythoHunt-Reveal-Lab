@@ -1,7 +1,7 @@
 import { assetUrl } from "../utils/asset-url.js";
 import { formatRange, formatService, natureLabel, parentName, recipeSections } from "./brassopedie-formatters.js";
 
-const INERT_SELECTORS = ["#app-header", "#reveal-search-form", "#carousel-container"];
+const INERT_SELECTORS = ["#app-header", "#reveal-search-form", "#carousel-container", "#brassopedie-view"];
 const FOCUSABLE_SELECTOR = "button, [href], input, select, textarea, summary, [tabindex]:not([tabindex='-1'])";
 
 const el = (tag, className, text) => {
@@ -57,7 +57,6 @@ export function createBrassopediePanel({ cardsById, onOpen, onClose }) {
   let overlay = null;
   let previousFocus = null;
   let cleanupKeydown = null;
-  const byBrassoId = Object.fromEntries(Object.values(cardsById).map((card) => [card.id, card.brassopedie]));
 
   function close() {
     if (!overlay) return;
@@ -71,8 +70,9 @@ export function createBrassopediePanel({ cardsById, onOpen, onClose }) {
     previousFocus = null;
   }
 
-  function render(card) {
+  function render(card, cardsByIdForEntry = cardsById) {
     const entry = card.brassopedie;
+    const byBrassoId = Object.fromEntries(Object.values(cardsByIdForEntry).map((item) => [item.id, item.brassopedie]));
     const parent = parentName(entry, byBrassoId);
     const service = formatService(entry);
     const recipe = entry.recette || {};
@@ -162,22 +162,31 @@ export function createBrassopediePanel({ cardsById, onOpen, onClose }) {
     cleanupKeydown = () => document.removeEventListener("keydown", onKeyDown);
   }
 
-  function open(cardId) {
-    const card = cardsById[cardId];
+  function openEntry({ card, cardsById: cardsByIdOverride = cardsById }) {
     if (!card) return { status: "missing" };
     close();
     previousFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     overlay = el("div", "brassopedie-overlay");
     overlay.addEventListener("click", (event) => { if (event.target === overlay) close(); });
-    const modal = render(card);
+    const modal = render(card, cardsByIdOverride);
     overlay.appendChild(modal);
     document.body.appendChild(overlay);
     setBackgroundInert(true);
     activateKeyboardTrap(modal);
     onOpen?.();
     modal.focus();
-    return { status: "opened", cardId };
+    return { status: "opened", cardId: card.id };
   }
 
-  return { open, close, isOpen: () => Boolean(overlay) };
+  function openCard(card, cardsByIdOverride = cardsById) {
+    return openEntry({ card, cardsById: cardsByIdOverride });
+  }
+
+  function open(cardId) {
+    const card = cardsById[cardId];
+    if (!card) return { status: "missing" };
+    return openEntry({ card, cardsById });
+  }
+
+  return { open, openCard, openEntry, close, isOpen: () => Boolean(overlay) };
 }
