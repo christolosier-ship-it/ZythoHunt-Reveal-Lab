@@ -69,6 +69,22 @@ function createClickGlow() {
   return glow;
 }
 
+export function resolveCardFramePath(/** @type {any} */ options = {}) {
+  const { cardData, collection, as } = options;
+  const isCarousel = as === "carousel";
+  if (isCarousel) {
+    return cardData?.frameThumb || collection?.collectionFaceThumb || collection?.cardFrame || cardData?.frame || null;
+  }
+  return cardData?.frame || collection?.cardFrame || null;
+}
+
+export function resolveCardBackPath(/** @type {any} */ options = {}) {
+  const { collection, as } = options;
+  const isCarousel = as === "carousel";
+  if (isCarousel) return collection?.cardBackThumb || collection?.cardBack || null;
+  return collection?.cardBack || null;
+}
+
 export function fitCardName(nameEl, containerEl = nameEl?.parentElement) {
   if (!nameEl || !containerEl) return;
 
@@ -115,8 +131,10 @@ export function createCard({ index = 0, cardData, revealable, discovered = false
   card.setAttribute("tabindex", "-1");
   card.setAttribute("role", "button");
 
-  const frameUrl = cardData?.frame ? assetUrl(cardData.frame) : collection?.cardFrame ? assetUrl(collection.cardFrame) : null;
-  const backUrl = collection?.cardBack ? assetUrl(collection.cardBack) : null;
+  const framePath = resolveCardFramePath({ cardData, collection, as });
+  const backPath = resolveCardBackPath({ collection, as });
+  const frameUrl = framePath ? assetUrl(framePath) : null;
+  const backUrl = backPath ? assetUrl(backPath) : null;
   const frontFace = createCardFront({
     cardData,
     frameUrl,
