@@ -14,6 +14,7 @@ import { getEditorialBackgroundPreset } from "./background/editorial-background-
 import { getStoredActiveCollectionId, setStoredActiveCollectionId } from "./app/active-collection-storage.js";
 import { setPendingReveal, takePendingReveal } from "./app/pending-reveal-storage.js";
 import { mountCollectionSession } from "./app/collection-session.js";
+import { createAppNavigation, resolveMenuView } from "./app/app-navigation.js";
 import { registerServiceWorker } from "./pwa/register-service-worker.js";
 
 const $ = (id) => document.getElementById(id);
@@ -75,6 +76,16 @@ function applyCollectionBackground(background, collection) {
   return nextSettings;
 }
 
+function getNavigationViews() {
+  return {
+    zythosphere: $("zythosphere-view"),
+    brassopedie: $("brassopedie-view"),
+    degustation: $("degustation-view"),
+    badges: $("badges-view"),
+    reglages: $("reglages-view")
+  };
+}
+
 function getSessionElements() {
   return {
     loadingBar: $("loading-bar"),
@@ -93,7 +104,7 @@ function getSessionElements() {
   };
 }
 
-async function boot() {
+async function boot(navigation) {
   const loadingScreen = $("loading-screen");
   const pendingReveal = takePendingReveal();
   const collectionManager = createCollectionManager(collectionBundles, { initialCollectionId: getStoredActiveCollectionId() });
@@ -121,7 +132,9 @@ async function boot() {
     background,
     collectionBundles,
     pendingReveal,
+    beforeValidReveal: () => navigation?.showView("zythosphere"),
     onExternalMatch: (match) => {
+      navigation?.showView("zythosphere");
       setStoredActiveCollectionId(match.collectionId);
       setPendingReveal(match);
       window.location.reload();
@@ -133,10 +146,21 @@ async function boot() {
   gsap.fromTo("#app", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.out" });
 }
 
-function mountAppMenu() {
+function mountAppMenu(navigation) {
   const toggle = $("app-menu-toggle");
   const menu = $("app-menu");
   if (!toggle || !menu) return;
+
+  const menuButtons = Array.from(menu.querySelectorAll("[data-menu-view]"));
+
+  const syncCurrent = (viewId) => {
+    menuButtons.forEach((button) => {
+      const isCurrent = resolveMenuView(/** @type {HTMLElement} */ (button).dataset.menuView) === viewId;
+      button.classList.toggle("is-active", isCurrent);
+      if (isCurrent) button.setAttribute("aria-current", "page");
+      else button.removeAttribute("aria-current");
+    });
+  };
 
   const closeMenu = () => {
     toggle.setAttribute("aria-expanded", "false");
@@ -154,11 +178,22 @@ function mountAppMenu() {
     toggleMenu();
   });
 
-  menu.addEventListener("click", (event) => event.stopPropagation());
+  menu.addEventListener("click", (event) => {
+    event.stopPropagation();
+    const target = /** @type {Element | null} */ (event.target instanceof Element ? event.target : null);
+    const button = /** @type {HTMLElement | null} */ (target?.closest("[data-menu-view]") || null);
+    if (!button) return;
+    const viewId = resolveMenuView(button.dataset.menuView);
+    if (viewId && navigation?.showView(viewId)) syncCurrent(viewId);
+    closeMenu();
+  });
   document.addEventListener("click", closeMenu);
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") closeMenu();
   });
+
+  navigation?.onViewChange(syncCurrent);
+  syncCurrent(navigation?.getActiveView?.() || "zythosphere");
 }
 
 function showStartupError(error) {
@@ -168,7 +203,8 @@ function showStartupError(error) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  mountAppMenu();
+  const navigation = createAppNavigation({ views: getNavigationViews(), initialView: "zythosphere" });
+  mountAppMenu(navigation);
   void registerServiceWorker().catch((error) => console.warn("Service worker registration failed", error));
-  void boot().catch(showStartupError);
+  void boot(navigation).catch(showStartupError);
 });

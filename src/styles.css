@@ -735,3 +735,90 @@ html, body {
 .app-menu button { display: block; width: 100%; border: 0; border-radius: 10px; background: transparent; color: var(--text); padding: 9px 10px; text-align: left; font: 600 .9rem var(--font-body); cursor: default; }
 .app-menu button:hover, .app-menu button:focus-visible { background: rgba(206,137,57,.12); color: var(--amber-light); }
 @media (max-width: 420px) { #app-header { gap: 6px; padding-inline: 8px; } .app-menu-toggle { padding-inline: 9px; } }
+
+/* ─── Global app views ──────────────────────────────── */
+#app-view-root {
+  flex: 1 1 auto;
+  min-height: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-view {
+  min-height: 0;
+}
+
+.app-view[hidden] {
+  display: none !important;
+}
+
+.app-view--zythosphere {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.app-view-panel {
+  height: 100%;
+  overflow: auto;
+  padding: clamp(18px, 4vw, 42px) max(14px, env(safe-area-inset-right)) calc(28px + env(safe-area-inset-bottom)) max(14px, env(safe-area-inset-left));
+}
+
+.app-view-panel-inner {
+  width: min(880px, 100%);
+  margin: 0 auto;
+  padding: clamp(22px, 5vw, 46px);
+  border: 1px solid rgba(206,137,57,.28);
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(28,21,9,.78), rgba(16,10,5,.66));
+  box-shadow: 0 22px 60px rgba(0,0,0,.28), inset 0 1px 0 rgba(232,160,64,.08);
+  backdrop-filter: blur(12px);
+}
+
+.app-view-panel h1 {
+  margin: 0 0 12px;
+  color: var(--amber-light);
+  font-family: var(--font-serif);
+  font-size: clamp(1.45rem, 6vw, 2.4rem);
+  letter-spacing: .08em;
+}
+
+.app-view-panel p {
+  max-width: 58ch;
+  color: var(--text-dim);
+  font-size: clamp(1rem, 2.8vw, 1.2rem);
+  line-height: 1.45;
+}
+
+.brassopedie-placeholder-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.brassopedie-placeholder-grid > div {
+  min-height: 96px;
+  border: 1px dashed rgba(206,137,57,.24);
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  color: var(--text-dim);
+  background: rgba(6,4,2,.25);
+  font-family: var(--font-serif);
+  letter-spacing: .08em;
+}
+
+.app-menu button { cursor: pointer; }
+.app-menu button.is-active,
+.app-menu button[aria-current="page"] {
+  background: rgba(206,137,57,.18);
+  color: var(--amber-light);
+}
+
+@media (max-width: 640px) {
+  .app-view-panel { padding-top: 24px; }
+  .app-view-panel-inner { border-radius: 18px; }
+  .brassopedie-placeholder-grid { grid-template-columns: 1fr; }
+}

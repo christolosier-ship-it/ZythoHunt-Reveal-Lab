@@ -15,7 +15,8 @@ export function createDiscoveryController({
   beforeReveal,
   afterReveal,
   currentCollectionId,
-  onExternalMatch
+  onExternalMatch,
+  beforeValidReveal
 }) {
   let busy = false;
   const realCards = cards.filter((card) => card.revealable);
@@ -103,11 +104,13 @@ export function createDiscoveryController({
     }
 
     if (result.collectionId && result.collectionId !== currentCollectionId) {
+      beforeValidReveal?.(result);
       setFeedback(`Direction ${result.collectionName || "autre collection"}…`);
       onExternalMatch?.(result);
       return;
     }
 
+    beforeValidReveal?.(result);
     await revealCard(result.cardId);
   }
 
