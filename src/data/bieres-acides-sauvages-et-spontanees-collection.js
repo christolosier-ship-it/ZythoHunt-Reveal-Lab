@@ -1,4 +1,4 @@
-import collectionJson from "../../docs/active/collection-06-bieres-acides-sauvages-et-spontanees.json" with { type: "json" };
+import collectionJson from "./brassopedie/collection-06-bieres-acides-sauvages-et-spontanees.json" with { type: "json" };
 import { createCollectionBundle } from "./create-collection-bundle.js";
 import { bieresAcidesSauvagesEtSpontaneesAssets, bieresAcidesSauvagesEtSpontaneesAssetPath, bieresAcidesSauvagesEtSpontaneesCardImages, bieresAcidesSauvagesEtSpontaneesThumbPath } from "./card-assets/bieres-acides-sauvages-et-spontanees-assets.js";
 
@@ -22,3 +22,9 @@ export const bieresAcidesSauvagesEtSpontaneesBundle = createCollectionBundle({
   },
   assetsReady: true
 });
+
+export const bieresAcidesSauvagesEtSpontaneesCollection = bieresAcidesSauvagesEtSpontaneesBundle.collection;
+export const bieresAcidesSauvagesEtSpontaneesCards = bieresAcidesSauvagesEtSpontaneesBundle.cards;
+export const bieresAcidesSauvagesEtSpontaneesCardsById = bieresAcidesSauvagesEtSpontaneesBundle.cardsById;
+export const revealableBieresAcidesSauvagesEtSpontaneesCards = bieresAcidesSauvagesEtSpontaneesBundle.revealableCards;
+export const validateBieresAcidesSauvagesEtSpontaneesCollection = bieresAcidesSauvagesEtSpontaneesBundle.validate;
