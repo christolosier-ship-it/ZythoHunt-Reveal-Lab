@@ -1,4 +1,4 @@
-import collectionJson from "../../docs/active/collection-09-appellations-commerciales.json" with { type: "json" };
+import collectionJson from "./brassopedie/collection-09-appellations-commerciales.json" with { type: "json" };
 import { createCollectionBundle } from "./create-collection-bundle.js";
 import { appellationsCommercialesAssets, appellationsCommercialesAssetPath, appellationsCommercialesCardImages, appellationsCommercialesThumbPath } from "./card-assets/appellations-commerciales-assets.js";
 
@@ -22,3 +22,9 @@ export const appellationsCommercialesBundle = createCollectionBundle({
   },
   assetsReady: true
 });
+
+export const appellationsCommercialesCollection = appellationsCommercialesBundle.collection;
+export const appellationsCommercialesCards = appellationsCommercialesBundle.cards;
+export const appellationsCommercialesCardsById = appellationsCommercialesBundle.cardsById;
+export const revealableAppellationsCommercialesCards = appellationsCommercialesBundle.revealableCards;
+export const validateAppellationsCommercialesCollection = appellationsCommercialesBundle.validate;
