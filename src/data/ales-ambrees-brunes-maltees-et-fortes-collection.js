@@ -1,8 +1,8 @@
-import collectionJson from "../../docs/active/collection-07-ales-ambrees-brunes-maltees-et-fortes.json" with { type: "json" };
+import collectionJson from "./brassopedie/collection-07-ales-ambrees-brunes-maltees-et-fortes.json" with { type: "json" };
 import { createCollectionBundle } from "./create-collection-bundle.js";
 import { alesAmbreesBrunesMalteesEtFortesAssets, alesAmbreesBrunesMalteesEtFortesAssetPath, alesAmbreesBrunesMalteesEtFortesCardImages, alesAmbreesBrunesMalteesEtFortesThumbPath } from "./card-assets/ales-ambrees-brunes-maltees-et-fortes-assets.js";
 
-export const alesAmbreesBrunesMalteesEtFortesBundle = createCollectionBundle({
+const bundle = createCollectionBundle({
   collectionJson,
   collectionId: "ales-ambrees-brunes-maltees-et-fortes",
   slug: "ales-ambrees-brunes-maltees-et-fortes",
@@ -22,3 +22,10 @@ export const alesAmbreesBrunesMalteesEtFortesBundle = createCollectionBundle({
   },
   assetsReady: true
 });
+
+export const alesAmbreesBrunesMalteesEtFortesBundle = bundle;
+export const alesAmbreesBrunesMalteesEtFortesCollection = bundle.collection;
+export const alesAmbreesBrunesMalteesEtFortesCards = bundle.cards;
+export const alesAmbreesBrunesMalteesEtFortesCardsById = bundle.cardsById;
+export const revealableAlesAmbreesBrunesMalteesEtFortesCards = bundle.revealableCards;
+export const validateAlesAmbreesBrunesMalteesEtFortesCollection = bundle.validate;
