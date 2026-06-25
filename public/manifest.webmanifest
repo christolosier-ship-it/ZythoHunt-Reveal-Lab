@@ -1,0 +1,19 @@
+{
+  "name": "ZythoHunt",
+  "short_name": "ZythoHunt",
+  "description": "Collection de cartes de styles de bières à révéler.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#120904",
+  "background_color": "#120904",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

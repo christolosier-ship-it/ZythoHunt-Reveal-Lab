@@ -14,6 +14,7 @@ import { getEditorialBackgroundPreset } from "./background/editorial-background-
 import { getStoredActiveCollectionId, setStoredActiveCollectionId } from "./app/active-collection-storage.js";
 import { setPendingReveal, takePendingReveal } from "./app/pending-reveal-storage.js";
 import { mountCollectionSession } from "./app/collection-session.js";
+import { registerServiceWorker } from "./pwa/register-service-worker.js";
 
 const $ = (id) => document.getElementById(id);
 
@@ -33,11 +34,10 @@ function renderCollectionSelector(manager, activeCollectionId, onSelect) {
     name.className = "collection-selector-name";
     name.textContent = collection.name || collection.nom || collection.id;
 
-    const status = document.createElement("span");
-    status.className = collection.assetsReady ? "collection-selector-status is-ready" : "collection-selector-status is-pending";
-    status.textContent = collection.assetsReady ? "Disponible" : "Images à compléter";
+    const availabilityLabel = collection.assetsReady ? "Disponible" : "Images à compléter";
+    button.setAttribute("aria-label", `${name.textContent} — ${availabilityLabel}`);
 
-    button.append(name, status);
+    button.append(name);
     button.addEventListener("click", () => onSelect(collection.id));
     listEl.appendChild(button);
   });
@@ -133,10 +133,42 @@ async function boot() {
   gsap.fromTo("#app", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.out" });
 }
 
+function mountAppMenu() {
+  const toggle = $("app-menu-toggle");
+  const menu = $("app-menu");
+  if (!toggle || !menu) return;
+
+  const closeMenu = () => {
+    toggle.setAttribute("aria-expanded", "false");
+    menu.hidden = true;
+  };
+
+  const toggleMenu = () => {
+    const isOpen = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute("aria-expanded", isOpen ? "false" : "true");
+    menu.hidden = isOpen;
+  };
+
+  toggle.addEventListener("click", (event) => {
+    event.stopPropagation();
+    toggleMenu();
+  });
+
+  menu.addEventListener("click", (event) => event.stopPropagation());
+  document.addEventListener("click", closeMenu);
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeMenu();
+  });
+}
+
 function showStartupError(error) {
   console.error("ZythoHunt startup failed", error);
   const loadingLabel = document.querySelector(".loading-label");
   if (loadingLabel) loadingLabel.textContent = "Erreur de chargement. Recharge la page.";
 }
 
-document.addEventListener("DOMContentLoaded", () => { void boot().catch(showStartupError); });
+document.addEventListener("DOMContentLoaded", () => {
+  mountAppMenu();
+  void registerServiceWorker().catch((error) => console.warn("Service worker registration failed", error));
+  void boot().catch(showStartupError);
+});
