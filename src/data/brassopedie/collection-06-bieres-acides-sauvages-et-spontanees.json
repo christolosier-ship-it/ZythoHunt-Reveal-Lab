@@ -57,8 +57,8 @@
           "Verre adapté au sous-style"
         ]
       },
-      "description": "« Bière acide / Sour Beer » se caractérise généralement par une expression dont les traits principaux sont : acidité nette à complexe, arômes fruités, citronnés, vineux ou fermiers; le malt et le houblon restent généralement en retrait. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
-      "histoireEtOrigines": "La famille « Bière acide / Sour Beer » s’est construite progressivement autour de pratiques de fermentation, de couleur ou d’équilibre communes plutôt qu’autour d’une recette fondatrice unique. Elle rassemble aujourd’hui des traditions provenant de International et d’autres régions. La taxonomie ZythoHunt en fait une carte autonome afin de respecter les étiquettes qui n’emploient qu’un terme générique, tout en maintenant des cartes distinctes pour les styles plus précis.",
+      "description": "La Bière acide n’est pas juste une bière qui grimace : c’est une famille où l’acidité remplace souvent l’amertume comme colonne vertébrale. Citron, pomme verte, yaourt, vinaigre doux, fruit mûr, bois, funk ou cave peuvent apparaître selon la méthode, mais l’équilibre doit rester buvable.",
+      "histoireEtOrigines": "Avant la microbiologie moderne, beaucoup de bières avaient une part sauvage ou acidulée. Les traditions européennes comme Berliner Weisse, Gose, Flanders Red, Oud Bruin et lambic ont ensuite été relues par la scène craft mondiale, qui a transformé l’acide en terrain de jeu contrôlé.",
       "recette": {
         "profilUnique": false,
         "explicationProfil": "« Bière acide / Sour Beer » désigne une famille regroupant plusieurs styles dont la force, la couleur, l’amertume, les ingrédients et les procédés peuvent diverger. Aucun profil de recette unique ne serait représentatif de l’ensemble de la famille.",
@@ -78,7 +78,7 @@
         "ebullitionEtHoublonnage": "houblonnage limité pour ne pas inhiber les bactéries",
         "fermentation": "acidification, fermentation mixte ou spontanée selon le style",
         "maturation": "maturation de quelques semaines à plusieurs années",
-        "profilRecherche": "une bière acidulée ou aigre, complexe et équilibrée plutôt que simplement mordante"
+        "profilRecherche": "une bière acidulée nette et complexe, où l’acidité donne de la tension sans devenir vinaigre agressif"
       },
       "sources": [
         {
@@ -147,8 +147,8 @@
           "Verre adapté au sous-style"
         ]
       },
-      "description": "« American Wild Ale » se caractérise généralement par une expression dont les traits principaux sont : acidité nette à complexe, arômes fruités, citronnés, vineux ou fermiers; le malt et le houblon restent généralement en retrait. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
-      "histoireEtOrigines": "La famille « American Wild Ale » s’est construite progressivement autour de pratiques de fermentation, de couleur ou d’équilibre communes plutôt qu’autour d’une recette fondatrice unique. Elle rassemble aujourd’hui des traditions provenant de États-Unis et d’autres régions. La taxonomie ZythoHunt en fait une carte autonome afin de respecter les étiquettes qui n’emploient qu’un terme générique, tout en maintenant des cartes distinctes pour les styles plus précis.",
+      "description": "L’American Wild Ale est la cave belge branchée sur courant américain : acidité variable, Brett, bactéries lactiques, fruits, bois, houblon discret ou parfois plus moderne. Elle peut être vive, funky, vineuse ou fruitée, mais doit éviter le chaos de laboratoire oublié.",
+      "histoireEtOrigines": "Le terme regroupe les interprétations américaines des fermentations mixtes et sauvages, inspirées par les lambics, saisons, Flanders ales et élevages en barrique. La scène craft américaine en a fait une catégorie large, moins attachée à un terroir unique qu’à la maîtrise des micro-organismes.",
       "recette": {
         "profilUnique": false,
         "explicationProfil": "« American Wild Ale » désigne une famille regroupant plusieurs styles dont la force, la couleur, l’amertume, les ingrédients et les procédés peuvent diverger. Aucun profil de recette unique ne serait représentatif de l’ensemble de la famille.",
@@ -168,7 +168,7 @@
         "ebullitionEtHoublonnage": "houblonnage limité pour ne pas inhiber les bactéries",
         "fermentation": "acidification, fermentation mixte ou spontanée selon le style",
         "maturation": "maturation de quelques semaines à plusieurs années",
-        "profilRecherche": "une bière acidulée ou aigre, complexe et équilibrée plutôt que simplement mordante"
+        "profilRecherche": "une sour américaine de fermentation mixte, expressive et maîtrisée, avec acidité, funk et complexité sans désordre microbien"
       },
       "sources": [
         {
@@ -237,8 +237,8 @@
           "Verre adapté au sous-style"
         ]
       },
-      "description": "« Wild Beer » se caractérise généralement par une expression dont les traits principaux sont : acidité nette à complexe, arômes fruités, citronnés, vineux ou fermiers; le malt et le houblon restent généralement en retrait. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
-      "histoireEtOrigines": "La famille « Wild Beer » s’est construite progressivement autour de pratiques de fermentation, de couleur ou d’équilibre communes plutôt qu’autour d’une recette fondatrice unique. Elle rassemble aujourd’hui des traditions provenant de International et d’autres régions. La taxonomie ZythoHunt en fait une carte autonome afin de respecter les étiquettes qui n’emploient qu’un terme générique, tout en maintenant des cartes distinctes pour les styles plus précis.",
+      "description": "La Wild Beer met la fermentation au centre : Brettanomyces, bactéries, levures non conventionnelles, bois ou environnement deviennent les véritables auteurs du goût. Elle n’est pas forcément très acide ; elle peut être sèche, fruitée, fermière, cuirée, florale ou légèrement animale.",
+      "histoireEtOrigines": "“Wild” désigne moins un style précis qu’une philosophie de fermentation hors levure pure et profil parfaitement propre. La bière sauvage moderne s’inspire autant des traditions spontanées belges que des expérimentations craft sur Brett, cultures mixtes, barriques et longues maturations.",
       "recette": {
         "profilUnique": false,
         "explicationProfil": "« Wild Beer » désigne une famille regroupant plusieurs styles dont la force, la couleur, l’amertume, les ingrédients et les procédés peuvent diverger. Aucun profil de recette unique ne serait représentatif de l’ensemble de la famille.",
@@ -258,7 +258,7 @@
         "ebullitionEtHoublonnage": "houblonnage limité pour ne pas inhiber les bactéries",
         "fermentation": "acidification, fermentation mixte ou spontanée selon le style",
         "maturation": "maturation de quelques semaines à plusieurs années",
-        "profilRecherche": "une bière acidulée ou aigre, complexe et équilibrée plutôt que simplement mordante"
+        "profilRecherche": "une bière sauvage sèche et expressive, où Brett, culture mixte ou microflore apportent profondeur sans défaut sale"
       },
       "sources": [
         {
@@ -329,8 +329,8 @@
           "Verre adapté au sous-style"
         ]
       },
-      "description": "« Bière de fermentation spontanée / Spontaneous Sour Ale » se caractérise généralement par une expression dont les traits principaux sont : bière sèche et complexe, acidité vive, notes citronnées, de foin, de cave et de fruits mûrs; la carbonatation dépend de l’assemblage. La dénomination couvre toutefois des interprétations suffisamment diverses pour que les valeurs analytiques et l’équilibre exact varient fortement.",
-      "histoireEtOrigines": "La famille « Bière de fermentation spontanée / Spontaneous Sour Ale » s’est construite progressivement autour de pratiques de fermentation, de couleur ou d’équilibre communes plutôt qu’autour d’une recette fondatrice unique. Elle rassemble aujourd’hui des traditions provenant de International et d’autres régions. La taxonomie ZythoHunt en fait une carte autonome afin de respecter les étiquettes qui n’emploient qu’un terme générique, tout en maintenant des cartes distinctes pour les styles plus précis.",
+      "description": "La fermentation spontanée laisse le moût rencontrer son environnement : levures et bactéries locales construisent acidité, fruit, foin, cave, cuir, bois et sécheresse. Ce n’est pas une bière “abandonnée à la nature”, mais un chaos lentement domestiqué.",
+      "histoireEtOrigines": "La référence historique majeure reste le lambic du Pajottenland et de la vallée de la Senne, refroidi en bac ouvert puis élevé longuement en bois. Aujourd’hui, d’autres brasseries reprennent ce principe hors de Belgique, avec leur propre microflore et leur propre climat de cave.",
       "recette": {
         "profilUnique": false,
         "explicationProfil": "« Bière de fermentation spontanée / Spontaneous Sour Ale » désigne une famille regroupant plusieurs styles dont la force, la couleur, l’amertume, les ingrédients et les procédés peuvent diverger. Aucun profil de recette unique ne serait représentatif de l’ensemble de la famille.",
@@ -350,7 +350,7 @@
         "ebullitionEtHoublonnage": "ébullition longue avec houblons vieillis",
         "fermentation": "ensemencement spontané en refroidissoir",
         "maturation": "élevage prolongé en foudres ou barriques, assemblage possible",
-        "profilRecherche": "une bière spontanée sèche, acidulée et profondément évolutive"
+        "profilRecherche": "une bière spontanée sèche et évolutive, marquée par l’environnement, le bois, l’acidité fine et le temps"
       },
       "sources": [
         {
@@ -422,8 +422,8 @@
           "Flûte"
         ]
       },
-      "description": "« Berliner Weisse » se caractérise généralement par une expression dont les traits principaux sont : acidité nette à complexe, arômes fruités, citronnés, vineux ou fermiers; le malt et le houblon restent généralement en retrait. Son identité est habituellement rattachée à Berlin, avec des variations modernes possibles selon les brasseries.",
-      "histoireEtOrigines": "Le style « Berliner Weisse » est associé à Berlin. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "description": "La Berliner Weisse est une lame de citron dans un verre de blé : très pâle, légère, sèche, très pétillante, dominée par une acidité lactique propre. Elle doit claquer, pas mordre ; aucune lourdeur, presque pas de houblon, juste une fraîcheur nerveuse.",
+      "histoireEtOrigines": "Spécialité régionale de Berlin, elle fut surnommée “Champagne du Nord” par les troupes napoléoniennes en 1809 pour son élégance vive et sa forte effervescence. Devenue rare en Allemagne, elle a été largement relancée par les brasseries craft internationales.",
       "recette": {
         "profilUnique": true,
         "explicationProfil": "",
@@ -443,7 +443,7 @@
         "ebullitionEtHoublonnage": "houblonnage limité pour ne pas inhiber les bactéries",
         "fermentation": "acidification, fermentation mixte ou spontanée selon le style",
         "maturation": "maturation de quelques semaines à plusieurs années",
-        "profilRecherche": "une bière acidulée ou aigre, complexe et équilibrée plutôt que simplement mordante"
+        "profilRecherche": "une bière de blé berlinoise très légère, lactique, sèche et pétillante, rafraîchissante plutôt que brutalement acide"
       },
       "sources": [
         {
@@ -513,8 +513,8 @@
           "Teku"
         ]
       },
-      "description": "« Specialty Berliner Weisse » se caractérise généralement par une expression dont les traits principaux sont : acidité nette à complexe, arômes fruités, citronnés, vineux ou fermiers; le malt et le houblon restent généralement en retrait. Son identité est habituellement rattachée à Interprétation contemporaine, avec des variations modernes possibles selon les brasseries.",
-      "histoireEtOrigines": "Le style « Specialty Berliner Weisse » est associé à Interprétation contemporaine. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "description": "La Specialty Berliner Weisse garde la base citronnée et légère de Berlin, puis ajoute fruit, herbe, épice, houblon ou autre variation. Le supplément doit danser sur l’acidité sans l’écraser : une Berliner déguisée, pas une limonade craft maquillée.",
+      "histoireEtOrigines": "Les versions aromatisées prolongent une habitude ancienne de service avec sirops, mais les brasseries modernes ont déplacé l’ajout directement dans la recette. La catégorie accueille ces interprétations tant que le squelette reste clair : blé, faible alcool, acidité lactique et grande buvabilité.",
       "recette": {
         "profilUnique": true,
         "explicationProfil": "",
@@ -534,7 +534,7 @@
         "ebullitionEtHoublonnage": "houblonnage limité pour ne pas inhiber les bactéries",
         "fermentation": "acidification, fermentation mixte ou spontanée selon le style",
         "maturation": "maturation de quelques semaines à plusieurs années",
-        "profilRecherche": "une bière acidulée ou aigre, complexe et équilibrée plutôt que simplement mordante"
+        "profilRecherche": "une Berliner Weisse modifiée mais reconnaissable, légère, acide et sèche, où l’ingrédient spécial reste net et intégré"
       },
       "sources": [
         {
@@ -604,8 +604,8 @@
           "Tulipe"
         ]
       },
-      "description": "« Gose » se caractérise généralement par une expression dont les traits principaux sont : acidité nette à complexe, arômes fruités, citronnés, vineux ou fermiers; le malt et le houblon restent généralement en retrait. Une salinité légère et la coriandre complètent une acidité lactique modérée. Son identité est habituellement rattachée à Goslar et Leipzig, avec des variations modernes possibles selon les brasseries.",
-      "histoireEtOrigines": "Le style « Gose » est associé à Goslar et Leipzig. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "description": "La Gose est une acidité salée : blé, citron, coriandre, légère salinité, corps souple et amertume presque absente. Elle doit évoquer une eau minérale vivante, pas une soupe de sel ; la coriandre chuchote, elle ne parfume pas tout le village.",
+      "histoireEtOrigines": "Originaire de Goslar puis associée à Leipzig, la Gose appartient aux bières allemandes acides de blé. Le BJCP la décrit comme modérément acide, légèrement salée, souvent coriandrée, avec une fermentation lactique et une très faible amertume.",
       "recette": {
         "profilUnique": true,
         "explicationProfil": "",
@@ -625,7 +625,7 @@
         "ebullitionEtHoublonnage": "houblonnage limité pour ne pas inhiber les bactéries",
         "fermentation": "acidification, fermentation mixte ou spontanée selon le style",
         "maturation": "maturation de quelques semaines à plusieurs années",
-        "profilRecherche": "une bière acidulée ou aigre, complexe et équilibrée plutôt que simplement mordante"
+        "profilRecherche": "une bière de blé acidulée, saline et coriandrée, très rafraîchissante, avec sel discret et acidité propre"
       },
       "sources": [
         {
@@ -697,8 +697,8 @@
           "Tulipe"
         ]
       },
-      "description": "« Leipzig Gose » se caractérise généralement par une expression dont les traits principaux sont : acidité nette à complexe, arômes fruités, citronnés, vineux ou fermiers; le malt et le houblon restent généralement en retrait. Son identité est habituellement rattachée à Leipzig, Saxe, avec des variations modernes possibles selon les brasseries.",
-      "histoireEtOrigines": "Le style « Leipzig Gose » est associé à Leipzig, Saxe. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "description": "La Leipzig Gose est la version patrimoniale : blé pâle, acidité lactique modérée, sel fin, coriandre, mousse vive et finale sèche. Elle doit rester mince et élégante, plus vieille taverne saxonne que cocktail tropical au sel rose.",
+      "histoireEtOrigines": "Après ses origines à Goslar, le style devient fortement associé à Leipzig, où il acquiert sa réputation classique. Cette carte isole l’approche traditionnelle : acidité, sel, coriandre et retenue, avant les versions contemporaines plus fruitées ou fortement aromatisées.",
       "recette": {
         "profilUnique": true,
         "explicationProfil": "",
@@ -718,7 +718,7 @@
         "ebullitionEtHoublonnage": "houblonnage limité pour ne pas inhiber les bactéries",
         "fermentation": "acidification, fermentation mixte ou spontanée selon le style",
         "maturation": "maturation de quelques semaines à plusieurs années",
-        "profilRecherche": "une bière acidulée ou aigre, complexe et équilibrée plutôt que simplement mordante"
+        "profilRecherche": "une Gose traditionnelle de Leipzig, claire, sèche et saline, avec coriandre fine et acidité lactique mesurée"
       },
       "sources": [
         {
@@ -788,8 +788,8 @@
           "Teku"
         ]
       },
-      "description": "« Contemporary Gose » se caractérise généralement par une expression dont les traits principaux sont : acidité nette à complexe, arômes fruités, citronnés, vineux ou fermiers; le malt et le houblon restent généralement en retrait. Son identité est habituellement rattachée à Mouvement craft international, avec des variations modernes possibles selon les brasseries.",
-      "histoireEtOrigines": "Le style « Contemporary Gose » est associé à Mouvement craft international. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "description": "La Contemporary Gose reprend le triangle blé-acidité-sel et l’ouvre aux fruits, houblons, épices ou dosages plus modernes. Elle peut être plus colorée, plus aromatique, plus généreuse, mais elle doit garder la nervosité saline de la Gose plutôt que sombrer dans le smoothie acide.",
+      "histoireEtOrigines": "La renaissance craft de la Gose a souvent amplifié son potentiel : fruits rouges, agrumes, fruits tropicaux, houblons aromatiques ou variations de sel. Ce style capture cette expansion internationale, tout en conservant le lien à la base allemande : blé, lactique, sel, fraîcheur.",
       "recette": {
         "profilUnique": true,
         "explicationProfil": "",
@@ -809,7 +809,7 @@
         "ebullitionEtHoublonnage": "houblonnage limité pour ne pas inhiber les bactéries",
         "fermentation": "acidification, fermentation mixte ou spontanée selon le style",
         "maturation": "maturation de quelques semaines à plusieurs années",
-        "profilRecherche": "une bière acidulée ou aigre, complexe et équilibrée plutôt que simplement mordante"
+        "profilRecherche": "une Gose moderne, acidulée et saline, ouverte aux fruits ou épices mais toujours sèche et désaltérante"
       },
       "sources": [
         {
@@ -879,8 +879,8 @@
           "Flûte"
         ]
       },
-      "description": "« Flanders Red Ale » se caractérise généralement par une expression dont les traits principaux sont : acidité nette à complexe, arômes fruités, citronnés, vineux ou fermiers; le malt et le houblon restent généralement en retrait. Son identité est habituellement rattachée à Flandre-Occidentale, avec des variations modernes possibles selon les brasseries.",
-      "histoireEtOrigines": "Le style « Flanders Red Ale » est associé à Flandre-Occidentale. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "description": "La Flanders Red Ale est le vin rouge des bières acides : robe rubis, acidité vive, cerise, prune, raisin, bois, tanins, parfois balsamique léger. Elle doit être élégante et vineuse, pas vinaigre de salade ni jus de fruits oublié.",
+      "histoireEtOrigines": "Née en Flandre occidentale, elle repose sur une longue maturation, souvent en foudres de chêne, puis sur l’assemblage de bières jeunes et âgées. Rodenbach en est l’archétype moderne, avec ce profil rouge, fruité, acide et tannique.",
       "recette": {
         "profilUnique": true,
         "explicationProfil": "",
@@ -900,7 +900,7 @@
         "ebullitionEtHoublonnage": "houblonnage limité pour ne pas inhiber les bactéries",
         "fermentation": "acidification, fermentation mixte ou spontanée selon le style",
         "maturation": "maturation de quelques semaines à plusieurs années",
-        "profilRecherche": "une bière acidulée ou aigre, complexe et équilibrée plutôt que simplement mordante"
+        "profilRecherche": "une ale rouge flamande, vineuse et acidulée, avec fruits rouges, bois, tanins et assemblage élégant"
       },
       "sources": [
         {
@@ -972,8 +972,8 @@
           "Calice"
         ]
       },
-      "description": "« Oud Bruin » se caractérise généralement par une expression dont les traits principaux sont : acidité nette à complexe, arômes fruités, citronnés, vineux ou fermiers; le malt et le houblon restent généralement en retrait. Son identité est habituellement rattachée à Flandre-Orientale, avec des variations modernes possibles selon les brasseries.",
-      "histoireEtOrigines": "Le style « Oud Bruin » est associé à Flandre-Orientale. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "description": "L’Oud Bruin est la brune acide plus maltée et ronde : caramel, raisin sec, prune, noix, pain brun, acidité douce et finale plus souple qu’une Flanders Red. Elle vieillit dans l’ombre, avec moins de tanin rouge et plus de profondeur brune.",
+      "histoireEtOrigines": "Originaire de Flandre orientale, l’Oud Bruin signifie littéralement “vieille brune” et renvoie à l’élevage ou au vieillissement du style. Historiquement, ces bières de provision développaient leur acidité avec le temps, souvent avec assemblage pour arrondir le résultat.",
       "recette": {
         "profilUnique": true,
         "explicationProfil": "",
@@ -993,7 +993,7 @@
         "ebullitionEtHoublonnage": "houblonnage limité pour ne pas inhiber les bactéries",
         "fermentation": "acidification, fermentation mixte ou spontanée selon le style",
         "maturation": "maturation de quelques semaines à plusieurs années",
-        "profilRecherche": "une bière acidulée ou aigre, complexe et équilibrée plutôt que simplement mordante"
+        "profilRecherche": "une brune flamande acidulée, maltée et fruitée, avec caramel sombre, fruits secs et acidité arrondie"
       },
       "sources": [
         {
@@ -1063,8 +1063,8 @@
           "Flûte"
         ]
       },
-      "description": "« Lambic » se caractérise généralement par une expression dont les traits principaux sont : bière sèche et complexe, acidité vive, notes citronnées, de foin, de cave et de fruits mûrs; la carbonatation dépend de l’assemblage. La fermentation spontanée et l’élevage en bois rendent chaque cuvée évolutive et fortement liée à son environnement. Son identité est habituellement rattachée à Pajottenland et vallée de la Senne, avec des variations modernes possibles selon les brasseries.",
-      "histoireEtOrigines": "Le style « Lambic » est associé à Pajottenland et vallée de la Senne. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "description": "Le Lambic est la cave du Pajottenland en bouteille ou en fût : sec, souvent peu ou pas pétillant, acide, citronné, cidré, boisé, avec foin, cuir, cave, pomme mûre et funk délicat. Sa beauté vient du temps long, pas de l’impact immédiat.",
+      "histoireEtOrigines": "Le lambic est traditionnellement brassé dans le Pajottenland et la vallée de la Senne, avec moût refroidi à l’air libre, houblons vieillis, froment cru et fermentation spontanée en bois. Il sert aussi de base à la gueuze, au faro et aux lambics fruités.",
       "recette": {
         "profilUnique": true,
         "explicationProfil": "",
@@ -1084,7 +1084,7 @@
         "ebullitionEtHoublonnage": "ébullition longue avec houblons vieillis",
         "fermentation": "ensemencement spontané en refroidissoir",
         "maturation": "élevage prolongé en foudres ou barriques, assemblage possible",
-        "profilRecherche": "une bière spontanée sèche, acidulée et profondément évolutive"
+        "profilRecherche": "un lambic sec et spontané, peu ou pas pétillant, avec acidité fine, bois, foin, cave et évolution lente"
       },
       "sources": [
         {
@@ -1156,8 +1156,8 @@
           "Tumbler lambic"
         ]
       },
-      "description": "« Gueuze » se caractérise généralement par une expression dont les traits principaux sont : bière sèche et complexe, acidité vive, notes citronnées, de foin, de cave et de fruits mûrs; la carbonatation dépend de l’assemblage. L’assemblage de lambics jeunes et vieux déclenche une refermentation et construit une bière sèche, pétillante et complexe. Son identité est habituellement rattachée à Pajottenland et vallée de la Senne, avec des variations modernes possibles selon les brasseries.",
-      "histoireEtOrigines": "Le style « Gueuze » est associé à Pajottenland et vallée de la Senne. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "description": "La Gueuze est le lambic devenu effervescence : assemblage de jeunes et vieux lambics, refermentation en bouteille, acidité vive, cidre sec, citron, cave, foin, bois et bulle nerveuse. Elle doit être tranchante mais profonde, pas seulement acide.",
+      "histoireEtOrigines": "Elle naît de l’assemblage de lambics d’âges différents : le jeune lambic apporte les sucres fermentescibles, le vieux lambic apporte complexité et profondeur, puis la bouteille relance la fermentation. C’est cette méthode qui lui vaut son aura de “Champagne de Bruxelles”.",
       "recette": {
         "profilUnique": true,
         "explicationProfil": "",
@@ -1177,7 +1177,7 @@
         "ebullitionEtHoublonnage": "ébullition longue avec houblons vieillis",
         "fermentation": "ensemencement spontané en refroidissoir",
         "maturation": "élevage prolongé en foudres ou barriques, assemblage possible",
-        "profilRecherche": "une bière spontanée sèche, acidulée et profondément évolutive"
+        "profilRecherche": "une gueuze sèche, pétillante et assemblée, avec acidité vive, complexité de lambic vieux et finale très longue"
       },
       "sources": [
         {
@@ -1252,8 +1252,8 @@
           "Tumbler lambic"
         ]
       },
-      "description": "« Fruit Lambic » se caractérise généralement par une expression dont les traits principaux sont : bière sèche et complexe, acidité vive, notes citronnées, de foin, de cave et de fruits mûrs; la carbonatation dépend de l’assemblage. Son identité est habituellement rattachée à Pajottenland et vallée de la Senne, avec des variations modernes possibles selon les brasseries.",
-      "histoireEtOrigines": "Le style « Fruit Lambic » est associé à Pajottenland et vallée de la Senne. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "description": "Le Fruit Lambic n’est pas une bière au sirop : cerise, framboise, pêche, abricot, raisin ou cassis fermentent avec le lambic et changent sa couleur, son acidité, ses tanins et son parfum. Le fruit doit devenir cave et fermentation, pas bonbon.",
+      "histoireEtOrigines": "Le fruit était traditionnellement ajouté par les assembleurs ou cafetiers pour élargir les bières disponibles. Le BJCP rappelle que les fruits sont souvent ajoutés pendant l’élevage, afin que levures et bactéries fermentent leurs sucres ; les krieks et framboises restent les références historiques.",
       "recette": {
         "profilUnique": true,
         "explicationProfil": "",
@@ -1275,7 +1275,7 @@
         "ebullitionEtHoublonnage": "ébullition longue avec houblons vieillis",
         "fermentation": "ensemencement spontané en refroidissoir",
         "maturation": "élevage prolongé en foudres ou barriques, assemblage possible",
-        "profilRecherche": "une bière spontanée sèche, acidulée et profondément évolutive"
+        "profilRecherche": "un lambic fruité sec et fermenté, où le fruit apporte acidité, tanin et parfum sans masquer le caractère sauvage"
       },
       "sources": [
         {
@@ -1345,8 +1345,8 @@
           "Tulipe"
         ]
       },
-      "description": "« American Sour Ale » se caractérise généralement par une expression dont les traits principaux sont : acidité nette à complexe, arômes fruités, citronnés, vineux ou fermiers; le malt et le houblon restent généralement en retrait. Son identité est habituellement rattachée à États-Unis, avec des variations modernes possibles selon les brasseries.",
-      "histoireEtOrigines": "Le style « American Sour Ale » est associé à États-Unis. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "description": "L’American Sour Ale est l’acidité craft à géométrie variable : base blonde, ambrée, brune ou forte, fermentation mixte, bois possible, fruits possibles, acidité de légère à franche. Elle doit avoir un centre de gravité clair, sinon elle devient juste “un truc acide en barrique”.",
+      "histoireEtOrigines": "Les brasseurs américains ont adopté les cultures mixtes, les barriques de vin et les bactéries lactiques en s’inspirant des traditions belges et allemandes, mais avec moins de contraintes géographiques. La catégorie couvre donc une méthode et un équilibre plus qu’une couleur ou une recette fixe.",
       "recette": {
         "profilUnique": true,
         "explicationProfil": "",
@@ -1366,7 +1366,7 @@
         "ebullitionEtHoublonnage": "houblonnage limité pour ne pas inhiber les bactéries",
         "fermentation": "acidification, fermentation mixte ou spontanée selon le style",
         "maturation": "maturation de quelques semaines à plusieurs années",
-        "profilRecherche": "une bière acidulée ou aigre, complexe et équilibrée plutôt que simplement mordante"
+        "profilRecherche": "une sour américaine structurée, acidulée et expressive, avec base lisible, fermentation maîtrisée et finale propre"
       },
       "sources": [
         {
@@ -1436,8 +1436,8 @@
           "Tulipe"
         ]
       },
-      "description": "« Fruited American Sour Ale » se caractérise généralement par une expression dont les traits principaux sont : acidité nette à complexe, arômes fruités, citronnés, vineux ou fermiers; le malt et le houblon restent généralement en retrait. Son identité est habituellement rattachée à États-Unis, avec des variations modernes possibles selon les brasseries.",
-      "histoireEtOrigines": "Le style « Fruited American Sour Ale » est associé à États-Unis. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "description": "La Fruited American Sour Ale ajoute le fruit au langage sour américain : framboise, cerise, pêche, mangue, agrume ou assemblages plus sauvages. Le fruit peut être intense, mais il doit rester fermenté, tendu, vivant, pas transformer la bière en purée sucrée sous pression.",
+      "histoireEtOrigines": "La scène craft américaine a largement popularisé les sour ales fruitées, parfois en barrique, parfois en acidification plus rapide. Cette carte distingue les versions où le fruit devient le partenaire principal de l’acidité, sans être un simple arôme posé sur une base neutre.",
       "recette": {
         "profilUnique": true,
         "explicationProfil": "",
@@ -1459,7 +1459,7 @@
         "ebullitionEtHoublonnage": "houblonnage limité pour ne pas inhiber les bactéries",
         "fermentation": "acidification, fermentation mixte ou spontanée selon le style",
         "maturation": "maturation de quelques semaines à plusieurs années",
-        "profilRecherche": "une bière acidulée ou aigre, complexe et équilibrée plutôt que simplement mordante"
+        "profilRecherche": "une sour américaine fruitée, vive et intégrée, avec fruit expressif, acidité nette et base encore perceptible"
       },
       "sources": [
         {
@@ -1529,8 +1529,8 @@
           "Tulipe"
         ]
       },
-      "description": "« Brett Beer » se caractérise généralement par une expression dont les traits principaux sont : acidité nette à complexe, arômes fruités, citronnés, vineux ou fermiers; le malt et le houblon restent généralement en retrait. Son identité est habituellement rattachée à Mouvement craft international, avec des variations modernes possibles selon les brasseries.",
-      "histoireEtOrigines": "Le style « Brett Beer » est associé à Mouvement craft international. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "description": "La Brett Beer met Brettanomyces au premier plan : ananas mûr, citron, foin, cuir, poivre, cave propre, parfois écurie légère. Elle n’est pas obligatoirement acide ; son sujet principal est le funk sec, l’évolution aromatique et la tension sauvage.",
+      "histoireEtOrigines": "Le BJCP classe Brett Beer dans les American Wild Ales et précise que Brett peut être utilisé sans acidité marquée, en primaire ou en maturation. Ce style moderne vient de la réhabilitation craft d’une levure longtemps perçue comme défaut dans les bières propres.",
       "recette": {
         "profilUnique": true,
         "explicationProfil": "",
@@ -1550,7 +1550,7 @@
         "ebullitionEtHoublonnage": "houblonnage limité pour ne pas inhiber les bactéries",
         "fermentation": "acidification, fermentation mixte ou spontanée selon le style",
         "maturation": "maturation de quelques semaines à plusieurs années",
-        "profilRecherche": "une bière acidulée ou aigre, complexe et équilibrée plutôt que simplement mordante"
+        "profilRecherche": "une bière sèche dominée par Brettanomyces, funky et fruitée, avec acidité faible à modérée mais grande évolution aromatique"
       },
       "sources": [
         {
@@ -1620,8 +1620,8 @@
           "Tulipe"
         ]
       },
-      "description": "« Mixed-Culture Brett Beer » se caractérise généralement par une expression dont les traits principaux sont : acidité nette à complexe, arômes fruités, citronnés, vineux ou fermiers; le malt et le houblon restent généralement en retrait. Son identité est habituellement rattachée à Mouvement craft international, avec des variations modernes possibles selon les brasseries.",
-      "histoireEtOrigines": "Le style « Mixed-Culture Brett Beer » est associé à Mouvement craft international. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "description": "La Mixed-Culture Brett Beer élargit le territoire : Brett, levures classiques, Lactobacillus, Pediococcus ou flore de barrique construisent acidité, funk, fruit, cuir, bois et sécheresse. Ici, plusieurs microbes jouent dans la même cave ; il faut un chef d’orchestre.",
+      "histoireEtOrigines": "Les cultures mixtes prolongent les modèles belges et les pratiques de barrique, mais avec une approche craft plus pilotée. Le BJCP décrit les Mixed-Fermentation Sour Beers comme des bières où micro-organismes non-Saccharomyces et bactéries peuvent produire acidité, complexité et caractère sauvage.",
       "recette": {
         "profilUnique": true,
         "explicationProfil": "",
@@ -1641,7 +1641,7 @@
         "ebullitionEtHoublonnage": "houblonnage limité pour ne pas inhiber les bactéries",
         "fermentation": "acidification, fermentation mixte ou spontanée selon le style",
         "maturation": "maturation de quelques semaines à plusieurs années",
-        "profilRecherche": "une bière acidulée ou aigre, complexe et équilibrée plutôt que simplement mordante"
+        "profilRecherche": "une bière de culture mixte sèche et complexe, avec Brett, acidité, fruit et funk en équilibre contrôlé"
       },
       "sources": [
         {
@@ -1712,8 +1712,8 @@
           "Teku"
         ]
       },
-      "description": "« Contemporary Belgian-Style Spontaneously Fermented Ale » se caractérise généralement par une expression dont les traits principaux sont : bière sèche et complexe, acidité vive, notes citronnées, de foin, de cave et de fruits mûrs; la carbonatation dépend de l’assemblage. Son identité est habituellement rattachée à Belgique contemporaine et interprétations internationales, avec des variations modernes possibles selon les brasseries.",
-      "histoireEtOrigines": "Le style « Contemporary Belgian-Style Spontaneously Fermented Ale » est associé à Belgique contemporaine et interprétations internationales. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "description": "Cette bière reprend la grammaire du lambic sans forcément porter son ancrage traditionnel : moût exposé, microflore locale, bois, temps long, acidité, foin, fruit mûr, cave et assemblage possible. Elle doit assumer son terroir propre, pas imiter Bruxelles avec un masque.",
+      "histoireEtOrigines": "Les brasseries contemporaines hors Pajottenland ont développé des fermentations spontanées inspirées du lambic, souvent via coolship et élevage en barriques. Cette carte accueille ces bières de méthode belge, mais de lieu différent, où l’environnement devient une signature locale.",
       "recette": {
         "profilUnique": true,
         "explicationProfil": "",
@@ -1733,7 +1733,7 @@
         "ebullitionEtHoublonnage": "ébullition longue avec houblons vieillis",
         "fermentation": "ensemencement spontané en refroidissoir",
         "maturation": "élevage prolongé en foudres ou barriques, assemblage possible",
-        "profilRecherche": "une bière spontanée sèche, acidulée et profondément évolutive"
+        "profilRecherche": "une spontanée contemporaine d’inspiration belge, sèche et boisée, exprimant sa microflore locale plutôt qu’une copie de lambic"
       },
       "sources": [
         {
@@ -1806,8 +1806,8 @@
           "Tulipe"
         ]
       },
-      "description": "« Wood- and Barrel-Aged Sour Beer » se caractérise généralement par une expression dont les traits principaux sont : acidité nette à complexe, arômes fruités, citronnés, vineux ou fermiers; le malt et le houblon restent généralement en retrait. Son identité est habituellement rattachée à International, avec des variations modernes possibles selon les brasseries.",
-      "histoireEtOrigines": "Le style « Wood- and Barrel-Aged Sour Beer » est associé à International. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "description": "La Wood- and Barrel-Aged Sour Beer ajoute le bois à l’acidité : tanins, vanille légère, vin, chêne, oxydation douce, profondeur et arrondi. La barrique doit étirer la bière, pas lui coller une planche mouillée sur la langue.",
+      "histoireEtOrigines": "Le vieillissement en bois est central dans de nombreuses traditions acides, notamment lambic et Flanders Red, puis devient un outil majeur de la scène craft. Les barriques peuvent apporter oxygène, microflore, tanins, traces du contenu précédent et temps de maturation.",
       "recette": {
         "profilUnique": true,
         "explicationProfil": "",
@@ -1827,7 +1827,7 @@
         "ebullitionEtHoublonnage": "houblonnage limité pour ne pas inhiber les bactéries",
         "fermentation": "acidification, fermentation mixte ou spontanée selon le style",
         "maturation": "maturation de quelques semaines à plusieurs années",
-        "profilRecherche": "une bière acidulée ou aigre, complexe et équilibrée plutôt que simplement mordante"
+        "profilRecherche": "une sour vieillie en bois, acidulée et profonde, où barrique, tanins et fermentation s’intègrent sans dominer"
       },
       "sources": [
         {
@@ -1897,8 +1897,8 @@
           "Tulipe"
         ]
       },
-      "description": "« Fruited Wood- and Barrel-Aged Sour Beer » se caractérise généralement par une expression dont les traits principaux sont : acidité nette à complexe, arômes fruités, citronnés, vineux ou fermiers; le malt et le houblon restent généralement en retrait. Son identité est habituellement rattachée à International, avec des variations modernes possibles selon les brasseries.",
-      "histoireEtOrigines": "Le style « Fruited Wood- and Barrel-Aged Sour Beer » est associé à International. Sa forme actuelle résulte de l’évolution des matières premières, des équipements et des habitudes de consommation, tout en conservant les traits qui permettent de l’identifier. Les référentiels contemporains décrivent une plage plutôt qu’une formule rigide : des exemples commerciaux peuvent s’écarter légèrement des valeurs usuelles sans perdre l’identité du style. La fiche privilégie donc les caractères communs et durables plutôt qu’une interprétation unique.",
+      "description": "La Fruited Wood- and Barrel-Aged Sour Beer empile les trois étages dangereux : acidité, fruit et bois. Cerise, framboise, pêche, raisin ou fruits sauvages rencontrent tanins, barrique, fermentation et temps. Le but n’est pas une confiture acide, mais un vin de fruit brassicole.",
+      "histoireEtOrigines": "Cette famille prolonge à la fois les lambics fruités, les Flanders ales vieillies et les sours américaines de barrique. Le fruit peut relancer la fermentation, apporter tanins et acidité, tandis que le bois structure la finale et ajoute de la profondeur.",
       "recette": {
         "profilUnique": true,
         "explicationProfil": "",
@@ -1920,7 +1920,7 @@
         "ebullitionEtHoublonnage": "houblonnage limité pour ne pas inhiber les bactéries",
         "fermentation": "acidification, fermentation mixte ou spontanée selon le style",
         "maturation": "maturation de quelques semaines à plusieurs années",
-        "profilRecherche": "une bière acidulée ou aigre, complexe et équilibrée plutôt que simplement mordante"
+        "profilRecherche": "une sour fruitée élevée en bois, avec fruit fermenté, acidité nette, tanins et profondeur de barrique sans sucrosité lourde"
       },
       "sources": [
         {
