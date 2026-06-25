@@ -1,0 +1,1585 @@
+{
+  "schemaVersion": "1.0.0",
+  "taxonomyVersion": "1.0.0",
+  "collection": {
+    "id": 4,
+    "slug": "traditions-belges-et-francaises",
+    "nom": "Traditions belges et françaises"
+  },
+  "cartes": [
+    {
+      "id": "belgian-ale-ale-belge",
+      "nom": "Belgian Ale / Ale belge",
+      "collectionId": 4,
+      "nature": "F",
+      "parentPrincipalId": "ale",
+      "aliases": [
+        "Belgian Ale",
+        "Ale belge"
+      ],
+      "paysOrigine": [
+        "Belgique"
+      ],
+      "origine": {
+        "libelle": "Belgique",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": null,
+        "max": null,
+        "unite": "%",
+        "statut": "variable"
+      },
+      "amertume": {
+        "min": null,
+        "max": null,
+        "unite": "IBU",
+        "statut": "variable"
+      },
+      "couleur": {
+        "min": null,
+        "max": null,
+        "unite": "EBC",
+        "statut": "variable"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": null,
+        "temperatureMax": null,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Verre adapté au sous-style"
+        ]
+      },
+      "description": "L’Ale belge n’est pas un style unique, mais une famille de fermentation expressive : fruit de levure, épices, malt clair ou ambré, sucres bien atténués et effervescence vive. Elle peut être simple ou puissante, blonde ou brune, mais elle garde cette signature belge où la levure écrit presque autant que le malt.",
+      "histoireEtOrigines": "La Belgique a construit une mosaïque de styles plutôt qu’un grand modèle unique : bières d’abbaye, ales spéciales, blondes fortes, saisons, bières de table et créations modernes. Cette carte sert de porte d’entrée à cette tradition : une fermentation haute libre, souvent sèche, parfois épicée, toujours difficile à enfermer dans une seule case.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "« Belgian Ale / Ale belge » désigne une famille regroupant plusieurs styles dont la force, la couleur, l’amertume, les ingrédients et les procédés peuvent diverger. Aucun profil de recette unique ne serait représentatif de l’ensemble de la famille.",
+        "maltsEtCereales": [
+          "malt Pilsner belge",
+          "malts de spécialité selon la couleur",
+          "sucres fermentescibles fréquents"
+        ],
+        "houblons": [
+          "houblons continentaux modérés"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure belge expressive"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "modérément minérale",
+        "empatage": "empâtage favorisant une forte atténuation",
+        "ebullitionEtHoublonnage": "houblonnage d’équilibre, épices parfois discrètes",
+        "fermentation": "fermentation haute avec montée contrôlée de température",
+        "maturation": "conditionnement en cuve ou refermentation en bouteille",
+        "profilRecherche": "une ale belge expressive, sèche et effervescente, où levure, malt et épices naturelles restent lisibles sans devenir lourds"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Belgian Ale / Ale belge — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Belgian Ale / Ale belge — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Belgian Ale / Ale belge — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "belgian-table-beer",
+      "nom": "Belgian Table Beer",
+      "collectionId": 4,
+      "nature": "S",
+      "parentPrincipalId": "belgian-ale-ale-belge",
+      "aliases": [],
+      "paysOrigine": [
+        "Belgique"
+      ],
+      "origine": {
+        "libelle": "Belgique, tradition domestique et monastique",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 1.5,
+        "max": 3.5,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 10,
+        "max": 30,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 4,
+        "max": 24,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 5,
+        "temperatureMax": 8,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Tulipe belge",
+          "Gobelet"
+        ]
+      },
+      "description": "La Belgian Table Beer est une bière du quotidien, légère mais pas muette : faible alcool, corps discret, fermentation belge douce, céréale, fruit léger, parfois une pointe épicée. Elle doit accompagner le repas, pas l’écraser ; une petite bière avec des manières de grande maison.",
+      "histoireEtOrigines": "Les bières de table belges appartiennent à la culture domestique, scolaire, monastique ou familiale d’une bière peu alcoolisée, parfois servie là où l’eau n’était pas toujours l’horizon le plus joyeux. Dans ZythoHunt, elle représente le versant modeste des traditions belges : moins d’apparat, plus d’usage.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt Pilsner belge",
+          "malts de spécialité selon la couleur",
+          "sucres fermentescibles fréquents"
+        ],
+        "houblons": [
+          "houblons continentaux modérés"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure belge expressive"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "modérément minérale",
+        "empatage": "empâtage favorisant une forte atténuation",
+        "ebullitionEtHoublonnage": "houblonnage d’équilibre, épices parfois discrètes",
+        "fermentation": "fermentation haute avec montée contrôlée de température",
+        "maturation": "conditionnement en cuve ou refermentation en bouteille",
+        "profilRecherche": "une bière belge de table, légère et sèche, avec assez de levure et de céréale pour rester une vraie bière"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Belgian Table Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Belgian Table Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Belgian Table Beer — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "belgian-session-ale",
+      "nom": "Belgian Session Ale",
+      "collectionId": 4,
+      "nature": "S",
+      "parentPrincipalId": "belgian-ale-ale-belge",
+      "aliases": [],
+      "paysOrigine": [
+        "Belgique"
+      ],
+      "origine": {
+        "libelle": "Belgique contemporain",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 3.0,
+        "max": 5.0,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 15,
+        "max": 35,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 4,
+        "max": 30,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 9,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Tulipe belge",
+          "Calice"
+        ]
+      },
+      "description": "La Belgian Session Ale reprend le parfum belge en format buvable : fruits clairs, poivre, céréale, mousse vive, alcool modéré et finale sèche. Elle doit garder le caractère de levure sans tomber dans la mini-tripel, ni dans la blonde sans relief.",
+      "histoireEtOrigines": "C’est une lecture contemporaine d’un vieux besoin : faire une bière belge de caractère qui ne demande pas de s’asseoir jusqu’à demain. Elle dialogue avec les bières de table, les singles et les blondes légères, mais avec un vocabulaire craft plus libre.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt Pilsner belge",
+          "malts de spécialité selon la couleur",
+          "sucres fermentescibles fréquents"
+        ],
+        "houblons": [
+          "houblons continentaux modérés"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure belge expressive"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "modérément minérale",
+        "empatage": "empâtage favorisant une forte atténuation",
+        "ebullitionEtHoublonnage": "houblonnage d’équilibre, épices parfois discrètes",
+        "fermentation": "fermentation haute avec montée contrôlée de température",
+        "maturation": "conditionnement en cuve ou refermentation en bouteille",
+        "profilRecherche": "une ale belge légère à modérée, fruitée-épicée, sèche et très buvable, avec une vraie signature de levure"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Belgian Session Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Belgian Session Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Belgian Session Ale — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "belgian-single",
+      "nom": "Belgian Single",
+      "collectionId": 4,
+      "nature": "S",
+      "parentPrincipalId": "belgian-ale-ale-belge",
+      "aliases": [
+        "Trappist Single"
+      ],
+      "paysOrigine": [
+        "Belgique"
+      ],
+      "origine": {
+        "libelle": "Abbayes belges",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 4.8,
+        "max": 6.0,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 25,
+        "max": 45,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 5,
+        "max": 14,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 9,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Calice",
+          "Tulipe belge"
+        ]
+      },
+      "description": "La Belgian Single est la bière de moine qui a appris à être vive : blonde, sèche, bien houblonnée, très carbonatée, avec levure belge fruitée-épicée et malt grainé discret. Elle a la silhouette d’une petite Tripel, mais sans le poids ni la chaleur.",
+      "histoireEtOrigines": "Longtemps associée aux bières simples brassées pour la consommation des moines, elle a pris une forme moderne plus pâle, plus sèche et plus amère. Westmalle brassait déjà une bière de ce type en 1922, mais le style actuel reflète aussi des goûts plus récents pour les blondes belges houblonnées.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt Pilsner belge",
+          "malts de spécialité selon la couleur",
+          "sucres fermentescibles fréquents"
+        ],
+        "houblons": [
+          "houblons continentaux modérés"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure belge expressive"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "modérément minérale",
+        "empatage": "empâtage favorisant une forte atténuation",
+        "ebullitionEtHoublonnage": "houblonnage d’équilibre, épices parfois discrètes",
+        "fermentation": "fermentation haute avec montée contrôlée de température",
+        "maturation": "conditionnement en cuve ou refermentation en bouteille",
+        "profilRecherche": "une blonde monastique sèche, amère et très carbonatée, avec levure belge expressive et malt pâle en soutien"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Belgian Single — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Belgian Single — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Belgian Single — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "belgian-pale-ale",
+      "nom": "Belgian Pale Ale",
+      "collectionId": 4,
+      "nature": "S",
+      "parentPrincipalId": "belgian-ale-ale-belge",
+      "aliases": [],
+      "paysOrigine": [
+        "Belgique"
+      ],
+      "origine": {
+        "libelle": "Belgique, notamment Anvers et Brabant",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 4.8,
+        "max": 5.5,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 20,
+        "max": 30,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 16,
+        "max": 30,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 8,
+        "temperatureMax": 11,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Tulipe belge",
+          "Calice"
+        ]
+      },
+      "description": "La Belgian Pale Ale est l’ale belge de comptoir : cuivrée, maltée, fruitée, avec pain toasté, biscuit, poire, orange, houblon floral ou herbacé, et peu de phénols agressifs. Elle est belge, oui, mais sans la fanfare épicée des grandes blondes fortes.",
+      "histoireEtOrigines": "Le style est surtout présent dans les provinces flamandes comme Anvers, Brabant, Hainaut et Flandre orientale. Il naît après un concours de 1904 destiné à créer une spécialité régionale capable de rivaliser avec les ales anglaises et les lagers continentales ; De Koninck en devient l’exemple moderne le plus connu.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt Pilsner belge",
+          "malts de spécialité selon la couleur",
+          "sucres fermentescibles fréquents"
+        ],
+        "houblons": [
+          "houblons continentaux modérés"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure belge expressive"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "modérément minérale",
+        "empatage": "empâtage favorisant une forte atténuation",
+        "ebullitionEtHoublonnage": "houblonnage d’équilibre, épices parfois discrètes",
+        "fermentation": "fermentation haute avec montée contrôlée de température",
+        "maturation": "conditionnement en cuve ou refermentation en bouteille",
+        "profilRecherche": "une pale ale belge cuivrée, maltée et fruitée, équilibrée par un houblon discret et une finale sèche"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Belgian Pale Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Belgian Pale Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Belgian Pale Ale — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "speciale-belge",
+      "nom": "Spéciale Belge",
+      "collectionId": 4,
+      "nature": "S",
+      "parentPrincipalId": "belgian-ale-ale-belge",
+      "aliases": [],
+      "paysOrigine": [
+        "Belgique"
+      ],
+      "origine": {
+        "libelle": "Belgique, notamment Anvers et Brabant",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 4.8,
+        "max": 5.5,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 20,
+        "max": 30,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 16,
+        "max": 30,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 8,
+        "temperatureMax": 11,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Tulipe belge",
+          "Calice"
+        ]
+      },
+      "description": "La Spéciale Belge est la cousine patrimoniale de la Belgian Pale Ale : ambrée, douce de malt, légèrement fruitée, avec biscuit, miel, toast et houblon en arrière-plan. Elle ne cherche pas l’exubérance ; elle cherche l’équilibre belge civilisé.",
+      "histoireEtOrigines": "La Spéciale Belge est explicitement liée au concours lancé en 1904 pour proposer un style belge capable de répondre aux bières étrangères. Elle devient une ale nationale de compromis : plus maltée qu’une lager, moins sauvage qu’une fermentation belge forte, suffisamment typée pour ne pas disparaître dans le verre.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt Pilsner belge",
+          "malts de spécialité selon la couleur",
+          "sucres fermentescibles fréquents"
+        ],
+        "houblons": [
+          "houblons continentaux modérés"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure belge expressive"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "modérément minérale",
+        "empatage": "empâtage favorisant une forte atténuation",
+        "ebullitionEtHoublonnage": "houblonnage d’équilibre, épices parfois discrètes",
+        "fermentation": "fermentation haute avec montée contrôlée de température",
+        "maturation": "conditionnement en cuve ou refermentation en bouteille",
+        "profilRecherche": "une ale belge ambrée, douce et équilibrée, avec malt toasté, fruit léger et houblon discret"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Spéciale Belge — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Spéciale Belge — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Spéciale Belge — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "belgian-blonde-ale",
+      "nom": "Belgian Blonde Ale",
+      "collectionId": 4,
+      "nature": "S",
+      "parentPrincipalId": "belgian-ale-ale-belge",
+      "aliases": [],
+      "paysOrigine": [
+        "Belgique"
+      ],
+      "origine": {
+        "libelle": "Belgique",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 6.0,
+        "max": 7.5,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 15,
+        "max": 30,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 8,
+        "max": 16,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 7,
+        "temperatureMax": 10,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Calice",
+          "Tulipe belge"
+        ]
+      },
+      "description": "La Belgian Blonde Ale est une blonde forte mais polie : or profond, malt doux, miel léger, orange ou citron de levure, poivre fin, alcool lisse et finale sèche. Elle doit séduire sans montrer ses muscles, comme une abbaye qui aurait appris le marketing.",
+      "histoireEtOrigines": "Le style est relativement moderne : il se développe après la Seconde Guerre mondiale pour séduire les buveurs européens de pilsners, avec Leffe comme moteur de popularisation. Il garde une impression presque lager dans sa propreté, mais avec une levure belge plus expressive.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt Pilsner belge",
+          "malts de spécialité selon la couleur",
+          "sucres fermentescibles fréquents"
+        ],
+        "houblons": [
+          "houblons continentaux modérés"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure belge expressive"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "modérément minérale",
+        "empatage": "empâtage favorisant une forte atténuation",
+        "ebullitionEtHoublonnage": "houblonnage d’équilibre, épices parfois discrètes",
+        "fermentation": "fermentation haute avec montée contrôlée de température",
+        "maturation": "conditionnement en cuve ou refermentation en bouteille",
+        "profilRecherche": "une blonde belge forte mais douce, claire, sèche, subtilement fruitée-épicée, avec alcool parfaitement lissé"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Belgian Blonde Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Belgian Blonde Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Belgian Blonde Ale — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "belgian-golden-strong-ale-belgian-strong-blonde-ale",
+      "nom": "Belgian Golden Strong Ale / Belgian Strong Blonde Ale",
+      "collectionId": 4,
+      "nature": "S",
+      "parentPrincipalId": "belgian-ale-ale-belge",
+      "aliases": [
+        "Belgian Golden Strong Ale",
+        "Belgian Strong Blonde Ale"
+      ],
+      "paysOrigine": [
+        "Belgique"
+      ],
+      "origine": {
+        "libelle": "Belgique",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 7.5,
+        "max": 10.5,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 20,
+        "max": 40,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 6,
+        "max": 14,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 7,
+        "temperatureMax": 10,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Tulipe belge",
+          "Calice"
+        ]
+      },
+      "description": "La Belgian Golden Strong Ale est une illusion dangereuse : très pâle, très sèche, très pétillante, avec poire, pomme, herbes, poivre, alcool parfumé et mousse spectaculaire. Elle paraît légère jusqu’au moment où elle se lève de table avant toi.",
+      "histoireEtOrigines": "Le style est lié à la brasserie Moortgat et à Duvel, développée après la Première Guerre mondiale en réponse à la popularité croissante des pilsners. Sa forme moderne, très pâle, sèche et effervescente, se stabilise surtout dans les années 1970.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt Pilsner belge",
+          "malts de spécialité selon la couleur",
+          "sucres fermentescibles fréquents"
+        ],
+        "houblons": [
+          "houblons continentaux modérés"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure belge expressive"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "modérément minérale",
+        "empatage": "empâtage favorisant une forte atténuation",
+        "ebullitionEtHoublonnage": "houblonnage d’équilibre, épices parfois discrètes",
+        "fermentation": "fermentation haute avec montée contrôlée de température",
+        "maturation": "conditionnement en cuve ou refermentation en bouteille",
+        "profilRecherche": "une blonde belge très forte, sèche et effervescente, où poire, houblon herbacé et alcool poivré restent élégants"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Belgian Golden Strong Ale / Belgian Strong Blonde Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Belgian Golden Strong Ale / Belgian Strong Blonde Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Belgian Golden Strong Ale / Belgian Strong Blonde Ale — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "belgian-dark-strong-ale",
+      "nom": "Belgian Dark Strong Ale",
+      "collectionId": 4,
+      "nature": "S",
+      "parentPrincipalId": "belgian-ale-ale-belge",
+      "aliases": [],
+      "paysOrigine": [
+        "Belgique"
+      ],
+      "origine": {
+        "libelle": "Belgique",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 8.0,
+        "max": 12.0,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 20,
+        "max": 35,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 24,
+        "max": 70,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 10,
+        "temperatureMax": 14,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Calice",
+          "Tulipe belge"
+        ]
+      },
+      "description": "La Belgian Dark Strong Ale est un coffre sombre : fruits secs, prune, figue, caramel profond, pain grillé, épices de levure et alcool chaud mais soyeux. Elle doit être riche sans devenir sirupeuse, puissante sans tourner au vin chaud.",
+      "histoireEtOrigines": "Le BJCP la décrit comme une ale belge très forte, sombre, complexe, avec richesse maltée, fruits noirs et notes épicées. Hors Belgique, elle est souvent rapprochée du mot “Quadrupel”, même si les usages commerciaux belges reposent aussi sur des noms de couleur, de force ou de cuvée.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt Pilsner belge",
+          "malts de spécialité selon la couleur",
+          "sucres fermentescibles fréquents"
+        ],
+        "houblons": [
+          "houblons continentaux modérés"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure belge expressive"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "modérément minérale",
+        "empatage": "empâtage favorisant une forte atténuation",
+        "ebullitionEtHoublonnage": "houblonnage d’équilibre, épices parfois discrètes",
+        "fermentation": "fermentation haute avec montée contrôlée de température",
+        "maturation": "conditionnement en cuve ou refermentation en bouteille",
+        "profilRecherche": "une ale belge sombre et forte, riche en fruits secs, caramel brun et épices, avec alcool fondu et finale non sirupeuse"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Belgian Dark Strong Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Belgian Dark Strong Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Belgian Dark Strong Ale — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "dubbel",
+      "nom": "Dubbel",
+      "collectionId": 4,
+      "nature": "S",
+      "parentPrincipalId": "belgian-ale-ale-belge",
+      "aliases": [],
+      "paysOrigine": [
+        "Belgique"
+      ],
+      "origine": {
+        "libelle": "Abbayes belges",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 6.0,
+        "max": 7.6,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 15,
+        "max": 25,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 20,
+        "max": 40,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 9,
+        "temperatureMax": 12,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Calice",
+          "Tulipe belge"
+        ]
+      },
+      "description": "La Dubbel est la brune d’abbaye en velours : cuivre profond, caramel, pain grillé, raisin, prune, sucre brun, levure épicée et chaleur discrète. Elle semble douce, mais sa finale doit rester assez sèche pour ne pas s’écrouler sous son propre malt.",
+      "histoireEtOrigines": "Les bières brunes fortes existaient déjà, mais la Dubbel moderne est généralement rattachée à Westmalle, qui produit une double brune après la relance de la brasserie en 1922. Les versions d’après-guerre diffusent ensuite ce profil monastique : malt, sucre, fruits noirs et levure belge.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt Pilsner belge",
+          "malts de spécialité selon la couleur",
+          "sucres fermentescibles fréquents"
+        ],
+        "houblons": [
+          "houblons continentaux modérés"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure belge expressive"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "modérément minérale",
+        "empatage": "empâtage favorisant une forte atténuation",
+        "ebullitionEtHoublonnage": "houblonnage d’équilibre, épices parfois discrètes",
+        "fermentation": "fermentation haute avec montée contrôlée de température",
+        "maturation": "conditionnement en cuve ou refermentation en bouteille",
+        "profilRecherche": "une brune belge d’abbaye, maltée et fruitée, avec caramel sombre, fruits secs, épices et finale assez sèche"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Dubbel — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Dubbel — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Dubbel — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "tripel",
+      "nom": "Tripel",
+      "collectionId": 4,
+      "nature": "S",
+      "parentPrincipalId": "belgian-ale-ale-belge",
+      "aliases": [],
+      "paysOrigine": [
+        "Belgique"
+      ],
+      "origine": {
+        "libelle": "Belgique, tradition monastique",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 7.5,
+        "max": 9.5,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 20,
+        "max": 40,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 8,
+        "max": 14,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 8,
+        "temperatureMax": 11,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Calice",
+          "Tulipe belge"
+        ]
+      },
+      "description": "La Tripel cache une grande force derrière une robe claire : malt pâle, miel, poivre, orange, citron, houblon noble, mousse dense et finale sèche. Elle doit être traîtresse dans le bon sens : puissante, mais plus aérienne qu’elle n’a le droit de l’être.",
+      "histoireEtOrigines": "La Tripel est popularisée par Westmalle, qui la brasse pour la première fois en 1931. Le style combine alcool élevé, forte atténuation et effervescence, ce qui explique cette impression paradoxale : grande puissance, mais corps plus léger qu’attendu.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt Pilsner belge",
+          "malts de spécialité selon la couleur",
+          "sucres fermentescibles fréquents"
+        ],
+        "houblons": [
+          "houblons continentaux modérés"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure belge expressive"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "modérément minérale",
+        "empatage": "empâtage favorisant une forte atténuation",
+        "ebullitionEtHoublonnage": "houblonnage d’équilibre, épices parfois discrètes",
+        "fermentation": "fermentation haute avec montée contrôlée de température",
+        "maturation": "conditionnement en cuve ou refermentation en bouteille",
+        "profilRecherche": "une blonde monastique forte, sèche et épicée, très effervescente, avec alcool caché et finale longue"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Tripel — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Tripel — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Tripel — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "quadrupel",
+      "nom": "Quadrupel",
+      "collectionId": 4,
+      "nature": "S",
+      "parentPrincipalId": "belgian-ale-ale-belge",
+      "aliases": [
+        "Quadrupel Ale"
+      ],
+      "paysOrigine": [
+        "Belgique",
+        "Pays-Bas"
+      ],
+      "origine": {
+        "libelle": "Tradition monastique belgo-néerlandaise",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 9.0,
+        "max": 14.0,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 20,
+        "max": 50,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 30,
+        "max": 80,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 11,
+        "temperatureMax": 15,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Calice",
+          "Snifter"
+        ]
+      },
+      "description": "La Quadrupel pousse la logique monastique vers le grand soir : brun profond, fruits noirs, datte, figue, caramel brûlé léger, sucre candi, épices, alcool large et texture ample. Elle doit impressionner sans devenir confiture alcoolisée.",
+      "histoireEtOrigines": "Le terme Quadrupel est surtout employé hors Belgique comme proche parent de la Belgian Dark Strong Ale, même si “Quadrupel” vient aussi de noms commerciaux spécifiques. Dans ZythoHunt, la carte isole le versant le plus massif, sombre et contemplatif de cette famille.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt Pilsner belge",
+          "malts de spécialité selon la couleur",
+          "sucres fermentescibles fréquents"
+        ],
+        "houblons": [
+          "houblons continentaux modérés"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure belge expressive"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "modérément minérale",
+        "empatage": "empâtage favorisant une forte atténuation",
+        "ebullitionEtHoublonnage": "houblonnage d’équilibre, épices parfois discrètes",
+        "fermentation": "fermentation haute avec montée contrôlée de température",
+        "maturation": "conditionnement en cuve ou refermentation en bouteille",
+        "profilRecherche": "une ale monastique très forte et sombre, avec fruits noirs, sucre candi, chaleur alcoolique et complexité fondue"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Quadrupel — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Quadrupel — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Quadrupel — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "saison",
+      "nom": "Saison",
+      "collectionId": 4,
+      "nature": "S",
+      "parentPrincipalId": "belgian-ale-ale-belge",
+      "aliases": [],
+      "paysOrigine": [
+        "Belgique"
+      ],
+      "origine": {
+        "libelle": "Wallonie, fermes du Hainaut",
+        "ville": null,
+        "region": "Wallonie",
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 3.5,
+        "max": 9.5,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 20,
+        "max": 45,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 5,
+        "max": 30,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 10,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Tulipe belge",
+          "Verre saison"
+        ]
+      },
+      "description": "La Saison est une bière sèche comme un chemin de ferme en été : poivre, fruits jaunes, céréales, houblon floral ou terreux, forte effervescence et finale ultra-nette. Elle peut être blonde, ambrée, faible ou forte, mais jamais lourde.",
+      "histoireEtOrigines": "Originaire de Wallonie, la Saison est souvent présentée comme une farmhouse ale brassée pour désaltérer les travailleurs saisonniers. Le style moderne est devenu une famille large : très atténuée, pétillante, fruitée-épicée, parfois rustique, parfois houblonnée.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt Pilsner",
+          "céréales rustiques possibles"
+        ],
+        "houblons": [
+          "houblons continentaux"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure saison très atténuante"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "modérément minérale",
+        "empatage": "empâtage visant une finale très sèche",
+        "ebullitionEtHoublonnage": "houblonnage moyen et épices seulement si harmonieuses",
+        "fermentation": "fermentation chaude et prolongée",
+        "maturation": "conditionnement vif, souvent refermenté",
+        "profilRecherche": "une ale wallonne très sèche, pétillante et rustique, avec levure poivrée, céréale légère et finale désaltérante"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Saison — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Saison — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Saison — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "specialty-saison",
+      "nom": "Specialty Saison",
+      "collectionId": 4,
+      "nature": "SS",
+      "parentPrincipalId": "saison",
+      "aliases": [],
+      "paysOrigine": [
+        "International"
+      ],
+      "origine": {
+        "libelle": "Interprétation contemporaine de la saison",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 3.5,
+        "max": 12.0,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 15,
+        "max": 50,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 4,
+        "max": 60,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "mixte",
+        "details": "Fermentation mixte associant levures et micro-organismes acidifiants selon le profil recherché."
+      },
+      "service": {
+        "temperatureMin": 7,
+        "temperatureMax": 11,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Tulipe belge",
+          "Teku"
+        ]
+      },
+      "description": "La Specialty Saison garde le squelette de la saison — sécheresse, effervescence, levure poivrée — puis y greffe fruits, céréales, houblons modernes, acidité, bois ou fermentation mixte. Le supplément doit enrichir la ferme, pas construire un parc d’attractions.",
+      "histoireEtOrigines": "La Saison a toujours été une famille souple, liée aux ingrédients disponibles et aux pratiques locales. Les versions contemporaines prolongent cette liberté avec des ajouts ou fermentations plus ambitieuses, souvent internationales, mais la base doit rester reconnaissable : sèche, vive, rustique.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt Pilsner",
+          "céréales rustiques possibles"
+        ],
+        "houblons": [
+          "houblons continentaux"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure saison très atténuante"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "modérément minérale",
+        "empatage": "empâtage visant une finale très sèche",
+        "ebullitionEtHoublonnage": "houblonnage moyen et épices seulement si harmonieuses",
+        "fermentation": "fermentation chaude et prolongée",
+        "maturation": "conditionnement vif, souvent refermenté",
+        "profilRecherche": "une saison modifiée mais lisible, sèche et vive, où l’ingrédient spécial complète la levure rustique sans la masquer"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Specialty Saison — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Specialty Saison — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Specialty Saison — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "biere-de-garde-style-franco-belge",
+      "nom": "Bière de Garde — style franco-belge",
+      "collectionId": 4,
+      "nature": "S",
+      "parentPrincipalId": "belgian-ale-ale-belge",
+      "aliases": [
+        "Bière de Garde"
+      ],
+      "paysOrigine": [
+        "France",
+        "Belgique"
+      ],
+      "origine": {
+        "libelle": "Nord de la France et zones frontalières",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 6.0,
+        "max": 8.5,
+        "unite": "%",
+        "statut": "defini"
+      },
+      "amertume": {
+        "min": 18,
+        "max": 28,
+        "unite": "IBU",
+        "statut": "defini"
+      },
+      "couleur": {
+        "min": 12,
+        "max": 40,
+        "unite": "EBC",
+        "statut": "defini"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 8,
+        "temperatureMax": 12,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Tulipe",
+          "Calice"
+        ]
+      },
+      "description": "La Bière de Garde est la garde maltée du Nord : blonde, ambrée ou brune, mais toujours lisse, toastée, biscuitée, sèche et plus propre qu’une saison. Elle parle cave fraîche, pain, caramel sec et patience, sans chercher l’acidité ni la rusticité forcée.",
+      "histoireEtOrigines": "Style artisanal du nord de la France, la Bière de Garde existe en versions blonde, ambrée et brune. Le BJCP insiste sur son profil malté, assez fort, propre et lagerisé, avec une finale sèche ; les notes de cave ou de moisi souvent citées viennent plutôt de mauvaises conditions d’importation ou d’âge.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "pale ale malt",
+          "malts caramel, biscuit ou bruns selon le style"
+        ],
+        "houblons": [
+          "houblons modérés"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure ale adaptée à la tradition"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "modérément minérale",
+        "empatage": "empâtage préservant une rondeur mesurée",
+        "ebullitionEtHoublonnage": "amertume d’équilibre",
+        "fermentation": "fermentation haute avec esters selon la tradition",
+        "maturation": "maturation courte à longue selon la force",
+        "profilRecherche": "une bière franco-belge de garde, maltée et sèche, avec pain, toast, rondeur propre et maturation soignée"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Bière de Garde — style franco-belge — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Bière de Garde — style franco-belge — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Bière de Garde — style franco-belge — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "american-belgo-ale",
+      "nom": "American-Belgo Ale",
+      "collectionId": 4,
+      "nature": "S",
+      "parentPrincipalId": "belgian-ale-ale-belge",
+      "aliases": [],
+      "paysOrigine": [
+        "États-Unis"
+      ],
+      "origine": {
+        "libelle": "États-Unis, influence belge",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 5.0,
+        "max": 10.0,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 25,
+        "max": 70,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 6,
+        "max": 40,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "haute",
+        "details": "Fermentation haute, avec une expression de levure et une température adaptées au style."
+      },
+      "service": {
+        "temperatureMin": 7,
+        "temperatureMax": 11,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Tulipe belge",
+          "Teku"
+        ]
+      },
+      "description": "L’American-Belgo Ale met une levure belge dans une machine américaine : houblons plus francs, agrumes, fruits tropicaux, poivre, esters, alcool possible et finale sèche. Le danger est simple : si le houblon et la levure crient ensemble, personne ne chante juste.",
+      "histoireEtOrigines": "Ce style vient de la scène craft américaine, fascinée par les levures belges mais habituée à pousser le houblon plus loin que les traditions classiques. Il appartient au territoire des hybrides : ni abbaye authentique, ni IPA pure, plutôt une collision contrôlée entre deux cultures brassicoles.",
+      "recette": {
+        "profilUnique": true,
+        "explicationProfil": "",
+        "maltsEtCereales": [
+          "malt Pilsner belge",
+          "malts de spécialité selon la couleur",
+          "sucres fermentescibles fréquents"
+        ],
+        "houblons": [
+          "houblons continentaux modérés"
+        ],
+        "levuresEtMicroorganismes": [
+          "levure belge expressive"
+        ],
+        "ingredientsComplementaires": [],
+        "profilEau": "modérément minérale",
+        "empatage": "empâtage favorisant une forte atténuation",
+        "ebullitionEtHoublonnage": "houblonnage d’équilibre, épices parfois discrètes",
+        "fermentation": "fermentation haute avec montée contrôlée de température",
+        "maturation": "conditionnement en cuve ou refermentation en bouteille",
+        "profilRecherche": "une ale américaine à levure belge, sèche et expressive, où houblon moderne et épices de fermentation restent harmonisés"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "American-Belgo Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "American-Belgo Ale — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "American-Belgo Ale — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    },
+    {
+      "id": "belgian-fruit-beer",
+      "nom": "Belgian Fruit Beer",
+      "collectionId": 4,
+      "nature": "S",
+      "parentPrincipalId": "belgian-ale-ale-belge",
+      "aliases": [],
+      "paysOrigine": [
+        "Belgique"
+      ],
+      "origine": {
+        "libelle": "Belgique",
+        "ville": null,
+        "region": null,
+        "bassinBrassicole": null
+      },
+      "alcool": {
+        "min": 4.0,
+        "max": 12.0,
+        "unite": "%",
+        "statut": "large"
+      },
+      "amertume": {
+        "min": 5,
+        "max": 40,
+        "unite": "IBU",
+        "statut": "large"
+      },
+      "couleur": {
+        "min": 4,
+        "max": 80,
+        "unite": "EBC",
+        "statut": "large"
+      },
+      "fermentation": {
+        "type": "variable",
+        "details": "Le type de fermentation dépend du style de base ou du produit concerné."
+      },
+      "service": {
+        "temperatureMin": 6,
+        "temperatureMax": 10,
+        "uniteTemperature": "°C",
+        "verresRecommandes": [
+          "Tulipe belge",
+          "Flûte"
+        ]
+      },
+      "description": "La Belgian Fruit Beer n’est pas une bière au sirop : le fruit doit dialoguer avec la base, pas la repeindre en rouge fluo. Cerise, framboise, pêche, abricot ou autres fruits peuvent apporter parfum, acidité, tanin, couleur et sécheresse, mais la bière doit rester reconnaissable.",
+      "histoireEtOrigines": "La Belgique a une longue familiarité avec les bières fruitées, notamment autour des lambics, mais cette carte couvre plus largement les bières belges où le fruit complète un style de base. Le BJCP rappelle que le fruit doit être évident mais intégré, et qu’il apporte souvent du goût plus que du sucre car ses sucres fermentent.",
+      "recette": {
+        "profilUnique": false,
+        "explicationProfil": "Les interprétations de « Belgian Fruit Beer » couvrent plusieurs styles de base ou procédés. Aucun profil de recette unique ne peut être retenu sans préciser la bière sous-jacente.",
+        "maltsEtCereales": [
+          "variables selon le style de base"
+        ],
+        "houblons": [
+          "variables selon le style de base"
+        ],
+        "levuresEtMicroorganismes": [
+          "variable selon le style de base"
+        ],
+        "ingredientsComplementaires": [
+          "fruits adaptés au profil recherché"
+        ],
+        "profilEau": "adapté au style de base",
+        "empatage": "adapté au style de base et aux ingrédients",
+        "ebullitionEtHoublonnage": "ajouts planifiés pour préserver l’équilibre",
+        "fermentation": "fermentation du style de base avec gestion de l’ingrédient spécial",
+        "maturation": "variable selon le procédé",
+        "profilRecherche": "une bière belge fruitée où le fruit est net, fermenté et intégré, sans effet soda ni disparition du style de base"
+      },
+      "sources": [
+        {
+          "organisme": "Brewers Association",
+          "edition": "2026",
+          "reference": "Belgian Fruit Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "BJCP",
+          "edition": "2021",
+          "reference": "Belgian Fruit Beer — Beer Style Guidelines",
+          "type": "guide_de_style"
+        },
+        {
+          "organisme": "World Beer Cup",
+          "edition": "2026",
+          "reference": "Belgian Fruit Beer — Beverage Styles",
+          "type": "guide_de_style"
+        }
+      ]
+    }
+  ]
+}
