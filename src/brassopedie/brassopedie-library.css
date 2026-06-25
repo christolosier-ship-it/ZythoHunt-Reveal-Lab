@@ -1,0 +1,34 @@
+.brassopedie-library { color: #f7ead2; padding: clamp(1rem, 2vw, 2rem); max-width: 1280px; margin: 0 auto; }
+.brassopedie-library-hero { padding: 1.25rem; border: 1px solid rgba(199,130,58,.35); border-radius: 24px; background: linear-gradient(135deg, rgba(54,26,12,.82), rgba(18,9,4,.62)); box-shadow: inset 0 1px rgba(255,255,255,.08); }
+.brassopedie-library-eyebrow, .brassopedie-library-kicker { color: #d99b5a; text-transform: uppercase; letter-spacing: .16em; font-size: .78rem; margin: 0 0 .35rem; }
+.brassopedie-library h1 { margin: 0; font-family: Cinzel, serif; font-size: clamp(2rem, 5vw, 4rem); }
+.brassopedie-library-layout { display: grid; grid-template-columns: minmax(220px, .75fr) minmax(320px, 1.35fr) minmax(300px, 1fr); gap: 1rem; margin-top: 1rem; align-items: start; }
+.brassopedie-library-collections, .brassopedie-library-main, .brassopedie-library-detail { border: 1px solid rgba(199,130,58,.28); border-radius: 22px; background: rgba(21,10,5,.72); padding: 1rem; }
+.brassopedie-library-collections { display: grid; gap: .7rem; }
+.brassopedie-library-collection { color: inherit; text-align: left; border: 1px solid rgba(221,158,83,.22); border-radius: 16px; background: rgba(255,255,255,.045); padding: .8rem; cursor: pointer; }
+.brassopedie-library-collection span { display:block; font-weight: 700; }
+.brassopedie-library-collection small { color: #d8bd93; }
+.brassopedie-library-collection i { display:block; height: 3px; margin-top:.55rem; border-radius:999px; background: linear-gradient(90deg,#d8954f var(--progress), rgba(255,255,255,.12) var(--progress)); }
+.brassopedie-library-collection.is-active { border-color: rgba(255,184,94,.8); background: rgba(142,76,28,.28); box-shadow: 0 0 0 1px rgba(255,184,94,.16); }
+.brassopedie-library-subtitle { margin: 0 0 .8rem; font-family: Cinzel, serif; }
+.brassopedie-library-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .75rem; }
+.brassopedie-library-card { min-height: 118px; color: inherit; border: 1px solid rgba(221,158,83,.22); border-radius: 18px; background: linear-gradient(160deg, rgba(255,255,255,.07), rgba(60,28,12,.38)); padding: .85rem; text-align: left; display: grid; align-content: space-between; gap:.45rem; }
+.brassopedie-library-card.is-revealed { cursor:pointer; }
+.brassopedie-library-card.is-revealed:hover, .brassopedie-library-card.is-revealed:focus-visible { border-color:#e4a45f; transform: translateY(-1px); }
+.brassopedie-library-card.is-locked { opacity:.68; color:#c8ad83; }
+.brassopedie-library-thumb { width: 44px; height:44px; border-radius: 14px; display:grid; place-items:center; background: rgba(216,149,79,.14); color:#f0b66d; font-weight:700; }
+.brassopedie-library-card small { color:#d8bd93; }
+.brassopedie-library-detail { position: sticky; top: 88px; max-height: calc(100vh - 110px); overflow:auto; }
+.brassopedie-library-detail:focus { outline: 2px solid #e4a45f; outline-offset: 2px; }
+.brassopedie-library-empty { color:#d8bd93; }
+.brassopedie-library-close { float:right; border:1px solid rgba(221,158,83,.35); border-radius:999px; background:rgba(255,255,255,.06); color:inherit; padding:.45rem .8rem; }
+.brassopedie-library-detail-media { min-height: 180px; display:grid; place-items:center; margin-bottom: 1rem; border-radius:18px; background: radial-gradient(circle, rgba(216,149,79,.16), rgba(0,0,0,.18)); overflow:hidden; }
+.brassopedie-library-detail-media img { max-width:100%; max-height: 280px; object-fit:contain; }
+.brassopedie-library-badges { display:flex; flex-wrap:wrap; gap:.45rem; margin:.7rem 0; }
+.brassopedie-library-badges span { border:1px solid rgba(221,158,83,.25); border-radius:999px; padding:.32rem .55rem; color:#efd5ad; background:rgba(255,255,255,.05); font-size:.85rem; }
+.brassopedie-library-section { border-top:1px solid rgba(221,158,83,.18); padding-top:.85rem; margin-top:.85rem; }
+.brassopedie-library-section-title { margin:.1rem 0 .4rem; color:#f3c180; font-size:1rem; }
+.brassopedie-library-text { line-height:1.55; color:#f2dfc1; }
+.brassopedie-library-list { padding-left:1.1rem; color:#f2dfc1; }
+@media (max-width: 980px) { .brassopedie-library-layout { grid-template-columns: 1fr; } .brassopedie-library-collections { display:flex; overflow-x:auto; padding-bottom:.75rem; } .brassopedie-library-collection { min-width: 190px; } .brassopedie-library-detail { position: static; max-height:none; } }
+@media (max-width: 560px) { .brassopedie-library { padding: .75rem; } .brassopedie-library-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .brassopedie-library-card { min-height: 104px; padding:.7rem; } }

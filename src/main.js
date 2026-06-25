@@ -3,6 +3,7 @@ import "./styles.css";
 import "./card-presentation.css";
 import "./background/background-integration.css";
 import "./brassopedie/brassopedie-panel.css";
+import "./brassopedie/brassopedie-library.css";
 import "./carousel/carousel-layout.css";
 import gsap from "gsap";
 import { collectionBundles } from "./data/collections.js";
@@ -16,6 +17,8 @@ import { setPendingReveal, takePendingReveal } from "./app/pending-reveal-storag
 import { mountCollectionSession } from "./app/collection-session.js";
 import { createAppNavigation, resolveMenuView } from "./app/app-navigation.js";
 import { registerServiceWorker } from "./pwa/register-service-worker.js";
+import { createDiscoveryRegistry } from "./discovery/discovery-registry.js";
+import { createBrassopedieLibraryView } from "./brassopedie/brassopedie-library-view.js";
 
 const $ = (id) => document.getElementById(id);
 
@@ -126,13 +129,32 @@ async function boot(navigation) {
   if (!validation.valid) console.error(`Collection ${collection.name} invalide`, validation.errors);
 
   gsap.set(loadingScreen, { opacity: 1 });
+  const discoveryRegistry = createDiscoveryRegistry(collectionBundles);
+  const brassopedieRoot = $("brassopedie-view");
+  let brassopedieLibrary = null;
+  if (brassopedieRoot) {
+    brassopedieLibrary = createBrassopedieLibraryView({
+      root: brassopedieRoot,
+      collectionBundles,
+      registry: discoveryRegistry,
+      initialCollectionId: collection.id
+    });
+  }
+  navigation?.onViewChange((viewId) => {
+    if (viewId === "brassopedie") brassopedieLibrary?.refresh();
+  });
+
   await mountCollectionSession({
     bundle: activeBundle,
     elements: getSessionElements(),
     background,
     collectionBundles,
     pendingReveal,
-    beforeValidReveal: () => navigation?.showView("zythosphere"),
+    beforeValidReveal: () => {
+      discoveryRegistry.refresh();
+      brassopedieLibrary?.refresh();
+      navigation?.showView("zythosphere");
+    },
     onExternalMatch: (match) => {
       navigation?.showView("zythosphere");
       setStoredActiveCollectionId(match.collectionId);
