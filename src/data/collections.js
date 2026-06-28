@@ -1,4 +1,4 @@
-import { porterStoutCards, porterStoutCollection, porterStoutCardsById, revealablePorterStoutCards, validatePorterStoutCollection } from "./porters-stouts-collection.js";
+import { porterStoutBundle as generatedPorterStoutBundle, porterStoutCards, porterStoutCollection, porterStoutCardsById, revealablePorterStoutCards, validatePorterStoutCollection } from "./porters-stouts-collection.js";
 import { lagersEtFermentationsBassesBundle } from "./lagers-et-fermentations-basses-collection.js";
 import { paleAlesBittersEtIpaBundle } from "./pale-ales-bitters-et-ipa-collection.js";
 import { traditionsBelgesEtFrancaisesBundle } from "./traditions-belges-et-francaises-collection.js";
@@ -31,7 +31,7 @@ const porterStoutBundle = {
 export const collectionBundles = [
   lagersEtFermentationsBassesBundle,
   paleAlesBittersEtIpaBundle,
-  porterStoutBundle,
+  generatedPorterStoutBundle,
   traditionsBelgesEtFrancaisesBundle,
   bieresDeBleEtDeSeigleBundle,
   bieresAcidesSauvagesEtSpontaneesBundle,
