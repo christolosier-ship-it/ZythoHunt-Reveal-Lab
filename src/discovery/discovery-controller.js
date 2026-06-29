@@ -16,7 +16,11 @@ export function createDiscoveryController({
   afterReveal,
   currentCollectionId,
   onExternalMatch,
-  beforeValidReveal
+  beforeValidReveal,
+  onUnknownReveal,
+  onAlreadyDiscoveredReveal,
+  onNewDiscoveryReveal,
+  onExternalCollectionReveal
 }) {
   let busy = false;
   const realCards = cards.filter((card) => card.revealable);
@@ -67,10 +71,14 @@ export function createDiscoveryController({
         ensureImage,
         beforeReveal,
         afterReveal,
-        onAlreadyDiscovered: () => setFeedback("Cette carte est déjà découverte"),
+        onAlreadyDiscovered: () => {
+          setFeedback("Cette carte est déjà découverte");
+          onAlreadyDiscoveredReveal?.({ card, collectionId: currentCollectionId });
+        },
         onDiscovered: () => {
           setFeedback("Nouvelle carte révélée");
           updateProgress();
+          onNewDiscoveryReveal?.({ card, collectionId: currentCollectionId });
         }
       });
       return result;
@@ -91,6 +99,7 @@ export function createDiscoveryController({
     const result = resolver.resolve(inputEl.value);
     if (!inputEl.value.trim() || result.status === "unknown") {
       setFeedback("Aucun style reconnu.", true);
+      onUnknownReveal?.({ input: inputEl.value });
       inputEl.animate?.(
         [
           { transform: "translateX(0)" },
@@ -105,6 +114,7 @@ export function createDiscoveryController({
 
     if (result.collectionId && result.collectionId !== currentCollectionId) {
       beforeValidReveal?.(result);
+      onExternalCollectionReveal?.(result);
       setFeedback(`Direction ${result.collectionName || "autre collection"}…`);
       onExternalMatch?.(result);
       return;

@@ -10,7 +10,7 @@ import { createRevealEngine } from "../reveal/reveal-engine.js";
 import { motionTokens } from "../animation/motion-tokens.js";
 import { createBrassopediePanel, shouldOpenBrassopedie } from "../brassopedie/brassopedie-panel.js";
 
-export async function mountCollectionSession({ bundle, elements, background, collectionBundles, onExternalMatch, pendingReveal, beforeValidReveal }) {
+export async function mountCollectionSession({ bundle, elements, background, collectionBundles, onExternalMatch, pendingReveal, beforeValidReveal, onUnknownReveal, onAlreadyDiscoveredReveal, onNewDiscoveryReveal, onExternalCollectionReveal }) {
   const { collection, cards, cardsById } = bundle;
   const assetQueue = createAssetPreloadQueue({ collection, cards });
 
@@ -67,7 +67,11 @@ export async function mountCollectionSession({ bundle, elements, background, col
     afterReveal: () => background.resume(),
     currentCollectionId: collection.id,
     onExternalMatch,
-    beforeValidReveal
+    beforeValidReveal,
+    onUnknownReveal,
+    onAlreadyDiscoveredReveal,
+    onNewDiscoveryReveal,
+    onExternalCollectionReveal
   });
   discovery.mount();
 

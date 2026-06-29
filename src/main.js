@@ -4,6 +4,7 @@ import "./card-presentation.css";
 import "./background/background-integration.css";
 import "./brassopedie/brassopedie-panel.css";
 import "./brassopedie/brassopedie-library.css";
+import "./badges/badges.css";
 import "./carousel/carousel-layout.css";
 import gsap from "gsap";
 import { collectionBundles } from "./data/collections.js";
@@ -19,6 +20,12 @@ import { createAppNavigation, resolveMenuView } from "./app/app-navigation.js";
 import { registerServiceWorker } from "./pwa/register-service-worker.js";
 import { createDiscoveryRegistry } from "./discovery/discovery-registry.js";
 import { createBrassopedieLibraryView } from "./brassopedie/brassopedie-library-view.js";
+import { BADGE_DEFINITIONS } from "./badges/badge-definitions.js";
+import { createBadgeStore } from "./badges/badge-storage.js";
+import { createRevealStatsStore } from "./badges/badge-stats-storage.js";
+import { createBadgeEngine } from "./badges/badge-engine.js";
+import { createBadgesView } from "./badges/badges-view.js";
+import { notifyBadgesUnlocked, showBadgeToast } from "./badges/badge-notifications.js";
 
 const $ = (id) => document.getElementById(id);
 
@@ -130,6 +137,20 @@ async function boot(navigation) {
 
   gsap.set(loadingScreen, { opacity: 1 });
   const discoveryRegistry = createDiscoveryRegistry(collectionBundles);
+  const badgeStore = createBadgeStore();
+  const revealStatsStore = createRevealStatsStore();
+  const badgeEngine = createBadgeEngine({ badgeStore, discoveryRegistry, revealStatsStore, collectionBundles });
+  const notifyNewBadges = (items) => {
+    discoveryRegistry.refresh();
+    badgesView?.refresh();
+    if (items.length) void notifyBadgesUnlocked(items);
+  };
+  let badgesView = createBadgesView({ root: $("badges-view"), badgeStore, badgeEngine, definitions: BADGE_DEFINITIONS });
+  badgesView.mount();
+  const archivedBadges = badgeEngine.evaluate({ silent: true });
+  if (archivedBadges.length) showBadgeToast(archivedBadges, `Archives mises à jour : ${archivedBadges.length} badges retrouvés.`);
+  const pendingBadgeQueue = badgeStore.takeQueue().map((item) => ({ ...item, badge: BADGE_DEFINITIONS.find((badge) => badge.id === item.badgeId) })).filter((item) => item.badge);
+  if (pendingBadgeQueue.length) void notifyBadgesUnlocked(pendingBadgeQueue);
   const brassopedieRoot = $("brassopedie-view");
   let brassopedieLibrary = null;
   if (brassopedieRoot) {
@@ -144,6 +165,7 @@ async function boot(navigation) {
   }
   navigation?.onViewChange((viewId) => {
     if (viewId === "brassopedie") brassopedieLibrary?.refresh();
+    if (viewId === "badges") badgesView?.refresh();
   });
 
   await mountCollectionSession({
@@ -156,6 +178,28 @@ async function boot(navigation) {
       discoveryRegistry.refresh();
       brassopedieLibrary?.refresh();
       navigation?.showView("zythosphere");
+    },
+    onUnknownReveal: (payload) => {
+      const previousRevealStats = revealStatsStore.getState();
+      revealStatsStore.recordUnknown(payload.input);
+      notifyNewBadges(badgeEngine.evaluate({ previousRevealStats }));
+    },
+    onAlreadyDiscoveredReveal: (payload) => {
+      const previousRevealStats = revealStatsStore.getState();
+      revealStatsStore.recordAlreadyDiscovered(payload);
+      notifyNewBadges(badgeEngine.evaluate({ previousRevealStats }));
+    },
+    onNewDiscoveryReveal: (payload) => {
+      const previousRevealStats = revealStatsStore.getState();
+      revealStatsStore.recordNewDiscovery(payload);
+      discoveryRegistry.refresh();
+      notifyNewBadges(badgeEngine.evaluate({ previousRevealStats }));
+    },
+    onExternalCollectionReveal: (result) => {
+      const previousRevealStats = revealStatsStore.getState();
+      revealStatsStore.recordExternalCollectionMatch(result);
+      const items = badgeEngine.evaluate({ previousRevealStats });
+      if (items.length) badgeStore.enqueue(items);
     },
     onExternalMatch: (match) => {
       navigation?.showView("zythosphere");

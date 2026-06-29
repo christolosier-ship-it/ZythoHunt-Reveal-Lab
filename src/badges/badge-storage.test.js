@@ -1,0 +1,3 @@
+import test from "node:test"; import assert from "node:assert/strict"; import { createBadgeStore } from "./badge-storage.js";
+function memoryStorage() { const m = new Map(); return { getItem: (k) => m.get(k) || null, setItem: (k, v) => m.set(k, v) }; }
+test("badge store unlock et queue", () => { const store = createBadgeStore({ storage: memoryStorage() }); assert.ok(store.unlock({ id: "x" }, "now")); assert.equal(store.unlock({ id: "x" }, "later"), null); store.enqueue([{ badge: { id: "x" }, unlockedAt: "now" }]); assert.deepEqual(store.takeQueue(), [{ badgeId: "x", unlockedAt: "now" }]); assert.deepEqual(store.takeQueue(), []); });

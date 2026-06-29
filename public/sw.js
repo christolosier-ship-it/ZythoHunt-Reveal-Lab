@@ -63,3 +63,16 @@ self.addEventListener("fetch", (event) => {
     event.respondWith(staleWhileRevalidate(request));
   }
 });
+
+
+self.addEventListener("notificationclick", (event) => {
+  event.notification.close();
+  event.waitUntil((async () => {
+    const allClients = await clients.matchAll({ type: "window", includeUncontrolled: true });
+    if (allClients.length > 0) {
+      await allClients[0].focus();
+      return;
+    }
+    await clients.openWindow("./");
+  })());
+});
